@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef} from 'react'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import epsilonLogo from '../../assets/images/logo_epsilon.png'
 import './header.css'
@@ -17,7 +17,7 @@ function Header() {
         </div>
         <div id="navigation">
           <img src={epsilonLogo}/>
-
+          <p><span>Epsilon Chimie |</span> European Chemicals Manufacturer</p>
           <nav>
             <ul>
               <li><a href="">Home</a></li>

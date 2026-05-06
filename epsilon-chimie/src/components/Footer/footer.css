@@ -6,8 +6,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
-  bottom: 0;
 }
 footer section:first-child {
   gap: 87px;
