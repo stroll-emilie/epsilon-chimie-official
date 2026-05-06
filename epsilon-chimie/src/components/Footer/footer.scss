@@ -7,6 +7,10 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    ///// FIXME: ENLEVER A LA FIN //////////
+    position: fixed;
+    bottom: 0;
+    ////////////////////////////////////////
     section:first-child{
         gap: 87px;
         display: flex;
@@ -51,6 +55,7 @@ footer{
             }
 
             h4{
+
                 font-family: var(--font-family-title);
                 font-size: var(--font-size-body-lg);
                 line-height: 175%;

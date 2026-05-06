@@ -4,16 +4,17 @@ header {
   padding: var(--spacing-x-large) 112px;
   position: sticky;
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  border-bottom: 1px solid var(--color-border-default);
 }
 header #credits {
   display: flex;
   flex-direction: row;
+  gap: var(--spacing-medium);
 }
 header #credits > p {
   color: var(--color-content-secondary);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-body-sm);
-  margin: 0 var(--spacing-xx-small);
 }
 header #navigation {
   display: flex;
@@ -65,4 +66,8 @@ header #action > a {
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
   border: 0.5px solid var(--color-border-accent);
+}
+header #action p {
+  gap: var(--spacing-xx-small);
+  display: flex;
 }/*# sourceMappingURL=header.css.map */

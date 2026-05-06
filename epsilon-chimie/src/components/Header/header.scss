@@ -5,15 +5,16 @@ header{
     position: sticky;
     // FIXME: Vérifier la couleur non présente dans globals.css
     box-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
+    border-bottom: 1px solid var(--color-border-default);
     
     #credits{
         display: flex;
         flex-direction: row;
+        gap: var(--spacing-medium);
         > p{
-        color: var(--color-content-secondary);
-        font-family: var(--font-family-heading);
-        font-size: var(--font-size-body-sm);
-        margin: 0 var(--spacing-xx-small);
+            color: var(--color-content-secondary);
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-body-sm);
         }
     }
 
@@ -68,6 +69,10 @@ header{
             background-color: var(--color-bg-primary);
             color: var(--color-content-on-primary);
             border: 0.5px solid var(--color-border-accent);
+        }
+        p{
+            gap:var(--spacing-xx-small);
+            display: flex;
         }
     }
 }
