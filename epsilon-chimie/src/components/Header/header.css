@@ -1,0 +1,68 @@
+/* Header */
+header {
+  background-color: var(--color-bg-default);
+  padding: var(--spacing-x-large) 112px;
+  position: sticky;
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+header #credits {
+  display: flex;
+  flex-direction: row;
+}
+header #credits > p {
+  color: var(--color-content-secondary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-sm);
+  margin: 0 var(--spacing-xx-small);
+}
+header #navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+}
+header #navigation > img {
+  width: 108px;
+  height: 68px;
+}
+header #navigation > nav {
+  display: flex;
+  justify-content: center;
+  color: var(--color-content-accent);
+  text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  font-size: var(--font-size-body-md);
+  font-family: var(--font-family-body);
+  width: 772px;
+}
+header #navigation > nav > ul {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}
+header #navigation > nav > ul > li {
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  gap: var(--spacing-xx-small);
+}
+header #navigation > nav > ul > li:hover {
+  border-bottom: var(--color-border-accent) 2px solid;
+  text-shadow: none;
+}
+header #action {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}
+header #action > * {
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  border-radius: var(--border-radius-xxl);
+}
+header #action > div {
+  border: 0.5px solid var(--color-border-accent);
+  color: var(--color-content-accent);
+}
+header #action > a {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-on-primary);
+  border: 0.5px solid var(--color-border-accent);
+}/*# sourceMappingURL=header.css.map */

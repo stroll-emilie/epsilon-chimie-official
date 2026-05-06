@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import epsilonLogo from '../assets/logo_epsilon.png'
-import '../styles/App.css'
+import epsilonLogo from '../../assets/images/logo_epsilon.png'
+import './header.css'
 
 function Header() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <header>

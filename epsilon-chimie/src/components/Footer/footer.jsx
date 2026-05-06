@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import '../styles/App.css'
+import './footer.css'
 
-function Header() {
-    const [count, setCount] = useState(0)
+function Footer() {
+
 
     return (
     <>
@@ -18,7 +18,7 @@ function Header() {
                         <h5>HEADQUARTERS</h5>
                         <p>
                             450 rue Antoine Lavoisier <br />
-                            Kergaradev III <br />
+                            Kergaradec III <br />
                             29490 Brest-Guipavas, France
                         </p>
                     </div>
@@ -82,4 +82,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Footer
