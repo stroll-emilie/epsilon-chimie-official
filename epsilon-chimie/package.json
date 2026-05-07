@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "hompage": "https://stroll-emilie.github.io/epsilon-chimie-official",
+  "homepage": "https://stroll-emilie.github.io/epsilon-chimie-official",
 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
