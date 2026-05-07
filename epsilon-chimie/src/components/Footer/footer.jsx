@@ -70,7 +70,7 @@ function Footer() {
             <section>
                 <p>© 2026 EPSILON CHIMIE SARL - 402 489 721</p>
                 <article>
-                    <p>ISO 9001 - 2024</p>
+                    <p>ICH-Q7 QUALITY ASSURANCE</p>
                     <p>MADE IN FRANCE</p>
                     <p>+33 (0)2 98 42 46 50</p>
                 </article>

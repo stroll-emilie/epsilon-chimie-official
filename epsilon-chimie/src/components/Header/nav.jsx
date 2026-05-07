@@ -1,12 +1,10 @@
 import { useEffect, useRef} from 'react'
-import { SearchIcon } from '../../assets/icons/search_icon'
-import epsilonLogo from '../../assets/images/logo_epsilon.png'
 import './header.css'
 
 
 
 
-function () {
+function Nav() {
     return (
     <>
         <nav>
@@ -16,9 +14,9 @@ function () {
                 <li><a href="">Custom Synthesis</a></li>
                 <li><a href="">About</a></li>
             </ul>
-            </nav>
+        </nav>
     </>
     )
 }
 
-export default Header
+export default Nav

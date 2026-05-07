@@ -1,45 +1,54 @@
-import { useEffect, useRef} from 'react'
+import { useEffect, useState} from 'react'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import epsilonLogo from '../../assets/images/logo_epsilon.png'
+import Nav from './nav.jsx'
+import Credit from './credit.jsx'
+import Action from './action.jsx'
 import './header.css'
 
 
 
 
 function Header() {
+
+
+
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScrolled = () => {
+      setScrolled(window.scrollY > 100)
+    }
+    window.addEventListener('scroll', handleScrolled)
+    return () => window.removeEventListener('scroll', handleScrolled)
+  }, [])
+
+  
   return (
-    <>
-      <header>
-        <div id='credits'>
-          <p>EUROPEANS CHEMICALS MANUFACTURER</p>
-          <p>BREST, FRANCE</p>
-          <p>SINCE 1995</p>
-        </div>
-        <div id="navigation">
-          <img src={epsilonLogo}/>
-          <p><span>Epsilon Chimie |</span> European Chemicals Manufacturer</p>
-          <nav>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Catalogue</a></li>
-              <li><a href="">Custom Synthesis</a></li>
-              <li><a href="">About</a></li>
-            </ul>
-          </nav>
+    <header className={scrolled ? 'scrolled' : ''}>
+      <div id='default'>
 
-          <div id='action'>
-            <div>
-               {/*TODO: Refaire la barre de recherche en fonction de ce qu'elle fera dans le futur quand ça arrivera */}
-              <p>
-                Search Catalogue <SearchIcon color="#000051"/>
-              </p>
-            </div>
-            <a href="">Request a quote</a>
+        {/* Le wrapper CSS gère l'animation — plus besoin de conditional render */}
+        <div className='credit-wrapper'>
+          <Credit />
+        </div>
+
+        <div id='navBar'>
+          <div className='logo-container'>
+            <img
+              src={epsilonLogo}
+              className={scrolled ? 'hide' : 'show'}
+            />
+            <p className={scrolled ? 'show' : 'hide'}>
+              <span>Epsilon Chimie |</span> European Chemicals Manufacturer
+            </p>
           </div>
-
+          <Nav />
+          <Action />
         </div>
-      </header>
-    </>
+
+      </div>
+    </header>
   )
 }
 

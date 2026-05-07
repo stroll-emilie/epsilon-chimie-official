@@ -1,0 +1,44 @@
+import { useEffect, useState} from 'react'
+import { SearchIcon } from '../../assets/icons/search_icon'
+import epsilonLogo from '../../assets/images/logo_epsilon.png'
+import Nav from './nav.jsx'
+import Credit from './credit.jsx'
+import Action from './action.jsx'
+import './header.css'
+
+
+
+
+function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(()=>{
+    
+    const handleScrolled = () => {
+      setScrolled(window.scrollY > 1)
+    }
+    
+    window.addEventListener('scroll', handleScrolled)
+    return () => window.removeEventListener('scroll',handleScrolled)
+  }, [])
+  return (
+    <>
+      <header className='{scrolled}'>
+        <div id='default'>
+            {!scrolled && <Credit/>}
+          <div id='navBar'>            
+            {scrolled ? (
+            <p><span>Epsilon Chimie |</span> European Chemicals Manufacturer</p>
+            ) : (
+            <img src={epsilonLogo}/>
+            )}
+            <Nav />
+            <Action />
+          </div>
+        </div>
+      </header>
+    </>
+  )
+}
+
+export default Header

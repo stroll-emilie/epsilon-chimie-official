@@ -30,7 +30,7 @@ footer section:first-child article ul li {
   font-size: var(--font-size-body-sm);
   line-height: 136%;
   letter-spacing: -1%;
-  color: var(--color-content-reversed-secondary);
+  color: var(--color-content-reversed-tertiary);
 }
 footer section:first-child article:first-child {
   display: flex;
