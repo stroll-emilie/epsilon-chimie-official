@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg-default);
+  /* FIXME: Vérifier la couleur non présente dans globals.css */
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  border-bottom: 1px solid var(--color-border-default);
+  /*FIXME: taille subjective*/
+  transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  padding: var(--spacing-x-large) 112px;
+}
+header #default .credit-wrapper {
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  max-height: 100px;
+  overflow: hidden;
+  transform: translateY(0);
+}
+header #default {
+  /*logo image*/
+}
+header #default img {
+  width: 108px;
+  height: 58px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header #default {
+  /*logo text*/
+}
+header #default #navBar > .logo-container p {
+  padding: var(--spacing-xx-small) var(--spacing-x-small);
+  text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  color: var(--color-content-accent);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+}
+header #default #navBar > .logo-container p span {
+  font-weight: var(--font-weight-bold);
+}
+header #default {
+  /*text au dessus cf credit.jsx*/
+}
+header #default #credits {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}
+header #default #credits > p {
+  color: var(--color-content-secondary);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-sm);
+  margin: 0 var(--spacing-xx-small);
+}
+header #default {
+  /* barre avec les onglet cf nav.jsx*/
+}
+header #default #navBar {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header #default #navBar nav {
+  display: flex;
+  justify-content: center;
+  color: var(--color-content-accent);
+  text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  font-size: var(--font-size-body-md);
+  font-family: var(--font-family-body);
+}
+header #default #navBar nav > ul {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}
+header #default #navBar nav > ul > li {
+  transition: background-color 0.15s ease;
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  gap: var(--spacing-xx-small);
+}
+header #default #navBar nav > ul > li:hover {
+  border-bottom: var(--color-border-accent) 2px solid;
+  text-shadow: none;
+}
+header #default #navBar nav > ul > li:active {
+  background: var(--color-bg-primary-subtle);
+}
+header #default #navBar #action {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+  transition: all 0.4s ease-in-out;
+}
+header #default #navBar #action a, header #default #navBar #action div {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  transition: all 0.4s ease-in-out;
+}
+header #default #navBar #action > div {
+  color: var(--color-content-accent);
+}
+header #default #navBar #action > div p {
+  gap: var(--spacing-xx-small);
+  display: flex;
+}
+header #default #navBar #action > a {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-on-primary);
+}
+header #default #navBar #action > a:hover {
+  background-color: var(--color-state-primary-hover);
+}
+header #default #navBar #action > a:active {
+  background-color: var(--color-state-primary-pressed);
+}
+header #default #navBar .logo-container {
+  display: grid;
+  align-items: center;
+}
+header #default #navBar .logo-container img, header #default #navBar .logo-container p {
+  grid-area: 1/1;
+  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+}
+header #default #navBar .logo-container img.hide {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  visibility: 0s 0.2s;
+}
+header #default #navBar .logo-container img.show {
+  transition: opacity 0.2s ease-in-out 0.1s;
+  opacity: 1;
+  visibility: 0s 0.2s;
+}
+header #default #navBar .logo-container p.hide {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+header #default #navBar .logo-container p.show {
+  transition: opacity 0.2s ease-in-out 0.1;
+  opacity: 1;
+}
+header {
+  /* changement de comportement au scroll*/
+}
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-x-small) 112px;
+}
+header.scrolled #default .credit-wrapper {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}/*# sourceMappingURL=header.css.map */
