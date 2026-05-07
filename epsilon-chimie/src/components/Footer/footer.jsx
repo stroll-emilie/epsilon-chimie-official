@@ -4,7 +4,6 @@ function Footer() {
 
 
     return (
-    <>
         <footer>
             <section>
                 <article>
@@ -77,7 +76,6 @@ function Footer() {
             </section>
 
         </footer>
-    </>
     )
 }
 

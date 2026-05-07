@@ -38,6 +38,8 @@ function Header() {
             <img
               src={epsilonLogo}
               className={scrolled ? 'hide' : 'show'}
+              alt="logo-epsilon-chimie"
+              title="logo-epsilon-chimie"
             />
             <p className={scrolled ? 'show' : 'hide'}>
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
