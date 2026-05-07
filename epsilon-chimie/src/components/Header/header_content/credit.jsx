@@ -1,4 +1,3 @@
-import { useEffect, useRef} from 'react'
 import '../header.css'
 
 function Credit() {

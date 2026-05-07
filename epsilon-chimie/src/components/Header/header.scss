@@ -30,22 +30,6 @@ header{
             object-fit: contain;
         }
 
-        /*logo text*/
-        #navBar{ 
-            > .logo-container p{
-                padding: var(--spacing-xx-small) var(--spacing-x-small);
-                text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
-                color: var(--color-content-accent);
-                font-family: var(--font-family-body);
-                font-size: var(--font-size-body-md);
-                line-height: 136%;
-                letter-spacing: -1%;
-                span{
-                    font-weight: var(--font-weight-bold);
-                }
-            }
-        }
-
         /*text au dessus cf credit.jsx*/
         #credits{
             width: 100%;
@@ -92,6 +76,21 @@ header{
                     }
                 }
             }
+            
+            /*logo text*/
+            > .logo-container p{
+                padding: var(--spacing-xx-small) var(--spacing-x-small);
+                text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
+                color: var(--color-content-accent);
+                font-family: var(--font-family-body);
+                font-size: var(--font-size-body-md);
+                line-height: 136%;
+                letter-spacing: -1%;
+                span{
+                    font-weight: var(--font-weight-bold);
+                }
+            }
+
 
             #action{
                 display: flex;
@@ -124,10 +123,7 @@ header{
                         background-color: var(--color-state-primary-pressed);
                     }
                 }
-                
-                
             }
-
             .logo-container{
                 display: grid;
                 align-items: center;
@@ -136,7 +132,6 @@ header{
                     grid-area: 1/1;
                     transition: opacity .2s ease-in-out, visibility 0s .2s;
                 }
-
 
                 img.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;visibility: 0s .2s;}
                 img.show{transition: opacity .2s ease-in-out .1s;opacity: 1;visibility: 0s .2s;}
@@ -160,11 +155,6 @@ header{
                 margin-bottom: 0;
                 transform: translateY(-10px);
                 pointer-events: none;
-            }
-            .navBar{
-                #logo-container{
-
-                }
             }
         }
     }  
