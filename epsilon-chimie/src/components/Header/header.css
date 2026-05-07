@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Header */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,7 +14,7 @@ header {
   padding: var(--spacing-x-large) 112px;
 }
 header #default .credit-wrapper {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 1;
   max-height: 100px;
   overflow: hidden;
@@ -155,8 +155,8 @@ header {
   /* changement de comportement au scroll*/
 }
 header.scrolled {
-  height: 60%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-x-small) 112px;
 }
 header.scrolled #default .credit-wrapper {
   opacity: 0;
@@ -164,5 +164,4 @@ header.scrolled #default .credit-wrapper {
   margin-bottom: 0;
   transform: translateY(-10px);
   pointer-events: none;
-  display: none;
 }/*# sourceMappingURL=header.css.map */

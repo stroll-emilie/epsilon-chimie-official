@@ -8,10 +8,11 @@ import Home from './pages/home/home.jsx'
 function App() {
   return (
     <>
+    <main>
       <Header />
-
       <Home />
       <Footer />
+    </main>
     </>
   )
 }

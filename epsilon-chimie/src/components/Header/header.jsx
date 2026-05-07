@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react'
+import { useEffect, useRef, useState} from 'react'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import epsilonLogo from '../../assets/images/logo_epsilon.png'
 import Nav from './header_content/nav.jsx'
@@ -14,10 +14,12 @@ function Header() {
 
 
   const [scrolled, setScrolled] = useState(false)
+  const scrolledRef = useRef(false)
 
   useEffect(() => {
     const handleScrolled = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 150)
+      
     }
     window.addEventListener('scroll', handleScrolled)
     return () => window.removeEventListener('scroll', handleScrolled)
