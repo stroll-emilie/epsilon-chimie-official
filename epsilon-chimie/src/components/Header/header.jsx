@@ -17,7 +17,7 @@ function Header() {
 
   useEffect(() => {
     const handleScrolled = () => {
-      setScrolled(window.scrollY > 100)
+      setScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScrolled)
     return () => window.removeEventListener('scroll', handleScrolled)
