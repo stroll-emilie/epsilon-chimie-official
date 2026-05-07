@@ -1,6 +1,6 @@
 import { useEffect, useRef} from 'react'
-import { SearchIcon } from '../../assets/icons/search_icon'
-import './header.css'
+import { SearchIcon } from '../../../assets/icons/search_icon'
+import '../header.css'
 
 
 

@@ -1,9 +1,9 @@
 import { useEffect, useState} from 'react'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import epsilonLogo from '../../assets/images/logo_epsilon.png'
-import Nav from './nav.jsx'
-import Credit from './credit.jsx'
-import Action from './action.jsx'
+import Nav from './header_content/nav.jsx'
+import Credit from './header_content/credit.jsx'
+import Action from './header_content/action.jsx'
 import './header.css'
 
 

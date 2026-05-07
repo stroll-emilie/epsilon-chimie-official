@@ -1,17 +1,18 @@
 /* Header */
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
     background-color: var(--color-bg-default);
     /* FIXME: Vérifier la couleur non présente dans globals.css */
     box-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
     border-bottom: 1px solid var(--color-border-default);
-
+    /*FIXME: taille subjective*/
     height: 141px;
     transition: height .4s ease-in-out, box-shadow .4s ease-in-out;
+      padding: var(--spacing-x-large) 112px;
+
     
     #default{
 
@@ -56,6 +57,7 @@ header{
                 color: var(--color-content-secondary);
                 font-family: var(--font-family-heading);
                 font-size: var(--font-size-body-sm);
+                margin: 0 var(--spacing-xx-small);
             }
         }
 
