@@ -1,4 +1,3 @@
-import { useEffect, useRef} from 'react'
 import { SearchIcon } from '../../../assets/icons/search_icon'
 import '../header.css'
 
@@ -15,7 +14,7 @@ function Action() {
                     Search Catalogue <SearchIcon color="#000051"/>
                 </p>
             </div>
-            <a href="">Request a quote</a>
+            <a href="#">Request a quote</a>
         </div>
     </>
     )

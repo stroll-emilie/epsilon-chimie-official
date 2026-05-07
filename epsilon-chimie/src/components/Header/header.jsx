@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState} from 'react'
-import { SearchIcon } from '../../assets/icons/search_icon'
 import epsilonLogo from '../../assets/images/logo_epsilon.png'
 import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
@@ -14,8 +13,6 @@ function Header() {
 
 
   const [scrolled, setScrolled] = useState(false)
-  const scrolledRef = useRef(false)
-
   useEffect(() => {
     const handleScrolled = () => {
       setScrolled(window.scrollY > 150)
@@ -40,6 +37,8 @@ function Header() {
             <img
               src={epsilonLogo}
               className={scrolled ? 'hide' : 'show'}
+              alt="logo-epsilon-chimie"
+              title="logo-epsilon-chimie"
             />
             <p className={scrolled ? 'show' : 'hide'}>
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer

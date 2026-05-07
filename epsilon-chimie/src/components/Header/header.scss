@@ -30,21 +30,6 @@ header{
             object-fit: contain;
         }
 
-        /*logo text*/
-        #navBar{ 
-            > .logo-container p{
-                padding: var(--spacing-xx-small) var(--spacing-x-small);
-                text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
-                color: var(--color-content-accent);
-                font-family: var(--font-family-body);
-                font-size: var(--font-size-body-md);
-                line-height: 136%;
-                letter-spacing: -1%;
-                span{
-                    font-weight: var(--font-weight-bold);
-                }
-            }
-        }
 
         /*text au dessus cf credit.jsx*/
         #credits{
@@ -90,6 +75,20 @@ header{
                             background: var(--color-bg-primary-subtle);
                         }
                     }
+                }
+            }
+            
+            /*logo text*/
+            > .logo-container p{
+                padding: var(--spacing-xx-small) var(--spacing-x-small);
+                text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
+                color: var(--color-content-accent);
+                font-family: var(--font-family-body);
+                font-size: var(--font-size-body-md);
+                line-height: 136%;
+                letter-spacing: -1%;
+                span{
+                    font-weight: var(--font-weight-bold);
                 }
             }
 
@@ -160,11 +159,6 @@ header{
                 margin-bottom: 0;
                 transform: translateY(-10px);
                 pointer-events: none;
-            }
-            .navBar{
-                #logo-container{
-
-                }
             }
         }
     }  
