@@ -3,6 +3,8 @@ import { MedalIcon } from '../../assets/icons/medal_icon'
 import { TimeIcon } from '../../assets/icons/time_icon'
 import { LocIcon } from '../../assets/icons/localisation_icon'
 import { HealthIcon } from '../../assets/icons/health_icon'
+import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
+import { SearchIcon } from '../../assets/icons/search_icon'
 
 
 
@@ -19,7 +21,7 @@ function Home() {
     return (
     <>
         {/* top */}
-        <section>
+        <section id="presentation">
             <article>
                 <div>
                     <legend><div></div>SINCE 1995, BREST, FRANCE</legend>
@@ -60,15 +62,25 @@ function Home() {
             </div>
         </div>
 
-        <section>
+        <section id="finder">
             <article>
-                <legend><div></div>COMPOUND FINDER</legend>
-                <h2>Search across 1 000+ references</h2>
-                <p>Search by IUPAC name, CAS number, MFCD, synonym or molecular formula. Can't finde what you need ? We synthesis on demand.</p>
+                <div>
+                    <legend><div></div>COMPOUND FINDER</legend>
+                    <h2>Search across 1 000+ references</h2>
+                    <p>Search by IUPAC name, CAS number, MFCD, synonym or molecular formula. Can't finde what you need ? We synthesis on demand.</p>
+                </div>
+                <a href="#">Request custom synthesis<CircleArrowIcon/></a>
             </article>
 
             <article>
-                <div></div>
+                <div>
+                    <div>
+                        {/* search bar */}
+                        <SearchIcon/>
+                        <p>Name, CAS, MFCD, formula...</p>
+                        <a href="#">Search</a>
+                    </div>
+                </div>
                 <div></div>
             </article>
         </section>
