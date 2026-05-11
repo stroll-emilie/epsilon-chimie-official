@@ -98,7 +98,6 @@ header #default #navBar #action {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-medium);
-  transition: all 0.4s ease-in-out;
 }
 header #default #navBar #action a, header #default #navBar #action div {
   border: 0.5px solid var(--color-border-accent);
@@ -106,7 +105,13 @@ header #default #navBar #action a, header #default #navBar #action div {
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
-  transition: all 0.4s ease-in-out;
+}
+header #default #navBar #action a:hover, header #default #navBar #action div:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+header #default #navBar #action a:active, header #default #navBar #action div:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
 }
 header #default #navBar #action > div p {
   gap: var(--spacing-xx-small);
@@ -118,6 +123,15 @@ header #default #navBar #action > a {
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+header #default #navBar #action > a:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+header #default #navBar #action > a:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+header #default #navBar #action > a {
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
