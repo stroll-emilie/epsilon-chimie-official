@@ -98,11 +98,9 @@ header{
                 display: flex;
                 flex-direction: row;
                 gap: var(--spacing-medium);
-                transition: all .4s ease-in-out; 
 
                 a,div{
                     @include btn-base;
-                    transition: all .4s ease-in-out;
                 }
 
                 > div{
