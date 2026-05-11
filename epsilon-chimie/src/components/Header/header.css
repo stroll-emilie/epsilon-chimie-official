@@ -30,21 +30,6 @@ header #default img {
      object-fit: contain;
 }
 header #default {
-  /*logo text*/
-}
-header #default #navBar > .logo-container p {
-  padding: var(--spacing-xx-small) var(--spacing-x-small);
-  text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
-  color: var(--color-content-accent);
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-md);
-  line-height: 136%;
-  letter-spacing: -1%;
-}
-header #default #navBar > .logo-container p span {
-  font-weight: var(--font-weight-bold);
-}
-header #default {
   /*text au dessus cf credit.jsx*/
 }
 header #default #credits {
@@ -94,6 +79,21 @@ header #default #navBar nav > ul > li:hover {
 header #default #navBar nav > ul > li:active {
   background: var(--color-bg-primary-subtle);
 }
+header #default #navBar {
+  /*logo text*/
+}
+header #default #navBar > .logo-container p {
+  padding: var(--spacing-xx-small) var(--spacing-x-small);
+  text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  color: var(--color-content-accent);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+}
+header #default #navBar > .logo-container p span {
+  font-weight: var(--font-weight-bold);
+}
 header #default #navBar #action {
   display: flex;
   flex-direction: row;
@@ -104,16 +104,20 @@ header #default #navBar #action a, header #default #navBar #action div {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
-  transition: all 0.4s ease-in-out;
-}
-header #default #navBar #action > div {
   color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  transition: all 0.4s ease-in-out;
 }
 header #default #navBar #action > div p {
   gap: var(--spacing-xx-small);
   display: flex;
 }
 header #default #navBar #action > a {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
