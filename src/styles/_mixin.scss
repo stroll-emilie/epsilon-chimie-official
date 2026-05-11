@@ -26,3 +26,15 @@
     }
 }
 
+@mixin btn-grey(){
+    @include btn-base();
+    color: var(--color-content-primary);
+    border-color: var(--color-border-reversed);
+    &:hover{
+        background-color: var(--color-state-bg-neutral-hover);
+    }
+    &:active{
+        background-color: var(--color-state-bg-neutral-pressed);
+        color: var(--color-content-primary);
+    }
+}

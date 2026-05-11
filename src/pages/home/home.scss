@@ -1,10 +1,5 @@
 @use '../../styles/_mixin' as *;
 
-@keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
-
 h1{
     font-family: var(--font-family-title);
     font-size: var(--font-size-title);
@@ -13,9 +8,12 @@ h1{
 }
 
 h2{
-    
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: 136%;
+    letter-spacing: -1%;
 }
-
 
 legend{
     gap: 2px;
@@ -42,7 +40,7 @@ section{
     /*FIXME: changer le 112px par une variable*/
     padding: var(--spacing-x-large) 112px;
     
-    &:first-of-type{
+    &#presentation{
         article{
             width: 45%;
             display: flex;
@@ -112,8 +110,20 @@ section{
         }
     }
 
-    &:nth-of-type(2){
-
+    &#finder{
+        /*FIXME: couleur non recenser*/
+        background-color: #C7DAEC;
+        article{
+            &:first-of-type{
+                div{
+                    
+                }
+                a{
+                    @include btn-grey;
+                }
+            }
+            
+        }
     }
     
 }
