@@ -1,16 +1,16 @@
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
   line-height: 175%;
   letter-spacing: -2%;
+}
+
+h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: 136%;
+  letter-spacing: -1%;
 }
 
 legend {
@@ -38,80 +38,80 @@ section {
   /*FIXME: changer le 112px par une variable*/
   padding: var(--spacing-x-large) 112px;
 }
-section:first-of-type article {
+section#presentation article {
   width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section:first-of-type article:first-of-type {
+section#presentation article:first-of-type {
   /*FIXME: changer le 4px par une variable*/
   gap: var(--spacing-large);
 }
-section:first-of-type article:first-of-type div:first-of-type p {
+section#presentation article:first-of-type div:first-of-type p {
   font-family: var(--font-famil);
   font-size: var(--font-size-body-lg);
   line-height: 136%;
   letter-spacing: -1%;
 }
-section:first-of-type article:first-of-type div:last-of-type {
+section#presentation article:first-of-type div:last-of-type {
   display: flex;
   gap: var(--spacing-medium);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type {
+section#presentation article:first-of-type div:last-of-type a:first-of-type {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type:hover {
+section#presentation article:first-of-type div:last-of-type a:first-of-type:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type:active {
+section#presentation article:first-of-type div:last-of-type a:first-of-type:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type {
+section#presentation article:first-of-type div:last-of-type a:first-of-type {
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type:hover {
+section#presentation article:first-of-type div:last-of-type a:first-of-type:hover {
   background-color: var(--color-state-primary-hover);
 }
-section:first-of-type article:first-of-type div:last-of-type a:first-of-type:active {
+section#presentation article:first-of-type div:last-of-type a:first-of-type:active {
   background-color: var(--color-state-primary-pressed);
 }
-section:first-of-type article:first-of-type div:last-of-type a:last-of-type {
+section#presentation article:first-of-type div:last-of-type a:last-of-type {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section:first-of-type article:first-of-type div:last-of-type a:last-of-type:hover {
+section#presentation article:first-of-type div:last-of-type a:last-of-type:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section:first-of-type article:first-of-type div:last-of-type a:last-of-type:active {
+section#presentation article:first-of-type div:last-of-type a:last-of-type:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section:first-of-type article:last-of-type {
+section#presentation article:last-of-type {
   /*FIXME: 48px absent dans globale*/
   gap: 48px;
 }
-section:first-of-type article:last-of-type img {
+section#presentation article:last-of-type img {
   /*FIXME: couleur a mettre dans global*/
   background-color: #D9D9D9;
   width: 100%;
   height: 400px;
 }
-section:first-of-type article:last-of-type ul {
+section#presentation article:last-of-type ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-section:first-of-type article:last-of-type ul li {
+section#presentation article:last-of-type ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,13 +120,43 @@ section:first-of-type article:last-of-type ul li {
   line-height: 136%;
   letter-spacing: -1%;
 }
-section:first-of-type article:last-of-type ul li span {
+section#presentation article:last-of-type ul li span {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
   line-height: 106%;
   letter-spacing: -1%;
 }
+section#finder {
+  /*FIXME: couleur non recenser*/
+  background-color: #C7DAEC;
+}
+section#finder article:first-of-type a {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#finder article:first-of-type a:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#finder article:first-of-type a:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#finder article:first-of-type a {
+  color: var(--color-content-primary);
+  border-color: var(--color-border-reversed);
+}
+section#finder article:first-of-type a:hover {
+  background-color: var(--color-state-bg-neutral-hover);
+}
+section#finder article:first-of-type a:active {
+  background-color: var(--color-state-bg-neutral-pressed);
+  color: var(--color-content-primary);
+}
+
 @keyframes carousel-scroll {
   from {
     transform: translateX(0);
