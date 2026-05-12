@@ -6,6 +6,9 @@ import { HealthIcon } from '../../assets/icons/health_icon'
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import { InfoCircleIcon } from '../../assets/icons/info_circle_icon'
+import { GlassIcon } from '../../assets/icons/glass_icon'
+import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
+
 
 
 
@@ -111,19 +114,79 @@ function Home() {
 
         <section id='capabilites'>
             <article>
-                <div>
-                    <legend><div className='losange'></div>CAPABILITIES</legend>
-                    <h2>One laboratory, Three complementary services.</h2>
-                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support. Every compound ships with a <strong>Certificate of Analysis</strong>.</p>
-                </div>
-                <div>
-                    <hr/>
-                    <div>
-
-                    </div>
-
-                </div>
+                <legend><div className='losange'></div>CAPABILITIES</legend>
+                <h2>One laboratory, Three complementary services.</h2>
+                <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support. Every compound ships with a <strong>Certificate of Analysis</strong>.</p>
             </article>
+
+            <article>
+                <hr/>
+
+                <div>
+                    <div className="glassIcon">
+                        <GlassIcon/>
+                    </div>
+                    <div className='service'>
+                        <div className="serviceTitle">
+                            <div className="number">01</div>
+                            <h3>Catalogue synthesis</h3>
+                        </div>
+                        <p>Over 1 000 phosphorus specialties in stock, shipped from Brest with full analytical documentation.</p>
+                    </div>
+                    <div className="arrowIcon">
+                        <RightArrowIcon/>
+                    </div>
+                    
+                </div>
+
+                <hr/>
+
+                <div>
+                    <div className="glassIcon">
+                        <GlassIcon/>
+                    </div>
+                    <div className='service'>
+                        <div className="serviceTitle">
+                            <div className="number">02</div>
+                            <h3>Custom synthesis</h3>
+                        </div>
+                        <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, to your specification.</p>
+                    </div>
+                    <div className="arrowIcon">
+                        <RightArrowIcon/>
+                    </div>
+                    
+                </div>
+
+                <hr/>
+
+                <div>
+                    <div className="glassIcon">
+                        <GlassIcon/>
+                    </div>
+                    <div className='service'>
+                        <div className="serviceTitle">
+                            <div className="number">03</div>
+                            <h3>Analytical support</h3>
+                        </div>
+                        <p>In-house 31P-NMR, 1H-NMR and HPLC characterisation. A Certificate of Analysis accompanies every batch.</p>
+                    </div>
+                    <div className="arrowIcon">
+                        <RightArrowIcon/>
+                    </div>
+                    
+                </div>
+
+                <hr/>
+            </article>
+        </section>
+        
+        <section id='families'>
+            <article>
+                <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
+                <h2>Six families, one thousand compounds</h2>
+            </article>
+
         </section>
     </>
     )
