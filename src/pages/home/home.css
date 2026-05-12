@@ -368,6 +368,28 @@ section#capabilites article:last-of-type > div .arrowIcon {
   padding: 6px 3px;
   color: var(--color-icon-brand);
 }
+section#families {
+  display: flex;
+}
+section#families > article#families-title {
+  display: flex;
+}
+section#families > article#families-title a {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#families > article#families-title a:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#families > article#families-title a:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
 @keyframes carousel-scroll {
   from {
     transform: translateX(0);
