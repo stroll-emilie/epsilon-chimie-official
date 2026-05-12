@@ -24,7 +24,7 @@ legend{
     font-size: var(--font-size-body-sm);
     color: var(--color-content-accent);
     line-height: 8px;
-    div{
+    .losange{
         width: 2px;
         height: 2px;
         background-color: var(--color-content-accent);
@@ -53,10 +53,8 @@ section{
                 div{
                     &:first-of-type{
                         p{
-                            font-family: var(--font-famil);
+                            @include text-style;
                             font-size: var(--font-size-body-lg);
-                            line-height: 136%;
-                            letter-spacing: -1%;
                         }
                     }
                     &:last-of-type{
@@ -112,20 +110,98 @@ section{
 
     &#finder{
         /*FIXME: couleur non recenser*/
+        display: flex;
+        justify-content: space-between;
         background-color: #C7DAEC;
-        article{
+        > article{
+            /*presentation <--*/
             &:first-of-type{
-                div{
-                    
+                width: 35%;
+                padding: var(--spacing-xx-small) 0;
+                > div{
+                    > p{
+                        @include text-style;
+                    }
+                    margin-bottom: var(--spacing-medium)
                 }
-                a{
+                a {
                     @include btn-grey;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: var(--spacing-xx-small);
                 }
             }
-            
+            /*Recherche -->*/
+            &:last-of-type{
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+                gap: var(--spacing-medium);
+                
+                .searchBar{
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-xx-small);
+                    /*Search Bar*/
+                    .searchBarContainer{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: var(--spacing-medium) var(--spacing-xx-small);
+                        min-width: 360px;
+                        /*FIXME: border radius non recenser*/
+                        border-radius: 12px;
+                        background-color: var(--color-surface-default);  
+                        .searchBarInput{
+                            display: flex;
+                            flex-direction: row;
+                            gap: var(--spacing-xx-small);
+                            width: 100%;
+                            input{
+                                width: 100%;
+                                outline-style: none;
+                            }
+                        }
+                        button{
+                            @include btn-blue;
+                        }
+                    }
+                    .popular{
+                        display: flex;
+                        gap: var(--spacing-xx-small);
+                        p{
+                            @include text-style;
+                        }
+                        ul{
+                            /*FIXME: 4px non recenser*/
+                            gap: 4px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            li{
+                                @include chips-base;
+                            }
+                        }
+                    }
+                }
+                .filtered{
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: var(--spacing-large);
+                    p{
+                        gap: var(--spacing-xx-small);
+                        display: flex;
+                        @include btn-base;
+                        width: auto;
+                    }
+                }
+            }
         }
     }
-    
+
+    &#capabilities{
+        
+    }
 }
 
 @keyframes carousel-scroll {
