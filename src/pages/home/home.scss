@@ -15,6 +15,13 @@ h2{
     letter-spacing: -1%;
 }
 
+h3{
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h3);
+    line-height: 136%;
+    letter-spacing: -1%;
+}
+
 legend{
     gap: 2px;
     display: flex;
@@ -199,8 +206,75 @@ section{
         }
     }
 
-    &#capabilities{
-        
+    &#capabilites{
+        article{
+            &:first-of-type{
+                color: #000;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:last-of-type{
+                display: flex;
+                flex-direction: column;
+                /*FIXME: non rencenser*/
+                width: 50%;
+                gap: 26px;
+                hr{
+                    color: var(--color-border-reversed);
+                }
+                > div{
+                    display: flex;
+                    align-items: center;
+                    gap: var(--spacing-x-small);
+                    .glassIcon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 56px;
+                        height: 56px;
+                        color: var(--color-icon-brand);
+                        background-color: rgba(159, 159, 210, .4);
+                        /*FIXME: non recenser*/
+                        border-radius: 12px;
+                        /*FIXME: non recenser*/
+                        padding: 4px;
+                    }
+
+                    .service{
+                        display: flex;
+                        flex-direction: column;
+                        /*FIXME: non rencenser*/
+                        gap: 2px;
+                        .serviceTitle{
+                            display: flex;
+                            align-items: center;
+                            /*FIXME: non rencenser*/
+                            gap: 9px;
+                            .number{
+                                font-family: var(--font-family-heading);
+                                /*FIXME: 12px non recenser*/
+                                font-size: 12px;
+                            }
+                        }
+                        p{
+                            @include text-style;
+                        }
+                    }
+
+                    .arrowIcon{
+                        /*FIXME: non renceser*/
+                        padding: 6px 3px;
+                        color: var(--color-icon-brand);
+                    }
+                }
+            }
+        }
+    }
+
+    &#families{
+
     }
 }
 

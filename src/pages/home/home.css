@@ -13,6 +13,13 @@ h2 {
   letter-spacing: -1%;
 }
 
+h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h3);
+  line-height: 136%;
+  letter-spacing: -1%;
+}
+
 legend {
   gap: 2px;
   display: flex;
@@ -297,6 +304,69 @@ section#finder > article:last-of-type .filtered p:active {
 }
 section#finder > article:last-of-type .filtered p {
   width: auto;
+}
+section#capabilites article:first-of-type {
+  color: #000;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+section#capabilites article:last-of-type {
+  display: flex;
+  flex-direction: column;
+  /*FIXME: non rencenser*/
+  width: 50%;
+  gap: 26px;
+}
+section#capabilites article:last-of-type hr {
+  color: var(--color-border-reversed);
+}
+section#capabilites article:last-of-type > div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-x-small);
+}
+section#capabilites article:last-of-type > div .glassIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--color-icon-brand);
+  background-color: rgba(159, 159, 210, 0.4);
+  /*FIXME: non recenser*/
+  border-radius: 12px;
+  /*FIXME: non recenser*/
+  padding: 4px;
+}
+section#capabilites article:last-of-type > div .service {
+  display: flex;
+  flex-direction: column;
+  /*FIXME: non rencenser*/
+  gap: 2px;
+}
+section#capabilites article:last-of-type > div .service .serviceTitle {
+  display: flex;
+  align-items: center;
+  /*FIXME: non rencenser*/
+  gap: 9px;
+}
+section#capabilites article:last-of-type > div .service .serviceTitle .number {
+  font-family: var(--font-family-heading);
+  /*FIXME: 12px non recenser*/
+  font-size: 12px;
+}
+section#capabilites article:last-of-type > div .service p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: var(--color-content-secondary);
+}
+section#capabilites article:last-of-type > div .arrowIcon {
+  /*FIXME: non renceser*/
+  padding: 6px 3px;
+  color: var(--color-icon-brand);
 }
 @keyframes carousel-scroll {
   from {
