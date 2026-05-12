@@ -5,18 +5,21 @@ import { LocIcon } from '../../assets/icons/localisation_icon'
 import { HealthIcon } from '../../assets/icons/health_icon'
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { SearchIcon } from '../../assets/icons/search_icon'
+import { InfoCircleIcon } from '../../assets/icons/info_circle_icon'
 
 
 
 
 function Home() {
+
+    /* Pour la répétition dans le carousel */
     const items = [
         { icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Quality assurance' },
         { icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Every lot above 98% purity' },
         { icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
         { icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
-    const repeated = [...items, ...items, ...items]
+    const repeated = [...items, ...items]
 
     return (
     <>
@@ -24,7 +27,7 @@ function Home() {
         <section id="presentation">
             <article>
                 <div>
-                    <legend><div></div>SINCE 1995, BREST, FRANCE</legend>
+                    <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
                     <h1>European chemicals Manufacturer</h1>
                     <p>We manufacture over thousands phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for research and industrial teams across Europe and beyond.</p>
                 </div>
@@ -65,7 +68,7 @@ function Home() {
         <section id="finder">
             <article>
                 <div>
-                    <legend><div></div>COMPOUND FINDER</legend>
+                    <legend><div className='losange'></div>COMPOUND FINDER</legend>
                     <h2>Search across 1 000+ references</h2>
                     <p>Search by IUPAC name, CAS number, MFCD, synonym or molecular formula. Can't finde what you need ? We synthesis on demand.</p>
                 </div>
@@ -73,15 +76,53 @@ function Home() {
             </article>
 
             <article>
-                <div>
-                    <div>
+                <div className='searchBar'>
+                    <div className='searchBarContainer'>
                         {/* search bar */}
-                        <SearchIcon/>
-                        <p>Name, CAS, MFCD, formula...</p>
-                        <a href="#">Search</a>
+                        <div className='searchBarInput'>
+                            <SearchIcon/>
+                            <input type="text" placeholder="Name, CAS, MFCD, formula..." name="inputSearchBar" id="inputSearchBar"/>
+                        </div>
+                        <button type='button'>Search</button>
+                    </div>
+                    <div className='popular'>
+                        <ul>
+                            <p>Popular : </p>
+                            <li>Diethyl phosphonates</li>
+                            <li>Wittig reagents</li>
+                            <li>Phosphonic acids</li>
+                            <li>HWE reagents</li>
+                            <li>Phosphonium salts</li>
+
+                        </ul>
                     </div>
                 </div>
-                <div></div>
+
+                <div className='filtered'>
+                    <p><InfoCircleIcon/>Phosphonic Acids</p>
+                    <p><InfoCircleIcon/>Phosphonates</p>
+                    <p><InfoCircleIcon/>Phosphonium Salts</p>
+                    <p><InfoCircleIcon/>Phosphoranes</p>
+                    <p><InfoCircleIcon/>Phosphines</p>
+                    <p><InfoCircleIcon/>Chemical Intermediates</p>
+                </div>
+            </article>
+        </section>
+
+        <section id='capabilites'>
+            <article>
+                <div>
+                    <legend><div className='losange'></div>CAPABILITIES</legend>
+                    <h2>One laboratory, Three complementary services.</h2>
+                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support. Every compound ships with a <strong>Certificate of Analysis</strong>.</p>
+                </div>
+                <div>
+                    <hr/>
+                    <div>
+
+                    </div>
+
+                </div>
             </article>
         </section>
     </>
