@@ -12,6 +12,7 @@ header {
   /*FIXME: taille subjective*/
   transition: height 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   padding: var(--spacing-x-large) 112px;
+  z-index: 100;
 }
 header #default .credit-wrapper {
   transition: all 0.2s ease-in-out;

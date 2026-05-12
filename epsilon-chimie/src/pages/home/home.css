@@ -23,7 +23,7 @@ legend {
   color: var(--color-content-accent);
   line-height: 8px;
 }
-legend div {
+legend .losange {
   width: 2px;
   height: 2px;
   background-color: var(--color-content-accent);
@@ -49,10 +49,12 @@ section#presentation article:first-of-type {
   gap: var(--spacing-large);
 }
 section#presentation article:first-of-type div:first-of-type p {
-  font-family: var(--font-famil);
-  font-size: var(--font-size-body-lg);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
   line-height: 136%;
   letter-spacing: -1%;
+  color: var(--color-content-secondary);
+  font-size: var(--font-size-body-lg);
 }
 section#presentation article:first-of-type div:last-of-type {
   display: flex;
@@ -129,34 +131,173 @@ section#presentation article:last-of-type ul li span {
 }
 section#finder {
   /*FIXME: couleur non recenser*/
+  display: flex;
+  justify-content: space-between;
   background-color: #C7DAEC;
 }
-section#finder article:first-of-type a {
+section#finder > article {
+  /*presentation <--*/
+}
+section#finder > article:first-of-type {
+  width: 35%;
+  padding: var(--spacing-xx-small) 0;
+}
+section#finder > article:first-of-type > div > p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: var(--color-content-secondary);
+}
+section#finder > article:first-of-type > div {
+  margin-bottom: var(--spacing-medium);
+}
+section#finder > article:first-of-type a {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#finder article:first-of-type a:hover {
+section#finder > article:first-of-type a:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section#finder article:first-of-type a:active {
+section#finder > article:first-of-type a:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section#finder article:first-of-type a {
+section#finder > article:first-of-type a {
   color: var(--color-content-primary);
   border-color: var(--color-border-reversed);
 }
-section#finder article:first-of-type a:hover {
+section#finder > article:first-of-type a:hover {
   background-color: var(--color-state-bg-neutral-hover);
 }
-section#finder article:first-of-type a:active {
+section#finder > article:first-of-type a:active {
   background-color: var(--color-state-bg-neutral-pressed);
   color: var(--color-content-primary);
 }
-
+section#finder > article:first-of-type a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xx-small);
+}
+section#finder > article {
+  /*Recherche -->*/
+}
+section#finder > article:last-of-type {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  gap: var(--spacing-medium);
+}
+section#finder > article:last-of-type .searchBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xx-small);
+  /*Search Bar*/
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--spacing-medium) var(--spacing-xx-small);
+  min-width: 360px;
+  /*FIXME: border radius non recenser*/
+  border-radius: 12px;
+  background-color: var(--color-surface-default);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer .searchBarInput {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xx-small);
+  width: 100%;
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer .searchBarInput input {
+  width: 100%;
+  outline-style: none;
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-on-primary);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button:hover {
+  background-color: var(--color-state-primary-hover);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button:active {
+  background-color: var(--color-state-primary-pressed);
+}
+section#finder > article:last-of-type .searchBar .popular {
+  display: flex;
+  gap: var(--spacing-xx-small);
+}
+section#finder > article:last-of-type .searchBar .popular p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: var(--color-content-secondary);
+}
+section#finder > article:last-of-type .searchBar .popular ul {
+  /*FIXME: 4px non recenser*/
+  gap: 4px;
+  display: flex;
+  flex-wrap: wrap;
+}
+section#finder > article:last-of-type .searchBar .popular ul li {
+  border-radius: var(--border-radius-full);
+  border: 0.5px solid var(--color-border-accent);
+  /*FIXME: 4px non recenser*/
+  padding: 4px var(--spacing-xx-small);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: var(--color-content-accent);
+}
+section#finder > article:last-of-type .searchBar .popular ul li:active {
+  color: var(--color-content-reversed-primary);
+  background-color: var(--color-bg-primary);
+}
+section#finder > article:last-of-type .filtered {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--spacing-large);
+}
+section#finder > article:last-of-type .filtered p {
+  gap: var(--spacing-xx-small);
+  display: flex;
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#finder > article:last-of-type .filtered p:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#finder > article:last-of-type .filtered p:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#finder > article:last-of-type .filtered p {
+  width: auto;
+}
 @keyframes carousel-scroll {
   from {
     transform: translateX(0);

@@ -13,7 +13,7 @@ header{
     /*FIXME: taille subjective*/
     transition: height .4s ease-in-out, box-shadow .4s ease-in-out;
     padding: var(--spacing-x-large) 112px;
-
+    z-index: 100;
     
     #default{
 
