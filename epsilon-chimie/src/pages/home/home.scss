@@ -274,7 +274,21 @@ section{
     }
 
     &#families{
+        display: flex;
+        > article{
+            &#families-title{
+                display: flex;
+                a{
+                    display: flex;
+                    align-items: center;
+                    @include btn-base;
+                }
+            }
 
+            &:last-of-type{
+
+            }
+        }
     }
 }
 

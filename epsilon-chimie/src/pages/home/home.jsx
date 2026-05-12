@@ -182,9 +182,16 @@ function Home() {
         </section>
         
         <section id='families'>
+            <article id='families-title'>
+                <div>
+                    <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
+                    <h2>Six families, one thousand compounds</h2>
+                </div>
+                <a href="#">Browse the full catalogue<CircleArrowIcon/></a>
+            </article>
+
             <article>
-                <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
-                <h2>Six families, one thousand compounds</h2>
+                
             </article>
 
         </section>
