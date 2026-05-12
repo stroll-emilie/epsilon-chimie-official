@@ -38,3 +38,28 @@
         color: var(--color-content-primary);
     }
 }
+
+@mixin text-style(){
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-md);
+    line-height: 136%;
+    letter-spacing: -1%;
+    color: var(--color-content-secondary);
+}
+
+@mixin chips-base{
+    border-radius: var(--border-radius-full);
+    border: .5px solid var(--color-border-accent);
+    /*FIXME: 4px non recenser*/
+    padding: 4px var(--spacing-xx-small);
+
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-sm);
+    line-height: 136%;
+    letter-spacing: -1%;
+    color: var(--color-content-accent);
+    &:active{
+        color: var(--color-content-reversed-primary);
+        background-color: var(--color-bg-primary);
+    }
+}
