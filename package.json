@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://stroll-emilie.github.io/epsilon-chimie-official",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
+    "prop-types": "^15.8.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tailwindcss": "^4.2.4"
