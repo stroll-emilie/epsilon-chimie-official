@@ -80,9 +80,6 @@ header #default #navBar nav > ul > li:hover {
 header #default #navBar nav > ul > li:active {
   background: var(--color-bg-primary-subtle);
 }
-header #default #navBar {
-  /*logo text*/
-}
 header #default #navBar > .logo-container p {
   padding: var(--spacing-xx-small) var(--spacing-x-small);
   text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
