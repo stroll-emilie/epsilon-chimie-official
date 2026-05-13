@@ -9,6 +9,6 @@ export const CircleArrowIcon = ({ size = 24}) => {
     );
 };
 
-CircleArrowIcon.PropTypes = {
+CircleArrowIcon.propTypes = {
     size: PropTypes.number
 }
