@@ -26,7 +26,6 @@ function Home() {
 
     return (
     <>
-        {/* top */}
         <section id="presentation">
             <article>
                 <div>
@@ -52,7 +51,6 @@ function Home() {
             </article>
         </section>
 
-        {/* carousel */}
         <div className="carousel">
             <div className="carousel__track">
                 <ul>
@@ -123,15 +121,17 @@ function Home() {
                 <hr/>
 
                 <div>
-                    <div className="glassIcon">
-                        <GlassIcon/>
-                    </div>
-                    <div className='service'>
-                        <div className="serviceTitle">
-                            <div className="number">01</div>
-                            <h3>Catalogue synthesis</h3>
+                    <div>
+                        <div className="glassIcon">
+                            <GlassIcon/>
                         </div>
-                        <p>Over 1 000 phosphorus specialties in stock, shipped from Brest with full analytical documentation.</p>
+                        <div className='service'>
+                            <div className="serviceTitle">
+                                <div className="number">01</div>
+                                <h3>Catalogue synthesis</h3>
+                            </div>
+                            <p>Over 1 000 phosphorus specialties in stock, shipped from Brest with full analytical documentation.</p>
+                        </div>
                     </div>
                     <div className="arrowIcon">
                         <RightArrowIcon/>
@@ -142,15 +142,17 @@ function Home() {
                 <hr/>
 
                 <div>
-                    <div className="glassIcon">
-                        <GlassIcon/>
-                    </div>
-                    <div className='service'>
-                        <div className="serviceTitle">
-                            <div className="number">02</div>
-                            <h3>Custom synthesis</h3>
+                    <div>
+                        <div className="glassIcon">
+                            <GlassIcon/>
                         </div>
-                        <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, to your specification.</p>
+                        <div className='service'>
+                            <div className="serviceTitle">
+                                <div className="number">02</div>
+                                <h3>Custom synthesis</h3>
+                            </div>
+                            <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, to your specification.</p>
+                        </div>
                     </div>
                     <div className="arrowIcon">
                         <RightArrowIcon/>
@@ -161,15 +163,17 @@ function Home() {
                 <hr/>
 
                 <div>
-                    <div className="glassIcon">
-                        <GlassIcon/>
-                    </div>
-                    <div className='service'>
-                        <div className="serviceTitle">
-                            <div className="number">03</div>
-                            <h3>Analytical support</h3>
+                    <div>
+                        <div className="glassIcon">
+                            <GlassIcon/>
                         </div>
-                        <p>In-house 31P-NMR, 1H-NMR and HPLC characterisation. A Certificate of Analysis accompanies every batch.</p>
+                        <div className='service'>
+                            <div className="serviceTitle">
+                                <div className="number">03</div>
+                                <h3>Analytical support</h3>
+                            </div>
+                            <p>In-house 31P-NMR, 1H-NMR and HPLC characterisation. A Certificate of Analysis accompanies every batch.</p>
+                        </div>
                     </div>
                     <div className="arrowIcon">
                         <RightArrowIcon/>
@@ -185,15 +189,105 @@ function Home() {
             <article id='families-title'>
                 <div>
                     <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
-                    <h2>Six families, one thousand compounds</h2>
+                    <h2>Six families, one <br />thousand compounds</h2>
                 </div>
                 <a href="#">Browse the full catalogue<CircleArrowIcon/></a>
             </article>
 
-            <article>
-                
+            <article id='families-list'>
+
+                <div className='column'>
+
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+                </div>
+
+                <div className='column'>
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+                </div>
+
+                <div className='column'>
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+
+                    <div className='familie-element'>
+                        <div className="glassIcon">
+                            <GlassIcon/>
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 01</div>
+                            <h3>Phosphonic</h3>
+                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+                </div>
             </article>
 
+        </section>
+
+        <section id='talk'>
+            <article>
+                <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
+                <h1>Need 100g or 1kg of a compound from our R&D</h1>
+                <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
+                <nav>
+                    <a href="">Request a quote</a>
+                    <a href="">Custom synthesis</a>
+                </nav>
+            </article>
         </section>
     </>
     )
