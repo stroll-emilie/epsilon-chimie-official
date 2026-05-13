@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export const CircleArrowIcon = ({ size = 24}) => {
     return (
         <svg width={size} height={size} viewBox={`0 0 24 24`} fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,7 +6,3 @@ export const CircleArrowIcon = ({ size = 24}) => {
         </svg>
     );
 };
-
-CircleArrowIcon.propTypes = {
-    size: PropTypes.number
-}
