@@ -17,10 +17,10 @@ function Home() {
 
     /* Pour la répétition dans le carousel */
     const items = [
-        { icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Quality assurance' },
-        { icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Every lot above 98% purity' },
-        { icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
-        { icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
+        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Quality assurance' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Every lot above 98% purity' },
+        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
+        { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
     const repeated = [...items, ...items]
 
@@ -55,12 +55,12 @@ function Home() {
             <div className="carousel__track">
                 <ul>
                     {repeated.map((item, i) => (
-                        <li key={i}>{item.icon}{item.label}</li>
+                        <li key={`a-${item.id}-${i}`}>{item.icon}{item.label}</li>
                     ))}
                 </ul>
                 <ul aria-hidden="true">
                     {repeated.map((item, i) => (
-                        <li key={i}>{item.icon}{item.label}</li>
+                        <li key={`b-${item.id}-${i}`}>{item.icon}{item.label}</li>
                     ))}
                 </ul>
             </div>
