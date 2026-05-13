@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 export const TimeIcon = ({ size = 24, color = "#000000" }) => {
     return (
-        <svg width={size} height={size} viewBox={`0 0 24 24`} fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_4418_3879)">
                 <path d="M12 8V13" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M9 2H15" stroke={color} strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
@@ -8,9 +10,14 @@ export const TimeIcon = ({ size = 24, color = "#000000" }) => {
             </g>
             <defs>
                 <clipPath id="clip0_4418_3879">
-                    <rect width="24" height="24" fill="white"/>
+                    <rect width="24" height="24" fill="white" />
                 </clipPath>
             </defs>
         </svg>
     );
+};
+
+TimeIcon.propTypes = {
+    size: PropTypes.number,
+    color: PropTypes.string,
 };
