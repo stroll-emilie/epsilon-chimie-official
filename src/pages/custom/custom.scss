@@ -1,10 +1,6 @@
 @use '../../styles/_mixin' as *;
 
 section{
-    
-
-    
-
     &#custom{
         legend{
             color: var(--color-content-reversed-secondary);
@@ -16,7 +12,6 @@ section{
         .path,.path>span{
             color: var(--color-content-reversed-secondary);
         }
-     
      
         background-color: var(--color-surface-reversed-subtle);
         color: var(--color-content-reversed-primary);
