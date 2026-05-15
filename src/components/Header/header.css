@@ -80,15 +80,6 @@ header #default #navBar nav > ul > li:hover {
 header #default #navBar nav > ul > li:active {
   background: var(--color-bg-primary-subtle);
 }
-<<<<<<< HEAD:src/components/Header/header.css
-<<<<<<< HEAD:src/components/Header/header.css
-=======
-header #default #navBar {
-  /*logo text*/
-}
->>>>>>> 98e1d2a (top home):epsilon-chimie/src/components/Header/header.css
-=======
->>>>>>> 81423f3 (fix icon):epsilon-chimie/src/components/Header/header.css
 header #default #navBar > .logo-container p {
   padding: var(--spacing-xx-small) var(--spacing-x-small);
   text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
@@ -112,10 +103,6 @@ header #default #navBar #action a, header #default #navBar #action div {
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
-<<<<<<< HEAD:src/components/Header/header.css
-<<<<<<< HEAD:src/components/Header/header.css
-=======
->>>>>>> 735281e (carousel):epsilon-chimie/src/components/Header/header.css
 }
 header #default #navBar #action a:hover, header #default #navBar #action div:hover {
   background-color: var(--color-state-bg-reversed-hover);
@@ -123,12 +110,6 @@ header #default #navBar #action a:hover, header #default #navBar #action div:hov
 header #default #navBar #action a:active, header #default #navBar #action div:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
-<<<<<<< HEAD:src/components/Header/header.css
-=======
-  transition: all 0.4s ease-in-out;
->>>>>>> 98e1d2a (top home):epsilon-chimie/src/components/Header/header.css
-=======
->>>>>>> 735281e (carousel):epsilon-chimie/src/components/Header/header.css
 }
 header #default #navBar #action > div p {
   gap: var(--spacing-xx-small);
@@ -140,10 +121,6 @@ header #default #navBar #action > a {
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
-<<<<<<< HEAD:src/components/Header/header.css
-<<<<<<< HEAD:src/components/Header/header.css
-=======
->>>>>>> 735281e (carousel):epsilon-chimie/src/components/Header/header.css
 }
 header #default #navBar #action > a:hover {
   background-color: var(--color-state-bg-reversed-hover);
@@ -153,11 +130,6 @@ header #default #navBar #action > a:active {
   color: var(--color-content-disabled);
 }
 header #default #navBar #action > a {
-<<<<<<< HEAD:src/components/Header/header.css
-=======
->>>>>>> 98e1d2a (top home):epsilon-chimie/src/components/Header/header.css
-=======
->>>>>>> 735281e (carousel):epsilon-chimie/src/components/Header/header.css
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
