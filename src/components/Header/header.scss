@@ -1,3 +1,5 @@
+@use '../../styles/_mixin' as *;
+
 /* Header */
 header{
     position: fixed;
@@ -11,7 +13,7 @@ header{
     /*FIXME: taille subjective*/
     transition: height .4s ease-in-out, box-shadow .4s ease-in-out;
     padding: var(--spacing-x-large) 112px;
-
+    z-index: 100;
     
     #default{
 
@@ -77,7 +79,7 @@ header{
                 }
             }
             
-            /*logo text*/
+            
             > .logo-container p{
                 padding: var(--spacing-xx-small) var(--spacing-x-small);
                 text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
@@ -96,17 +98,12 @@ header{
                 display: flex;
                 flex-direction: row;
                 gap: var(--spacing-medium);
-                transition: all .4s ease-in-out; 
 
                 a,div{
-                    border: 0.5px solid var(--color-border-accent);
-                    border-radius: var(--border-radius-xxl);
-                    padding: var(--spacing-xx-small) var(--spacing-medium);
-                    transition: all .4s ease-in-out;
+                    @include btn-base;
                 }
 
                 > div{
-                    color: var(--color-content-accent);
                     p{
                         gap:var(--spacing-xx-small);
                         display: flex;
@@ -114,14 +111,7 @@ header{
                 }
                 
                 > a {
-                    background-color: var(--color-bg-primary);
-                    color: var(--color-content-on-primary);
-                    &:hover{
-                        background-color: var(--color-state-primary-hover);
-                    }
-                    &:active{
-                        background-color: var(--color-state-primary-pressed);
-                    }
+                    @include btn-blue;
                 }
             }
             .logo-container{
