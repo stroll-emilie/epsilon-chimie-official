@@ -1,15 +1,16 @@
-section legend {
+section#custom legend {
   color: var(--color-content-reversed-secondary);
 }
-section legend .losange {
+section#custom legend .losange {
   background-color: var(--color-content-reversed-secondary);
 }
-section .path, section .path > span {
+section#custom .path, section#custom .path > span {
   color: var(--color-content-reversed-secondary);
 }
 section#custom {
   background-color: var(--color-surface-reversed-subtle);
   color: var(--color-content-reversed-primary);
+  gap: var(--spacing-x-large);
 }
 section#custom > div {
   display: flex;

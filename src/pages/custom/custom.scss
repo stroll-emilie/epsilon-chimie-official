@@ -1,20 +1,26 @@
 @use '../../styles/_mixin' as *;
 
 section{
-    legend{
-        color: var(--color-content-reversed-secondary);
-        .losange{
-            background-color: var(--color-content-reversed-secondary);
-        }
-    }
+    
 
-    .path,.path>span{
-        color: var(--color-content-reversed-secondary);
-    }
+    
 
     &#custom{
+        legend{
+            color: var(--color-content-reversed-secondary);
+            .losange{
+                background-color: var(--color-content-reversed-secondary);
+            }
+        }
+     
+        .path,.path>span{
+            color: var(--color-content-reversed-secondary);
+        }
+     
+     
         background-color: var(--color-surface-reversed-subtle);
         color: var(--color-content-reversed-primary);
+        gap: var(--spacing-x-large);
         > div{
             display: flex;
             flex-direction: column;
