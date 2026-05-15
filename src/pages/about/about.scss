@@ -1,1 +1,31 @@
 @use '../../styles/_mixin' as *;
+
+section{
+    &#aboutLab{
+        > div{
+            article{
+                /*FIXME: Non recenser*/
+                gap: 4px;
+                    .path{
+                        font-family: var(--font-family-heading);
+                        font-size: var(--font-size-body-sm);
+                        font-weight: var(--font-weight-light);
+                        line-height: 100%;
+                        letter-spacing: -1%;
+                        color: var(--color-content-tertiary);
+                        >span{
+                            color: var(--color-content-primary);
+                        }
+                    }            
+            }
+        }
+    }
+    &#quality{
+        article{
+            &:first-of-type{
+            }
+            &:last-of-type{
+            }
+        }
+    }
+}
