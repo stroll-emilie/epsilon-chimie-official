@@ -1,0 +1,42 @@
+@use '../../styles/_mixin' as *;
+
+section{
+    legend{
+        color: var(--color-content-reversed-secondary);
+        .losange{
+            background-color: var(--color-content-reversed-secondary);
+        }
+    }
+
+    .path,.path>span{
+        color: var(--color-content-reversed-secondary);
+    }
+
+    &#custom{
+        background-color: var(--color-surface-reversed-subtle);
+        color: var(--color-content-reversed-primary);
+        > div{
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-medium);
+            max-width: 55%;
+
+            article{
+                /*FIXME: non recenser*/
+                gap: 4px;
+            }
+            nav{
+                display: flex;
+                gap: var(--spacing-medium);
+                a{
+                    &:first-of-type{
+                        @include btn-white;
+                    }
+                    &:last-of-type{
+                        @include btn-border-white;
+                    }
+                }
+            }
+        }
+    }
+}

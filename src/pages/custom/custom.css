@@ -1,0 +1,66 @@
+section legend {
+  color: var(--color-content-reversed-secondary);
+}
+section legend .losange {
+  background-color: var(--color-content-reversed-secondary);
+}
+section .path, section .path > span {
+  color: var(--color-content-reversed-secondary);
+}
+section#custom {
+  background-color: var(--color-surface-reversed-subtle);
+  color: var(--color-content-reversed-primary);
+}
+section#custom > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  max-width: 55%;
+}
+section#custom > div article {
+  /*FIXME: non recenser*/
+  gap: 4px;
+}
+section#custom > div nav {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+section#custom > div nav a:first-of-type {
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  background-color: var(--color-bg-default);
+  color: var(--color-content-primary);
+}
+section#custom > div nav a:first-of-type:hover {
+  background-color: var(--color-state-bg-neutral-hover);
+}
+section#custom > div nav a:first-of-type:active {
+  background-color: var(--color-state-bg-neutral-pressed);
+}
+section#custom > div nav a:last-of-type {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#custom > div nav a:last-of-type:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#custom > div nav a:last-of-type:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#custom > div nav a:last-of-type {
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-border-subtle);
+}
+section#custom > div nav a:last-of-type:hover {
+  background-color: var(--color-state-bg-neutral-hover);
+  color: var(--color-content-primary);
+}
+section#custom > div nav a:last-of-type:active {
+  background-color: var(--color-state-bg-neutral-pressed);
+  color: var(--color-content-primary);
+}/*# sourceMappingURL=custom.css.map */

@@ -62,6 +62,18 @@ legend{
     color: var(--color-content-secondary);
 }
 
+.path{
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-light);
+    line-height: 100%;
+    letter-spacing: -1%;
+    color: var(--color-content-tertiary);
+    >span{
+        color: var(--color-content-primary);
+    }
+}
+
 section{
     display: flex;
     flex-direction: row;
@@ -380,7 +392,6 @@ section{
                     }
                     &:last-of-type{
                         @include btn-border-white;
-                        color: var(--color-content-reversed-primary);
                     }
                 }
             }
