@@ -1,3 +1,9 @@
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
@@ -301,19 +307,26 @@ section#finder > article:last-of-type .searchBar .popular ul {
   flex-wrap: wrap;
 }
 section#finder > article:last-of-type .searchBar .popular ul li {
-  border-radius: var(--border-radius-full);
-  border: 0.5px solid var(--color-border-accent);
-  /*FIXME: 4px non recenser*/
-  padding: 4px var(--spacing-xx-small);
+  display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
   line-height: 136%;
   letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.5px solid var(--color-border-accent);
   color: var(--color-content-accent);
 }
 section#finder > article:last-of-type .searchBar .popular ul li:active {
-  color: var(--color-content-reversed-primary);
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-link-hover);
 }
 section#finder > article:last-of-type .filtered {
   display: grid;

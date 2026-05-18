@@ -2,6 +2,9 @@ import './catalogue.css';
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
+import logo from '../../assets/images/03076.png'
+
+
 
 function Catalogue() {
     return (
@@ -37,8 +40,8 @@ function Catalogue() {
             </article>
 
             <article id="product">
-                <div>
-                    <p>18 RESULTS</p>
+                <div id="sort">
+                    <p className="number">18 RESULTS</p>
                     <div>
                         <p>SORT</p>
                         <select name="sort" id="sort">
@@ -48,15 +51,59 @@ function Catalogue() {
                     </div>
                 </div>
 
-                <article>
-                    <div className='img-container'>
-                        <img src="" alt="" />
-                    </div>
+                <div id="product-container">
+                    <article>
+                        <div className='img-container'>
+                            <div>
+                                <div className="in-stock">In stock</div>
+                                <div className='purity'>90%</div>
+                            </div>
+                            <img src={logo} alt="" />
+                        </div>
 
-                    <div className='txt-container'>
+                        <div className='txt-container'>
+                            <div>
+                                <div className="number">EC-02091</div>
+                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
+                                <div className="number">
+                                    <p>CAS 859-65-4</p>
+                                    <p>MW 380.42</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Phosphoranes</li>
+                                <li>Analytical</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                    </div>
-                </article>
+
+                    <article>
+                        <div className='img-container'>
+                            <div>
+                                <div className="in-stock">In stock</div>
+                                <div className='purity'>90%</div>
+                            </div>
+                            <img src={logo} alt="" />
+                        </div>
+
+                        <div className='txt-container'>
+                            <div>
+                                <div className="number">EC-02091</div>
+                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
+                                <div className="number">
+                                    <p>CAS 859-65-4</p>
+                                    <p>MW 380.42</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Phosphoranes</li>
+                                <li>Analytical</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                </div>
             </article>
         </section>
     </>

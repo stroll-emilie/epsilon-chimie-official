@@ -1,3 +1,9 @@
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 section#searchInCatalogue {
   display: flex;
   flex-direction: column;
@@ -61,6 +67,7 @@ section#searchInCatalogue > article:last-of-type {
   padding: var(--spacing-medium) var(--spacing-xx-small);
 }
 section#searchInCatalogue > article:last-of-type > div {
+  color: var(--color-content-tertiary);
   gap: var(--spacing-xx-small);
   width: 90%;
   display: flex;
@@ -70,4 +77,182 @@ section#searchInCatalogue > article:last-of-type > div {
 section#searchInCatalogue > article:last-of-type > div input {
   width: 100%;
   outline-style: none;
+}
+section#content-catalogue {
+  background-color: var(--color-surface-raised);
+  width: 100%;
+}
+section#content-catalogue article {
+  display: flex;
+  justify-content: space-between;
+}
+section#content-catalogue article#product {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+section#content-catalogue article#product div#sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#content-catalogue article#product div#sort p {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-content-primary);
+}
+section#content-catalogue article#product div#sort div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+section#content-catalogue article#product div#sort div select {
+  display: flex;
+  padding: var(--spacing-x-small) var(--spacing-x-small) var(--spacing-x-small) var(--spacing-medium);
+  border-radius: var(--border-radius-lg);
+  gap: var(--spacing-xx-small);
+  background-color: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  width: 250px;
+}
+section#content-catalogue article#product div#product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#product-container article {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  gap: var(--spacing-medium);
+  background-color: var(--color-bg-default);
+}
+section#content-catalogue article#product div#product-container article div.img-container {
+  position: relative;
+}
+section#content-catalogue article#product div#product-container article div.img-container > div {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  justify-content: space-between;
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.in-stock {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-bg-success);
+  color: var(--color-content-success);
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.out-stock {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-bg-danger);
+  color: var(--color-content-danger);
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.purity {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-default);
+  background-color: var(--color-bg-default);
+  color: var(--color-content-secondary);
+}
+section#content-catalogue article#product div#product-container article div.txt-container {
+  border: 1px solid #D9D9D9;
+  border-top: none;
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
+}
+section#content-catalogue article#product div#product-container article div.txt-container div .nomenclature {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 136%;
+}
+section#content-catalogue article#product div#product-container article div.txt-container div .number:first-of-type {
+  color: var(--color-content-accent);
+}
+section#content-catalogue article#product div#product-container article div.txt-container div > div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-content-tertiary);
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul li:first-of-type {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  font-size: 8px;
+  height: 12px;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-bg-default);
+  color: var(--color-content-secondary);
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul li:last-of-type {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  font-size: 8px;
+  height: 12px;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
 }/*# sourceMappingURL=catalogue.css.map */
