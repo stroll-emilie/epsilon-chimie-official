@@ -64,7 +64,7 @@ header{
                     display: flex;
                     flex-direction: row;
                     gap: var(--spacing-medium);
-                    > li{
+                    > li > a{
                         transition: background-color .15s ease;
                         padding: var(--spacing-xx-small) var(--spacing-medium);
                         gap: var(--spacing-xx-small);

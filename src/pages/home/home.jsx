@@ -10,11 +10,8 @@ import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 
 
-
-
-
 function Home() {
-
+    
     /* Pour la répétition dans le carousel */
     const items = [
         { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Quality assurance' },

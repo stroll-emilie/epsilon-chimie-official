@@ -68,16 +68,16 @@ header #default #navBar nav > ul {
   flex-direction: row;
   gap: var(--spacing-medium);
 }
-header #default #navBar nav > ul > li {
+header #default #navBar nav > ul > li > a {
   transition: background-color 0.15s ease;
   padding: var(--spacing-xx-small) var(--spacing-medium);
   gap: var(--spacing-xx-small);
 }
-header #default #navBar nav > ul > li:hover {
+header #default #navBar nav > ul > li > a:hover {
   border-bottom: var(--color-border-accent) 2px solid;
   text-shadow: none;
 }
-header #default #navBar nav > ul > li:active {
+header #default #navBar nav > ul > li > a:active {
   background: var(--color-bg-primary-subtle);
 }
 header #default #navBar > .logo-container p {
