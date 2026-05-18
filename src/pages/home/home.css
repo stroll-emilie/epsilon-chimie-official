@@ -53,10 +53,9 @@ legend .losange {
   max-height: 56px;
   color: var(--color-icon-brand);
   background-color: rgba(159, 159, 210, 0.4);
-  /*FIXME: non recenser*/
+  /*FIXME: border radius 12px non recenser*/
   border-radius: 12px;
-  /*FIXME: non recenser*/
-  padding: 4px;
+  padding: var(--spacing-xxx-small);
 }
 
 .number {
@@ -93,7 +92,6 @@ section#presentation article {
   justify-content: center;
 }
 section#presentation article:first-of-type {
-  /*FIXME: changer le 4px par une variable*/
   gap: var(--spacing-large);
 }
 section#presentation article:first-of-type div:first-of-type p {
@@ -301,8 +299,7 @@ section#finder > article:last-of-type .searchBar .popular p {
   color: var(--color-content-secondary);
 }
 section#finder > article:last-of-type .searchBar .popular ul {
-  /*FIXME: 4px non recenser*/
-  gap: 4px;
+  gap: var(--spacing-xxx-small);
   display: flex;
   flex-wrap: wrap;
 }
@@ -442,7 +439,6 @@ section#families > article#families-list {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /*FIXME: non recenser*/
 }
 section#families > article#families-list .column {
   width: 33%;

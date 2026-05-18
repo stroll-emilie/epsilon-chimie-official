@@ -15,7 +15,6 @@ section{
             article{
                 width: 45%;
                 gap: var(--spacing-large);
-                /*FIXME: Non recenser*/
                 p{
                     @include text-style;
                     font-size: var(--font-size-body-lg);
@@ -57,8 +56,7 @@ section{
             width: 30%;
             gap: var(--spacing-medium);
             >div{
-                /*FIXME: non renceser*/
-                gap: 4px;
+                gap: var(--spacing-xxx-small);
             }
             p{
                 @include text-style;

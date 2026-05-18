@@ -23,8 +23,7 @@ section{
             max-width: 55%;
 
             article{
-                /*FIXME: non recenser*/
-                gap: 4px;
+                gap: var(--spacing-xxx-small);
             }
             nav{
                 display: flex;

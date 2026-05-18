@@ -17,7 +17,6 @@ section#aboutLab > div {
 section#aboutLab > div article {
   width: 45%;
   gap: var(--spacing-large);
-  /*FIXME: Non recenser*/
 }
 section#aboutLab > div article p {
   font-family: var(--font-family-body);
@@ -77,8 +76,7 @@ section#quality article {
   gap: var(--spacing-medium);
 }
 section#quality article > div {
-  /*FIXME: non renceser*/
-  gap: 4px;
+  gap: var(--spacing-xxx-small);
 }
 section#quality article p {
   font-family: var(--font-family-body);

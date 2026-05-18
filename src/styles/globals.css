@@ -120,6 +120,7 @@
 
   /* ── Espacement ───────────────────────────────────────── */
   --spacing-none:      0px;
+  --spacing-xxx-small: 4px;
   --spacing-xx-small:  8px;
   --spacing-x-small:   12px;
   --spacing-medium:    16px;
