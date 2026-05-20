@@ -1,4 +1,6 @@
 import './catalogue.css';
+import { useState, useEffect } from 'react';
+import Papa from "papaparse";
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
@@ -6,7 +8,52 @@ import logo from '../../assets/images/03076.png'
 
 
 
+
 function Catalogue() {
+
+    const [products, setProducts] = useState([]);
+    const [search, setSearch] = useState("");
+
+    // Charger le CSV
+    useEffect(() => {
+        fetch(`${import.meta.env.BASE_URL}Produits.csv`)
+            .then(res => res.arrayBuffer())  
+            .then(buffer => {
+                const decoder = new TextDecoder("windows-1252");  
+                const csv = decoder.decode(buffer);
+                
+                const lines = csv.split("\n").filter(Boolean);
+                const headers = lines[0]
+                    .split(";")
+                    .map(h => h.trim().replace(/\r/g, ""));        
+                const data = lines.slice(1).map(line => {
+                    const values = line.split(";");
+                    return headers.reduce((obj, header, i) => {
+                        obj[header.trim()] = values[i]?.trim().replace(/\r/g, "") ?? "";
+                        return obj;
+                    }, {});
+                });
+
+                const grouped = {};
+                data.forEach(row => {
+                    const ref = row["Réf EPSILON"];
+                    if (!ref) return;
+
+                    if(!grouped[ref] && row["NomPourTri"]) {
+                        grouped[ref] = row;
+                    }
+                })
+                setProducts(Object.values(grouped));
+            });
+    }, []);
+
+    // filtrage par recherche
+    const filtered = products.filter(p =>
+        Object.values(p).some(val => 
+            String(val).toLowerCase().includes(search.toLowerCase())
+        )
+    );
+
     return (
     <>
         <section id="searchInCatalogue">
@@ -24,7 +71,12 @@ function Catalogue() {
             <article>
                 <div>
                     <SearchIcon/>
-                    <input type="text" placeholder="Search by name, CAS number, MFCD, formula or synonym..." />
+                    <input 
+                        type="text" 
+                        placeholder="Search by name, CAS number, MFCD, formula or synonym..." 
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                    />
                 </div>
 
                 <p>| ctrl + K</p>
@@ -49,11 +101,11 @@ function Catalogue() {
 
             <article id="product">
                 <div id="sort">
-                    <p className="number">18 RESULTS</p>
+                    <p className="number">{filtered.length} RESULTS</p>
                     <div>
                         <p>SORT</p>
-                        <select name="sort" id="sort">
-                            <option value="1" selected>Name (A-Z)</option>
+                        <select defaultValue="1">
+                            <option value="1" >Name (A-Z)</option>
                             <option value="2" >Name (Z-A)</option>
                         </select>
                     </div>
@@ -61,306 +113,34 @@ function Catalogue() {
 
 
                 <div id="product-container">
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
+                    {filtered.map((product, index) => (
+                        <article>
+                            <div className='img-container'>
+                                <div>
+                                    <div className="in-stock">In stock</div>
+                                    <div className='purity'>90%</div>
                                 </div>
+                                <img src={logo} alt="" />
                             </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
 
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
+                            <div className='txt-container'>
+                                <div>
+                                    <div className="number">EC-{product["Réf EPSILON"]}</div>
+                                    <p className='nomenclature'>{product["Nom"]}</p>
+                                    <div className="number">
+                                        <p>CAS {product["CAS"]}</p>
+                                        <p>MW {product["Masse molaire"]}</p>
+                                    </div>
                                 </div>
+                                <ul>
+                                    <li>Phosphoranes</li>
+                                    <li>Analytical</li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div className='img-container'>
-                            <div>
-                                <div className="in-stock">In stock</div>
-                                <div className='purity'>90%</div>
-                            </div>
-                            <img src={logo} alt="" />
-                        </div>
-
-                        <div className='txt-container'>
-                            <div>
-                                <div className="number">EC-02091</div>
-                                <p className='nomenclature'>Benzoylmethylene triphenolphosphorane</p>
-                                <div className="number">
-                                    <p>CAS 859-65-4</p>
-                                    <p>MW 380.42</p>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>Phosphoranes</li>
-                                <li>Analytical</li>
-                            </ul>
-                        </div>
-                    </article>
+                        </article>
+                    ))}
                     
+
                 </div>
             </article>
         </section>
