@@ -1,4 +1,4 @@
-@mixin btn-base(){
+@mixin btn-base{
     border: 0.5px solid var(--color-border-accent);
     border-radius: var(--border-radius-xxl);
     padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -14,7 +14,7 @@
     }
 }
 
-@mixin btn-blue(){
+@mixin btn-blue{
     @include btn-base();
     background-color: var(--color-bg-primary);
     color: var(--color-content-on-primary);
@@ -26,7 +26,7 @@
     }
 }
 
-@mixin btn-grey(){
+@mixin btn-grey{
     @include btn-base();
     color: var(--color-content-primary);
     border-color: var(--color-border-reversed);
@@ -39,7 +39,7 @@
     }
 }
 
-@mixin btn-white(){
+@mixin btn-white{
     box-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
     border-radius: var(--border-radius-xxl);
     padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -53,7 +53,7 @@
     }
 }
 
-@mixin btn-border-white(){
+@mixin btn-border-white{
     @include btn-base;
     border: 1px solid var(--color-border-subtle);
     color: var(--color-border-subtle);
@@ -163,7 +163,7 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 
-@mixin stat(){
+@mixin stat{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -185,7 +185,7 @@
     }
 }
 
-@mixin select(){
+@mixin select{
     display: flex;
     padding: var(--spacing-x-small) var(--spacing-x-small) var(--spacing-x-small) var(--spacing-medium);
     border-radius: var(--border-radius-lg);
@@ -198,7 +198,7 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 
-@mixin text-style(){
+@mixin text-style{
     font-family: var(--font-family-body);
     font-size: var(--font-size-body-md);
     line-height: 136%;
@@ -206,7 +206,7 @@
     color: var(--color-content-secondary);
 }
 
-@mixin legend-marker(){
+@mixin legend-marker{
     gap: 2px;
     display: flex;
     flex-direction: row;
@@ -220,5 +220,25 @@
         height: 2px;
         background-color: var(--color-content-accent);
         transform: rotate(45deg);
+    }
+}
+
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+
+@mixin filter-element{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xxx-small);
+    padding: var(--spacing-xxx-small) var(--spacing-xx-small);
+    border-radius: var(--border-radius-md);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-md);
+    line-height: 136%;
+    letter-spacing: -1%;
+    color: #000;
+    &:active{
+        background-color: rgba(159, 159, 210, .4);
+        color: var(--color-content-accent);
     }
 }

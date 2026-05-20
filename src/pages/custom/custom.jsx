@@ -9,8 +9,8 @@ function Custom() {
                 <div className='path'>HOME / <span>CUSTOM SYNTHESIS</span></div>
                 <article>
                     <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
-                    <h1>A french laboratory serving worldwide industry since 1995.</h1>
-                    <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemicals for research and industry. Our founders trained in organometallic chemistry lab of the University of Brest; our product range still reflects that heritage.</p>
+                    <h1>Synthesise a batch quickly, with your budget.</h1>
+                    <p>We offer on-demand synthesis of non-commercial products for research. Our team is polyvalent and attentive to customer needs, so we can address challenges quickly.</p>
                 </article>
                 <nav>
                     <a href="">Start a request</a>

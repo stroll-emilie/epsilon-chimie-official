@@ -4,6 +4,8 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 section#searchInCatalogue {
   display: flex;
   flex-direction: column;
@@ -36,6 +38,7 @@ section#searchInCatalogue > article:first-of-type div:last-of-type a {
   display: flex;
   align-items: flex-end;
   align-self: flex-end;
+  gap: var(--spacing-xx-small);
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -66,8 +69,10 @@ section#searchInCatalogue > article:last-of-type {
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-medium) var(--spacing-xx-small);
 }
-section#searchInCatalogue > article:last-of-type > div {
+section#searchInCatalogue > article:last-of-type p {
   color: var(--color-content-tertiary);
+}
+section#searchInCatalogue > article:last-of-type > div {
   gap: var(--spacing-xx-small);
   width: 90%;
   display: flex;
@@ -79,6 +84,8 @@ section#searchInCatalogue > article:last-of-type > div input {
   outline-style: none;
 }
 section#content-catalogue {
+  display: flex;
+  align-items: flex-start;
   background-color: var(--color-surface-raised);
   width: 100%;
 }
@@ -86,10 +93,36 @@ section#content-catalogue article {
   display: flex;
   justify-content: space-between;
 }
+section#content-catalogue article#filtre {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: var(--spacing-x-large);
+}
+section#content-catalogue article#filtre > .number {
+  border-bottom: 0.5px solid var(--color-border-reversed);
+}
+section#content-catalogue article#filtre > div .filter-elem {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-xxx-small);
+  padding: var(--spacing-xxx-small) var(--spacing-xx-small);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: #000;
+}
+section#content-catalogue article#filtre > div .filter-elem:active {
+  background-color: rgba(159, 159, 210, 0.4);
+  color: var(--color-content-accent);
+}
 section#content-catalogue article#product {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 80%;
+  gap: var(--spacing-x-large);
 }
 section#content-catalogue article#product div#sort {
   display: flex;
