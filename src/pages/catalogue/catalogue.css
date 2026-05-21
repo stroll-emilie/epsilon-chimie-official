@@ -155,9 +155,8 @@ section#content-catalogue article#product div#product-container {
 section#content-catalogue article#product div#product-container article {
   display: flex;
   flex-direction: column;
-  width: 17%;
+  width: 18%;
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-  gap: var(--spacing-medium);
   background-color: var(--color-bg-default);
 }
 section#content-catalogue article#product div#product-container article div.img-container {
@@ -168,7 +167,7 @@ section#content-catalogue article#product div#product-container article div.img-
   display: flex;
   width: 100%;
   padding: 8px;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 section#content-catalogue article#product div#product-container article div.img-container > div > div.in-stock {
   display: flex;
@@ -252,8 +251,6 @@ section#content-catalogue article#product div#product-container article div.txt-
 section#content-catalogue article#product div#product-container article div.txt-container ul li {
   width: -moz-fit-content;
   width: fit-content;
-}
-section#content-catalogue article#product div#product-container article div.txt-container ul li:first-of-type {
   display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
@@ -261,26 +258,6 @@ section#content-catalogue article#product div#product-container article div.txt-
   letter-spacing: -1%;
   padding: 4px var(--spacing-xx-small);
   gap: 4px;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  font-size: 8px;
-  height: 12px;
-  background-color: var(--color-state-bg-reversed-hover);
-  color: var(--color-content-accent);
-  border-radius: var(--border-radius-full);
-  background-color: var(--color-bg-default);
-  color: var(--color-content-secondary);
-}
-section#content-catalogue article#product div#product-container article div.txt-container ul li:last-of-type {
-  display: flex;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-sm);
-  line-height: 136%;
-  letter-spacing: -1%;
-  padding: 4px var(--spacing-xx-small);
-  gap: 4px;
-  width: -moz-fit-content;
   width: fit-content;
   align-items: center;
   font-size: 8px;

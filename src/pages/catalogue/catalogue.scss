@@ -113,19 +113,20 @@ section{
                         article{
                             display: flex;
                             flex-direction: column;
-                            width: 17%;
+                            width: 18%;
                             border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-                            gap: var(--spacing-medium);
                             background-color: var(--color-bg-default);
                             div{
                                 &.img-container{
                                     position: relative;
+
                                     > div{
                                         position: absolute;
                                         display: flex;
                                         width: 100%;
                                         padding: 8px;
-                                        justify-content: space-between;
+                                        justify-content: flex-end;
+
                                         >div{
                                             &.in-stock{
                                                 @include chips-large-success-rounded;
@@ -174,12 +175,7 @@ section{
                                         gap: 4px;
                                         li{
                                             width: fit-content;
-                                            &:first-of-type{
-                                                @include chips-small-neutral-rounded;
-                                            }
-                                            &:last-of-type{
-                                                @include chips-small-primary-rounded;
-                                            }
+                                            @include chips-small-primary-rounded;
                                         }
                                     }
                                     
