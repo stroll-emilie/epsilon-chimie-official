@@ -49,8 +49,6 @@ function Catalogue() {
 
                 const csv = decoder.decode(buffer);
                 
-                const lines = csv.split("\n").filter(Boolean);
-
                 const result = Papa.parse(csv, {
                     delimiter: ";",
                     header: true,
