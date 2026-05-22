@@ -9,7 +9,10 @@ import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
+import { TrendUpIcon } from '../../assets/icons/trendUpicon';
+import { TrendDownIcon } from '../../assets/icons/trendDownIcon';
 import vide from '../../assets/images/mollecules/vide.png'
+
 
 const images = import.meta.glob('../../assets/images/mollecules/*.png', { eager: true });
 
@@ -43,7 +46,7 @@ function Catalogue() {
 
     // Charger le CSV
     useEffect(() => {
-        fetch(`${import.meta.env.BASE_URL}test.csv`)
+        fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
             .then(res => res.arrayBuffer())  
             .then(buffer => {
 
@@ -88,19 +91,31 @@ function Catalogue() {
         .filter(p => Object.values(p).some(val => String(val).toLowerCase().includes(search.toLowerCase())))
         // filtre par selection de filtre
         .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
-        // par trie
+        // par tri
         .sort((a,b) => {
             switch(sortOrder) {
                 case "nameAsc" :    return a["NomPourTri"].localeCompare(b["NomPourTri"]);
                 case "nameDesc" :   return b["NomPourTri"].localeCompare(a["NomPourTri"]);
                 case "casAsc":      return a["CAS"].localeCompare(b["CAS"]);
                 case "casDesc":     return b["CAS"].localeCompare(a["CAS"]);
-                case "purityAsc":   return (parseFloat(b["Purity"]) || 0) - (parseFloat(a["Purity"]) || 0);
-                case "purityDesc":  return (parseFloat(a["Purity"]) || 0) - (parseFloat(b["Purity"]) || 0);
-                default: return 0;
+                case "purityAsc": {
+                    
+                    const pA = parseFloat(a["Purity"]);
+                    const pB = parseFloat(b["Purity"]);
+                    if (isNaN(pA)) return 1;   // a va en bas
+                    if (isNaN(pB)) return -1;  // b va en bas
+                    return pB - pA;
+                }
+                case "purityDesc": {
+                    const pA = parseFloat(a["Purity"]);
+                    const pB = parseFloat(b["Purity"]);
+                    if (isNaN(pA)) return 1;   // a va en bas
+                    if (isNaN(pB)) return -1;  // b va en bas
+                    return pA - pB;
+                    
+                }default: return 0;
             }
         });
-        console.log(sortOrder, filtered.slice(0, 5).map(p => p["Purity"]))
 
     // compteur de produit par famille de molécule
     const countFamily = {
@@ -169,10 +184,10 @@ function Catalogue() {
                         <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
                             <option value="nameAsc" >Name (A➔Z)</option>
                             <option value="nameDesc" >Name (Z➔A)</option>
-                            <option value="casAsc" >CAS (A➔Z)</option>
-                            <option value="casDesc" >CAS (Z➔A)</option>
-                            <option value="purityAsc" >Purity (&gt;)</option>
-                            <option value="purityDesc" >Purity (&lt;)</option>
+                            <option value="casAsc" >CAS (0/9)</option>
+                            <option value="casDesc" >CAS (9/0)</option>
+                            <option value="purityAsc" >Purity (↗)</option>
+                            <option value="purityDesc" >Purity (↘)</option>
                         </select>
                     </div>
                 </div>
