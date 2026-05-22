@@ -1,10 +1,14 @@
 import './catalogue.css';
 import { useState, useEffect } from 'react';
 import Papa from "papaparse";
+
+import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
+
+
+
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
-
 import vide from '../../assets/images/mollecules/vide.png'
 
 const images = import.meta.glob('../../assets/images/mollecules/*.png', { eager: true });
@@ -27,21 +31,23 @@ const imageMap = Object.fromEntries(
         return [ref, module.default];
     })
 );
-console.log(Object.keys(images).slice(0, 5));
 
 
 function Catalogue() {
 
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState("");
+    const [selectedFamily, setSelectedFamily] = useState("All");
+    const [sortOrder, setSortOrder] = useState("nameAsc");
+
 
     // Charger le CSV
     useEffect(() => {
-        fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
+        fetch(`${import.meta.env.BASE_URL}test.csv`)
             .then(res => res.arrayBuffer())  
             .then(buffer => {
 
-                const decoder = new TextDecoder("windows-1252"); 
+                const decoder = new TextDecoder("utf-8"); 
 
                 const csv = decoder.decode(buffer);
                 
@@ -76,12 +82,36 @@ function Catalogue() {
             });
     }, []);
 
-    // filtrage par recherche
-    const filtered = products.filter(p =>
-        Object.values(p).some(val => 
-            String(val).toLowerCase().includes(search.toLowerCase())
-        )
-    );
+
+    const filtered = products
+        // filtre par recherche
+        .filter(p => Object.values(p).some(val => String(val).toLowerCase().includes(search.toLowerCase())))
+        // filtre par selection de filtre
+        .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
+        // par trie
+        .sort((a,b) => {
+            switch(sortOrder) {
+                case "nameAsc" :    return a["NomPourTri"].localeCompare(b["NomPourTri"]);
+                case "nameDesc" :   return b["NomPourTri"].localeCompare(a["NomPourTri"]);
+                case "casAsc":      return a["CAS"].localeCompare(b["CAS"]);
+                case "casDesc":     return b["CAS"].localeCompare(a["CAS"]);
+                case "purityAsc":   return (parseFloat(b["Purity"]) || 0) - (parseFloat(a["Purity"]) || 0);
+                case "purityDesc":  return (parseFloat(a["Purity"]) || 0) - (parseFloat(b["Purity"]) || 0);
+                default: return 0;
+            }
+        });
+        console.log(sortOrder, filtered.slice(0, 5).map(p => p["Purity"]))
+
+    // compteur de produit par famille de molécule
+    const countFamily = {
+        "All": products.length,
+        "Phosphonic Acids": products.filter(p => getMoleculeFamily(p) === "Phosphonic Acids").length,
+        "Phosphonate": products.filter(p => getMoleculeFamily(p) === "Phosphonate").length,
+        "Phosphonium Salts": products.filter(p => getMoleculeFamily(p) === "Phosphonium Salts").length,
+        "Phosphorane": products.filter(p => getMoleculeFamily(p) === "Phosphorane").length,
+        "Phosphine": products.filter(p => getMoleculeFamily(p) === "Phosphine").length,
+        "Chemical Intermediate": products.filter(p => getMoleculeFamily(p) === "Chemical Intermediate").length,
+    };
 
     return (
     <>
@@ -117,13 +147,16 @@ function Catalogue() {
             <article id="filtre">
                 <p className='number'>CHEMICAL FAMILY</p>
                 <div>
-                    <p className='filter-elem'>All<span>{filtered.length}</span></p>
-                    <p className='filter-elem'>Phosphonic Acids<span>3</span></p>
-                    <p className='filter-elem'>Phosphonates<span>6</span></p>
-                    <p className='filter-elem'>Phosphonium Salts<span>2</span></p>
-                    <p className='filter-elem'>Phosphoranes<span>2</span></p>
-                    <p className='filter-elem'>Phosphines<span>2</span></p>
-                    <p className='filter-elem'>Chemical Intermediates<span>2</span></p>
+                    {Object.entries(countFamily).map(([family,count]) => (
+                        <p
+                            key={family}
+                            className={`filter-elem ${selectedFamily === family ? "active" : ""}`}
+                            onClick={() => setSelectedFamily(family)}
+                        >
+                            {family}<span>{count}</span>
+                        </p>
+                    ))}
+
 
                 </div>
             </article>
@@ -133,9 +166,13 @@ function Catalogue() {
                     <p className="number">{filtered.length} RESULTS</p>
                     <div>
                         <p>SORT</p>
-                        <select defaultValue="1">
-                            <option value="1" >Name (A-Z)</option>
-                            <option value="2" >Name (Z-A)</option>
+                        <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+                            <option value="nameAsc" >Name (A➔Z)</option>
+                            <option value="nameDesc" >Name (Z➔A)</option>
+                            <option value="casAsc" >CAS (A➔Z)</option>
+                            <option value="casDesc" >CAS (Z➔A)</option>
+                            <option value="purityAsc" >Purity (&gt;)</option>
+                            <option value="purityDesc" >Purity (&lt;)</option>
                         </select>
                     </div>
                 </div>
@@ -168,7 +205,7 @@ function Catalogue() {
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>Phosphoranes</li>
+                                        <li>{getMoleculeFamily(product)}</li>
                                     </ul>
                                 </div>
                             </article>

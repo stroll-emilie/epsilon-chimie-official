@@ -237,7 +237,7 @@
     line-height: 136%;
     letter-spacing: -1%;
     color: #000;
-    &:active{
+    &.active{
         background-color: rgba(159, 159, 210, .4);
         color: var(--color-content-accent);
     }

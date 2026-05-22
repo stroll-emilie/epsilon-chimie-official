@@ -102,6 +102,9 @@ section{
                             gap: var(--spacing-medium);
                             select{
                                 @include select;
+                                &:focus{
+                                    outline-style: none;
+                                }
                             }
                         }
                     }
