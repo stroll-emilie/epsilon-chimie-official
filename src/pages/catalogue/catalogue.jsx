@@ -51,8 +51,6 @@ function Catalogue() {
                 
                 const lines = csv.split("\n").filter(Boolean);
 
-                const headers = lines[0].split(";").map(h => h.trim().replace(/\r/g, ""));
-
                 const result = Papa.parse(csv, {
                     delimiter: ";",
                     header: true,
@@ -158,13 +156,13 @@ function Catalogue() {
                 <p className='number'>CHEMICAL FAMILY</p>
                 <div>
                     {Object.entries(countFamily).map(([family,count]) => (
-                        <p
+                        <button
                             key={family}
                             className={`filter-elem ${selectedFamily === family ? "active" : ""}`}
                             onClick={() => setSelectedFamily(family)}
                         >
                             {family}<span>{count}</span>
-                        </p>
+                        </button>
                     ))}
 
 

@@ -103,6 +103,7 @@ section#content-catalogue article#filtre > .number {
   border-bottom: 0.5px solid var(--color-border-reversed);
 }
 section#content-catalogue article#filtre > div .filter-elem {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: var(--spacing-xxx-small);

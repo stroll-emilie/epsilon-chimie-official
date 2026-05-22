@@ -78,6 +78,7 @@ section{
                 }
                 >div{
                     .filter-elem{
+                        width: 100%;
                         @include filter-element;
                     }
                 }
