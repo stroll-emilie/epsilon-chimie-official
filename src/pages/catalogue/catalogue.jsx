@@ -4,13 +4,9 @@ import Papa from "papaparse";
 
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
-
-
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
-import { TrendUpIcon } from '../../assets/icons/trendUpicon';
-import { TrendDownIcon } from '../../assets/icons/trendDownIcon';
 import vide from '../../assets/images/mollecules/vide.png'
 
 
@@ -44,7 +40,6 @@ function Catalogue() {
     const [sortOrder, setSortOrder] = useState("nameAsc");
 
 
-    // Charger le CSV
     useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
             .then(res => res.arrayBuffer())  
@@ -100,17 +95,17 @@ function Catalogue() {
                 case "casDesc":     return b["CAS"].localeCompare(a["CAS"]);
                 case "purityAsc": {
                     
-                    const pA = parseFloat(a["Purity"]);
-                    const pB = parseFloat(b["Purity"]);
-                    if (isNaN(pA)) return 1;   // a va en bas
-                    if (isNaN(pB)) return -1;  // b va en bas
+                    const pA = Number.parseFloat(a["Purity"]);
+                    const pB = Number.parseFloat(b["Purity"]);
+                    if (Number.isNaN(pA)) return 1;   // a va en bas
+                    if (Number.isNaN(pB)) return -1;  // b va en bas
                     return pB - pA;
                 }
                 case "purityDesc": {
-                    const pA = parseFloat(a["Purity"]);
-                    const pB = parseFloat(b["Purity"]);
-                    if (isNaN(pA)) return 1;   // a va en bas
-                    if (isNaN(pB)) return -1;  // b va en bas
+                    const pA = Number.parseFloat(a["Purity"]);
+                    const pB = Number.parseFloat(b["Purity"]);
+                    if (Number.isNaN(pA)) return 1;   // a va en bas
+                    if (Number.isNaN(pB)) return -1;  // b va en bas
                     return pA - pB;
                     
                 }default: return 0;
