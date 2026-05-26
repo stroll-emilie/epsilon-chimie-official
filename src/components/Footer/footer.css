@@ -1,6 +1,6 @@
 footer {
   background-color: var(--color-bg-reversed);
-  color: white;
+  color: var(--color-content-reversed-primary);
   width: 100%;
   padding: var(--spacing-x-large);
   display: flex;
@@ -42,7 +42,7 @@ footer section:first-child article:first-child {
 }
 footer section:first-child article:first-child div:last-child {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-xx-small);
   flex-direction: column;
 }
 footer section:first-child article:first-child h4 {

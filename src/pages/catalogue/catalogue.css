@@ -1,8 +1,16 @@
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 section#searchInCatalogue {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /*FIXME: Non recenser*/
+  /*FIXME: gap 20px Non recenser*/
   gap: 20px;
   border-bottom: 0.5px solid var(--color-border-reversed);
 }
@@ -30,6 +38,7 @@ section#searchInCatalogue > article:first-of-type div:last-of-type a {
   display: flex;
   align-items: flex-end;
   align-self: flex-end;
+  gap: var(--spacing-xx-small);
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -60,6 +69,9 @@ section#searchInCatalogue > article:last-of-type {
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-medium) var(--spacing-xx-small);
 }
+section#searchInCatalogue > article:last-of-type p {
+  color: var(--color-content-tertiary);
+}
 section#searchInCatalogue > article:last-of-type > div {
   gap: var(--spacing-xx-small);
   width: 90%;
@@ -70,4 +82,191 @@ section#searchInCatalogue > article:last-of-type > div {
 section#searchInCatalogue > article:last-of-type > div input {
   width: 100%;
   outline-style: none;
+}
+section#content-catalogue {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--color-surface-raised);
+  width: 100%;
+}
+section#content-catalogue article {
+  display: flex;
+  justify-content: space-between;
+}
+section#content-catalogue article#filtre {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: var(--spacing-x-large);
+}
+section#content-catalogue article#filtre > .number {
+  border-bottom: 0.5px solid var(--color-border-reversed);
+}
+section#content-catalogue article#filtre > div .filter-elem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-xxx-small);
+  padding: var(--spacing-xxx-small) var(--spacing-xx-small);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  line-height: 136%;
+  letter-spacing: -1%;
+  color: #000;
+}
+section#content-catalogue article#filtre > div .filter-elem.active {
+  background-color: rgba(159, 159, 210, 0.4);
+  color: var(--color-content-accent);
+}
+section#content-catalogue article#product {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: var(--spacing-x-large);
+}
+section#content-catalogue article#product div#sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#content-catalogue article#product div#sort p {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-content-primary);
+}
+section#content-catalogue article#product div#sort div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+section#content-catalogue article#product div#sort div select {
+  display: flex;
+  padding: var(--spacing-x-small) var(--spacing-x-small) var(--spacing-x-small) var(--spacing-medium);
+  border-radius: var(--border-radius-lg);
+  gap: var(--spacing-xx-small);
+  background-color: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  width: 250px;
+}
+section#content-catalogue article#product div#sort div select:focus {
+  outline-style: none;
+}
+section#content-catalogue article#product div#product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#product-container article {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  background-color: var(--color-bg-default);
+}
+section#content-catalogue article#product div#product-container article div.img-container {
+  position: relative;
+}
+section#content-catalogue article#product div#product-container article div.img-container > div {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  justify-content: flex-end;
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.in-stock {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-bg-success);
+  color: var(--color-content-success);
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.out-stock {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-bg-danger);
+  color: var(--color-content-danger);
+}
+section#content-catalogue article#product div#product-container article div.img-container > div > div.purity {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-default);
+  background-color: var(--color-bg-default);
+  color: var(--color-content-secondary);
+}
+section#content-catalogue article#product div#product-container article div.txt-container {
+  border: 1px solid #D9D9D9;
+  border-top: none;
+  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+  padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
+}
+section#content-catalogue article#product div#product-container article div.txt-container div .nomenclature {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 136%;
+}
+section#content-catalogue article#product div#product-container article div.txt-container div .number:first-of-type {
+  color: var(--color-content-accent);
+}
+section#content-catalogue article#product div#product-container article div.txt-container div > div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-content-tertiary);
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+section#content-catalogue article#product div#product-container article div.txt-container ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: fit-content;
+  align-items: center;
+  font-size: 8px;
+  height: 12px;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
 }/*# sourceMappingURL=catalogue.css.map */

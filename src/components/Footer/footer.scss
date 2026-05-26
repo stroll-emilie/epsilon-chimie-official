@@ -1,7 +1,6 @@
 footer{
     background-color: var(--color-bg-reversed);
-    // FIXME: changer////////
-    color: white; 
+    color: var(--color-content-reversed-primary); 
     width: 100%;
     padding: var(--spacing-x-large);
     display: flex;
@@ -44,9 +43,8 @@ footer{
             width: 26%;
             color: var(--color-content-reversed-primary);
             div:last-child{
-                // FIXME: 8px n'est pas dans globals.css
                 display: flex;
-                gap: 8px;
+                gap: var(--spacing-xx-small);
                 flex-direction: column;
             }
 
@@ -81,7 +79,6 @@ footer{
         font-family: var(--font-family-heading);
         font-weight: var(--font-weight-light);
         font-size: var(--font-size-body-sm);
-        // FIXME: vérifier le 15px////////
         line-height: 15px;
         letter-spacing: -1%;
         text-transform: uppercase;  

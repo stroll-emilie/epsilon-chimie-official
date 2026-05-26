@@ -5,9 +5,9 @@ section{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /*FIXME: Non recenser*/
+        /*FIXME: gap 20px Non recenser*/
         gap: 20px;
-        border-bottom: .5px solid var(--color-border-reversed);
+        border-bottom: 0.5px solid var(--color-border-reversed);
         > article{
             h2{
                 font-size: var(--font-size-h1);
@@ -28,6 +28,7 @@ section{
                             display: flex;
                             align-items: flex-end;
                             align-self: flex-end;
+                            gap: var(--spacing-xx-small);
                             @include btn-grey;
                         }
                     }
@@ -37,7 +38,11 @@ section{
                 display: flex;
                 border: 1px solid var(--color-border-reversed);
                 border-radius: var(--border-radius-xxl);
-                padding: var(--spacing-medium) var(--spacing-xx-small);
+                padding: var(--spacing-medium) var(--spacing-xx-small);  
+                p{
+                    color: var(--color-content-tertiary);
+
+                }
                 >div{
                     gap: var(--spacing-xx-small);
                     width: 90%;
@@ -48,11 +53,142 @@ section{
                         width: 100%;
                         outline-style: none;
                     }
+                    
                 }
             }
         }
     }
-    &#content-catalogue{
 
+    
+    &#content-catalogue{
+        display: flex;
+        align-items: flex-start;
+        background-color: var(--color-surface-raised);
+        width: 100%;
+        article{
+            display: flex;
+            justify-content: space-between;
+            &#filtre{
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                padding: var(--spacing-x-large);
+                > .number{
+                    border-bottom: .5px solid var(--color-border-reversed);
+                }
+                >div{
+                    .filter-elem{
+                        width: 100%;
+                        @include filter-element;
+                    }
+                }
+            }
+            &#product{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                gap: var(--spacing-x-large);
+                div{
+                    &#sort{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p{
+                            font-size: var(--font-size-body-sm);
+                            color: var(--color-content-primary)
+                        }
+                        div{
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-medium);
+                            select{
+                                @include select;
+                                &:focus{
+                                    outline-style: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &#product-container{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: var(--spacing-xx-small);
+                        article{
+                            display: flex;
+                            flex-direction: column;
+                            width: 18%;
+                            border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+                            background-color: var(--color-bg-default);
+                            div{
+                                &.img-container{
+                                    position: relative;
+
+                                    > div{
+                                        position: absolute;
+                                        display: flex;
+                                        width: 100%;
+                                        padding: 8px;
+                                        justify-content: flex-end;
+
+                                        >div{
+                                            &.in-stock{
+                                                @include chips-large-success-rounded;
+                                            }
+                                            &.out-stock{
+                                                @include chips-large-danger-rounded;
+                                            }
+                                            &.purity{
+                                                @include chips-large-neutral-square;
+                                            }
+                                        }
+                                    }
+                                    
+
+                                }
+                                &.txt-container{
+                                    border: 1px solid #D9D9D9;
+                                    border-top: none;
+                                    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+                                    padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
+                                    div{
+                                        .nomenclature{
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            font-family: var(--font-family-heading);
+                                            font-size: var(--font-size-body-sm);
+                                            font-weight: var(--font-weight-bold);
+                                            line-height: 136%;
+                                        }
+                                        
+                                        .number{
+                                            &:first-of-type{
+                                                color: var(--color-content-accent)
+                                            }
+                                        }
+                                        > div{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            color: var(--color-content-tertiary);
+                                        }
+                                    }
+                                    ul{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 4px;
+                                        li{
+                                            width: fit-content;
+                                            @include chips-small-primary-rounded;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
