@@ -12,6 +12,17 @@ import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 
 // Families
+import HWE from '../../assets/images/schema/molecule-hwe.png'
+import Phosphonic from '../../assets/images/schema/family-phosphonic-acid.png';
+import Phosphonate from '../../assets/images/schema/family-phosphonate.png';
+import Phosphorane from '../../assets/images/schema/family-phosphorane.png';
+import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.png';
+import Phosphines from '../../assets/images/schema/family-phosphine.png';
+import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.png';
+
+
+
+
 
 function Home() {
     
@@ -41,8 +52,9 @@ function Home() {
             </article>
 
             <article>
-
-                <img src="" alt="" />
+                <div>
+                    <img src={HWE} alt="" />
+                </div>
                 <ul>
                     <li><span>1 000+</span>REFERENCES</li>
                     <li><span>30+ YRS</span>OF EXPERIENCE</li>
@@ -199,51 +211,25 @@ function Home() {
                 <div className='column'>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphonic} alt="Phosphonic schema" />
                         </div>
                         <span>
                             <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
+                            <h3>Phosphonic Acids</h3>
                             <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphorane} alt="Phosphorane schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
-                        </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
-                    </div>
-                </div>
-
-                <div className='column'>
-                    <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
-                        </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
-                    </div>
-
-                    <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 04</div>
+                            <h3>Phosphoranes</h3>
+                            <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
@@ -251,25 +237,51 @@ function Home() {
 
                 <div className='column'>
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphonate} alt="Phosphonate schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 02</div>
+                            <h3>Phosphonates</h3>
+                            <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphines} alt="Phosphines schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 05</div>
+                            <h3>Phosphines</h3>
+                            <p>Phosphites, phosphine oxides and ligand building blocks.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+                </div>
+
+                <div className='column'>
+                    <div className='familie-element'>
+                        <div>
+                            <img src={Phosphonium} alt="Phosphonium schema" />
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 03</div>
+                            <h3>Phosphonium Salts</h3>
+                            <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+
+                    <div className='familie-element'>
+                        <div>
+                            <img src={Intermeidates} alt="Intermeidates schema" />
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 06</div>
+                            <h3>Chemical Intermediates</h3>
+                            <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>

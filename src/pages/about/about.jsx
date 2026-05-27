@@ -1,4 +1,6 @@
 import './about.css'
+import Batiment from '../../assets/images/batiment4.jpg'
+
 
 function About() {
     return (
@@ -12,7 +14,7 @@ function About() {
                     <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemicals for research and industry. Our founders trained in organometallic chemistry lab of the University of Brest; our product range still reflects that heritage.</p>
                 </article>
                 <div>
-                    <img src="" alt="" />
+                    <img src={Batiment} alt="" />
                 </div>
             </div>
         </section>
