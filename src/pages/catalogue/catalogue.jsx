@@ -1,5 +1,7 @@
 import './catalogue.css';
+
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Papa from "papaparse";
 
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
@@ -39,6 +41,7 @@ function Catalogue() {
     const [selectedFamily, setSelectedFamily] = useState("All");
     const [sortOrder, setSortOrder] = useState("nameAsc");
 
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
@@ -126,7 +129,7 @@ function Catalogue() {
             <article>
                 <div>
                     <h2>Product catalogue</h2>
-                    <p>18 of 1 000+ references. Every batch ships with a Certificate of Analysis.</p>
+                    <p>{filtered.length} of 1 000+ references. Every batch ships with a Certificate of Analysis.</p>
                 </div>
                 <div>
                     <a href=""><DownloadPDFIcon/>Catalogue (PDF)</a>
@@ -193,7 +196,7 @@ function Catalogue() {
                             ?? vide;
 
                         return (
-                            <article key={ref}>
+                            <article key={ref} onClick={() => navigate(`/product/${ref}`)} style={{ cursor: 'pointer' }}>
                                 <div className='img-container'>
                                     <div>
                                         <div className='purity'>{product["Purity"] || "-"} </div>

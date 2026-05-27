@@ -119,6 +119,9 @@ section#content-catalogue article#filtre > div .filter-elem.active {
   background-color: rgba(159, 159, 210, 0.4);
   color: var(--color-content-accent);
 }
+section#content-catalogue article#filtre > div .filter-elem:hover {
+  cursor: pointer;
+}
 section#content-catalogue article#product {
   display: flex;
   flex-direction: column;
@@ -147,6 +150,9 @@ section#content-catalogue article#product div#sort div select {
   background-color: var(--color-bg-default);
   border: 1px solid var(--color-border-default);
   width: 250px;
+}
+section#content-catalogue article#product div#sort div select:hover {
+  cursor: pointer;
 }
 section#content-catalogue article#product div#sort div select:focus {
   outline-style: none;

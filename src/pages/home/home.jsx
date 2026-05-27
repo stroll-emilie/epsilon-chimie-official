@@ -12,14 +12,14 @@ import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 
 // Families
-import HWE from '../../assets/images/schema/molecule-hwe.png'
-import Phosphonic from '../../assets/images/schema/family-phosphonic-acid.png';
-import Phosphonate from '../../assets/images/schema/family-phosphonate.png';
-import Phosphorane from '../../assets/images/schema/family-phosphorane.png';
-import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.png';
-import Phosphines from '../../assets/images/schema/family-phosphine.png';
-import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.png';
-
+import HWE from '../../assets/images/schema/molecule-hwe.svg'
+import Phosphonic from '../../assets/images/schema/family-phosphonic-acid.svg';
+import Phosphonate from '../../assets/images/schema/family-phosphonate.svg';
+import Phosphorane from '../../assets/images/schema/family-phosphorane.svg';
+import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg';
+import Phosphines from '../../assets/images/schema/family-phosphine.svg';
+import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
+import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
 
 
 
@@ -126,7 +126,19 @@ function Home() {
             <article>
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
-                <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support. Every compound ships with a <strong>Certificate of Analysis</strong>.</p>
+                <div>
+                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support.
+                        <br /> <br />
+                        Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :
+                    </p>
+                    <ul>
+                        <li>In house 13C-NMR</li>
+                        <li>31P-NMR</li>
+                        <li>1H-NMR</li>
+                        <li>and HPLC characterisation (on request)</li>
+                    </ul>
+                </div>
+                
             </article>
 
             <article>
@@ -164,27 +176,6 @@ function Home() {
                                 <h3>Custom synthesis</h3>
                             </div>
                             <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, conform to your specification.</p>
-                        </div>
-                    </div>
-                    <div className="arrowIcon">
-                        <RightArrowIcon/>
-                    </div>
-                    
-                </div>
-
-                <hr/>
-
-                <div>
-                    <div>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <div className='service'>
-                            <div className="serviceTitle">
-                                <div className="number">03</div>
-                                <h3>Analytical support</h3>
-                            </div>
-                            <p>In-house 13C-NMR, 31P-NMR, 1H-NMR and HPLC characterisation (on request). A Certificate of Analysis with full traceability accompanies every batch.</p>
                         </div>
                     </div>
                     <div className="arrowIcon">
@@ -300,6 +291,7 @@ function Home() {
                     <a href="">Custom synthesis</a>
                 </nav>
             </article>
+            <img src={PhosphonateMark} alt="" />
         </section>
     </>
     )

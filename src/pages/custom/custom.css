@@ -129,6 +129,7 @@ section#applications {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  gap: var(--spacing-x-large);
   background-color: var(--color-bg-subtle);
   padding: var(--spacing-xx-large) 112px;
   width: 100%;
@@ -216,8 +217,11 @@ section#talk-to-director > article:last-of-type > div:first-of-type > div {
 section#talk-to-director > article:last-of-type > div:last-of-type {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: var(--spacing-large);
+}
+section#talk-to-director > article:last-of-type > div:last-of-type > a {
+  display: flex;
+  gap: var(--spacing-xx-small);
 }
 section#talk-to-director > article:last-of-type > div:last-of-type > a:first-of-type {
   border: 0.5px solid var(--color-border-accent);

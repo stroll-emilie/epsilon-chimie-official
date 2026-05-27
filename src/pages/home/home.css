@@ -292,6 +292,9 @@ section#finder > article:last-of-type .searchBar .searchBarContainer button:hove
 section#finder > article:last-of-type .searchBar .searchBarContainer button:active {
   background-color: var(--color-state-primary-pressed);
 }
+section#finder > article:last-of-type .searchBar .searchBarContainer button:hover {
+  cursor: pointer;
+}
 section#finder > article:last-of-type .searchBar .popular {
   display: flex;
   gap: var(--spacing-xx-small);
@@ -330,6 +333,9 @@ section#finder > article:last-of-type .searchBar .popular ul li:active {
   background-color: var(--color-state-bg-reversed-hover);
   color: var(--color-content-link-hover);
 }
+section#finder > article:last-of-type .searchBar .popular ul li:hover {
+  cursor: pointer;
+}
 section#finder > article:last-of-type .filtered {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -355,6 +361,9 @@ section#finder > article:last-of-type .filtered p:active {
 section#finder > article:last-of-type .filtered p {
   width: auto;
 }
+section#finder > article:last-of-type .filtered p:hover {
+  cursor: pointer;
+}
 section#capabilites h2 {
   font-size: var(--font-size-h1);
 }
@@ -363,6 +372,11 @@ section#capabilites article:first-of-type {
   width: 30%;
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-medium);
+}
+section#capabilites article:first-of-type ul {
+  list-style-type: disc;
+  list-style-position: inside;
 }
 section#capabilites article:last-of-type {
   display: flex;
@@ -478,6 +492,7 @@ section#families > article#families-list .column .familie-element span p {
   color: var(--color-content-secondary);
   color: #000;
   font-size: var(--font-size-body-sm);
+  height: 32px;
 }
 section#families > article#families-list .column .familie-element a {
   display: flex;

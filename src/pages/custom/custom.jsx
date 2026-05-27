@@ -1,6 +1,9 @@
 
 import './custom.css'
 import PierreCornec from '../../assets/images/cornec-200w.jpg'
+import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg'
+import {CallIcon} from '../../assets/icons/call_icon'
+
 
 function Custom() {
     return (
@@ -17,7 +20,8 @@ function Custom() {
                     <a href="">Start a request</a>
                     <a href="">Browse the catalogue</a>
                 </nav>
-            </div>  
+            </div> 
+            <img src={PhosphonateMark} alt="" /> 
         </section>
 
         <section id='process'>
@@ -111,7 +115,7 @@ function Custom() {
                     <p>For any question about custom synthesis or project feasibility, write or call directly. We respond to every enquiry within 48 working hours.</p>
                 </div>
                 <div>
-                    <a href="tel:+33298424650"> Call +33 (0)2 98 42 46 50</a>
+                    <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
                     <a href="mailto:pierre.cornec@epsilon-chimie.com">Mail to : pierre.corner[at]epsilon-chimie.com</a>
                     <a href="">Start a quote request</a>
 

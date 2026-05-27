@@ -6,6 +6,8 @@ import Home from './pages/home/home.jsx'
 import About from './pages/about/about.jsx'
 import Custom from './pages/custom/custom.jsx'
 import Catalogue from './pages/catalogue/catalogue.jsx'
+import Product from './pages/product/product.jsx'
+
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <Routes>
         <Route path='/epsilon-chimie-official/' element={<Home />} />
         <Route path='/epsilon-chimie-official/catalogue' element={<Catalogue />} />
+        <Route path='/epsilon-chimie-official/product/:id' element={<Product />} />
+
+
         <Route path='/epsilon-chimie-official/about' element={<About />} />
         <Route path='/epsilon-chimie-official/custom' element={<Custom />} />
       </Routes>

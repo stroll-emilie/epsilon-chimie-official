@@ -96,10 +96,11 @@ section{
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        gap: var(--spacing-x-large);
         background-color: var(--color-bg-subtle);
         padding: var(--spacing-xx-large) 112px;
         width: 100%;
-        > article{
+        > article{            
             width: 40%;
             &:first-of-type{
                 display: flex;
@@ -181,10 +182,10 @@ section{
                     &:last-of-type{
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: space-between;
                         gap: var(--spacing-large);
-
                         > a{
+                            display: flex;
+                            gap: var(--spacing-xx-small);
                             &:first-of-type{
                                 @include btn-blue;
                             }
