@@ -27,13 +27,58 @@ function About() {
             </article>
         </section>
 
+        <section id="timeline">
+            <article>
+                <legend><div className='losange'></div>TIMELINE</legend>
+                <h2>Twenty-eight years of phosphorus chemistry.</h2>
+            </article>
+
+            <article>
+                <ul>
+                    <hr />
+                    <li>
+                        <h3>1995</h3>
+                        <p>Fondation</p>
+                        <p>Epsilon Chimie founded in Brest, focused on phosphorus specialty chemistry.</p>
+                    </li>
+                    <hr />
+                    <li>
+                        <h3>1996</h3>
+                        <p>International and online</p>
+                        <p>First shipments to North America and Asia. Over 30 countries served.</p>
+                    </li>
+                    <hr />
+                    <li>
+                        <h3>2010</h3>
+                        <p>Expansion</p>
+                        <p>Relocation to a 2 800 m2 facility in Kergaradec, Guipavas (near Brest).</p>
+                    </li>
+                    <hr />
+                    <li>
+                        <h3>2024</h3>
+                        <p>ICH-Q7 Guidelines</p>
+                        <p>Quality management renewed and based on ICH-Q7 Guidelines.</p>
+                    </li>
+                    <hr />
+                    <li>
+                        <h3>YYYY</h3>
+                        <p>Fondation</p>
+                        <p>Catalogue now exceeds one thousand commercial references.</p>
+                    </li>
+                    <hr />
+                </ul>
+            </article>
+
+        </section>
+
+
         <section id="quality">
             <article>
                 <div>
                     <legend><div className='losange'></div>QUALITY</legend>
-                    <h2>ICH-Q7 QUALITY ASSURANCE</h2>
+                    <h2>ICH-Q7 Guidelines</h2>
                 </div>
-                <p>Our quality system is re-certified every three years. Each batch is released only after 31P-NMR or 1H-NMR confirmation, HPLC purity check and a documented visual inspection. A Certificate of Analysis accompanies every delivery.</p>
+                <p>Our quality system is re-certified every three years. Each batch is released only after 13C-NMR, 31P-NMR or 1H-NMR confirmation, HPLC purity check and a documented visual inspection. A Certificate of Analysis accompanies every delivery.</p>
             </article>
 
             <article>
