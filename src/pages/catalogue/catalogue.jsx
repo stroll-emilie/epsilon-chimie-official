@@ -12,26 +12,7 @@ import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
 import vide from '../../assets/images/mollecules/vide.png'
 
 
-const images = import.meta.glob('../../assets/images/mollecules/*.png', { eager: true });
 
-function parseNom(nom) {
-    if (!nom) return { name: "", purity: "" };
-    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/);
-    if (match) {
-        return {
-            name: nom.slice(0, match.index).trim(),
-            purity: match[2].trim()  // ex: "97 %"
-        };
-    }
-    return { name: nom, purity: "" };
-}
-
-const imageMap = Object.fromEntries(
-    Object.entries(images).map(([path, module]) => {
-        const ref = path.split('/').pop().replace('.png', '');
-        return [ref, module.default];
-    })
-);
 
 
 function Catalogue() {

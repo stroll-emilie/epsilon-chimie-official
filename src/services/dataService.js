@@ -1,0 +1,112 @@
+import Papa from 'papaparse';
+import { getMoleculeFamily } from '../utils/getMoleculeFamily';
+import vide from '../assets/images/mollecules/vide.png'
+
+let cache = null
+
+// Chargement des données | découpage | groupement
+
+export async function loadProducts() {
+    if (cache) return cache
+    const res = await fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
+    const buffer = await res.arrayBuffer()
+    const csv = new TextDecoder("utf-8").decode(buffer)
+    const { data } = Papa.parse(csv, {
+        delimiter: ";", header: true,
+        skipEmptyLines: true,
+    })
+
+    // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
+    const parsed = data.map(row => {
+        const { name, purity } = parseNom(row["Nom"])
+        row["NomClean"] = name
+        row["Purity"] = purity
+        return row
+    })
+
+    
+    const grouped = {}
+    parsed.forEach(row => {
+        const ref = String(row["Réf EPSILON"])
+        if (!ref) return
+        if (!grouped[ref] && row["NomPourTri"]) grouped[ref] = row
+    })
+
+    cache = Object.values(grouped)
+    return cache
+}
+
+// applique les tries et filtres
+export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
+    return products
+    // par recherche dans la barre de recherche
+        .filter(p => Object.values(p).some(val => String(val).toLowerCase().includes(search.toLowerCase())))
+        // par famille à gauche
+        .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
+        // par tri en haut
+        .sort((a,b) => {
+            switch(sortOrder) {
+                case "nameAsc" :    return a["NomPourTri"].localeCompare(b["NomPourTri"]);
+                case "nameDesc" :   return b["NomPourTri"].localeCompare(a["NomPourTri"]);
+                case "casAsc":      return a["CAS"].localeCompare(b["CAS"]);
+                case "casDesc":     return b["CAS"].localeCompare(a["CAS"]);
+                case "purityAsc": {
+                    
+                    const pA = Number.parseFloat(a["Purity"]);
+                    const pB = Number.parseFloat(b["Purity"]);
+                    if (Number.isNaN(pA)) return 1;   // a va en bas
+                    if (Number.isNaN(pB)) return -1;  // b va en bas
+                    return pB - pA;
+                }
+                case "purityDesc": {
+                    const pA = Number.parseFloat(a["Purity"]);
+                    const pB = Number.parseFloat(b["Purity"]);
+                    if (Number.isNaN(pA)) return 1;   // a va en bas
+                    if (Number.isNaN(pB)) return -1;  // b va en bas
+                    return pA - pB;
+                    
+                }default: return 0;
+            }
+        });
+}
+
+// compte le nombre d'élement de chaque 
+export function countByFamily(products) {
+    const families = ["Phosphonic Acids", "Phosphonate", "Phosphonium Salts", "Phosphorane", "Phosphine", "Chemical Intermediate"]
+    const counts = { "All" : products.length }
+    families.forEach(f => {
+        counts[f] = products.filter(p => getMoleculeFamily(p) === f).length
+    })
+    return counts
+}
+
+// Récupéré les infos sur un seul produit
+export function getProductById(products, id) {
+    return products.find(p => p["Réf EPSILON"] === id)
+}
+
+//**************************** Gestion des images ***********************************//
+
+const images = import.meta.glob('../assets/images/mollecules/*.png', { eager: true });
+
+const imageMap = Object.fromEntries(
+    Object.entries(images).map(([path, module]) => {
+        const ref = path.split('/').pop().replace('.png', '');
+        return [ref, module.default];
+    })
+);
+
+export function getProductImage(ref) {
+    return imageMap[ref]
+        ?? imageMap[ref.padStart(5, '0')]
+        ?? imageMap[ref.padStart(6, '0')]
+        ?? vide
+}
+//***********************************************************************************//
+
+export function parseNom(nom) {
+    if (!nom) return { name: "", purity: "" }
+    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/)
+    if (match) return { name: nom.slice(0, match.index).trim(), purity: match[2].trim() }
+    return { name: nom, purity: "" }
+}
