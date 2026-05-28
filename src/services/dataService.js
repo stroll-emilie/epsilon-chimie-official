@@ -1,6 +1,7 @@
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 import vide from '../assets/images/mollecules/vide.png'
+import Fuse from 'fuse.js'
 
 let cache = null
 
@@ -38,9 +39,28 @@ export async function loadProducts() {
 
 // applique les tries et filtres
 export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
-    return products
-    // par recherche dans la barre de recherche
-        .filter(p => Object.values(p).some(val => String(val).toLowerCase().includes(search.toLowerCase())))
+
+    // traitement dans un premier temps de la recherche dans la barre de recherche
+    
+    let result = products
+
+    if (search) {
+        const cleanSearch = search.replace(/^EC-/i, "").trim()
+        
+        const fuse = new Fuse(products, {
+            keys: [
+                { name: "NomClean", getFn: p => String(p["NomClean"] ?? "") },
+                { name: "CAS", getFn: p => String(p["CAS"] ?? "") },
+                { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
+                { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
+            ],
+            threshold: 0.4,
+        })
+        result = fuse.search(cleanSearch).map(r => r.item)
+    }
+
+
+    return result
         // par famille à gauche
         .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
         // par tri en haut

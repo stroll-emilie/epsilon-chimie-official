@@ -1,5 +1,7 @@
 import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
+import { ProductProvider } from './context/ProductContext.jsx'
+
 import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer.jsx'
 import Home from './pages/home/home.jsx'
@@ -12,17 +14,19 @@ import Product from './pages/product/product.jsx'
 function App() {
   return (
     <main>
-      <Header />
-      <Routes>
-        <Route path='/epsilon-chimie-official/' element={<Home />} />
-        <Route path='/epsilon-chimie-official/catalogue' element={<Catalogue />} />
-        <Route path='/epsilon-chimie-official/product/:id' element={<Product />} />
+      <ProductProvider>
+        <Header />
+        <Routes>
+          <Route path='/epsilon-chimie-official/' element={<Home />} />
 
-
-        <Route path='/epsilon-chimie-official/about' element={<About />} />
-        <Route path='/epsilon-chimie-official/custom' element={<Custom />} />
-      </Routes>
-      <Footer />
+          <Route path='/epsilon-chimie-official/catalogue' element={<Catalogue />} />
+          <Route path='/epsilon-chimie-official/product/:id' element={<Product />} />
+          
+          <Route path='/epsilon-chimie-official/about' element={<About />} />
+          <Route path='/epsilon-chimie-official/custom' element={<Custom />} />
+        </Routes>
+        <Footer />
+      </ProductProvider>
     </main>
   )
 }
