@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 export const LocIcon = ({ size = 24, color = "#000000" }) => {
     return (

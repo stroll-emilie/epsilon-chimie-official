@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 export const GlassIcon = ({ size = 24 }) => {
     return (

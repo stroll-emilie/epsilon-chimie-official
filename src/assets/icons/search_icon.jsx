@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 export const SearchIcon = ({ size = 24 }) => {
     return (

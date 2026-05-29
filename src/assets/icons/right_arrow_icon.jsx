@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 export const RightArrowIcon = ({ size = 24 }) => {
     return (

@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 
 export const CallIcon = ({ size = 24}) => {

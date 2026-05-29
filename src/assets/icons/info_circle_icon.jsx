@@ -1,4 +1,3 @@
-import { SvgIcon } from './svg_icon';
 
 export const InfoCircleIcon = ({ size = 24, rotate = 180 }) => {
     return (
