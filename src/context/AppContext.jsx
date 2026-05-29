@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState, useMemo  } from "react";
 import { loadProducts } from "../services/dataService";
 
-import PropTypes from 'prop-types';
 import { childrenProp } from '../propTypes';
 
 

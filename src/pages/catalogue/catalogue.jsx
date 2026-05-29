@@ -13,7 +13,7 @@ import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
 
 function Catalogue() {
 
-    const {products, loading} = useProducts()
+    const {products} = useProducts()
     const [search, setSearch] = useState("");
     const [selectedFamily, setSelectedFamily] = useState("All");
     const [sortOrder, setSortOrder] = useState("nameAsc");
