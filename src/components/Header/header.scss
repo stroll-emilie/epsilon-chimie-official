@@ -73,6 +73,10 @@ header{
                         &:active{
                             background: var(--color-bg-primary-subtle);
                         }
+                        &.active{
+                            border-bottom: var(--color-border-accent) 2px solid;
+                            text-shadow: none;
+                        }
                     }
                 }
             }

@@ -494,7 +494,7 @@ section#families > article#families-list .column .familie-element span p {
   font-size: var(--font-size-body-sm);
   height: 32px;
 }
-section#families > article#families-list .column .familie-element a {
+section#families > article#families-list .column .familie-element > p {
   display: flex;
   align-items: center;
   color: var(--color-content-accent);
@@ -505,6 +505,7 @@ section#families > article#families-list .column .familie-element a {
   font-weight: var(--font-weight-bold);
   line-height: 100%;
   letter-spacing: -1%;
+  cursor: pointer;
 }
 section#families > article#families-list .column {
   /* column gauche */

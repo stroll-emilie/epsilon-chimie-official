@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { useSearchParams } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
@@ -19,7 +20,7 @@ function Catalogue() {
 
     const {products} = useProducts()
     const [search, setSearch] = useState(searchParams.get('search') || '');
-    const [selectedFamily, setSelectedFamily] = useState("All");
+    const [selectedFamily, setSelectedFamily] = useState(searchParams.get('family') || 'All');
     const [sortOrder, setSortOrder] = useState("nameAsc");
 
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ function Catalogue() {
     return (
     <>
         <section id="searchInCatalogue">
-            <div className='path'>HOME / <span>CATALOGUE</span></div>
+            <div className='path'><Link to="/">HOME</Link> / <span>CATALOGUE</span></div>
             <article>
                 <div>
                     <h2>Product catalogue</h2>

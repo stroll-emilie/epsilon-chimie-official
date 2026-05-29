@@ -351,7 +351,7 @@ section{
                                 height: 32px;
                             }
                         }
-                        a{
+                        > p{
                             display: flex;
                             align-items: center;
                             color: var(--color-content-accent);
@@ -362,6 +362,7 @@ section{
                             font-weight: var(--font-weight-bold);
                             line-height: 100%;
                             letter-spacing: -1%;
+                            cursor: pointer;
                         }
                     }
                     /* column gauche */

@@ -1,6 +1,7 @@
 import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
 import { ProductProvider } from './context/AppContext.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer.jsx'
@@ -15,6 +16,7 @@ function App() {
   return (
       <main>
         <ProductProvider>
+          <ScrollToTop/>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
