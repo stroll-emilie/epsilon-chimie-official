@@ -1,11 +1,7 @@
 import './catalogue.css';
 
-import { useState,useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { useSearchParams } from 'react-router-dom';
-
-import { Link } from 'react-router-dom';
+import { useState} from 'react';
+import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
