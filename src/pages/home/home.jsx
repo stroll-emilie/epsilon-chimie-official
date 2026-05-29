@@ -21,7 +21,8 @@ import Phosphines from '../../assets/images/schema/family-phosphine.svg';
 import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
 
-
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 
 function Home() {
@@ -34,6 +35,15 @@ function Home() {
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
     const repeated = [...items, ...items]
+
+    /* Barre de recherche Finder */
+    const navigate = useNavigate();
+    const [query, setQuery] = useState("");
+
+    const handleSearch = () => {
+        if(!query.trim()) return;
+        navigate(`/catalogue?search=${encodeURIComponent(query)}`);
+    }
 
     return (
     <>
@@ -94,9 +104,18 @@ function Home() {
                         {/* search bar */}
                         <div className='searchBarInput'>
                             <SearchIcon/>
-                            <input type="text" placeholder="Name, CAS, MFCD, formula..." name="inputSearchBar" id="inputSearchBar"/>
+                            <input 
+                                type="text" 
+                                placeholder="Name, CAS, MFCD, formula..." 
+                                name="inputSearchBar" 
+                                id="inputSearchBar"
+                                
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                            />
                         </div>
-                        <button type='button'>Search</button>
+                        <button type='button' onClick={handleSearch}>Search</button>
                     </div>
                     <div className='popular'>
                         <ul>

@@ -1,7 +1,10 @@
 import './catalogue.css';
 
-import { useState} from 'react';
+import { useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { useSearchParams } from 'react-router-dom';
+
 
 import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
@@ -12,14 +15,14 @@ import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
 
 function Catalogue() {
+    const [searchParams] = useSearchParams();
 
     const {products} = useProducts()
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(searchParams.get('search') || '');
     const [selectedFamily, setSelectedFamily] = useState("All");
     const [sortOrder, setSortOrder] = useState("nameAsc");
 
     const navigate = useNavigate();
-
 
     const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
     const countFamily = countByFamily(products)

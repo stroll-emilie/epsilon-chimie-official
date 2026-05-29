@@ -1,5 +1,6 @@
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
+
 import vide from '../assets/images/mollecules/vide.png'
 import Fuse from 'fuse.js'
 
