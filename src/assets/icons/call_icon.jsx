@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-CallIcon.propTypes = sizeProp
 
 export const CallIcon = ({ size = 24}) => {
     return (
@@ -15,3 +14,4 @@ export const CallIcon = ({ size = 24}) => {
         </svg>
     );
 };
+CallIcon.propTypes = sizeProp

@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-DownloadXLSIcon.propTypes = sizeProp
 
 export const DownloadXLSIcon = ({ size = 24}) => {
     return (
@@ -18,3 +17,4 @@ export const DownloadXLSIcon = ({ size = 24}) => {
         </svg>
     );
 };
+DownloadXLSIcon.propTypes = sizeProp

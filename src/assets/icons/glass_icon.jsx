@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-GlassIcon.propTypes = sizeProp
 
 
 export const GlassIcon = ({ size = 24 }) => {
@@ -23,3 +22,4 @@ export const GlassIcon = ({ size = 24 }) => {
         </svg>
     );
 };
+GlassIcon.propTypes = sizeProp

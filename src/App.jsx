@@ -1,6 +1,6 @@
 import './styles/App.css'
 import { Routes, Route } from 'react-router-dom'
-import { ProductProvider } from './context/ProductContext.jsx'
+import { ProductProvider } from './context/AppContext.jsx'
 
 import Header from './components/Header/header.jsx'
 import Footer from './components/Footer/footer.jsx'

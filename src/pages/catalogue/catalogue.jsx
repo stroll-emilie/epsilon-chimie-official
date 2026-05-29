@@ -3,7 +3,7 @@ import './catalogue.css';
 import { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useProducts } from '../../context/ProductContext';
+import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
@@ -24,7 +24,6 @@ function Catalogue() {
     const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
     const countFamily = countByFamily(products)
 
-    const handleSearch = () => setSearch(searchInput)
 
     return (
     <>

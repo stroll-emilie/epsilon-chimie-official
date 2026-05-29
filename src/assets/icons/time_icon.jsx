@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-TimeIcon.propTypes = sizeProp
 
 export const TimeIcon = ({ size = 24, color = "#000000" }) => {
     return (
@@ -17,3 +16,5 @@ export const TimeIcon = ({ size = 24, color = "#000000" }) => {
         </svg>
     );
 };
+
+TimeIcon.propTypes = sizeProp

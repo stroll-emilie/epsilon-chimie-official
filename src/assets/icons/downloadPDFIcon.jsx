@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-DownloadPDFIcon.propTypes = sizeProp
 
 export const DownloadPDFIcon = ({ size = 24 }) => {
     return (
@@ -11,3 +10,4 @@ export const DownloadPDFIcon = ({ size = 24 }) => {
         </svg>
     );
 };
+DownloadPDFIcon.propTypes = sizeProp

@@ -1,10 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { loadProducts } from "../services/dataService";
 
-import { childrenProp } from "../propTypes";
-ProductProvider.propTypes = childrenProp
+import PropTypes from 'prop-types';
+import { childrenProp } from '../propTypes';
 
-const ProductContext = createContext(null)
+
+
+const AppContext = createContext(null)
 
 export function ProductProvider({ children }) {
     const [products, setProducts] = useState([])
@@ -17,14 +19,20 @@ export function ProductProvider({ children }) {
         })
     }, [])
 
+    const value = useMemo(() => ({ products, loading }), [products, loading]);
+
     return (
-        <ProductContext.Provider value={{products, loading}}>
-            {children}
-        </ProductContext.Provider>
-    )
+    <AppContext.Provider value={value}>
+        {children}
+    </AppContext.Provider>
+    );
 }
 
 
+ProductProvider.propTypes = {
+    ...childrenProp
+};
+
 export function useProducts(){
-    return useContext(ProductContext)
+    return useContext(AppContext)
 }

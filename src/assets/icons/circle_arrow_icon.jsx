@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-CircleArrowIcon.propTypes = sizeProp
 
 export const CircleArrowIcon = ({ size = 24 }) => {
     return (
@@ -9,3 +8,4 @@ export const CircleArrowIcon = ({ size = 24 }) => {
         </svg>
     );
 };
+CircleArrowIcon.propTypes = sizeProp

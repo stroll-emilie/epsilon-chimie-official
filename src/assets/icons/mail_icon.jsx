@@ -1,5 +1,4 @@
 import { sizeProp } from "../../propTypes";
-MailIcon.propTypes = sizeProp
 
 export const MailIcon = ({ size = 24 }) => {
     return (
@@ -15,3 +14,5 @@ export const MailIcon = ({ size = 24 }) => {
         </svg>
     );
 };
+
+MailIcon.propTypes = sizeProp
