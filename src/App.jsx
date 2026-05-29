@@ -17,13 +17,12 @@ function App() {
       <ProductProvider>
         <Header />
         <Routes>
-          <Route path='/epsilon-chimie-official/' element={<Home />} />
+          <Route path='/' element={<Home />} />
 
-          <Route path='/epsilon-chimie-official/catalogue' element={<Catalogue />} />
-          <Route path='/epsilon-chimie-official/product/:id' element={<Product />} />
-          
-          <Route path='/epsilon-chimie-official/about' element={<About />} />
-          <Route path='/epsilon-chimie-official/custom' element={<Custom />} />
+          <Route path='/catalogue' element={<Catalogue />} />
+          <Route path='/product/:id' element={<Product />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/custom' element={<Custom />} />
         </Routes>
         <Footer />
       </ProductProvider>
