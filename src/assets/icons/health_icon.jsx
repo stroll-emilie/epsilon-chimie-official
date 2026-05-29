@@ -1,5 +1,5 @@
 import { sizeProp } from "../../propTypes";
-HealthIcon.prototype = sizeProp
+HealthIcon.propTypes = sizeProp
 
 export const HealthIcon = ({ size = 24, color = "#000000" }) => {
     return (

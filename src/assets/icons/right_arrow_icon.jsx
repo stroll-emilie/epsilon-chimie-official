@@ -1,5 +1,5 @@
 import { sizeProp } from "../../propTypes";
-RightArrowIcon.prototype = sizeProp
+RightArrowIcon.propTypes = sizeProp
 
 export const RightArrowIcon = ({ size = 24 }) => {
     return (

@@ -1,5 +1,5 @@
 import { sizeProp } from "../../propTypes";
-DownloadPDFIcon.prototype = sizeProp
+DownloadPDFIcon.propTypes = sizeProp
 
 export const DownloadPDFIcon = ({ size = 24 }) => {
     return (

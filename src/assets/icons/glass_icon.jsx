@@ -1,5 +1,5 @@
 import { sizeProp } from "../../propTypes";
-GlassIcon.prototype = sizeProp
+GlassIcon.propTypes = sizeProp
 
 
 export const GlassIcon = ({ size = 24 }) => {

@@ -1,5 +1,5 @@
 import { sizeProp } from "../../propTypes";
-LocIcon.prototype = sizeProp
+LocIcon.propTypes = sizeProp
 
 export const LocIcon = ({ size = 24, color = "#000000" }) => {
     return (
