@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { SvgIcon } from './svg_icon';
 
 export const GlassIcon = ({ size = 24 }) => {
     return (
@@ -20,8 +20,4 @@ export const GlassIcon = ({ size = 24 }) => {
             </defs>
         </svg>
     );
-};
-
-GlassIcon.propTypes = {
-    size: PropTypes.number,
 };

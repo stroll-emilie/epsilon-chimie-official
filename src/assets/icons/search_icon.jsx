@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { SvgIcon } from './svg_icon';
 
 export const SearchIcon = ({ size = 24 }) => {
     return (
@@ -7,8 +7,4 @@ export const SearchIcon = ({ size = 24 }) => {
             <path d="M22 22L20 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     );
-};
-
-SearchIcon.propTypes = {
-    size: PropTypes.number,
 };

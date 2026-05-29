@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { SvgIcon } from './svg_icon';
 
 export const LocIcon = ({ size = 24, color = "#000000" }) => {
     return (
@@ -16,7 +16,3 @@ export const LocIcon = ({ size = 24, color = "#000000" }) => {
     );
 };
 
-LocIcon.propTypes = {
-    size: PropTypes.number,
-    color: PropTypes.string,
-};

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { SvgIcon } from './svg_icon';
 
 export const RightArrowIcon = ({ size = 24 }) => {
     return (
@@ -7,8 +7,4 @@ export const RightArrowIcon = ({ size = 24 }) => {
             <path d="M3.5 12H20.33" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     );
-};
-
-RightArrowIcon.propTypes = {
-    size: PropTypes.number,
 };

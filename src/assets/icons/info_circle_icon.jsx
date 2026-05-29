@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { SvgIcon } from './svg_icon';
 
 export const InfoCircleIcon = ({ size = 24, rotate = 180 }) => {
     return (
@@ -16,9 +16,4 @@ export const InfoCircleIcon = ({ size = 24, rotate = 180 }) => {
             </defs>
         </svg>
     );
-};
-
-InfoCircleIcon.propTypes = {
-    size: PropTypes.number,
-    rotate: PropTypes.number,
 };
