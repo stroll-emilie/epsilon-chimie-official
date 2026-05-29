@@ -1,4 +1,5 @@
 import './styles/App.css'
+import { HashRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
 import { ProductProvider } from './context/AppContext.jsx'
 
@@ -13,20 +14,22 @@ import Product from './pages/product/product.jsx'
 
 function App() {
   return (
-    <main>
-      <ProductProvider>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
+    <Router>
+      <main>
+        <ProductProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
 
-          <Route path='/catalogue' element={<Catalogue />} />
-          <Route path='/product/:id' element={<Product />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/custom' element={<Custom />} />
-        </Routes>
-        <Footer />
-      </ProductProvider>
-    </main>
+            <Route path='/catalogue' element={<Catalogue />} />
+            <Route path='/product/:id' element={<Product />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/custom' element={<Custom />} />
+          </Routes>
+          <Footer />
+        </ProductProvider>
+      </main>
+    </Router>
   )
 }
 
