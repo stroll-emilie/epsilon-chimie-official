@@ -1,4 +1,5 @@
-
+import { sizeProp } from "../../propTypes";
+MailIcon.prototype = sizeProp
 
 export const MailIcon = ({ size = 24 }) => {
     return (

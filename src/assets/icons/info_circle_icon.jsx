@@ -1,3 +1,5 @@
+import { sizeProp } from "../../propTypes";
+InfoCircleIcon.prototype = sizeProp
 
 export const InfoCircleIcon = ({ size = 24, rotate = 180 }) => {
     return (

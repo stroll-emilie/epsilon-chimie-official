@@ -1,3 +1,5 @@
+import { sizeProp } from "../../propTypes";
+TimeIcon.prototype = sizeProp
 
 export const TimeIcon = ({ size = 24, color = "#000000" }) => {
     return (

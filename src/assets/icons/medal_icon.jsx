@@ -1,3 +1,5 @@
+import { sizeProp } from "../../propTypes";
+MedalIcon.prototype = sizeProp
 
 export const MedalIcon = ({ size = 24, color = "#000000" }) => {
     return (

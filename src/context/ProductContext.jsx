@@ -1,6 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { loadProducts } from "../services/dataService";
 
+import { childrenProp } from "../propTypes";
+ProductProvider.prototype = childrenProp
+
 const ProductContext = createContext(null)
 
 export function ProductProvider({ children }) {

@@ -1,4 +1,5 @@
-
+import { sizeProp } from "../../propTypes";
+CircleArrowIcon.prototype = sizeProp
 
 export const CircleArrowIcon = ({ size = 24 }) => {
     return (

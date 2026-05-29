@@ -1,4 +1,5 @@
-
+import { sizeProp } from "../../propTypes";
+DownloadXLSIcon.prototype = sizeProp
 
 export const DownloadXLSIcon = ({ size = 24}) => {
     return (

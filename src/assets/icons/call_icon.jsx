@@ -1,4 +1,5 @@
-
+import { sizeProp } from "../../propTypes";
+CallIcon.prototype = sizeProp
 
 export const CallIcon = ({ size = 24}) => {
     return (

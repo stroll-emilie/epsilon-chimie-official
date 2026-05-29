@@ -1,3 +1,6 @@
+import { sizeProp } from "../../propTypes";
+GlassIcon.prototype = sizeProp
+
 
 export const GlassIcon = ({ size = 24 }) => {
     return (

@@ -1,3 +1,5 @@
+import { sizeProp } from "../../propTypes";
+SearchIcon.prototype = sizeProp
 
 export const SearchIcon = ({ size = 24 }) => {
     return (
