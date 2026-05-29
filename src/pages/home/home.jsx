@@ -1,21 +1,35 @@
 import './home.css'
+// carousel
 import { MedalIcon } from '../../assets/icons/medal_icon'
 import { TimeIcon } from '../../assets/icons/time_icon'
 import { LocIcon } from '../../assets/icons/localisation_icon'
 import { HealthIcon } from '../../assets/icons/health_icon'
+
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { SearchIcon } from '../../assets/icons/search_icon'
 import { InfoCircleIcon } from '../../assets/icons/info_circle_icon'
 import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 
+// Families
+import HWE from '../../assets/images/schema/molecule-hwe.svg'
+import Phosphonic from '../../assets/images/schema/family-phosphonic-acid.svg';
+import Phosphonate from '../../assets/images/schema/family-phosphonate.svg';
+import Phosphorane from '../../assets/images/schema/family-phosphorane.svg';
+import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg';
+import Phosphines from '../../assets/images/schema/family-phosphine.svg';
+import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
+import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
+
+
+
 
 function Home() {
     
     /* Pour la répétition dans le carousel */
     const items = [
-        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Quality assurance' },
-        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Every lot above 98% purity' },
+        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Guidelines' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'most chemicals above 98%' },
         { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
@@ -28,22 +42,23 @@ function Home() {
                 <div>
                     <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
                     <h1>European chemicals Manufacturer</h1>
-                    <p>We manufacture over thousands phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for research and industrial teams across Europe and beyond.</p>
+                    <p>We manufacture over hundreeds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
                 <div>
                     <a href="#">Explore the catalogue</a>
-                    <a href="#">Request a quote</a>
+                    <a href="#">Request for quote</a>
                 </div>
             </article>
 
             <article>
-
-                <img src="" alt="" />
+                <div>
+                    <img src={HWE} alt="" />
+                </div>
                 <ul>
                     <li><span>1 000+</span>REFERENCES</li>
                     <li><span>30+ YRS</span>OF EXPERIENCE</li>
-                    <li><span>ICH-Q7</span>QUALITY ASSURANCE</li>
+                    <li><span>ICH-Q7</span>GUIDELINES</li>
                 </ul>
             </article>
         </section>
@@ -68,9 +83,9 @@ function Home() {
                 <div>
                     <legend><div className='losange'></div>COMPOUND FINDER</legend>
                     <h2>Search across 1 000+ references</h2>
-                    <p>Search by IUPAC name, CAS number, MFCD, synonym or molecular formula. Can't finde what you need ? We synthesis on demand.</p>
+                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
                 </div>
-                <a href="#">Request custom synthesis<CircleArrowIcon/></a>
+                <a href="#">Request for custom synthesis<CircleArrowIcon/></a>
             </article>
 
             <article>
@@ -111,7 +126,19 @@ function Home() {
             <article>
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
-                <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support. Every compound ships with a <strong>Certificate of Analysis</strong>.</p>
+                <div>
+                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support.
+                        <br /> <br />
+                        Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :
+                    </p>
+                    <ul>
+                        <li>In house 13C-NMR</li>
+                        <li>31P-NMR</li>
+                        <li>1H-NMR</li>
+                        <li>and HPLC characterisation (on request)</li>
+                    </ul>
+                </div>
+                
             </article>
 
             <article>
@@ -125,9 +152,9 @@ function Home() {
                         <div className='service'>
                             <div className="serviceTitle">
                                 <div className="number">01</div>
-                                <h3>Catalogue synthesis</h3>
+                                <h3>Catalogue</h3>
                             </div>
-                            <p>Over 1 000 phosphorus specialties in stock, shipped from Brest with full analytical documentation.</p>
+                            <p>Over 1 000 phosphorus specialties mostly in stock, shipped from France (Brest) with full analytical documentation.</p>
                         </div>
                     </div>
                     <div className="arrowIcon">
@@ -148,28 +175,7 @@ function Home() {
                                 <div className="number">02</div>
                                 <h3>Custom synthesis</h3>
                             </div>
-                            <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, to your specification.</p>
-                        </div>
-                    </div>
-                    <div className="arrowIcon">
-                        <RightArrowIcon/>
-                    </div>
-                    
-                </div>
-
-                <hr/>
-
-                <div>
-                    <div>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <div className='service'>
-                            <div className="serviceTitle">
-                                <div className="number">03</div>
-                                <h3>Analytical support</h3>
-                            </div>
-                            <p>In-house 31P-NMR, 1H-NMR and HPLC characterisation. A Certificate of Analysis accompanies every batch.</p>
+                            <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, conform to your specification.</p>
                         </div>
                     </div>
                     <div className="arrowIcon">
@@ -196,51 +202,25 @@ function Home() {
                 <div className='column'>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphonic} alt="Phosphonic schema" />
                         </div>
                         <span>
                             <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
+                            <h3>Phosphonic Acids</h3>
                             <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphorane} alt="Phosphorane schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
-                        </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
-                    </div>
-                </div>
-
-                <div className='column'>
-                    <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
-                        </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
-                    </div>
-
-                    <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 04</div>
+                            <h3>Phosphoranes</h3>
+                            <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
@@ -248,25 +228,51 @@ function Home() {
 
                 <div className='column'>
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphonate} alt="Phosphonate schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 02</div>
+                            <h3>Phosphonates</h3>
+                            <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
 
                     <div className='familie-element'>
-                        <div className="glassIcon">
-                            <GlassIcon/>
+                        <div>
+                            <img src={Phosphines} alt="Phosphines schema" />
                         </div>
                         <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
+                            <div className="number">FAMILY 05</div>
+                            <h3>Phosphines</h3>
+                            <p>Phosphites, phosphine oxides and ligand building blocks.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+                </div>
+
+                <div className='column'>
+                    <div className='familie-element'>
+                        <div>
+                            <img src={Phosphonium} alt="Phosphonium schema" />
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 03</div>
+                            <h3>Phosphonium Salts</h3>
+                            <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
+                        </span>
+                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                    </div>
+
+                    <div className='familie-element'>
+                        <div>
+                            <img src={Intermeidates} alt="Intermeidates schema" />
+                        </div>
+                        <span>
+                            <div className="number">FAMILY 06</div>
+                            <h3>Chemical Intermediates</h3>
+                            <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
                         <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
                     </div>
@@ -285,6 +291,7 @@ function Home() {
                     <a href="">Custom synthesis</a>
                 </nav>
             </article>
+            <img src={PhosphonateMark} alt="" />
         </section>
     </>
     )

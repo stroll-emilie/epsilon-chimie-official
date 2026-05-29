@@ -1,123 +1,29 @@
 import './catalogue.css';
-import { useState, useEffect } from 'react';
-import Papa from "papaparse";
 
+import { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { useProducts } from '../../context/AppContext';
+import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
-import vide from '../../assets/images/mollecules/vide.png'
-
-
-const images = import.meta.glob('../../assets/images/mollecules/*.png', { eager: true });
-
-function parseNom(nom) {
-    if (!nom) return { name: "", purity: "" };
-    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/);
-    if (match) {
-        return {
-            name: nom.slice(0, match.index).trim(),
-            purity: match[2].trim()  // ex: "97 %"
-        };
-    }
-    return { name: nom, purity: "" };
-}
-
-const imageMap = Object.fromEntries(
-    Object.entries(images).map(([path, module]) => {
-        const ref = path.split('/').pop().replace('.png', '');
-        return [ref, module.default];
-    })
-);
-
 
 function Catalogue() {
 
-    const [products, setProducts] = useState([]);
+    const {products} = useProducts()
     const [search, setSearch] = useState("");
     const [selectedFamily, setSelectedFamily] = useState("All");
     const [sortOrder, setSortOrder] = useState("nameAsc");
 
-
-    useEffect(() => {
-        fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
-            .then(res => res.arrayBuffer())  
-            .then(buffer => {
-
-                const decoder = new TextDecoder("utf-8"); 
-
-                const csv = decoder.decode(buffer);
-                
-                const result = Papa.parse(csv, {
-                    delimiter: ";",
-                    header: true,
-                    skipEmptyLines: true,
-                    quoteChar: '"',
-                    dynamicTyping: false,
-                });
-
-                const data = result.data.map(row => {
-                    const { name, purity } = parseNom(row["Nom"]);
-                    row["NomClean"] = name;
-                    row["Purity"] = purity;
-                    return row;
-                });
-
-                const grouped = {};
-                data.forEach(row => {
-                    const ref = String(row["Réf EPSILON"]);
-                    if (!ref) return;
-                    if(!grouped[ref] && row["NomPourTri"]) {
-                        grouped[ref] = row;
-                    }
-                })
-                setProducts(Object.values(grouped));
-            });
-    }, []);
+    const navigate = useNavigate();
 
 
-    const filtered = products
-        // filtre par recherche
-        .filter(p => Object.values(p).some(val => String(val).toLowerCase().includes(search.toLowerCase())))
-        // filtre par selection de filtre
-        .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
-        // par tri
-        .sort((a,b) => {
-            switch(sortOrder) {
-                case "nameAsc" :    return a["NomPourTri"].localeCompare(b["NomPourTri"]);
-                case "nameDesc" :   return b["NomPourTri"].localeCompare(a["NomPourTri"]);
-                case "casAsc":      return a["CAS"].localeCompare(b["CAS"]);
-                case "casDesc":     return b["CAS"].localeCompare(a["CAS"]);
-                case "purityAsc": {
-                    
-                    const pA = Number.parseFloat(a["Purity"]);
-                    const pB = Number.parseFloat(b["Purity"]);
-                    if (Number.isNaN(pA)) return 1;   // a va en bas
-                    if (Number.isNaN(pB)) return -1;  // b va en bas
-                    return pB - pA;
-                }
-                case "purityDesc": {
-                    const pA = Number.parseFloat(a["Purity"]);
-                    const pB = Number.parseFloat(b["Purity"]);
-                    if (Number.isNaN(pA)) return 1;   // a va en bas
-                    if (Number.isNaN(pB)) return -1;  // b va en bas
-                    return pA - pB;
-                    
-                }default: return 0;
-            }
-        });
+    const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
+    const countFamily = countByFamily(products)
 
-    // compteur de produit par famille de molécule
-    const countFamily = {
-        "All": products.length,
-        "Phosphonic Acids": products.filter(p => getMoleculeFamily(p) === "Phosphonic Acids").length,
-        "Phosphonate": products.filter(p => getMoleculeFamily(p) === "Phosphonate").length,
-        "Phosphonium Salts": products.filter(p => getMoleculeFamily(p) === "Phosphonium Salts").length,
-        "Phosphorane": products.filter(p => getMoleculeFamily(p) === "Phosphorane").length,
-        "Phosphine": products.filter(p => getMoleculeFamily(p) === "Phosphine").length,
-        "Chemical Intermediate": products.filter(p => getMoleculeFamily(p) === "Chemical Intermediate").length,
-    };
 
     return (
     <>
@@ -126,11 +32,11 @@ function Catalogue() {
             <article>
                 <div>
                     <h2>Product catalogue</h2>
-                    <p>18 of 1 000+ references. Every batch ships with a Certificate of Analysis.</p>
+                    <p>{dataProcessed.length} of 1 000+ references. Every batch ships with a Certificate of Analysis.</p>
                 </div>
                 <div>
-                    <a href=""><DownloadPDFIcon/>Catalogue (PDF)</a>
-                    <a href=""><DownloadXLSIcon/>Catalogue (XLS)</a>
+                    <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
+                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.pdf"><DownloadXLSIcon/>Catalogue (XLS)</a>
                 </div>
             </article>
             <article>
@@ -141,6 +47,7 @@ function Catalogue() {
                         placeholder="Search by name, CAS number, MFCD, formula or synonym..." 
                         value={search}
                         onChange={e => setSearch(e.target.value)}
+                        onKeyDown={e => e.key === "Enter"}
                     />
                 </div>
 
@@ -169,7 +76,7 @@ function Catalogue() {
 
             <article id="product">
                 <div id="sort">
-                    <p className="number">{filtered.length} RESULTS</p>
+                    <p className="number">{dataProcessed.length} RESULTS</p>
                     <div>
                         <p>SORT</p>
                         <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
@@ -185,15 +92,12 @@ function Catalogue() {
 
 
                 <div id="product-container">
-                    {filtered.map((product, index) => {
+                    {dataProcessed.map((product, index) => {
                         const ref = product["Réf EPSILON"];
-                        const imgSrc = imageMap[ref] 
-                            ?? imageMap[ref.padStart(5, '0')] 
-                            ?? imageMap[ref.padStart(6, '0')]
-                            ?? vide;
+                        const imgSrc = getProductImage(ref)
 
                         return (
-                            <article key={ref}>
+                            <article key={ref} onClick={() => navigate(`/product/${ref}`)} style={{ cursor: 'pointer' }}>
                                 <div className='img-container'>
                                     <div>
                                         <div className='purity'>{product["Purity"] || "-"} </div>

@@ -80,6 +80,10 @@ section{
                     .filter-elem{
                         width: 100%;
                         @include filter-element;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        
                     }
                 }
             }
@@ -103,9 +107,13 @@ section{
                             gap: var(--spacing-medium);
                             select{
                                 @include select;
+                                &:hover{
+                                    cursor: pointer;
+                                }
                                 &:focus{
                                     outline-style: none;
                                 }
+
                             }
                         }
                     }

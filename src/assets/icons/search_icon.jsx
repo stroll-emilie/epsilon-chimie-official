@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { sizeProp } from "../../propTypes";
 
 export const SearchIcon = ({ size = 24 }) => {
     return (
@@ -8,7 +8,4 @@ export const SearchIcon = ({ size = 24 }) => {
         </svg>
     );
 };
-
-SearchIcon.propTypes = {
-    size: PropTypes.number,
-};
+SearchIcon.propTypes = sizeProp

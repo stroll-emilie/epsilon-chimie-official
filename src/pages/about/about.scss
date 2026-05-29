@@ -46,6 +46,55 @@ section{
         }
     }
 
+    &#timeline{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: var(--color-bg-secondary-subtle);
+        gap: 32px;
+        article{
+            &:first-of-type{
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-xxx-small);
+            }
+            &:last-of-type{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 26px;
+                    li{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        gap: 64px;
+                        h3{
+                            font-family: var(--font-family-heading);
+                            font-size: var(--font-size-h1);
+                            font-weight: var(--font-weight-bold);
+                            line-height: 100%;
+                            letter-spacing: -1%;
+                            color: var(--color-content-accent);
+                        }
+                        p{
+                            &:first-of-type{
+                                font-family: var(--font-family-heading);
+                                font-size: var(--font-size-h3);
+                                line-height: 136%;
+                            }
+                        }
+                    }
+                    > hr{
+                        &:first-of-type{
+                            width: 55%;
+                        }
+                        color: var(--color-border-reversed);
+                    }
+                }
+            }
+        }
+    }
+
     &#quality{
         color: #000;
         background-color: var(--color-bg-secondary-subtle);

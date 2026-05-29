@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { sizeProp } from "../../propTypes";
 
 export const TimeIcon = ({ size = 24, color = "#000000" }) => {
     return (
@@ -17,7 +17,4 @@ export const TimeIcon = ({ size = 24, color = "#000000" }) => {
     );
 };
 
-TimeIcon.propTypes = {
-    size: PropTypes.number,
-    color: PropTypes.string,
-};
+TimeIcon.propTypes = sizeProp

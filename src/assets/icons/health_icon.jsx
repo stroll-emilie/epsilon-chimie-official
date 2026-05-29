@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { sizeProp } from "../../propTypes";
 
 export const HealthIcon = ({ size = 24, color = "#000000" }) => {
     return (
@@ -15,8 +15,4 @@ export const HealthIcon = ({ size = 24, color = "#000000" }) => {
         </svg>
     );
 };
-
-HealthIcon.propTypes = {
-    size: PropTypes.number,
-    color: PropTypes.string,
-};
+HealthIcon.propTypes = sizeProp
