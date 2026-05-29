@@ -2,8 +2,8 @@
 import './custom.css'
 import PierreCornec from '../../assets/images/cornec-200w.jpg'
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg'
-import {CallIcon} from '../../assets/icons/call_icon'
-
+import { CallIcon } from '../../assets/icons/call_icon'
+import { MailIcon } from '../../assets/icons/mail_icon'
 
 function Custom() {
     return (
@@ -116,7 +116,7 @@ function Custom() {
                 </div>
                 <div>
                     <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
-                    <a href="mailto:pierre.cornec@epsilon-chimie.com">Mail to : pierre.corner[at]epsilon-chimie.com</a>
+                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>Mail to : pierre.corner[at]epsilon-chimie.com</a>
                     <a href="">Start a quote request</a>
 
                 </div>
