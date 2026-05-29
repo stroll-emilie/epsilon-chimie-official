@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useMemo  } from "react";
 import { loadProducts } from "../services/dataService";
 
 import PropTypes from 'prop-types';
