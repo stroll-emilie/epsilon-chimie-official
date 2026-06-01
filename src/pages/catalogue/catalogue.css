@@ -6,6 +6,8 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 section#searchInCatalogue {
   display: flex;
   flex-direction: column;
@@ -94,6 +96,8 @@ section#content-catalogue article {
   justify-content: space-between;
 }
 section#content-catalogue article#filtre {
+  position: sticky;
+  top: 60px;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -125,7 +129,7 @@ section#content-catalogue article#filtre > div .filter-elem:hover {
 section#content-catalogue article#product {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 79%;
   gap: var(--spacing-x-large);
 }
 section#content-catalogue article#product div#sort {

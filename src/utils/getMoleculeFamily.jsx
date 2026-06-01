@@ -1,7 +1,7 @@
 const family_map = {
     "1.0": "Phosphonium Salts",
-    "2.0": "Phosphonate",
-    "3.0": "Phosphorane"
+    "2.0": "Phosphonates",
+    "3.0": "Phosphoranes"
 }
 
 export function getMoleculeFamily(molecule){
@@ -12,7 +12,7 @@ export function getMoleculeFamily(molecule){
     if(name) {
         const normalized = name.toLowerCase(); 
         if(normalized.includes('phosphonic')) return 'Phosphonic Acids';
-        if(normalized.includes('phosphin')) return 'Phosphine';
+        if(normalized.includes('phosphin')) return 'Phosphines';
     }
 
     if (familyID && family_map[familyID]){
@@ -20,5 +20,5 @@ export function getMoleculeFamily(molecule){
     }
 
 
-    return 'Chemical Intermediate';
+    return 'Chemical Intermediates';
 }

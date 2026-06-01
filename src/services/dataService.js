@@ -93,7 +93,7 @@ export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
 
 // compte le nombre d'élement de chaque 
 export function countByFamily(products) {
-    const families = ["Phosphonic Acids", "Phosphonate", "Phosphonium Salts", "Phosphorane", "Phosphine", "Chemical Intermediate"]
+    const families = ["Phosphonic Acids", "Phosphonates", "Phosphonium Salts", "Phosphoranes", "Phosphines", "Chemical Intermediates"]
     const counts = { "All" : products.length }
     families.forEach(f => {
         counts[f] = products.filter(p => getMoleculeFamily(p) === f).length

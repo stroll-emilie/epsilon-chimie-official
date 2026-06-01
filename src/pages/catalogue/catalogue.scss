@@ -69,6 +69,8 @@ section{
             display: flex;
             justify-content: space-between;
             &#filtre{
+                position: sticky;
+                top: 60px;
                 display: flex;
                 flex-direction: column;
                 gap: 9px;
@@ -90,7 +92,7 @@ section{
             &#product{
                 display: flex;
                 flex-direction: column;
-                width: 80%;
+                width: 79%;
                 gap: var(--spacing-x-large);
                 div{
                     &#sort{
