@@ -5,12 +5,14 @@ import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mar
 import { CallIcon } from '../../assets/icons/call_icon'
 import { MailIcon } from '../../assets/icons/mail_icon'
 
+import { Link } from 'react-router-dom'
+
 function Custom() {
     return (
     <>
         <section id="custom">
             <div>
-                <div className='path'>HOME / <span>CUSTOM SYNTHESIS</span></div>
+                <div className='path'><Link to="/">HOME</Link> / <span>CUSTOM SYNTHESIS</span></div>
                 <article>
                     <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
                     <h1>Synthesise a batch quickly, respecting your budget.</h1>

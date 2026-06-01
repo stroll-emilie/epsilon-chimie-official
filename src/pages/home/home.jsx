@@ -21,8 +21,8 @@ import Phosphines from '../../assets/images/schema/family-phosphine.svg';
 import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
 
-
-
+import { useNavigate,Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Home() {
     
@@ -35,6 +35,18 @@ function Home() {
     ]
     const repeated = [...items, ...items]
 
+    /* Barre de recherche Finder */
+    const navigate = useNavigate();
+    const [query, setQuery] = useState("");
+    
+
+    const handleSearch = () => {
+        if(!query.trim()) return;
+        navigate(`/catalogue?search=${encodeURIComponent(query)}`);
+    }
+
+    const popularSearch = ["Diethyl phosphonates", "Wittig reagents", "phosphonic acids"," HWE reagents", "Phosphonium salts"];
+
     return (
     <>
         <section id="presentation">
@@ -46,7 +58,7 @@ function Home() {
                 </div>
 
                 <div>
-                    <a href="#">Explore the catalogue</a>
+                    <Link to="/catalogue">Explore the catalogue</Link>
                     <a href="#">Request for quote</a>
                 </div>
             </article>
@@ -94,30 +106,41 @@ function Home() {
                         {/* search bar */}
                         <div className='searchBarInput'>
                             <SearchIcon/>
-                            <input type="text" placeholder="Name, CAS, MFCD, formula..." name="inputSearchBar" id="inputSearchBar"/>
+                            <input 
+                                type="text" 
+                                placeholder="Name, CAS, MFCD, formula..." 
+                                name="inputSearchBar" 
+                                id="inputSearchBar"
+                                
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}
+                                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                            />
                         </div>
-                        <button type='button'>Search</button>
+                        <button type='button' onClick={handleSearch}>Search</button>
                     </div>
                     <div className='popular'>
                         <ul>
                             <p>Popular : </p>
-                            <li>Diethyl phosphonates</li>
-                            <li>Wittig reagents</li>
-                            <li>Phosphonic acids</li>
-                            <li>HWE reagents</li>
-                            <li>Phosphonium salts</li>
-
+                            {popularSearch.map(search => (
+                                <li
+                                    key={search}
+                                    onClick={() => navigate(`/catalogue?search=${encodeURIComponent(search)}`)}
+                                >
+                                    {search}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
 
                 <div className='filtered'>
-                    <p><InfoCircleIcon/>Phosphonic Acids</p>
-                    <p><InfoCircleIcon/>Phosphonates</p>
-                    <p><InfoCircleIcon/>Phosphonium Salts</p>
-                    <p><InfoCircleIcon/>Phosphoranes</p>
-                    <p><InfoCircleIcon/>Phosphines</p>
-                    <p><InfoCircleIcon/>Chemical Intermediates</p>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><InfoCircleIcon/>Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonate')}><InfoCircleIcon/>Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><InfoCircleIcon/>Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphorane')}><InfoCircleIcon/>Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphine')}><InfoCircleIcon/>Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><InfoCircleIcon/>Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -194,7 +217,7 @@ function Home() {
                     <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
                     <h2>Six families, one <br />thousand compounds</h2>
                 </div>
-                <a href="#">Browse the full catalogue<CircleArrowIcon/></a>
+                <Link to="/catalogue">Browse the full catalogue<CircleArrowIcon/></Link>
             </article>
 
             <article id='families-list'>
@@ -210,7 +233,7 @@ function Home() {
                             <h3>Phosphonic Acids</h3>
                             <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE FAMILY <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -222,7 +245,7 @@ function Home() {
                             <h3>Phosphoranes</h3>
                             <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Phosphorane')}>BROWSE FAMILY <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -236,7 +259,7 @@ function Home() {
                             <h3>Phosphonates</h3>
                             <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Phosphonate')}>BROWSE FAMILY <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -248,7 +271,7 @@ function Home() {
                             <h3>Phosphines</h3>
                             <p>Phosphites, phosphine oxides and ligand building blocks.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Phosphine')}>BROWSE FAMILY <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -262,7 +285,7 @@ function Home() {
                             <h3>Phosphonium Salts</h3>
                             <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE FAMILY <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -274,7 +297,8 @@ function Home() {
                             <h3>Chemical Intermediates</h3>
                             <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
-                        <a href="#">BROWSE FAMILY <CircleArrowIcon/></a>
+                        <button onClick={() => navigate('catalogue?family=Chemical Intermediate')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        
                     </div>
                 </div>
             </article>
@@ -288,7 +312,7 @@ function Home() {
                 <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 <nav>
                     <a href="">Request a quote</a>
-                    <a href="">Custom synthesis</a>
+                    <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>
             <img src={PhosphonateMark} alt="" />

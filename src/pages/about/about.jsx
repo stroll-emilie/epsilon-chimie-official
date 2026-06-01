@@ -1,6 +1,7 @@
 import './about.css'
 import Batiment from '../../assets/images/batiment4.jpg'
 
+import { Link } from 'react-router-dom'
 
 function About() {
     return (
@@ -8,7 +9,7 @@ function About() {
         <section id="aboutLab">
             <div>
                 <article>
-                    <div className='path'>HOME / <span>ABOUT</span></div>
+                    <div className='path'><Link to="/">HOME</Link> / <span>ABOUT</span></div>
                     <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
                     <h1>A french laboratory serving worldwide industry since 1995.</h1>
                     <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemicals for research and industry. Our founders trained in organometallic chemistry lab of the University of Brest; our product range still reflects that heritage.</p>
@@ -64,7 +65,7 @@ function About() {
                     <hr />
                     <li>
                         <h3>YYYY</h3>
-                        <p>Fondation</p>
+                        <p>Catalogue 1000+</p>
                         <p>Catalogue now exceeds one thousand commercial references.</p>
                     </li>
                     <hr />
