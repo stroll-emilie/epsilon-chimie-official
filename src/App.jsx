@@ -10,6 +10,7 @@ import About from './pages/about/about.jsx'
 import Custom from './pages/custom/custom.jsx'
 import Catalogue from './pages/catalogue/catalogue.jsx'
 import Product from './pages/product/product.jsx'
+import Error404 from './pages/error/error404.jsx'
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
             <Route path='/product/:id' element={<Product />} />
             <Route path='/about' element={<About />} />
             <Route path='/custom' element={<Custom />} />
+            <Route path='/error404' element={<Error404 />} />
+
           </Routes>
           <Footer />
         </ProductProvider>

@@ -7,7 +7,6 @@ import Fuse from 'fuse.js'
 let cache = null
 
 // Chargement des données | découpage | groupement
-
 export async function loadProducts() {
     if (cache) return cache
     const res = await fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
@@ -103,7 +102,15 @@ export function countByFamily(products) {
 
 // Récupéré les infos sur un seul produit
 export function getProductById(products, id) {
-    return products.find(p => p["Réf EPSILON"] === id)
+    return products.find(p => String(p["Réf EPSILON"]) === String(id))
+}
+
+// Formater la formule chimique de la molécule
+export function formatFormula(formula) {
+    if(!formula) return ""
+    return formula
+        .replace(/([A-Z][a-z]?)/g, match => `<span>${match}</span>`)
+        .replace(/(\d+)/g, match => `<sub>${match}</sub>`)
 }
 
 //**************************** Gestion des images ***********************************//

@@ -1,40 +1,56 @@
-import { WarnIcon } from '../../assets/icons/warn_icon'
 import './product.css'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate, Link, useParams } from 'react-router-dom'
+import { useProducts } from '../../context/AppContext';
+import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
+import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
 
 import Vide from '../../assets/images/mollecules/vide.png'
+import { WarnIcon } from '../../assets/icons/warn_icon'
 
 import Specification from './components/specification.jsx'
 import SafetyHazards from './components/safety_hazards'
 import ShippingDocs from './components/shipping_docs'
-import { useState } from 'react'
 
 function Product() {
     
-    
-    const [quantity,setquantity] = useState()
+    const navigate = useNavigate();
+
+    const { products, loading } = useProducts()
+    const { id } = useParams()
+
+    if (loading) return <p>Chargement...</p>
+
+    const prod = getProductById(products, id)
+
+    if (!prod) navigate('/error404')
+
+    const formula = formatFormula(prod["Formule brute"])
+    const imgSrc = getProductImage(id)
+    const { name, purity } = parseNom(prod["Nom"])
+
     return (
     <>
         <section id="product-details">
             <article>
-                <img src={Vide} alt="" />
+                <img src={imgSrc} alt="" />
                 <div>
                     <div>
                         <div className="number">FORMULA</div>
-                        <p>CH<sub>6</sub>NO<sub>3</sub>P</p>
+                        <p dangerouslySetInnerHTML={{ __html: formula }} />
                     </div>
 
                     <div>
                         <div className="number">MW</div>
-                        <p>111.04 <span>g/mol</span></p>
+                        <p>{prod["Masse molaire"]} <span>g/mol</span></p>
                     </div>
                 </div>
             </article>
 
             <article>
                 <div>
-                    <legend><div className='losange'></div>RÉFÉRENCE EPSILON - FAMILLE DE MOLÉCULE</legend>
-                    <h2>Nom de la molécule</h2>
+                    <legend><div className='losange'></div>{prod["Réf EPSILON"]} - {getMoleculeFamily(prod)}</legend>
+                    <h2>{name}</h2>
                 </div>
 
                 <div className='information'>
@@ -68,7 +84,7 @@ function Product() {
                         <button>Safety & hazards</button>
                         <button>Shipping & docs</button>
                     </nav>
-                    <ShippingDocs/>
+                    <Specification/>
                 </div>
 
             </article>
