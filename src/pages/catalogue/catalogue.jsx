@@ -36,7 +36,7 @@ function Catalogue() {
                 </div>
                 <div>
                     <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
-                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.pdf"><DownloadXLSIcon/>Catalogue (XLS)</a>
+                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.xls"><DownloadXLSIcon/>Catalogue (XLS)</a>
                 </div>
             </article>
             <article>

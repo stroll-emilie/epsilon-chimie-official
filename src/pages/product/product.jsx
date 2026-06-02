@@ -38,9 +38,10 @@ function Product() {
     // préparation des informations à afficher
     const formula = formatFormula(prod["Formule brute"])
     const imgSrc = getProductImage(id)
-    const { name, purity } = parseNom(prod["Nom"])
+    const { name, purity, method } = parseNom(prod["Nom"])
     const packing = prod["Conditionnement"]?.split("\n").map(el => el.trim()) ?? [];
-    
+    const fullPuity = method ? `${purity} (${method})` : purity;
+
     const currentPackingSelected = packingSelected || packing[0];
     const ActiveComponent = TABS_CONFIG.find(tab => tab.id === detailsSelected)?.component;
 
@@ -49,7 +50,7 @@ function Product() {
         { label:"MFCD", data:prod["Code ACD"] || "N/A" },
         { label:"EPSILON CODE", data:id || "N/A" },
         { label:"MOLECULAR FORMULA", data:formula || "N/A" },
-        { label:"PURITY", data:purity || "N/A" },
+        { label:"PURITY", data:fullPuity || "N/A" },
         { label:"APPEARANCE", data:prod["Appearance"] || "N/A" },
         { label:"STORAGE", data:prod["Storage"] || "N/A" }
     ]

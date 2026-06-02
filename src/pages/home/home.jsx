@@ -136,10 +136,10 @@ function Home() {
 
                 <div className='filtered'>
                     <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><InfoCircleIcon/>Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonate')}><InfoCircleIcon/>Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><InfoCircleIcon/>Phosphonates</button>
                     <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><InfoCircleIcon/>Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphorane')}><InfoCircleIcon/>Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphine')}><InfoCircleIcon/>Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><InfoCircleIcon/>Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><InfoCircleIcon/>Phosphines</button>
                     <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><InfoCircleIcon/>Chemical Intermediates</button>
                 </div>
             </article>

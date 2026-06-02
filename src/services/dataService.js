@@ -19,9 +19,10 @@ export async function loadProducts() {
 
     // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
     const parsed = data.map(row => {
-        const { name, purity } = parseNom(row["Nom"])
+        const { name, purity, method } = parseNom(row["Nom"])
         row["NomClean"] = name
         row["Purity"] = purity
+        row["Method"] = method
         return row
     })
 
@@ -133,8 +134,18 @@ export function getProductImage(ref) {
 //***********************************************************************************//
 
 export function parseNom(nom) {
-    if (!nom) return { name: "", purity: "" }
-    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/)
-    if (match) return { name: nom.slice(0, match.index).trim(), purity: match[2].trim() }
-    return { name: nom, purity: "" }
+    if (!nom) return { name: "", purity: "", method: "" };
+    
+    // On garde ta Regex, elle est très bien !
+    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/);
+    
+    if (match) {
+        return { 
+            name: nom.slice(0, match.index).trim(), 
+            purity: match[2].trim(),
+            method: match[3] ? match[3].replace(/[()]/g, '').trim() : "" 
+        };
+    }
+    
+    return { name: nom, purity: "", method: "" };
 }
