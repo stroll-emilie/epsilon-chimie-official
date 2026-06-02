@@ -1,0 +1,50 @@
+@use '../../styles/_mixin' as *;
+
+#error404{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    article{
+        display: flex;
+        &:first-of-type{
+            display: flex;
+            align-content: flex-start;
+            width: 100%;
+            padding: 48px 128px;
+        }
+        &:last-of-type{
+            display: flex;
+            padding: 48px 128px;
+            gap: var(--spacing-x-large);
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            border-top: .5px solid var(--color-border-reversed);
+            h1{
+                color: var(--color-content-accent)
+            }
+            p{
+                @include text-style;
+                font-size: var(--font-size-body-lg);
+            }
+            > nav{
+                display: flex;
+                gap: var(--spacing-xxx-small);
+                a{
+                    display: flex;
+                    gap: var(--spacing-xx-small);
+                    &:first-of-type{
+                        @include btn-blue;
+                        svg{
+                            rotate: 180deg;
+                        }
+                    }
+                    &:last-of-type{
+                        @include btn-grey;
+                    }
+                }
+            }
+        }
+    }
+}
