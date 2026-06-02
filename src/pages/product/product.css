@@ -9,11 +9,12 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 #product-details {
+  display: flex;
+  align-items: flex-start;
   gap: var(--spacing-x-large);
 }
 #product-details > article {
   display: flex;
-  top: 0;
   width: 40%;
 }
 #product-details > article:first-of-type {
@@ -108,7 +109,7 @@
 #product-details > article:last-of-type > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) button:hover {
   background-color: var(--color-state-bg-neutral-hover);
 }
-#product-details > article:last-of-type > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) button:active {
+#product-details > article:last-of-type > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) button.active, #product-details > article:last-of-type > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) button:active {
   background-color: var(--color-bg-primary);
   outline: none;
   color: var(--color-content-on-primary);
@@ -164,7 +165,7 @@
   line-height: 136%;
   padding: var(--spacing-xx-small) var(--spacing-x-small);
 }
-#product-details > article:last-of-type > div:nth-of-type(4) nav button:active {
+#product-details > article:last-of-type > div:nth-of-type(4) nav button.active, #product-details > article:last-of-type > div:nth-of-type(4) nav button:active {
   color: var(--color-content-accent);
   border-color: var(--color-border-accent);
 }
