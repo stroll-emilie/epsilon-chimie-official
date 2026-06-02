@@ -4,13 +4,13 @@ import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
 import './header.css'
-
+import { useNavigate } from 'react-router-dom'
 
 
 
 function Header() {
 
-
+  const navigate = useNavigate()
 
   const [scrolled, setScrolled] = useState(false)
 
@@ -40,8 +40,9 @@ function Header() {
               className={scrolled ? 'hide' : 'show'}
               alt="logo-epsilon-chimie"
               title="logo-epsilon-chimie"
+              onClick={() => navigate("/")}
             />
-            <p className={scrolled ? 'show' : 'hide'}>
+            <p className={scrolled ? 'show' : 'hide'} onClick={() => navigate("/")}>
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
             </p>
           </div>

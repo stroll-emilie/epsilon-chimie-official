@@ -1,7 +1,9 @@
 import './footer.css'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Footer() {
-
+    const navigate = useNavigate()
 
     return (
         <footer>
@@ -26,18 +28,18 @@ function Footer() {
                 <article>
                     <span>PRODUCTS</span>
                     <ul>
-                        <li>Phosphonic Acids</li>
-                        <li>Phosphonates</li>
-                        <li>Phosphonium Salts</li>
-                        <li>Phosphoranes</li>
-                        <li>Full Catalogue (PDF)</li>
+                        <li onClick={() => navigate('catalogue?family=Phosphonic Acids')}>Phosphonic Acids</li>
+                        <li onClick={() => navigate('catalogue?family=Phosphonates')}>Phosphonates</li>
+                        <li onClick={() => navigate('catalogue?family=Phosphonium Salts')}>Phosphonium Salts</li>
+                        <li onClick={() => navigate('catalogue?family=Phosphoranes')}>Phosphoranes</li>
+                        <li><a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf">Full Catalogue (PDF)</a></li>
                     </ul>
                 </article>
 
                 <article>
                     <span>SERVICES</span>
                     <ul>
-                        <li>Custom synthesis</li>
+                        <li><Link to="/custom">Custom synthesis</Link></li>
                         <li>Request a quote</li>
                         <li>Technical data sheets</li>
                         <li>MSDS download</li>
@@ -47,7 +49,7 @@ function Footer() {
                 <article>
                     <span>COMPAGNY</span>
                     <ul>
-                        <li>About</li>
+                        <li><Link to="/about">About</Link></li>
                         <li>Quality & ISO 9001</li>
                         <li>Press</li>
 

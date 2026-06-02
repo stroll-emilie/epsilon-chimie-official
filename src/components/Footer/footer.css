@@ -31,6 +31,7 @@ footer section:first-child article ul li {
   line-height: 136%;
   letter-spacing: -1%;
   color: var(--color-content-reversed-tertiary);
+  cursor: pointer;
 }
 footer section:first-child article:first-child {
   display: flex;

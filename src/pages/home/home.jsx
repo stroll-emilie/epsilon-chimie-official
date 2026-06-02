@@ -167,7 +167,7 @@ function Home() {
             <article>
                 <hr/>
 
-                <div>
+                <div onClick={() => navigate("/catalogue")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -188,7 +188,7 @@ function Home() {
 
                 <hr/>
 
-                <div>
+                <div onClick={() => navigate("/custom")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>

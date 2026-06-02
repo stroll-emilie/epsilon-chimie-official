@@ -394,6 +394,7 @@ section#capabilites article:last-of-type > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 section#capabilites article:last-of-type > div > div {
   gap: var(--spacing-x-small);

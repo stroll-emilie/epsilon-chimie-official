@@ -262,6 +262,7 @@ section{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    cursor: pointer;
                     > div{
                         gap: var(--spacing-x-small);
                         display: flex;

@@ -28,6 +28,7 @@ header{
             width: 108px;
             height: 58px;
             object-fit: contain;
+            cursor: pointer;
         }
 
         /*text au dessus cf credit.jsx*/
@@ -140,6 +141,7 @@ header{
     &.scrolled {
         box-shadow: 0 2px 10px rgba(0,0,0,.1);
         padding: var(--spacing-x-small) 112px;
+        cursor: pointer;
         #default{
             .credit-wrapper{
                 opacity: 0;
