@@ -7,4 +7,201 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
-/*******************************************************************************************************************//*# sourceMappingURL=request.css.map */
+/*******************************************************************************************************************/
+label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 8px;
+  text-transform: uppercase;
+}
+label svg {
+  color: var(--color-icon-danger);
+}
+
+section#request-title {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 0.5px solid var(--color-border-reversed);
+}
+section#request article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  width: 100%;
+  background-color: #FFF;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius-xxl);
+}
+section#request article > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+section#request article > div hr {
+  width: 100%;
+  color: var(--color-border-default);
+}
+section#request article > div .form-point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+section#request article > div .form-point span {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: 100%;
+  color: var(--color-content-tertiary);
+  border: 1px solid var(--color-border-reversed);
+  border-radius: var(--border-radius-full);
+  padding: 5px var(--spacing-medium);
+}
+section#request article > div .form-point p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-content-tertiary);
+  line-height: 136%;
+}
+section#request article > div .form-point.active span {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-reversed-primary);
+  border-radius: var(--border-radius-full);
+}
+section#request article > div .form-point.active p {
+  color: var(--color-content-accent);
+}
+section#request article form input[type=text], section#request article form select, section#request article form textarea {
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-x-small) var(--spacing-medium);
+}
+section#request article form .input-comment {
+  line-height: 140%;
+  color: var(--color-content-secondary);
+}
+section#request article form hr {
+  color: var(--color-border-reversed);
+  height: 0.5px;
+}
+section#request article form#form-compound {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+section#request article form#form-compound > div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacing-x-large);
+  gap: var(--spacing-medium);
+}
+section#request article form#form-compound > div#request-type {
+  flex-direction: column;
+  display: flex;
+}
+section#request article form#form-compound > div#request-type > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-x-large);
+}
+section#request article form#form-compound > div#request-type > div > div {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-x-small);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  width: 48%;
+}
+section#request article form#form-compound > div#request-type > div > div input {
+  margin-top: 7px;
+}
+section#request article form#form-compound > div#request-type > div > div > div {
+  display: flex;
+  flex-direction: column;
+}
+section#request article form#form-compound > div#request-type > div > div > div > span {
+  font-weight: var(--font-weight-bold);
+}
+section#request article form#form-compound > div#quantity-purity, section#request article form#form-compound > div#packing-required {
+  display: flex;
+  gap: var(--spacing-medium);
+  flex-direction: row;
+  justify-content: space-between;
+}
+section#request article form#form-compound > div#quantity-purity > div, section#request article form#form-compound > div#packing-required > div {
+  display: flex;
+  gap: var(--spacing-xx-small);
+  flex-direction: column;
+  width: 100%;
+}
+section#request article form nav {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: space-between;
+  padding: 0 var(--spacing-x-large);
+}
+section#request article form nav a {
+  display: flex;
+  gap: var(--spacing-xx-small);
+}
+section#request article form nav a svg {
+  rotate: 180deg;
+}
+section#request article form nav a:first-of-type {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#request article form nav a:first-of-type:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#request article form nav a:first-of-type:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#request article form nav a:first-of-type {
+  color: var(--color-content-primary);
+  border-color: var(--color-border-reversed);
+}
+section#request article form nav a:first-of-type:hover {
+  background-color: var(--color-state-bg-neutral-hover);
+}
+section#request article form nav a:first-of-type:active {
+  background-color: var(--color-state-bg-neutral-pressed);
+  color: var(--color-content-primary);
+}
+section#request article form nav a:last-of-type {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#request article form nav a:last-of-type:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#request article form nav a:last-of-type:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#request article form nav a:last-of-type {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-on-primary);
+}
+section#request article form nav a:last-of-type:hover {
+  background-color: var(--color-state-primary-hover);
+}
+section#request article form nav a:last-of-type:active {
+  background-color: var(--color-state-primary-pressed);
+}/*# sourceMappingURL=request.css.map */

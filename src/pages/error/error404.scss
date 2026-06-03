@@ -1,18 +1,16 @@
 @use '../../styles/_mixin' as *;
 
-#error404{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    article{
+section{
+    &#error-title{
         display: flex;
-        &:first-of-type{
-            display: flex;
-            align-content: flex-start;
-            width: 100%;
-            padding: 48px 128px;
-        }
-        &:last-of-type{
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: .5px solid var(--color-border-reversed);
+    }
+    &#error404{
+        display: flex;
+        flex-direction: column;
+        article{
             display: flex;
             padding: 48px 128px;
             gap: var(--spacing-x-large);
@@ -20,7 +18,6 @@
             align-items: center;
             text-align: center;
             width: 100%;
-            border-top: .5px solid var(--color-border-reversed);
             h1{
                 color: var(--color-content-accent)
             }

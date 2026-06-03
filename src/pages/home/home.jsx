@@ -59,7 +59,7 @@ function Home() {
 
                 <div>
                     <Link to="/catalogue">Explore the catalogue</Link>
-                    <a href="#">Request for quote</a>
+                    <Link to="/request-for-quote">Request a quote</Link>
                 </div>
             </article>
 
@@ -233,7 +233,7 @@ function Home() {
                             <h3>Phosphonic Acids</h3>
                             <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE PHOSPHONIC ACIDS <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -245,7 +245,7 @@ function Home() {
                             <h3>Phosphoranes</h3>
                             <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphorane')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphorane')}>BROWSE PHOSPHORANES <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -259,7 +259,7 @@ function Home() {
                             <h3>Phosphonates</h3>
                             <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonate')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonate')}>BROWSE PHOSPHONATES <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -271,7 +271,7 @@ function Home() {
                             <h3>Phosphines</h3>
                             <p>Phosphites, phosphine oxides and ligand building blocks.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphine')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphine')}>BROWSE PHOSPHINES <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -285,7 +285,7 @@ function Home() {
                             <h3>Phosphonium Salts</h3>
                             <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE PHOSPHONIUM SALTS <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -297,7 +297,7 @@ function Home() {
                             <h3>Chemical Intermediates</h3>
                             <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Chemical Intermediate')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Chemical Intermediate')}>BROWSE CHEMICAL INTERMEDIATES <CircleArrowIcon/></button>
                         
                     </div>
                 </div>
@@ -311,7 +311,7 @@ function Home() {
                 <h1>Need 100g or 1kg of a compound from our R&D</h1>
                 <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 <nav>
-                    <a href="">Request a quote</a>
+                    <Link to="/request-for-quote">Request a quote</Link>
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>

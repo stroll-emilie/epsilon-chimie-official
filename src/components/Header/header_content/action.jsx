@@ -1,6 +1,6 @@
 import { SearchIcon } from '../../../assets/icons/search_icon'
 import '../header.css'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,7 +13,7 @@ function Action() {
                 Search Catalogue <SearchIcon/>
             </p>
         </div>
-        <a href="#">Request a quote</a>
+        <Link to="/request-for-quote">Request a quote</Link>
     </div>
     )
 }

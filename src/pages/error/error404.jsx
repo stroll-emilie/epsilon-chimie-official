@@ -8,10 +8,10 @@ function Error404() {
     return (
     <>
         
+        <section id="error-title">
+            <div className='path'><Link to="/">HOME</Link> / <span>ERROR 404</span></div>
+        </section>
         <section id="error404">
-            <article>
-                <div className='path'><Link to="/">HOME</Link> / <span>ERROR 404</span></div>
-            </article>
             <article>
                 <div>
                     <h1>404</h1>

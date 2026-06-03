@@ -40,7 +40,7 @@ function Footer() {
                     <span>SERVICES</span>
                     <ul>
                         <li><Link to="/custom">Custom synthesis</Link></li>
-                        <li>Request a quote</li>
+                        <li><Link to="/request-for-quote">Request a quote</Link></li>
                         <li>Technical data sheets</li>
                         <li>MSDS download</li>
                     </ul>

@@ -27,6 +27,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/custom' element={<Custom />} />
             <Route path='/request-for-quote' element={<Request />} />
+            <Route path='/request-for-quote/:id' element={<Request />} />
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
 

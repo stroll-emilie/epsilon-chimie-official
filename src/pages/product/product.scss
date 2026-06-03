@@ -88,7 +88,7 @@
                             display: flex;
                             gap: var(--spacing-xx-small);
                             align-items: flex-end;
-                            a{
+                            button{
                                 @include btn-blue;
                             }
                             p{
