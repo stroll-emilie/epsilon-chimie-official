@@ -82,15 +82,24 @@ section{
                     padding: var(--spacing-x-small) var(--spacing-medium);
                 }
                 .input-comment{
-                    
+                    display: flex;
+                    gap: var(--spacing-x-small);
                     line-height: 140%;
                     color: var(--color-content-secondary);
+                    a {
+                        cursor: pointer;
+                        text-decoration: underline;
+                        color: var(--color-content-accent);
+                    }
                 }
                 hr{
                     color: var(--color-border-reversed);
                     height: .5px;
-
                 }
+                #form-contact-info{
+                    @include card-default;
+                }
+
                 &#form-compound{
                     display: flex;
                     flex-direction: column;
@@ -129,11 +138,12 @@ section{
                             }
                         }
                         
-                        &#quantity-purity, &#packing-required{
+                        &#quantity-purity, &#packing-required, &#company-institution, &#country-website, &#your-name, &#mail-phone, &#role{
                             display: flex;
                             gap: var(--spacing-medium);
                             flex-direction: row;
                             justify-content: space-between;
+                            align-items: flex-end;
                             >div{
                                 display: flex;
                                 gap: var(--spacing-xx-small);

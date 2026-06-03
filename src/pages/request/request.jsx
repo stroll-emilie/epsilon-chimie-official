@@ -1,6 +1,8 @@
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { InfoCircleVideIcon } from '../../assets/icons/info_circle_vide_icon'
+import Compagny from './components/compagny'
 import Compound from './components/compound'
+import Contact from './components/contact'
 import './request.css'
 import { Link } from 'react-router-dom'
 
@@ -36,7 +38,10 @@ function Request() {
                 </div>
         
                 <form id='form-compound'>
-                    <Compound/>
+                    <Contact/>
+
+
+
                     <hr />
                     
                     <nav>
