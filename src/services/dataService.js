@@ -136,7 +136,6 @@ export function getProductImage(ref) {
 export function parseNom(nom) {
     if (!nom) return { name: "", purity: "", method: "" };
     
-    // On garde ta Regex, elle est très bien !
     const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/);
     
     if (match) {

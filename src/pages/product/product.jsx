@@ -106,7 +106,7 @@ function Product() {
                         <p>Larger quantities ? Wa produce up to multi kilograms batches on demand.</p>
                     </div>
                     <div>
-                        <button onClick={() => navigate(`/request-for-quote/id=${id}?packing=${currentPackingSelected}`)}>Request quote for {currentPackingSelected}</button>
+                        <button onClick={() => navigate(`/request-for-quote/${id}?packing=${currentPackingSelected}`)}>Request quote for {currentPackingSelected}</button>
                         <p>SDS and TDS available on request</p>
                     </div>
                 </div>

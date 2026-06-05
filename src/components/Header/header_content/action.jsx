@@ -13,7 +13,7 @@ function Action() {
                 Search Catalogue <SearchIcon/>
             </p>
         </div>
-        <Link to="/request-for-quote">Request a quote</Link>
+        <Link to="/request-for-quote">Request for quote</Link>
     </div>
     )
 }

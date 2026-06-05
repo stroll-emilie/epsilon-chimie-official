@@ -19,7 +19,7 @@ function Custom() {
                     <p>We offer on-demand synthesis of non-commercial products for research. Our team is polyvalent and attentive to customer needs, so we can address challenges quickly.</p>
                 </article>
                 <nav>
-                    <Link to="/request-for-quote">Request a quote</Link>
+                    <Link to="/request-for-quote">Request for quote</Link>
                     <Link to="/catalogue">Browse the catalogue</Link>
                 </nav>
             </div> 
@@ -119,7 +119,7 @@ function Custom() {
                 <div>
                     <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
                     <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>Mail to : pierre.corner[at]epsilon-chimie.com</a>
-                    <Link to="/request-for-quote">Request a quote</Link>
+                    <Link to="/request-for-quote">Request for quote</Link>
 
                 </div>
             </article>

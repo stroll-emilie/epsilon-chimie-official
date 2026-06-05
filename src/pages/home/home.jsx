@@ -54,12 +54,12 @@ function Home() {
                 <div>
                     <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
                     <h1>European chemicals Manufacturer</h1>
-                    <p>We manufacture over hundreeds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
+                    <p>We manufacture over hundreds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
                 <div>
                     <Link to="/catalogue">Explore the catalogue</Link>
-                    <Link to="/request-for-quote">Request a quote</Link>
+                    <Link to="/request-for-quote">Request for quote</Link>
                 </div>
             </article>
 
@@ -150,7 +150,7 @@ function Home() {
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
                 <div>
-                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support.
+                    <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
                         <br /> <br />
                         Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :
                     </p>
@@ -283,7 +283,7 @@ function Home() {
                         <span>
                             <div className="number">FAMILY 03</div>
                             <h3>Phosphonium Salts</h3>
-                            <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
+                            <p>Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
                         </span>
                         <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE PHOSPHONIUM SALTS <CircleArrowIcon/></button>
                     </div>
@@ -311,7 +311,7 @@ function Home() {
                 <h1>Need 100g or 1kg of a compound from our R&D</h1>
                 <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 <nav>
-                    <Link to="/request-for-quote">Request a quote</Link>
+                    <Link to="/request-for-quote">Request for quote</Link>
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>

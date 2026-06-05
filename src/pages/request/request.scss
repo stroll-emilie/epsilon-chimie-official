@@ -80,6 +80,7 @@ section{
                     border: 1px solid var(--color-border-default);
                     border-radius: var(--border-radius-lg);
                     padding: var(--spacing-x-small) var(--spacing-medium);
+                    outline-style: none;
                 }
                 .input-comment{
                     display: flex;
@@ -88,8 +89,10 @@ section{
                     color: var(--color-content-secondary);
                     a {
                         cursor: pointer;
-                        text-decoration: underline;
                         color: var(--color-content-accent);
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
                 }
                 hr{
@@ -143,24 +146,25 @@ section{
                             gap: var(--spacing-medium);
                             flex-direction: row;
                             justify-content: space-between;
-                            align-items: flex-end;
+                            align-items: flex-start;
                             >div{
                                 display: flex;
                                 gap: var(--spacing-xx-small);
                                 flex-direction: column;
                                 width: 100%;
                             }
+                            &#mail-phone,&#country-website,&#country-website{
+                                align-items: flex-end;
+                            }
                         }
                     }
                 }
-
                 nav{
                     display: flex;
                     gap: var(--spacing-medium);
                     justify-content: space-between;
-                        padding: 0 var(--spacing-x-large);
-
-                    a{
+                    padding: 0 var(--spacing-x-large);
+                    button{
                         display: flex;
                         gap: var(--spacing-xx-small);
                         svg{

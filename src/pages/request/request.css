@@ -85,6 +85,7 @@ section#request article form input[type=text], section#request article form sele
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-x-small) var(--spacing-medium);
+  outline-style: none;
 }
 section#request article form .input-comment {
   display: flex;
@@ -94,8 +95,10 @@ section#request article form .input-comment {
 }
 section#request article form .input-comment a {
   cursor: pointer;
-  text-decoration: underline;
   color: var(--color-content-accent);
+}
+section#request article form .input-comment a:hover {
+  text-decoration: underline;
 }
 section#request article form hr {
   color: var(--color-border-reversed);
@@ -164,7 +167,7 @@ section#request article form#form-compound > div#quantity-purity, section#reques
   gap: var(--spacing-medium);
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 section#request article form#form-compound > div#quantity-purity > div, section#request article form#form-compound > div#packing-required > div, section#request article form#form-compound > div#company-institution > div, section#request article form#form-compound > div#country-website > div, section#request article form#form-compound > div#your-name > div, section#request article form#form-compound > div#mail-phone > div, section#request article form#form-compound > div#role > div {
   display: flex;
@@ -172,65 +175,68 @@ section#request article form#form-compound > div#quantity-purity > div, section#
   flex-direction: column;
   width: 100%;
 }
+section#request article form#form-compound > div#quantity-purity#mail-phone, section#request article form#form-compound > div#quantity-purity#country-website, section#request article form#form-compound > div#quantity-purity#country-website, section#request article form#form-compound > div#packing-required#mail-phone, section#request article form#form-compound > div#packing-required#country-website, section#request article form#form-compound > div#packing-required#country-website, section#request article form#form-compound > div#company-institution#mail-phone, section#request article form#form-compound > div#company-institution#country-website, section#request article form#form-compound > div#company-institution#country-website, section#request article form#form-compound > div#country-website#mail-phone, section#request article form#form-compound > div#country-website#country-website, section#request article form#form-compound > div#country-website#country-website, section#request article form#form-compound > div#your-name#mail-phone, section#request article form#form-compound > div#your-name#country-website, section#request article form#form-compound > div#your-name#country-website, section#request article form#form-compound > div#mail-phone#mail-phone, section#request article form#form-compound > div#mail-phone#country-website, section#request article form#form-compound > div#mail-phone#country-website, section#request article form#form-compound > div#role#mail-phone, section#request article form#form-compound > div#role#country-website, section#request article form#form-compound > div#role#country-website {
+  align-items: flex-end;
+}
 section#request article form nav {
   display: flex;
   gap: var(--spacing-medium);
   justify-content: space-between;
   padding: 0 var(--spacing-x-large);
 }
-section#request article form nav a {
+section#request article form nav button {
   display: flex;
   gap: var(--spacing-xx-small);
 }
-section#request article form nav a svg {
+section#request article form nav button svg {
   rotate: 180deg;
 }
-section#request article form nav a:first-of-type {
+section#request article form nav button:first-of-type {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#request article form nav a:first-of-type:hover {
+section#request article form nav button:first-of-type:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section#request article form nav a:first-of-type:active {
+section#request article form nav button:first-of-type:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section#request article form nav a:first-of-type {
+section#request article form nav button:first-of-type {
   color: var(--color-content-primary);
   border-color: var(--color-border-reversed);
 }
-section#request article form nav a:first-of-type:hover {
+section#request article form nav button:first-of-type:hover {
   background-color: var(--color-state-bg-neutral-hover);
 }
-section#request article form nav a:first-of-type:active {
+section#request article form nav button:first-of-type:active {
   background-color: var(--color-state-bg-neutral-pressed);
   color: var(--color-content-primary);
 }
-section#request article form nav a:last-of-type {
+section#request article form nav button:last-of-type {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#request article form nav a:last-of-type:hover {
+section#request article form nav button:last-of-type:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section#request article form nav a:last-of-type:active {
+section#request article form nav button:last-of-type:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section#request article form nav a:last-of-type {
+section#request article form nav button:last-of-type {
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
-section#request article form nav a:last-of-type:hover {
+section#request article form nav button:last-of-type:hover {
   background-color: var(--color-state-primary-hover);
 }
-section#request article form nav a:last-of-type:active {
+section#request article form nav button:last-of-type:active {
   background-color: var(--color-state-primary-pressed);
 }/*# sourceMappingURL=request.css.map */
