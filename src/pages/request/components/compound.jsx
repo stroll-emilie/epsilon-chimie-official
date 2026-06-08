@@ -47,6 +47,7 @@ function Compound({data, onChange}) {
                 placeholder='e.g. Diethyl phosphonate, CAS 762-04-9' 
                 value={data.compoundName}
                 onChange={(e) => onChange({compoundName: e.target.value})}
+                maxLength={100}
                 />
         </div>
 
@@ -58,6 +59,7 @@ function Compound({data, onChange}) {
                     placeholder='e.g. 250 g or 5x100 g'
                     value={data.quantity}
                     onChange={(e) => onChange({quantity: e.target.value})}
+                    maxLength={50}
                 />
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
@@ -87,6 +89,7 @@ function Compound({data, onChange}) {
                     placeholder='e.g. x*50 g glass bottles'
                     value={data.packing}
                     onChange={(e) => onChange({packing: e.target.value})}
+                    maxLength={50}
                 />
             </div>
             <div>
@@ -111,6 +114,7 @@ function Compound({data, onChange}) {
                 placeholder="e.g. HWE olefination step in a API synthesis; internal R&D only."
                 value={data.application}
                 onChange={(e) => onChange({application: e.target.value})}
+                maxLength={1000}
             >
             </textarea>
             <p className='input-comment'>Help us confirm the right grade and packaging. Treated confidentially.</p>

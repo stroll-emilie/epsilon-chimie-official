@@ -1,3 +1,6 @@
+import countries from 'i18n-iso-countries';
+import enLocale from 'i18n-iso-countries/langs/en.json';
+
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
@@ -5,6 +8,8 @@ import vide from '../assets/images/mollecules/vide.png'
 import Fuse from 'fuse.js'
 
 let cache = null
+
+countries.registerLocale(enLocale);
 
 // Chargement des données | découpage | groupement
 export async function loadProducts() {
@@ -40,27 +45,7 @@ export async function loadProducts() {
 
 // applique les tries et filtres
 export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
-
-    // traitement dans un premier temps de la recherche dans la barre de recherche
-    
     let result = products
-
-    if (search) {
-        const cleanSearch = search.replace(/^EC-/i, "").trim()
-        
-        const fuse = new Fuse(products, {
-            keys: [
-                { name: "NomClean", getFn: p => String(p["NomClean"] ?? "") },
-                { name: "CAS", getFn: p => String(p["CAS"] ?? "") },
-                { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
-                { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
-            ],
-            threshold: 0.4,
-        })
-        result = fuse.search(cleanSearch).map(r => r.item)
-    }
-
-
     return result
         // par famille à gauche
         .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
@@ -88,7 +73,22 @@ export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
                     
                 }default: return 0;
             }
-        });
+    });
+}
+
+export function searchProducts(products, search) {
+    if(!search) return products;
+    const cleanSearch = search.replace(/^EC-/i, "").trim()
+    const fuse = new Fuse(products, {
+        keys: [
+            { name: "NomClean", getFn: p => String(p["NomClean"] ?? "") },
+            { name: "CAS", getFn: p => String(p["CAS"] ?? "") },
+            { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
+            { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
+        ],
+        threshold: 0.4,
+    });
+    return fuse.search(cleanSearch).map(r => r.item);
 }
 
 // compte le nombre d'élement de chaque 
@@ -166,3 +166,10 @@ export function parseNom(nom) {
 
     return { name: nom, purity: "", method: "" };
 }
+
+//***********************************************************************************//
+
+export const getCountryOptions = () =>
+    Object.entries(countries.getNames("en", { select: "official" }))
+        .map(([code, name]) => ({ code, name }))
+        .sort((a, b) => a.name.localeCompare(b.name));

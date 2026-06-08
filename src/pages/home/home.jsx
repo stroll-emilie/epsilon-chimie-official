@@ -245,7 +245,7 @@ function Home() {
                             <h3>Phosphoranes</h3>
                             <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphorane')}>BROWSE PHOSPHORANES <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphoranes')}>BROWSE PHOSPHORANES <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -259,7 +259,7 @@ function Home() {
                             <h3>Phosphonates</h3>
                             <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonate')}>BROWSE PHOSPHONATES <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonates')}>BROWSE PHOSPHONATES <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -271,7 +271,7 @@ function Home() {
                             <h3>Phosphines</h3>
                             <p>Phosphites, phosphine oxides and ligand building blocks.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphine')}>BROWSE PHOSPHINES <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphines')}>BROWSE PHOSPHINES <CircleArrowIcon/></button>
                     </div>
                 </div>
 

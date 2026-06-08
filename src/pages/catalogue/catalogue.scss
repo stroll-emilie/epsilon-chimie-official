@@ -196,7 +196,87 @@ section{
                                 }
                             }
                         }
+
+
+                        #empty-search{
+                            display: flex;
+                            flex-direction: column;
+                            background-color: var(--color-surface-default);
+                            border-radius: var(--border-radius-xxl);
+                            padding: var(--spacing-large);
+                            align-items: center;
+                            >div{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                width: 70%;
+                                gap: var(--spacing-xx-large);
+                                #empty-info-container{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                    gap: var(--spacing-x-large);
+                                    #empty-title{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        #empty-svg{
+                                            background-color: var(--color-state-bg-reversed-hover);
+                                            width: 96px;
+                                            height: 96px;
+                                            border-radius: var(--border-radius-full);
+                                            padding: var(--spacing-medium);
+                                            svg{
+                                                width: 64px;
+                                                height: 64px;
+                                                color: var(--color-icon-brand)
+                                            }
+                                        }
+                                        h2:first-of-type,span{
+                                            color: var(--color-content-accent);
+                                            font-size: var(--font-size-h1);
+                                        }
+                                    }
+                                    nav{
+                                        display: flex;
+                                        gap: var(--spacing-xx-small);
+                                        button{
+                                            display: flex;
+                                            gap: var(--spacing-xx-small);
+                                            @include btn-grey;
+                                            cursor: pointer;
+
+                                        }
+                                        a{
+                                            @include btn-blue;
+                                        }
+                                    }
+                                }
+                                div:last-of-type{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: var(--spacing-xx-small);
+                                    ul{
+                                        display: flex;
+                                        gap: var(--spacing-xx-small);
+                                        li{
+                                            @include chips-large-outlined-rounded;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
+
+
+
+
+
+
                 }
             }
         }

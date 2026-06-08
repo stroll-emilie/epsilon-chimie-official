@@ -1,5 +1,9 @@
 
 import '../request.css'
+import { getCountryOptions } from '../../../services/dataService'
+
+const countryOptions = getCountryOptions();
+
 
 function Company({data,onChange}) {
     
@@ -13,6 +17,7 @@ function Company({data,onChange}) {
                 placeholder='e.g. Epsilon Chimie'
                 value={data.company}
                 onChange={(e) => onChange({company: e.target.value})}
+                maxLength={150}
                 />
             </div>
 
@@ -38,8 +43,14 @@ function Company({data,onChange}) {
         <div id="country-website">
             <div>
                 <label htmlFor="country">country <span>*</span></label>
-                <select>
-                    <option value=""> Select a Country</option>
+                <select
+                    value={data.country}
+                    onChange={(e) => onChange({country: e.target.value})}
+                >
+                    <option value="default"> Select a Country</option>
+                    {countryOptions.map(({ code, name }) => (
+                        <option key={code} value={name}>{code} - {name}</option>
+                    ))}
                 </select>
                 <p className='input-comment'>This may have an impacts on freight costs and currencies.</p>
             </div>
@@ -51,6 +62,7 @@ function Company({data,onChange}) {
                 placeholder='e.g. https://'
                 value={data.website}
                 onChange={(e) => onChange({website: e.target.value})}
+                maxLength={200}
                 />
             </div>
         </div>
@@ -61,6 +73,7 @@ function Company({data,onChange}) {
                 placeholder="Anything else we should know?."
                 value={data.additional}
                 onChange={(e) => onChange({additional: e.target.value})}
+                maxLength={1000}
             >
 
             </textarea>

@@ -1,10 +1,13 @@
 import './catalogue.css';
 
+import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
+import { ReloadIcon } from '../../assets/icons/reload_icon';
+
 import { useState} from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
-import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
+import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
 import { SearchIcon } from "../../assets/icons/search_icon"
@@ -21,8 +24,9 @@ function Catalogue() {
 
     const navigate = useNavigate();
 
-    const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
-    const countFamily = countByFamily(dataProcessed)
+    const searchedProducts = searchProducts(products, search);
+    const countFamily = countByFamily(searchedProducts)
+    const dataProcessed = filterAndSort(searchedProducts, {search: "", selectedFamily, sortOrder})
 
 
     return (
@@ -121,6 +125,38 @@ function Catalogue() {
                             </article>
                         );
                     })}
+
+                    {dataProcessed.length === 0 && (
+                        <div id="empty-search">
+                            <div>
+                                <div id='empty-info-container'>
+                                    <div id='empty-title'>
+                                        <div id='empty-svg'>
+                                            <SearchBrokenIcon/>
+                                        </div>
+                                        <h2>Oups !</h2>
+                                        <h2>It seems like we don't have results for <span>"..."</span></h2>
+                                    </div>
+                                    <p>Check the spelling, try a CAS number or a synonym, or widen your filters. Many compounds are also available through our on-demand synthesis service.</p>
+                                    <nav>
+                                        <button type="button" onClick={() => { setSearch(""); setSelectedFamily("All"); }}>
+                                            <ReloadIcon/> Clear search and filter
+                                        </button>
+                                        <Link to="/request-for-quote">Request a custom quote</Link>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <div className="number">OR YOU CAN TRY ONE OF THESE</div>
+                                    <ul>
+                                        <li onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</li>
+                                        <li onClick={() => setSearch("Diethyl")}>Diethyl</li>
+                                        <li onClick={() => setSearch("Phosphonates")}>Phosphonates</li>
+                                        <li onClick={() => setSearch("Triphenyl")}>Triphenyl</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                     
 
                 </div>

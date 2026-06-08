@@ -8,11 +8,12 @@ function Contact({data,onChange}) {
     <>
         <div id="your-name">
             <div>
-                <label htmlFor="first-name">first nam<span>*</span></label>
+                <label htmlFor="first-name">first name<span>*</span></label>
                 <input 
                 type="text"
                 value={data.firstName}
                 onChange={(e) => onChange({firstName: e.target.value})}
+                maxLength={50}
                 />
             </div>
 
@@ -22,6 +23,7 @@ function Contact({data,onChange}) {
                 type="text"
                 value={data.lastName}
                 onChange={(e) => onChange({lastName: e.target.value})}
+                maxLength={50}
                 />
             </div>
         </div>
@@ -34,6 +36,7 @@ function Contact({data,onChange}) {
                 placeholder='e.g. Research chemist, Procurement officer'
                 value={data.role}
                 onChange={(e) => onChange({role: e.target.value})}
+                maxLength={150}
                 />
             </div>
         </div>
@@ -46,16 +49,18 @@ function Contact({data,onChange}) {
                 placeholder='name@company.com'
                 value={data.email}
                 onChange={(e) => onChange({email: e.target.value})}
+                maxLength={100}
                 />
             </div>
 
             <div>
-                <label htmlFor="phone">phone number (optional)</label>
+                <label htmlFor="phone">phone number</label>
                 <input 
                 type="text"
                 placeholder='+33 ...'
                 value={data.tel}
                 onChange={(e) => onChange({tel: e.target.value})}
+                maxLength={30}
                 />
             </div>
         </div>
