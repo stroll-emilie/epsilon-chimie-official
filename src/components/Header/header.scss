@@ -102,17 +102,26 @@ header{
                 flex-direction: row;
                 gap: var(--spacing-medium);
 
-                a,div{
+                > button{
+                    display: flex;
+                    gap: var(--spacing-xx-small);
                     @include btn-base;
                 }
-
-                > div{
-                    p{
-                        gap:var(--spacing-xx-small);
-                        display: flex;
+                
+                div{
+                    display: flex;
+                    gap: var(--spacing-xx-small);
+                    padding: var(--spacing-xx-small) var(--spacing-medium);
+                    border-radius: var(--border-radius-lg);
+                    border: 1px solid var(--color-border-accent);
+                    color: var(--color-content-accent);
+                    input{
+                        outline-style: none
+                    }
+                    button{
+                        cursor: pointer;
                     }
                 }
-                
                 > a {
                     @include btn-blue;
                 }

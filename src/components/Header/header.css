@@ -111,23 +111,35 @@ header #default #navBar #action {
   flex-direction: row;
   gap: var(--spacing-medium);
 }
-header #default #navBar #action a, header #default #navBar #action div {
+header #default #navBar #action > button {
+  display: flex;
+  gap: var(--spacing-xx-small);
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-header #default #navBar #action a:hover, header #default #navBar #action div:hover {
+header #default #navBar #action > button:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-header #default #navBar #action a:active, header #default #navBar #action div:active {
+header #default #navBar #action > button:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-header #default #navBar #action > div p {
-  gap: var(--spacing-xx-small);
+header #default #navBar #action div {
   display: flex;
+  gap: var(--spacing-xx-small);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border-accent);
+  color: var(--color-content-accent);
+}
+header #default #navBar #action div input {
+  outline-style: none;
+}
+header #default #navBar #action div button {
+  cursor: pointer;
 }
 header #default #navBar #action > a {
   border: 0.5px solid var(--color-border-accent);

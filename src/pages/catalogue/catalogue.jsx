@@ -3,7 +3,7 @@ import './catalogue.css';
 import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
 import { ReloadIcon } from '../../assets/icons/reload_icon';
 
-import { useState} from 'react';
+import { useEffect, useState} from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
@@ -28,6 +28,10 @@ function Catalogue() {
     const countFamily = countByFamily(searchedProducts)
     const dataProcessed = filterAndSort(searchedProducts, {search: "", selectedFamily, sortOrder})
 
+    useEffect(() => {
+        const s = searchParams.get('search') || '';
+        setSearch(s);
+    }, [searchParams]);
 
     return (
     <>
