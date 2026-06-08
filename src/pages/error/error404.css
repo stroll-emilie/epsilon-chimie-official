@@ -72,6 +72,11 @@ section#error404 article > nav a:first-of-type:hover {
 section#error404 article > nav a:first-of-type:active {
   background-color: var(--color-state-primary-pressed);
 }
+section#error404 article > nav a:first-of-type:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
 section#error404 article > nav a:first-of-type svg {
   rotate: 180deg;
 }

@@ -10,8 +10,12 @@ label{
     font-weight: var(--font-weight-bold);
     line-height: 8px;
     text-transform: uppercase;
-    svg{
-        color: var(--color-icon-danger)
+
+    span{
+        color: var(--color-icon-danger);
+        font-family: var(--font-family-body);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-body-lg);
     }
 }
 
@@ -154,7 +158,7 @@ section{
                                 width: 100%;
                             }
                             &#mail-phone,&#country-website,&#country-website{
-                                align-items: flex-end;
+                                align-items: flex-start;
                             }
                         }
                     }

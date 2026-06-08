@@ -1,5 +1,4 @@
 
-import { InfoCircleVideIcon } from '../../../assets/icons/info_circle_vide_icon'
 import { LockCircleIcon } from '../../../assets/icons/lock_circle_icon'
 import '../request.css'
 
@@ -9,7 +8,7 @@ function Contact({data,onChange}) {
     <>
         <div id="your-name">
             <div>
-                <label htmlFor="first-name">first nam<InfoCircleVideIcon/></label>
+                <label htmlFor="first-name">first nam<span>*</span></label>
                 <input 
                 type="text"
                 value={data.firstName}
@@ -18,7 +17,7 @@ function Contact({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="last-name">last name<InfoCircleVideIcon/></label>
+                <label htmlFor="last-name">last name<span>*</span></label>
                 <input 
                 type="text"
                 value={data.lastName}
@@ -41,7 +40,7 @@ function Contact({data,onChange}) {
 
         <div id="mail-phone">
             <div>
-                <label htmlFor="mail">e-mail<InfoCircleVideIcon/></label>
+                <label htmlFor="mail">e-mail<span>*</span></label>
                 <input 
                 type="text"
                 placeholder='name@company.com'

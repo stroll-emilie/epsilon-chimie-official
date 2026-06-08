@@ -136,6 +136,11 @@ section#presentation article:first-of-type div:last-of-type a:first-of-type:hove
 section#presentation article:first-of-type div:last-of-type a:first-of-type:active {
   background-color: var(--color-state-primary-pressed);
 }
+section#presentation article:first-of-type div:last-of-type a:first-of-type:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
 section#presentation article:first-of-type div:last-of-type a:last-of-type {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
@@ -295,6 +300,11 @@ section#finder > article:last-of-type .searchBar .searchBarContainer button:hove
 }
 section#finder > article:last-of-type .searchBar .searchBarContainer button:active {
   background-color: var(--color-state-primary-pressed);
+}
+section#finder > article:last-of-type .searchBar .searchBarContainer button:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
 }
 section#finder > article:last-of-type .searchBar .searchBarContainer button:hover {
   cursor: pointer;

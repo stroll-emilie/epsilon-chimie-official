@@ -153,6 +153,11 @@ header #default #navBar #action > a:hover {
 header #default #navBar #action > a:active {
   background-color: var(--color-state-primary-pressed);
 }
+header #default #navBar #action > a:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
 header #default #navBar .logo-container {
   display: grid;
   align-items: center;

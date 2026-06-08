@@ -21,8 +21,11 @@ label {
   line-height: 8px;
   text-transform: uppercase;
 }
-label svg {
+label span {
   color: var(--color-icon-danger);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body-lg);
 }
 
 section#request-title {
@@ -176,7 +179,7 @@ section#request article form#form-compound > div#quantity-purity > div, section#
   width: 100%;
 }
 section#request article form#form-compound > div#quantity-purity#mail-phone, section#request article form#form-compound > div#quantity-purity#country-website, section#request article form#form-compound > div#quantity-purity#country-website, section#request article form#form-compound > div#packing-required#mail-phone, section#request article form#form-compound > div#packing-required#country-website, section#request article form#form-compound > div#packing-required#country-website, section#request article form#form-compound > div#company-institution#mail-phone, section#request article form#form-compound > div#company-institution#country-website, section#request article form#form-compound > div#company-institution#country-website, section#request article form#form-compound > div#country-website#mail-phone, section#request article form#form-compound > div#country-website#country-website, section#request article form#form-compound > div#country-website#country-website, section#request article form#form-compound > div#your-name#mail-phone, section#request article form#form-compound > div#your-name#country-website, section#request article form#form-compound > div#your-name#country-website, section#request article form#form-compound > div#mail-phone#mail-phone, section#request article form#form-compound > div#mail-phone#country-website, section#request article form#form-compound > div#mail-phone#country-website, section#request article form#form-compound > div#role#mail-phone, section#request article form#form-compound > div#role#country-website, section#request article form#form-compound > div#role#country-website {
-  align-items: flex-end;
+  align-items: flex-start;
 }
 section#request article form nav {
   display: flex;
@@ -239,4 +242,9 @@ section#request article form nav button:last-of-type:hover {
 }
 section#request article form nav button:last-of-type:active {
   background-color: var(--color-state-primary-pressed);
+}
+section#request article form nav button:last-of-type:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
 }/*# sourceMappingURL=request.css.map */

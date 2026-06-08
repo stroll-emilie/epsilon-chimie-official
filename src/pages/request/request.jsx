@@ -24,9 +24,6 @@ function Request() {
 
     const [formStep, setFormStep] = useState(0)
 
-
-
-    
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const packing = searchParams.get('packing');
@@ -35,9 +32,10 @@ function Request() {
     
     const [formData, setFormData] = useState({
         requestType: id ? "catalogue" : "custom", compoundName: name || "", quantity: "", purity: "", packing: packing || "", required: "default", application: "",
-        company: "", sector: "", contry: "", website: "", additional: "", 
+        company: "", sector: "", country: "", website: "", additional: "", privacyPolicy: "",
         firstName: "", lastName: "", role: "", email: "", tel: ""
     });
+
     
     useEffect(() => {
         if(!loading && id && !prod){
@@ -50,6 +48,19 @@ function Request() {
     const next = () => setFormStep((s) => s + 1);
     const prev = () => setFormStep((s) => s - 1);
     const handleSubmit = () => console.log("Données finales :", formData);
+    
+    // Champs obligatoire pour passer à l'étape suivante 
+    const REQUIRED_FIELDS = {
+        0: ["compoundName", "quantity", "purity"],
+        1: ["country", "privacyPolicy"],
+        2: ["firstName", "lastName", "email"],
+    };
+
+    const isStepValid = REQUIRED_FIELDS[formStep].every((field) => {
+        const value = formData[field];
+        if(typeof value === "boolean") return value === true;
+        return value?.toString().trim() !== "" && value !== "default"
+    });
 
     return (
     <>
@@ -79,7 +90,7 @@ function Request() {
                         <p>CONTACT</p>
                     </div>
                 </div>
-        
+
                 <form id='form-compound'>
                     {formStep === 0 && (
                         <Compound data={formData} onChange={updateData}/>
@@ -100,10 +111,10 @@ function Request() {
                         {formStep === 0 && <span />}
 
                         {formStep <2 && (
-                            <button type="button" onClick={next}> Next</button>
+                            <button type="button" onClick={next} disabled={!isStepValid}> Next</button>
                         )}
                         {formStep >=2 && (
-                            <button type="button" onClick={handleSubmit}>Submit</button>
+                            <button type="button" onClick={handleSubmit} disabled={!isStepValid}>Submit</button>
                         )}
                     </nav>
                 </form>

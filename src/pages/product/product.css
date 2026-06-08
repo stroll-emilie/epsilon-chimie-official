@@ -107,6 +107,7 @@
   outline: 1px solid var(--color-border-reversed);
   border-radius: var(--border-radius-xxl);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+  cursor: pointer;
 }
 #product-details > article:last-of-type > div:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) button:hover {
   background-color: var(--color-state-bg-neutral-hover);
@@ -144,6 +145,14 @@
 }
 #product-details > article:last-of-type > div:nth-of-type(3) > div:last-of-type button:active {
   background-color: var(--color-state-primary-pressed);
+}
+#product-details > article:last-of-type > div:nth-of-type(3) > div:last-of-type button:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
+#product-details > article:last-of-type > div:nth-of-type(3) > div:last-of-type button {
+  cursor: pointer;
 }
 #product-details > article:last-of-type > div:nth-of-type(3) > div:last-of-type p {
   font-family: var(--font-family-body);

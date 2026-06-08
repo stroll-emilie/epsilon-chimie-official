@@ -1,5 +1,4 @@
 import { CircleArrowIcon } from '../../../assets/icons/circle_arrow_icon'
-import { InfoCircleVideIcon } from '../../../assets/icons/info_circle_vide_icon'
 import '../request.css'
 import { Link } from 'react-router-dom'
 
@@ -42,7 +41,7 @@ function Compound({data, onChange}) {
         </div>
         
         <div id='product-name'>
-            <label htmlFor="name">compound name, cas number or target structure <InfoCircleVideIcon/></label>
+            <label htmlFor="name">compound name, cas number or target structure <span>*</span></label>
             <input 
                 type="text" 
                 placeholder='e.g. Diethyl phosphonate, CAS 762-04-9' 
@@ -53,7 +52,7 @@ function Compound({data, onChange}) {
 
         <div id='quantity-purity'>
             <div>
-                <label htmlFor="quantity">quantity <InfoCircleVideIcon/></label>
+                <label htmlFor="quantity">quantity <span>*</span></label>
                 <input 
                     type="text" 
                     placeholder='e.g. 250 g or 5x100 g'
@@ -63,7 +62,7 @@ function Compound({data, onChange}) {
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
             <div>
-                <label htmlFor="purity">minimum purity <InfoCircleVideIcon/></label>
+                <label htmlFor="purity">minimum purity <span>*</span></label>
                 <select 
                     name="purity"
                     value={data.purity}
@@ -98,9 +97,9 @@ function Compound({data, onChange}) {
                     onChange={(e) => onChange({required: e.target.value})}
                 >
                     <option value="default">Select a timeline</option>
-                    <option value="withinweek">within a week</option>
-                    <option value="withinmonth">within a month</option>
-                    <option value="overmonth">over a month</option>
+                    <option value="withinweek">Within a week</option>
+                    <option value="withinmonth">Within a month</option>
+                    <option value="overmonth">Over a month</option>
 
                 </select>
             </div>

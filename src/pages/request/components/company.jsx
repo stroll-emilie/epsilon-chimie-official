@@ -1,5 +1,4 @@
 
-import { InfoCircleVideIcon } from '../../../assets/icons/info_circle_vide_icon'
 import '../request.css'
 
 function Company({data,onChange}) {
@@ -19,7 +18,11 @@ function Company({data,onChange}) {
 
             <div>
                 <label htmlFor="sector">sector</label>
-                <select>
+                <select 
+                    name="sector"
+                    value={data.sector}
+                    onChange={(e) => onChange({sector: e.target.value})}
+                >
                     <option value="default">Select a sector</option>
                     <option value="pharmaceutical">Pharmaceutical</option>
                     <option value="scholar">Scholar</option>
@@ -34,7 +37,7 @@ function Company({data,onChange}) {
     
         <div id="country-website">
             <div>
-                <label htmlFor="country">country <InfoCircleVideIcon/></label>
+                <label htmlFor="country">country <span>*</span></label>
                 <select>
                     <option value=""> Select a Country</option>
                 </select>
@@ -61,7 +64,16 @@ function Company({data,onChange}) {
             >
 
             </textarea>
-            <p className='input-comment'><input type="checkbox" /><span>By clicking 'Next', you confirm that you have read ou <a href="">privacy policy</a>  and agree that your details will be used solely to process this request.</span></p>
+            <p className='input-comment'>
+                <input 
+                    type="checkbox" 
+                    checked={data.privacyPolicy}
+                    onChange={(e) => onChange({privacyPolicy: e.target.checked})}
+                />
+                <span>
+                    By clicking 'Next', you confirm that you have read ou <a href="">privacy policy</a>  and agree that your details will be used solely to process this request.
+                </span>
+            </p>
         </div>
     </>
     )
