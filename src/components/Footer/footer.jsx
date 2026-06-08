@@ -32,6 +32,8 @@ function Footer() {
                         <li onClick={() => navigate('catalogue?family=Phosphonates')}>Phosphonates</li>
                         <li onClick={() => navigate('catalogue?family=Phosphonium Salts')}>Phosphonium Salts</li>
                         <li onClick={() => navigate('catalogue?family=Phosphoranes')}>Phosphoranes</li>
+                        <li onClick={() => navigate('catalogue?family=Phosphines')}>Phosphines</li>
+                        <li onClick={() => navigate('catalogue?family=Chemical Intermediates')}>Chemical Intermediates</li>
                         <li><a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf">Full Catalogue (PDF)</a></li>
                     </ul>
                 </article>

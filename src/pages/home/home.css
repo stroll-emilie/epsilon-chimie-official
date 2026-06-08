@@ -378,6 +378,10 @@ section#finder > article:last-of-type .filtered button {
 section#finder > article:last-of-type .filtered button:hover {
   cursor: pointer;
 }
+section#finder > article:last-of-type .filtered button img {
+  width: 20px;
+  height: 20px;
+}
 section#capabilites h2 {
   font-size: var(--font-size-h1);
 }
@@ -520,7 +524,14 @@ section#families > article#families-list .column .familie-element > button {
   font-weight: var(--font-weight-bold);
   line-height: 100%;
   letter-spacing: -1%;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
   cursor: pointer;
+  border-bottom: 1px solid var(--color-border-accent);
+}
+section#families > article#families-list .column .familie-element > button:active {
+  background-color: var(--color-bg-primary-subtle);
 }
 section#families > article#families-list .column {
   /* column gauche */

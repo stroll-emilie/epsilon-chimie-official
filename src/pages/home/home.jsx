@@ -97,7 +97,7 @@ function Home() {
                     <h2>Search across 1 000+ references</h2>
                     <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
                 </div>
-                <a href="#">Request for custom synthesis<CircleArrowIcon/></a>
+                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
             </article>
 
             <article>
@@ -135,12 +135,12 @@ function Home() {
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><InfoCircleIcon/>Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><InfoCircleIcon/>Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><InfoCircleIcon/>Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><InfoCircleIcon/>Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphines')}><InfoCircleIcon/>Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><InfoCircleIcon/>Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonate schema" />Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonate schema" />Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonate schema" />Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphonate schema" />Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphonate schema" />Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermeidates} alt="Phosphonate schema" />Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -297,7 +297,7 @@ function Home() {
                             <h3>Chemical Intermediates</h3>
                             <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Chemical Intermediate')}>BROWSE CHEMICAL INTERMEDIATES <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>BROWSE CHEMICAL INTERMEDIATES <CircleArrowIcon/></button>
                         
                     </div>
                 </div>
@@ -308,7 +308,7 @@ function Home() {
         <section id='talk'>
             <article>
                 <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
-                <h1>Need 100g or 1kg of a compound from our R&D</h1>
+                <h1>Need 100g or 1kg of a compound from our R&D ?</h1>
                 <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 <nav>
                     <Link to="/request-for-quote">Request for quote</Link>

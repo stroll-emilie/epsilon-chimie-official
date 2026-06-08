@@ -71,6 +71,10 @@ function Product() {
                         <p>{prod["Masse molaire"]} <span>g/mol</span></p>
                     </div>
                 </div>
+                <div>
+                    <span>Labeled with your internal reference</span>
+                    <p>For easier organization, each bottle can be labeled with your internal reference for seamless integration in your workflow, easy tracking and usage.</p>
+                </div>
             </article>
 
             <article>

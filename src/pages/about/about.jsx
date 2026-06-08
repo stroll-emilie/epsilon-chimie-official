@@ -58,17 +58,12 @@ function About() {
                     </li>
                     <hr />
                     <li>
-                        <h3>2024</h3>
+                        <h3>2012</h3>
                         <p>ICH-Q7 Guidelines</p>
                         <p>Quality management renewed and based on ICH-Q7 Guidelines.</p>
                     </li>
                     <hr />
-                    <li>
-                        <h3>YYYY</h3>
-                        <p>Catalogue 1000+</p>
-                        <p>Catalogue now exceeds one thousand commercial references.</p>
-                    </li>
-                    <hr />
+                    
                 </ul>
             </article>
 
