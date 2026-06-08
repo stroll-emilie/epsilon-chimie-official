@@ -1,7 +1,6 @@
 import './request.css'
 
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
-import { InfoCircleVideIcon } from '../../assets/icons/info_circle_vide_icon'
 
 import Company from './components/company'
 import Compound from './components/compound'

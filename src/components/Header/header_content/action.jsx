@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { SearchIcon } from '../../../assets/icons/search_icon'
 import '../header.css'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { XIcon } from '../../../assets/icons/x_icon'
 
 function Action() {

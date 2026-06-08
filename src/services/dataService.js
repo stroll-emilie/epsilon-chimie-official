@@ -116,7 +116,7 @@ export function formatFormula(formula) {
 
 export const getDefaultPurity = (purity) => {
     if(!purity) return "default";
-    const num = parseFloat(purity);
+    const num = Number.parseFloat(purity);
 
     if (num >= 99) return "99";
     if (num >= 98) return "min98";

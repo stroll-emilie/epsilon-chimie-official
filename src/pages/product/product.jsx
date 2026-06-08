@@ -1,11 +1,9 @@
 import './product.css'
-import { useState, useEffect } from 'react'
 import { useNavigate, Link, useParams } from 'react-router-dom'
 import { useProducts } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
 
-import Vide from '../../assets/images/mollecules/vide.png'
 import { WarnIcon } from '../../assets/icons/warn_icon'
 
 import Specification from './components/specification.jsx'
