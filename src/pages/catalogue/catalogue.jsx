@@ -22,7 +22,7 @@ function Catalogue() {
     const navigate = useNavigate();
 
     const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
-    const countFamily = countByFamily(products)
+    const countFamily = countByFamily(dataProcessed)
 
 
     return (

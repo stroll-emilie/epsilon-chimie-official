@@ -114,6 +114,17 @@ export function formatFormula(formula) {
         .replace(/(\d+)/g, match => `<sub>${match}</sub>`)
 }
 
+export const getDefaultPurity = (purity) => {
+    if(!purity) return "default";
+    const num = parseFloat(purity);
+
+    if (num >= 99) return "99";
+    if (num >= 98) return "min98";
+    if (num >= 95) return "95";
+    if (num >= 80) return "80-90";
+    return "min50";
+};
+
 //**************************** Gestion des images ***********************************//
 
 const images = import.meta.glob('../assets/images/mollecules/*.png', { eager: true });
@@ -135,16 +146,23 @@ export function getProductImage(ref) {
 
 export function parseNom(nom) {
     if (!nom) return { name: "", purity: "", method: "" };
-    
-    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/);
-    
+
+    const match = nom.match(
+        /(,\s*|\s+)(tech\.?\s*)?(min\.?\s*)?([\d.,]+-?[\d.]*\s*%?)(\s*min\.?)?\s*(\([^)]+\))?$/i
+    );
+
     if (match) {
-        return { 
-            name: nom.slice(0, match.index).trim(), 
-            purity: match[2].trim(),
-            method: match[3] ? match[3].replace(/[()]/g, '').trim() : "" 
+        const tech   = match[2] ? "tech. " : "";
+        const min    = (match[3] || match[5]) ? "min. " : "";
+        const value  = match[4].replace(",", ".").trim(); // "97,5" → "97.5"
+        const method = match[6] ? match[6].replace(/[()]/g, "").trim() : "";
+
+        return {
+            name:   nom.slice(0, match.index).trim(),
+            purity: (tech + min + value).trim(),
+            method,
         };
     }
-    
+
     return { name: nom, purity: "", method: "" };
 }

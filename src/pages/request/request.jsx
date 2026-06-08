@@ -9,40 +9,45 @@ import Contact from './components/contact'
 
 
 import { useEffect, useMemo, useState } from 'react'
-import { getProductById, parseNom} from '../../services/dataService.js'
+import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
 import { useProducts } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 
 function Request() {
-    
-    
     const navigate = useNavigate();
     const { products, loading } = useProducts()
     const { id } = useParams()
     const prod = useMemo(() => id ? getProductById(products, id) : null, [products, id]);
-
-
+    console.log(prod)
+    
     const [formStep, setFormStep] = useState(0)
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const packing = searchParams.get('packing');
     
-    const { name, purity, method } = prod ? parseNom(prod["Nom"]) : {}
     
     const [formData, setFormData] = useState({
-        requestType: id ? "catalogue" : "custom", compoundName: name || "", quantity: "", purity: "", packing: packing || "", required: "default", application: "",
+        requestType: id ? "catalogue" : "custom", compoundName: "", quantity: "", purity: "", packing: packing || "", required: "default", application: "",
         company: "", sector: "", country: "", website: "", additional: "", privacyPolicy: "",
         firstName: "", lastName: "", role: "", email: "", tel: ""
     });
 
-    
     useEffect(() => {
-        if(!loading && id && !prod){
+        if (!loading && id && !prod) {
             navigate('/error404');
         }
     }, [loading, id, prod]);
-    
+
+    useEffect(() => {
+        if (!prod) return;
+        const { name, purity } = parseNom(prod["Nom"]);
+        setFormData((prev) => ({
+            ...prev,
+            compoundName: name || "",
+            purity: getDefaultPurity(purity),
+        }));
+    }, [prod]);
     
     const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
     const next = () => setFormStep((s) => s + 1);
