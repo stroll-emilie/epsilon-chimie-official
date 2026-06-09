@@ -127,7 +127,7 @@ header #default #navBar #action > button:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-header #default #navBar #action div {
+header #default #navBar #action > div {
   display: flex;
   gap: var(--spacing-xx-small);
   padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -135,10 +135,10 @@ header #default #navBar #action div {
   border: 1px solid var(--color-border-accent);
   color: var(--color-content-accent);
 }
-header #default #navBar #action div input {
+header #default #navBar #action > div input {
   outline-style: none;
 }
-header #default #navBar #action div button {
+header #default #navBar #action > div button, header #default #navBar #action > div svg {
   cursor: pointer;
 }
 header #default #navBar #action > a {

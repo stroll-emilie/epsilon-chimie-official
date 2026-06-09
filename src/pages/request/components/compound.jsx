@@ -1,6 +1,5 @@
 import { CircleArrowIcon } from '../../../assets/icons/circle_arrow_icon'
 import '../request.css'
-import { Link } from 'react-router-dom'
 
 function Compound({data, onChange}) {
     
@@ -71,11 +70,11 @@ function Compound({data, onChange}) {
                     onChange={(e) => onChange({purity: e.target.value})}
                 >
                     <option value="default">Select a purity</option>
-                    <option value="min50">min. 50%</option>
-                    <option value="80-90">80-90%</option>
-                    <option value="95">95%</option>
-                    <option value="min98">min. 98%</option>
                     <option value="99">99%</option>
+                    <option value="min98">min. 98%</option>
+                    <option value="95">95%</option>
+                    <option value="80-90">80-90%</option>
+                    <option value="min50">min. 50%</option>
                 </select>
             </div>
             

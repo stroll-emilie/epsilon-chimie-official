@@ -108,7 +108,7 @@ header{
                     @include btn-base;
                 }
                 
-                div{
+                > div{
                     display: flex;
                     gap: var(--spacing-xx-small);
                     padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -118,7 +118,7 @@ header{
                     input{
                         outline-style: none
                     }
-                    button{
+                    button,svg{
                         cursor: pointer;
                     }
                 }

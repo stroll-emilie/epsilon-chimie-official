@@ -7,7 +7,6 @@ import { HealthIcon } from '../../assets/icons/health_icon'
 
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { SearchIcon } from '../../assets/icons/search_icon'
-import { InfoCircleIcon } from '../../assets/icons/info_circle_icon'
 import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 

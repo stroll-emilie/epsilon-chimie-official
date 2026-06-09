@@ -17,7 +17,16 @@ function Action() {
             <button onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
         ) : (
             <div>
-                <SearchIcon/>
+                <div onClick={() => {
+                        setIsOpen(false);
+                        setSearch("");
+                        if(search.length > 0){
+                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
+                        }
+                    }
+                >
+                    <SearchIcon/>
+                </div>
                 <input 
                     autoFocus 
                     placeholder='Search CAS...' 
@@ -25,6 +34,8 @@ function Action() {
                     onChange={e => setSearch(e.target.value)}
                     onKeyDown={e => {
                         if(e.key === "Enter") {
+                            setIsOpen(false);
+                            setSearch("");
                             navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`);
                         }
                     }}

@@ -9,6 +9,7 @@ import { WarnIcon } from '../../assets/icons/warn_icon'
 import Specification from './components/specification.jsx'
 import SafetyHazards from './components/safety_hazards'
 import ShippingDocs from './components/shipping_docs'
+import { useState } from 'react';
 
 const TABS_CONFIG = [
     { id: "Specifications", label: "Specifications", component: Specification },

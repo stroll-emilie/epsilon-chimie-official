@@ -1,4 +1,21 @@
 import PropTypes from 'prop-types'
+import { data } from 'react-router-dom';
 
 export const sizeProp = {size: PropTypes.number};
 export const childrenProp = {children: PropTypes.node.isRequired};
+
+export const specsListProp = {
+    specsList: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export const formDataProp = {
+    data: PropTypes.shape({
+        company:        PropTypes.string,
+        country:        PropTypes.string,
+        additional:     PropTypes.string,
+        requestType:    PropTypes.string,
+        compoundName:   PropTypes.string,
+        application:    PropTypes.string,
+        lastName:       PropTypes.string,
+    }).isRequired
+}
