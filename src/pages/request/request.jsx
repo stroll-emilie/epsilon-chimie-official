@@ -12,7 +12,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
 import { useProducts } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
-import { EMAILJS_CONFIG } from '../../config/emailjs.js'
+import { EMAILJS_CONFIG } from '../../config/tempo.js'
 
 function Request() {
     const navigate = useNavigate();
