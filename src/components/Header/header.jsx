@@ -34,17 +34,16 @@ function Header() {
         </div>
 
         <div id='navBar'>
-          <div className='logo-container'>
+          <div className='logo-container' onClick={() => navigate("/")}>
             <img
               src={epsilonLogo}
               className={scrolled ? 'hide' : 'show'}
               alt="logo-epsilon-chimie"
               title="logo-epsilon-chimie"
-              onClick={() => navigate("/")}
             />
-            <p className={scrolled ? 'show' : 'hide'} onClick={() => navigate("/")}>
+            <button className={scrolled ? 'show' : 'hide'} onClick={() => navigate("/")}>
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
-            </p>
+            </button>
           </div>
           <Nav />
           <Action />

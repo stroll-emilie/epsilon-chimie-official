@@ -10,21 +10,18 @@ function Action() {
     const [isOpen, setIsOpen] = useState(false)
     const navigate = useNavigate();
 
-
     return (
     <div id='action'>
-        {!isOpen ? (
-            <button onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
-        ) : (
-            <div>
-                <div onClick={() => {
-                        setIsOpen(false);
-                        setSearch("");
-                        if(search.length > 0){
-                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
-                        }
-                    }
-                >
+        {isOpen ? (
+            <div onClick={() => {
+                setIsOpen(false);
+                setSearch("");
+                if(search.length > 0){
+                    navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
+                }
+            }
+            >
+                <div>
                     <SearchIcon/>
                 </div>
                 <input 
@@ -42,6 +39,8 @@ function Action() {
                 />
                 <button onClick={() => { setIsOpen(false); setSearch(""); }}><XIcon/></button>
             </div>
+        ) : (
+            <button onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
         )}
         <Link to="/request-for-quote">Request for quote</Link>
     </div>

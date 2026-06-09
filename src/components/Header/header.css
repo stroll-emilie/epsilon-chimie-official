@@ -174,7 +174,7 @@ header #default #navBar .logo-container {
   display: grid;
   align-items: center;
 }
-header #default #navBar .logo-container img, header #default #navBar .logo-container p {
+header #default #navBar .logo-container img, header #default #navBar .logo-container button {
   grid-area: 1/1;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 }
