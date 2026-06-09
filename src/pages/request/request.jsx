@@ -1,4 +1,5 @@
 import './request.css'
+import emailjs from '@emailjs/browser'
 
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 
@@ -11,6 +12,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
 import { useProducts } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
+import { EMAILJS_CONFIG } from '../../config/email.js.js'
 
 function Request() {
     const navigate = useNavigate();
@@ -50,8 +52,11 @@ function Request() {
     const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
     const next = () => setFormStep((s) => s + 1);
     const prev = () => setFormStep((s) => s - 1);
-    const handleSubmit = () => console.log("Données finales :", formData);
-    
+    const handleSubmit = () => {
+        console.log("Données finales :", formData);
+        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, formData);
+        alert("Mail envoyé");
+    }
     // Champs obligatoire pour passer à l'étape suivante 
     const REQUIRED_FIELDS = {
         0: ["compoundName", "quantity", "purity"],
