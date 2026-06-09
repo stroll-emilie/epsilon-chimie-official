@@ -33,12 +33,12 @@ function Action() {
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                     onKeyDown={e => {
-                        if(e.key === "Enter") {
+                        if(e.key === "Enter" && search.length > 0) {
                             setIsOpen(false);
                             setSearch("");
-                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`);
+                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
                         }
-                    }}
+                    }
                 />
                 <button onClick={() => { setIsOpen(false); setSearch(""); }}><XIcon/></button>
             </div>

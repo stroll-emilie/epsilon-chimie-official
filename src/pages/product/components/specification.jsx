@@ -1,5 +1,5 @@
 import '../product.css'
-import { specsListProp } from '../../../props/propTypes';
+import { specsListProp } from '../../../propTypes';
 
 
 function Specification({specsList}) {
