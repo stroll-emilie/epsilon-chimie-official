@@ -28,6 +28,7 @@ header{
             width: 108px;
             height: 58px;
             object-fit: contain;
+            cursor: pointer;
         }
 
         /*text au dessus cf credit.jsx*/
@@ -82,7 +83,7 @@ header{
             }
             
             
-            > .logo-container p{
+            > .logo-container a{
                 padding: var(--spacing-xx-small) var(--spacing-x-small);
                 text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
                 color: var(--color-content-accent);
@@ -101,17 +102,26 @@ header{
                 flex-direction: row;
                 gap: var(--spacing-medium);
 
-                a,div{
+                > button{
+                    display: flex;
+                    gap: var(--spacing-xx-small);
                     @include btn-base;
                 }
-
+                
                 > div{
-                    p{
-                        gap:var(--spacing-xx-small);
-                        display: flex;
+                    display: flex;
+                    gap: var(--spacing-xx-small);
+                    padding: var(--spacing-xx-small) var(--spacing-medium);
+                    border-radius: var(--border-radius-lg);
+                    border: 1px solid var(--color-border-accent);
+                    color: var(--color-content-accent);
+                    input{
+                        outline-style: none
+                    }
+                    button,svg{
+                        cursor: pointer;
                     }
                 }
-                
                 > a {
                     @include btn-blue;
                 }
@@ -120,7 +130,7 @@ header{
                 display: grid;
                 align-items: center;
                 
-                img,p{
+                img,a{
                     grid-area: 1/1;
                     transition: opacity .2s ease-in-out, visibility 0s .2s;
                 }
@@ -128,8 +138,8 @@ header{
                 img.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;visibility: 0s .2s;}
                 img.show{transition: opacity .2s ease-in-out .1s;opacity: 1;visibility: 0s .2s;}
 
-                p.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;}
-                p.show{transition: opacity .2s ease-in-out .1;opacity: 1;}
+                a.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;}
+                a.show{transition: opacity .2s ease-in-out .1;opacity: 1;}
             
 
             }
@@ -140,6 +150,7 @@ header{
     &.scrolled {
         box-shadow: 0 2px 10px rgba(0,0,0,.1);
         padding: var(--spacing-x-small) 112px;
+        cursor: pointer;
         #default{
             .credit-wrapper{
                 opacity: 0;

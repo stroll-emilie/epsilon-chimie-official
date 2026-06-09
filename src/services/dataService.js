@@ -1,3 +1,6 @@
+import countries from 'i18n-iso-countries';
+import enLocale from 'i18n-iso-countries/langs/en.json';
+
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
@@ -6,8 +9,9 @@ import Fuse from 'fuse.js'
 
 let cache = null
 
-// Chargement des données | découpage | groupement
+countries.registerLocale(enLocale);
 
+// Chargement des données | découpage | groupement
 export async function loadProducts() {
     if (cache) return cache
     const res = await fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
@@ -20,9 +24,10 @@ export async function loadProducts() {
 
     // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
     const parsed = data.map(row => {
-        const { name, purity } = parseNom(row["Nom"])
+        const { name, purity, method } = parseNom(row["Nom"])
         row["NomClean"] = name
         row["Purity"] = purity
+        row["Method"] = method
         return row
     })
 
@@ -40,27 +45,7 @@ export async function loadProducts() {
 
 // applique les tries et filtres
 export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
-
-    // traitement dans un premier temps de la recherche dans la barre de recherche
-    
     let result = products
-
-    if (search) {
-        const cleanSearch = search.replace(/^EC-/i, "").trim()
-        
-        const fuse = new Fuse(products, {
-            keys: [
-                { name: "NomClean", getFn: p => String(p["NomClean"] ?? "") },
-                { name: "CAS", getFn: p => String(p["CAS"] ?? "") },
-                { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
-                { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
-            ],
-            threshold: 0.4,
-        })
-        result = fuse.search(cleanSearch).map(r => r.item)
-    }
-
-
     return result
         // par famille à gauche
         .filter(p => selectedFamily === "All" || getMoleculeFamily(p) === selectedFamily)
@@ -88,12 +73,27 @@ export function filterAndSort(products, {search, selectedFamily, sortOrder}) {
                     
                 }default: return 0;
             }
-        });
+    });
+}
+
+export function searchProducts(products, search) {
+    if(!search) return products;
+    const cleanSearch = search.replace(/^EC-/i, "").trim()
+    const fuse = new Fuse(products, {
+        keys: [
+            { name: "NomClean", getFn: p => String(p["NomClean"] ?? "") },
+            { name: "CAS", getFn: p => String(p["CAS"] ?? "") },
+            { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
+            { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
+        ],
+        threshold: 0.4,
+    });
+    return fuse.search(cleanSearch).map(r => r.item);
 }
 
 // compte le nombre d'élement de chaque 
 export function countByFamily(products) {
-    const families = ["Phosphonic Acids", "Phosphonate", "Phosphonium Salts", "Phosphorane", "Phosphine", "Chemical Intermediate"]
+    const families = ["Phosphonic Acids", "Phosphonates", "Phosphonium Salts", "Phosphoranes", "Phosphines", "Chemical Intermediates"]
     const counts = { "All" : products.length }
     families.forEach(f => {
         counts[f] = products.filter(p => getMoleculeFamily(p) === f).length
@@ -103,8 +103,27 @@ export function countByFamily(products) {
 
 // Récupéré les infos sur un seul produit
 export function getProductById(products, id) {
-    return products.find(p => p["Réf EPSILON"] === id)
+    return products.find(p => String(p["Réf EPSILON"]) === String(id))
 }
+
+// Formater la formule chimique de la molécule
+export function formatFormula(formula) {
+    if(!formula) return ""
+    return formula
+        .replace(/([A-Z][a-z]?)/g, match => `<span>${match}</span>`)
+        .replace(/(\d+)/g, match => `<sub>${match}</sub>`)
+}
+
+export const getDefaultPurity = (purity) => {
+    if(!purity) return "default";
+    const num = Number.parseFloat(purity);
+
+    if (num >= 99) return "99";
+    if (num >= 98) return "min98";
+    if (num >= 95) return "95";
+    if (num >= 80) return "80-90";
+    return "min50";
+};
 
 //**************************** Gestion des images ***********************************//
 
@@ -126,8 +145,31 @@ export function getProductImage(ref) {
 //***********************************************************************************//
 
 export function parseNom(nom) {
-    if (!nom) return { name: "", purity: "" }
-    const match = nom.match(/,\s*(min\.\s*)?([\d.]+\s*%)\s*(\([^)]+\))?/)
-    if (match) return { name: nom.slice(0, match.index).trim(), purity: match[2].trim() }
-    return { name: nom, purity: "" }
+    if (!nom) return { name: "", purity: "", method: "" };
+
+    const match = nom.match(
+        /(,\s*|\s+)(tech\.?\s*)?(min\.?\s*)?([\d.,]+-?[\d.]*\s*%?)(\s*min\.?)?\s*(\([^)]+\))?$/i
+    );
+
+    if (match) {
+        const tech   = match[2] ? "tech. " : "";
+        const min    = (match[3] || match[5]) ? "min. " : "";
+        const value  = match[4].replace(",", ".").trim(); // "97,5" → "97.5"
+        const method = match[6] ? match[6].replace(/[()]/g, "").trim() : "";
+
+        return {
+            name:   nom.slice(0, match.index).trim(),
+            purity: (tech + min + value).trim(),
+            method,
+        };
+    }
+
+    return { name: nom, purity: "", method: "" };
 }
+
+//***********************************************************************************//
+
+export const getCountryOptions = () =>
+    Object.entries(countries.getNames("en", { select: "official" }))
+        .map(([code, name]) => ({ code, name }))
+        .sort((a, b) => a.name.localeCompare(b.name));

@@ -6,6 +6,10 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 section#searchInCatalogue {
   display: flex;
   flex-direction: column;
@@ -94,6 +98,8 @@ section#content-catalogue article {
   justify-content: space-between;
 }
 section#content-catalogue article#filtre {
+  position: sticky;
+  top: 60px;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -125,7 +131,7 @@ section#content-catalogue article#filtre > div .filter-elem:hover {
 section#content-catalogue article#product {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 79%;
   gap: var(--spacing-x-large);
 }
 section#content-catalogue article#product div#sort {
@@ -258,7 +264,7 @@ section#content-catalogue article#product div#product-container article div.txt-
   flex-direction: column;
   gap: 4px;
 }
-section#content-catalogue article#product div#product-container article div.txt-container ul li {
+section#content-catalogue article#product div#product-container article div.txt-container ul button {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -275,4 +281,165 @@ section#content-catalogue article#product div#product-container article div.txt-
   background-color: var(--color-state-bg-reversed-hover);
   color: var(--color-content-accent);
   border-radius: var(--border-radius-full);
+}
+section#content-catalogue article#product div#product-container #empty-search {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-default);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-large);
+  align-items: center;
+}
+section#content-catalogue article#product div#product-container #empty-search > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  gap: var(--spacing-xx-large);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-x-large);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container #empty-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container #empty-title #empty-svg {
+  background-color: var(--color-state-bg-reversed-hover);
+  width: 96px;
+  height: 96px;
+  border-radius: var(--border-radius-full);
+  padding: var(--spacing-medium);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container #empty-title #empty-svg svg {
+  width: 64px;
+  height: 64px;
+  color: var(--color-icon-brand);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container #empty-title h2:first-of-type, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container #empty-title span {
+  color: var(--color-content-accent);
+  font-size: var(--font-size-h1);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav {
+  display: flex;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+  display: flex;
+  gap: var(--spacing-xx-small);
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+  color: var(--color-content-primary);
+  border-color: var(--color-border-reversed);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:hover {
+  background-color: var(--color-state-bg-neutral-hover);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:active {
+  background-color: var(--color-state-bg-neutral-pressed);
+  color: var(--color-content-primary);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+  cursor: pointer;
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a {
+  border: 0.5px solid var(--color-border-accent);
+  border-radius: var(--border-radius-xxl);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  color: var(--color-content-accent);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:hover {
+  background-color: var(--color-state-bg-reversed-hover);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:active {
+  background-color: var(--color-state-bg-dark-active);
+  color: var(--color-content-disabled);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a {
+  background-color: var(--color-bg-primary);
+  color: var(--color-content-on-primary);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:hover {
+  background-color: var(--color-state-primary-hover);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:active {
+  background-color: var(--color-state-primary-pressed);
+}
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul {
+  display: flex;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li {
+  display: flex;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
+  padding: 4px var(--spacing-xx-small);
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-accent);
+  border-radius: var(--border-radius-full);
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.5px solid var(--color-border-accent);
+  color: var(--color-content-accent);
+}
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li:active {
+  background-color: var(--color-state-bg-reversed-hover);
+  color: var(--color-content-link-hover);
+}
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li {
+  cursor: pointer;
+}
+section#content-catalogue article#product div#pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-xx-small);
+}
+section#content-catalogue article#product div#pagination button {
+  padding: var(--spacing-xx-small) var(--spacing-x-small);
+  outline: 1px solid var(--color-border-reversed);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
+}
+section#content-catalogue article#product div#pagination button:first-of-type svg {
+  rotate: 180deg;
+}
+section#content-catalogue article#product div#pagination button:active {
+  color: var(--color-content-on-primary);
+  background-color: var(--color-bg-primary);
+  border: none;
 }/*# sourceMappingURL=catalogue.css.map */

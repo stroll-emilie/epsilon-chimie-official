@@ -6,6 +6,10 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 h1 {
   font-family: var(--font-family-title);
   font-size: var(--font-size-title);
@@ -131,6 +135,11 @@ section#presentation article:first-of-type div:last-of-type a:first-of-type:hove
 }
 section#presentation article:first-of-type div:last-of-type a:first-of-type:active {
   background-color: var(--color-state-primary-pressed);
+}
+section#presentation article:first-of-type div:last-of-type a:first-of-type:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
 }
 section#presentation article:first-of-type div:last-of-type a:last-of-type {
   border: 0.5px solid var(--color-border-accent);
@@ -292,6 +301,11 @@ section#finder > article:last-of-type .searchBar .searchBarContainer button:hove
 section#finder > article:last-of-type .searchBar .searchBarContainer button:active {
   background-color: var(--color-state-primary-pressed);
 }
+section#finder > article:last-of-type .searchBar .searchBarContainer button:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
 section#finder > article:last-of-type .searchBar .searchBarContainer button:hover {
   cursor: pointer;
 }
@@ -364,6 +378,10 @@ section#finder > article:last-of-type .filtered button {
 section#finder > article:last-of-type .filtered button:hover {
   cursor: pointer;
 }
+section#finder > article:last-of-type .filtered button img {
+  width: 20px;
+  height: 20px;
+}
 section#capabilites h2 {
   font-size: var(--font-size-h1);
 }
@@ -388,35 +406,37 @@ section#capabilites article:last-of-type {
 section#capabilites article:last-of-type hr {
   color: var(--color-border-reversed);
 }
-section#capabilites article:last-of-type > div {
+section#capabilites article:last-of-type > button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
 }
-section#capabilites article:last-of-type > div > div {
+section#capabilites article:last-of-type > button > div {
   gap: var(--spacing-x-small);
   display: flex;
 }
-section#capabilites article:last-of-type > div > div .service {
+section#capabilites article:last-of-type > button > div .service {
   display: flex;
   flex-direction: column;
   /*FIXME: non rencenser*/
   gap: 2px;
 }
-section#capabilites article:last-of-type > div > div .service .serviceTitle {
+section#capabilites article:last-of-type > button > div .service .serviceTitle {
   display: flex;
   align-items: center;
   /*FIXME: non rencenser*/
   gap: 9px;
 }
-section#capabilites article:last-of-type > div > div .service p {
+section#capabilites article:last-of-type > button > div .service p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-md);
   line-height: 136%;
   letter-spacing: -1%;
   color: var(--color-content-secondary);
 }
-section#capabilites article:last-of-type > div .arrowIcon {
+section#capabilites article:last-of-type > button .arrowIcon {
   /*FIXME: non renceser*/
   padding: 6px 3px;
   color: var(--color-icon-brand);
@@ -505,7 +525,14 @@ section#families > article#families-list .column .familie-element > button {
   font-weight: var(--font-weight-bold);
   line-height: 100%;
   letter-spacing: -1%;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
   cursor: pointer;
+  border-bottom: 1px solid var(--color-border-accent);
+}
+section#families > article#families-list .column .familie-element > button:active {
+  background-color: var(--color-bg-primary-subtle);
 }
 section#families > article#families-list .column {
   /* column gauche */

@@ -1,7 +1,8 @@
 import './footer.css'
+import { useNavigate, Link } from 'react-router-dom'
 
 function Footer() {
-
+    const navigate = useNavigate()
 
     return (
         <footer>
@@ -26,28 +27,29 @@ function Footer() {
                 <article>
                     <span>PRODUCTS</span>
                     <ul>
-                        <li>Phosphonic Acids</li>
-                        <li>Phosphonates</li>
-                        <li>Phosphonium Salts</li>
-                        <li>Phosphoranes</li>
-                        <li>Full Catalogue (PDF)</li>
+                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>Phosphonic Acids</button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonates')}>Phosphonates</button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>Phosphonium Salts</button>
+                        <button onClick={() => navigate('catalogue?family=Phosphoranes')}>Phosphoranes</button>
+                        <button onClick={() => navigate('catalogue?family=Phosphines')}>Phosphines</button>
+                        <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>Chemical Intermediates</button>
+                        <li><a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf">Full Catalogue (PDF)</a></li>
                     </ul>
                 </article>
 
                 <article>
                     <span>SERVICES</span>
                     <ul>
-                        <li>Custom synthesis</li>
-                        <li>Request a quote</li>
+                        <li><Link to="/custom">Custom synthesis</Link></li>
+                        <li><Link to="/request-for-quote">Request for quote</Link></li>
                         <li>Technical data sheets</li>
-                        <li>MSDS download</li>
                     </ul>
                 </article>
 
                 <article>
-                    <span>COMPAGNY</span>
+                    <span>COMPANY</span>
                     <ul>
-                        <li>About</li>
+                        <li><Link to="/about">About</Link></li>
                         <li>Quality & ISO 9001</li>
                         <li>Press</li>
 

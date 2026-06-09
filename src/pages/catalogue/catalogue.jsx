@@ -1,15 +1,19 @@
 import './catalogue.css';
 
-import { useState} from 'react';
+import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
+import { ReloadIcon } from '../../assets/icons/reload_icon';
+
+import { useEffect, useState} from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
-import { filterAndSort, countByFamily, getProductImage } from '../../services/dataService';
+import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
+import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon';
 
 function Catalogue() {
     const [searchParams] = useSearchParams();
@@ -18,12 +22,27 @@ function Catalogue() {
     const [search, setSearch] = useState(searchParams.get('search') || '');
     const [selectedFamily, setSelectedFamily] = useState(searchParams.get('family') || 'All');
     const [sortOrder, setSortOrder] = useState("nameAsc");
+    const [currentPage, setCurrentPage] =useState(1);
+    const ITEMS_PER_PAGE = 50;
 
     const navigate = useNavigate();
 
-    const dataProcessed = filterAndSort(products, {search, selectedFamily, sortOrder})
-    const countFamily = countByFamily(products)
+    const searchedProducts = searchProducts(products, search);
+    const countFamily = countByFamily(searchedProducts)
+    const dataProcessed = filterAndSort(searchedProducts, {search: "", selectedFamily, sortOrder})
 
+    const totalPages = Math.ceil(dataProcessed.length / ITEMS_PER_PAGE);
+    const paginated = dataProcessed.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+    );
+
+    useEffect(() => {
+        const s = searchParams.get('search') || '';
+        setSearch(s);
+    }, [searchParams]);
+
+    useEffect(() => setCurrentPage(1), [search,selectedFamily])
 
     return (
     <>
@@ -36,7 +55,7 @@ function Catalogue() {
                 </div>
                 <div>
                     <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
-                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.pdf"><DownloadXLSIcon/>Catalogue (XLS)</a>
+                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.xls"><DownloadXLSIcon/>Catalogue (XLS)</a>
                 </div>
             </article>
             <article>
@@ -92,7 +111,7 @@ function Catalogue() {
 
 
                 <div id="product-container">
-                    {dataProcessed.map((product, index) => {
+                    {paginated.map((product, index) => {
                         const ref = product["Réf EPSILON"];
                         const imgSrc = getProductImage(ref)
 
@@ -121,9 +140,51 @@ function Catalogue() {
                             </article>
                         );
                     })}
+
+                    {dataProcessed.length === 0 && (
+                        <div id="empty-search">
+                            <div>
+                                <div id='empty-info-container'>
+                                    <div id='empty-title'>
+                                        <div id='empty-svg'>
+                                            <SearchBrokenIcon/>
+                                        </div>
+                                        <h2>Oups !</h2>
+                                        <h2>It seems like we don't have results for <span>"..."</span></h2>
+                                    </div>
+                                    <p>Check the spelling, try a CAS number or a synonym, or widen your filters. Many compounds are also available through our on-demand synthesis service.</p>
+                                    <nav>
+                                        <button type="button" onClick={() => { setSearch(""); setSelectedFamily("All"); }}>
+                                            <ReloadIcon/> Clear search and filter
+                                        </button>
+                                        <Link to="/request-for-quote">Request a custom quote</Link>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <div className="number">OR YOU CAN TRY ONE OF THESE</div>
+                                    <ul>
+                                        <button onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</button>
+                                        <button onClick={() => setSearch("Diethyl")}>Diethyl</button>
+                                        <button onClick={() => setSearch("Phosphonates")}>Phosphonates</button>
+                                        <button onClick={() => setSearch("Triphenyl")}>Triphenyl</button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                     
 
                 </div>
+
+                <div id="pagination">
+                    <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1}><CircleArrowIcon/></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    {/* button pages */}
+                    <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages}><CircleArrowIcon/></button>
+                </div>
+
             </article>
         </section>
     </>

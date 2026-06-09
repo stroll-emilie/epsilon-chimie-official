@@ -6,6 +6,10 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 /* Header */
 header {
   position: fixed;
@@ -34,6 +38,7 @@ header #default img {
   height: 58px;
   -o-object-fit: contain;
      object-fit: contain;
+  cursor: pointer;
 }
 header #default {
   /*text au dessus cf credit.jsx*/
@@ -89,7 +94,7 @@ header #default #navBar nav > ul > li > a.active {
   border-bottom: var(--color-border-accent) 2px solid;
   text-shadow: none;
 }
-header #default #navBar > .logo-container p {
+header #default #navBar > .logo-container a {
   padding: var(--spacing-xx-small) var(--spacing-x-small);
   text-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
   color: var(--color-content-accent);
@@ -98,7 +103,7 @@ header #default #navBar > .logo-container p {
   line-height: 136%;
   letter-spacing: -1%;
 }
-header #default #navBar > .logo-container p span {
+header #default #navBar > .logo-container a span {
   font-weight: var(--font-weight-bold);
 }
 header #default #navBar #action {
@@ -106,23 +111,35 @@ header #default #navBar #action {
   flex-direction: row;
   gap: var(--spacing-medium);
 }
-header #default #navBar #action a, header #default #navBar #action div {
+header #default #navBar #action > button {
+  display: flex;
+  gap: var(--spacing-xx-small);
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-header #default #navBar #action a:hover, header #default #navBar #action div:hover {
+header #default #navBar #action > button:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-header #default #navBar #action a:active, header #default #navBar #action div:active {
+header #default #navBar #action > button:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-header #default #navBar #action > div p {
-  gap: var(--spacing-xx-small);
+header #default #navBar #action > div {
   display: flex;
+  gap: var(--spacing-xx-small);
+  padding: var(--spacing-xx-small) var(--spacing-medium);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border-accent);
+  color: var(--color-content-accent);
+}
+header #default #navBar #action > div input {
+  outline-style: none;
+}
+header #default #navBar #action > div button, header #default #navBar #action > div svg {
+  cursor: pointer;
 }
 header #default #navBar #action > a {
   border: 0.5px solid var(--color-border-accent);
@@ -148,11 +165,16 @@ header #default #navBar #action > a:hover {
 header #default #navBar #action > a:active {
   background-color: var(--color-state-primary-pressed);
 }
+header #default #navBar #action > a:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
+}
 header #default #navBar .logo-container {
   display: grid;
   align-items: center;
 }
-header #default #navBar .logo-container img, header #default #navBar .logo-container p {
+header #default #navBar .logo-container img, header #default #navBar .logo-container a {
   grid-area: 1/1;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 }
@@ -167,12 +189,12 @@ header #default #navBar .logo-container img.show {
   opacity: 1;
   visibility: 0s 0.2s;
 }
-header #default #navBar .logo-container p.hide {
+header #default #navBar .logo-container a.hide {
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
-header #default #navBar .logo-container p.show {
+header #default #navBar .logo-container a.show {
   transition: opacity 0.2s ease-in-out 0.1;
   opacity: 1;
 }
@@ -182,6 +204,7 @@ header {
 header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: var(--spacing-x-small) 112px;
+  cursor: pointer;
 }
 header.scrolled #default .credit-wrapper {
   opacity: 0;

@@ -24,6 +24,11 @@
     &:active{
         background-color: var(--color-state-primary-pressed);
     }
+    &:disabled{
+        background-color: var(--color-bg-disabled);
+        color: var(--color-content-reversed-secondary);
+        border: none
+    }
 }
 
 @mixin btn-grey{
@@ -241,4 +246,51 @@
         background-color: rgba(159, 159, 210, .4);
         color: var(--color-content-accent);
     }
+}
+
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+
+@mixin card-default{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-large);
+    background-color: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-x-large);
+    box-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
+    > div{
+        display: flex;
+        gap: var(--spacing-x-small);
+        align-items: center;
+        h3{
+            font-weight: var(--font-weight-bold);
+            white-space: nowrap;
+        }
+        
+    }
+}
+
+@mixin card-warning{
+    @include card-default;
+    background-color: var(--color-bg-warning);
+    color: var(--color-content-warning);
+    border-color: var(--color-border-warning);
+}
+
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+
+
+@mixin note-default{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+    padding: var(--spacing-x-large);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
+    border: 1px solid var(--color-border-default);
+    background-color: var(--color-bg-default);
+
 }

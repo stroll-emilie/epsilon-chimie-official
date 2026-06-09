@@ -7,7 +7,6 @@ import { HealthIcon } from '../../assets/icons/health_icon'
 
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon'
 import { SearchIcon } from '../../assets/icons/search_icon'
-import { InfoCircleIcon } from '../../assets/icons/info_circle_icon'
 import { GlassIcon } from '../../assets/icons/glass_icon'
 import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 
@@ -54,12 +53,12 @@ function Home() {
                 <div>
                     <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
                     <h1>European chemicals Manufacturer</h1>
-                    <p>We manufacture over hundreeds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
+                    <p>We manufacture over hundreds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
                 <div>
                     <Link to="/catalogue">Explore the catalogue</Link>
-                    <a href="#">Request for quote</a>
+                    <Link to="/request-for-quote">Request for quote</Link>
                 </div>
             </article>
 
@@ -97,7 +96,7 @@ function Home() {
                     <h2>Search across 1 000+ references</h2>
                     <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
                 </div>
-                <a href="#">Request for custom synthesis<CircleArrowIcon/></a>
+                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
             </article>
 
             <article>
@@ -135,12 +134,12 @@ function Home() {
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><InfoCircleIcon/>Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonate')}><InfoCircleIcon/>Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><InfoCircleIcon/>Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphorane')}><InfoCircleIcon/>Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphine')}><InfoCircleIcon/>Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><InfoCircleIcon/>Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonate schema" />Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonate schema" />Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonate schema" />Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphonate schema" />Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphonate schema" />Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermeidates} alt="Phosphonate schema" />Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -150,7 +149,7 @@ function Home() {
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
                 <div>
-                    <p>We combine a stocked catalgue, made-to-order synthesis and full analytical support.
+                    <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
                         <br /> <br />
                         Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :
                     </p>
@@ -167,7 +166,7 @@ function Home() {
             <article>
                 <hr/>
 
-                <div>
+                <button onClick={() => navigate("/catalogue")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -184,11 +183,11 @@ function Home() {
                         <RightArrowIcon/>
                     </div>
                     
-                </div>
+                </button>
 
                 <hr/>
 
-                <div>
+                <button onClick={() => navigate("/custom")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -205,7 +204,7 @@ function Home() {
                         <RightArrowIcon/>
                     </div>
                     
-                </div>
+                </button>
 
                 <hr/>
             </article>
@@ -233,7 +232,7 @@ function Home() {
                             <h3>Phosphonic Acids</h3>
                             <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE PHOSPHONIC ACIDS <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -245,7 +244,7 @@ function Home() {
                             <h3>Phosphoranes</h3>
                             <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphorane')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphoranes')}>BROWSE PHOSPHORANES <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -259,7 +258,7 @@ function Home() {
                             <h3>Phosphonates</h3>
                             <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonate')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonates')}>BROWSE PHOSPHONATES <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -271,7 +270,7 @@ function Home() {
                             <h3>Phosphines</h3>
                             <p>Phosphites, phosphine oxides and ligand building blocks.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphine')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphines')}>BROWSE PHOSPHINES <CircleArrowIcon/></button>
                     </div>
                 </div>
 
@@ -283,9 +282,9 @@ function Home() {
                         <span>
                             <div className="number">FAMILY 03</div>
                             <h3>Phosphonium Salts</h3>
-                            <p>Wittig reageant precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
+                            <p>Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE PHOSPHONIUM SALTS <CircleArrowIcon/></button>
                     </div>
 
                     <div className='familie-element'>
@@ -297,7 +296,7 @@ function Home() {
                             <h3>Chemical Intermediates</h3>
                             <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
                         </span>
-                        <button onClick={() => navigate('catalogue?family=Chemical Intermediate')}>BROWSE FAMILY <CircleArrowIcon/></button>
+                        <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>BROWSE CHEMICAL INTERMEDIATES <CircleArrowIcon/></button>
                         
                     </div>
                 </div>
@@ -308,10 +307,10 @@ function Home() {
         <section id='talk'>
             <article>
                 <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
-                <h1>Need 100g or 1kg of a compound from our R&D</h1>
+                <h1>Need 100g or 1kg of a compound from our R&D ?</h1>
                 <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 <nav>
-                    <a href="">Request a quote</a>
+                    <Link to="/request-for-quote">Request for quote</Link>
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>

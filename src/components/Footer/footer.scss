@@ -24,13 +24,14 @@ footer{
             }
 
             ul{
-                li{
+                li,button{
                 padding: var(--spacing-xx-small) var(--spacing-x-small);
                 font-family: var(--font-family-body);
                 font-size: var(--font-size-body-sm);
                 line-height: 136%;
                 letter-spacing: -1%;
                 color: var(--color-content-reversed-tertiary);
+                cursor: pointer;    
                 }
             }
         }

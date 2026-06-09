@@ -4,12 +4,10 @@ import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
 import './header.css'
-
-
+import { Link } from 'react-router-dom'
 
 
 function Header() {
-
 
 
   const [scrolled, setScrolled] = useState(false)
@@ -34,17 +32,17 @@ function Header() {
         </div>
 
         <div id='navBar'>
-          <div className='logo-container'>
+          <Link to="/" className='logo-container'>
             <img
               src={epsilonLogo}
               className={scrolled ? 'hide' : 'show'}
               alt="logo-epsilon-chimie"
               title="logo-epsilon-chimie"
             />
-            <p className={scrolled ? 'show' : 'hide'}>
+            <Link to="/" className={scrolled ? 'show' : 'hide'} >
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
-            </p>
-          </div>
+            </Link>
+          </Link>
           <Nav />
           <Action />
         </div>

@@ -6,6 +6,10 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/*******************************************************************************************************************/
 .roundedNumber {
   display: flex;
   padding: 5px var(--spacing-medium);
@@ -246,6 +250,11 @@ section#talk-to-director > article:last-of-type > div:last-of-type > a:first-of-
 }
 section#talk-to-director > article:last-of-type > div:last-of-type > a:first-of-type:active {
   background-color: var(--color-state-primary-pressed);
+}
+section#talk-to-director > article:last-of-type > div:last-of-type > a:first-of-type:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-content-reversed-secondary);
+  border: none;
 }
 section#talk-to-director > article:last-of-type > div:last-of-type > a:nth-of-type(2) {
   border: 0.5px solid var(--color-border-accent);
