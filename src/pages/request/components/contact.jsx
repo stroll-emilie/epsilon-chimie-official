@@ -1,6 +1,8 @@
 
 import { LockCircleIcon } from '../../../assets/icons/lock_circle_icon'
 import '../request.css'
+import { formDataProp } from '../../../propTypes';
+
 
 function Contact({data,onChange}) {
     
@@ -71,5 +73,7 @@ function Contact({data,onChange}) {
     </>
     )
 }
+
+Contact.propTypes = { ...formDataProp };
 
 export default Contact

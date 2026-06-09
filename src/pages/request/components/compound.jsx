@@ -1,5 +1,7 @@
 import { CircleArrowIcon } from '../../../assets/icons/circle_arrow_icon'
 import '../request.css'
+import { formDataProp } from '../../../propTypes';
+
 
 function Compound({data, onChange}) {
     
@@ -121,5 +123,7 @@ function Compound({data, onChange}) {
     </>
     )
 }
+Compound.propTypes = { ...formDataProp };
+
 
 export default Compound

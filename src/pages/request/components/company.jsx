@@ -1,12 +1,14 @@
 
 import '../request.css'
 import { getCountryOptions } from '../../../services/dataService'
+import { formDataProp } from '../../../propTypes';
 
 const countryOptions = getCountryOptions();
 
 
 function Company({data,onChange}) {
-    
+
+
     return (
     <>
         <div id="company-institution">
@@ -91,5 +93,6 @@ function Company({data,onChange}) {
     </>
     )
 }
+Company.propTypes = { ...formDataProp };
 
 export default Company
