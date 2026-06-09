@@ -102,13 +102,13 @@ header{
                 flex-direction: row;
                 gap: var(--spacing-medium);
 
-                > button{
+                #searchButtonOff{
                     display: flex;
                     gap: var(--spacing-xx-small);
                     @include btn-base;
                 }
                 
-                > div{
+                #searchButtonOn{
                     display: flex;
                     gap: var(--spacing-xx-small);
                     padding: var(--spacing-xx-small) var(--spacing-medium);
@@ -126,6 +126,7 @@ header{
                     @include btn-blue;
                 }
             }
+
             .logo-container{
                 display: grid;
                 align-items: center;

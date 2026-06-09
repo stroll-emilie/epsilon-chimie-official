@@ -13,34 +13,45 @@ function Action() {
     return (
     <div id='action'>
         {isOpen ? (
-            <button onClick={() => {
-                setIsOpen(false);
-                setSearch("");
-                if(search.length > 0){
-                    navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
-                }
-            }
-            >
-                <div>
-                    <SearchIcon/>
+            <div id='searchButtonOn'>
+                <div
+                    onClick={() => {
+                        setIsOpen(false);
+                        if (search.trim()) {
+                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`);
+                        }
+                        setSearch("");
+                    }}
+                >
+                    <SearchIcon />
                 </div>
-                <input 
-                    autoFocus 
-                    placeholder='Search CAS...' 
+
+                <input
+                    autoFocus
+                    placeholder='Search CAS...'
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                     onKeyDown={e => {
-                        if(e.key === "Enter" && search.length > 0) {
+                        if (e.key === "Enter" && search.trim()) {
                             setIsOpen(false);
+                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`);
                             setSearch("");
-                            navigate(`/catalogue?search=${encodeURIComponent(search.trim())}`)};
                         }
-                    }
+                    }}
                 />
-                <button onClick={() => { setIsOpen(false); setSearch(""); }}><XIcon/></button>
-            </button>
+
+                <button
+                    type="button"
+                    onClick={() => {
+                        setIsOpen(false);
+                        setSearch("");
+                    }}
+                >
+                    <XIcon />
+                </button>
+            </div>
         ) : (
-            <button onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
+            <button id='searchButtonOff' onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
         )}
         <Link to="/request-for-quote">Request for quote</Link>
     </div>
