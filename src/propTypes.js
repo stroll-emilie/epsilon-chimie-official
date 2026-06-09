@@ -5,7 +5,12 @@ export const sizeProp = {size: PropTypes.number};
 export const childrenProp = {children: PropTypes.node.isRequired};
 
 export const specsListProp = {
-    specsList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    specsList: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired,
+            data:  PropTypes.string,
+        })
+    ).isRequired,
 };
 
 export const formDataProp = {

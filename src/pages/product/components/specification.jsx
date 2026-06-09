@@ -1,4 +1,5 @@
 import '../product.css'
+import { specsListProp } from '../../../props/propTypes';
 
 
 function Specification({specsList}) {
@@ -16,10 +17,10 @@ function Specification({specsList}) {
                     )}
                 </div>
             ))}
-            
         </article>
     </>
     )
 }
+Specification.propTypes = { ...specsListProp };
 
 export default Specification
