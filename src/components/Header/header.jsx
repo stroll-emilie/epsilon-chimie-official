@@ -4,7 +4,7 @@ import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
 import './header.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -34,7 +34,7 @@ function Header() {
         </div>
 
         <div id='navBar'>
-          <div className='logo-container' onClick={() => navigate("/")}>
+          <Link to="/" className='logo-container'>
             <img
               src={epsilonLogo}
               className={scrolled ? 'hide' : 'show'}
@@ -44,7 +44,7 @@ function Header() {
             <button className={scrolled ? 'show' : 'hide'} onClick={() => navigate("/")}>
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
             </button>
-          </div>
+          </Link>
           <Nav />
           <Action />
         </div>

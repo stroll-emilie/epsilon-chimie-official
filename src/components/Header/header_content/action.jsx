@@ -13,7 +13,7 @@ function Action() {
     return (
     <div id='action'>
         {isOpen ? (
-            <div onClick={() => {
+            <button onClick={() => {
                 setIsOpen(false);
                 setSearch("");
                 if(search.length > 0){
@@ -38,7 +38,7 @@ function Action() {
                     }
                 />
                 <button onClick={() => { setIsOpen(false); setSearch(""); }}><XIcon/></button>
-            </div>
+            </button>
         ) : (
             <button onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
         )}
