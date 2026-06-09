@@ -25,4 +25,4 @@ dist-ssr
 
 *.csv
 ^[1-9]{5}.png
-./src/config/emailjs.js
+src/config/emailjs.js
