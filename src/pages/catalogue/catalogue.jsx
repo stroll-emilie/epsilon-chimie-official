@@ -4,7 +4,7 @@ import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
 import { ReloadIcon } from '../../assets/icons/reload_icon';
 
 import { useEffect, useState} from 'react';
-import { useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { useNavigate, Link, useSearchParams, data } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
@@ -13,6 +13,8 @@ import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
+import { RightArrowIcon } from '../../assets/icons/right_arrow_icon';
+import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon';
 
 function Catalogue() {
     const [searchParams] = useSearchParams();
@@ -21,6 +23,8 @@ function Catalogue() {
     const [search, setSearch] = useState(searchParams.get('search') || '');
     const [selectedFamily, setSelectedFamily] = useState(searchParams.get('family') || 'All');
     const [sortOrder, setSortOrder] = useState("nameAsc");
+    const [currentPage, setCurrentPage] =useState(1);
+    const ITEMS_PER_PAGE = 50;
 
     const navigate = useNavigate();
 
@@ -28,10 +32,18 @@ function Catalogue() {
     const countFamily = countByFamily(searchedProducts)
     const dataProcessed = filterAndSort(searchedProducts, {search: "", selectedFamily, sortOrder})
 
+    const totalPages = Math.ceil(dataProcessed.length / ITEMS_PER_PAGE);
+    const paginated = dataProcessed.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+    );
+
     useEffect(() => {
         const s = searchParams.get('search') || '';
         setSearch(s);
     }, [searchParams]);
+
+    useEffect(() => setCurrentPage(1), [search,selectedFamily])
 
     return (
     <>
@@ -100,7 +112,7 @@ function Catalogue() {
 
 
                 <div id="product-container">
-                    {dataProcessed.map((product, index) => {
+                    {paginated.map((product, index) => {
                         const ref = product["Réf EPSILON"];
                         const imgSrc = getProductImage(ref)
 
@@ -165,7 +177,14 @@ function Catalogue() {
 
                 </div>
 
-                
+                <div id="pagination">
+                    <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1}><CircleArrowIcon/></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    {/* button pages */}
+                    <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages}><CircleArrowIcon/></button>
+                </div>
 
             </article>
         </section>

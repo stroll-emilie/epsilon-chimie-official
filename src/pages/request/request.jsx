@@ -17,7 +17,6 @@ function Request() {
     const { products, loading } = useProducts()
     const { id } = useParams()
     const prod = useMemo(() => id ? getProductById(products, id) : null, [products, id]);
-    console.log(prod)
     
     const [formStep, setFormStep] = useState(0)
 
