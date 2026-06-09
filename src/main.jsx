@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 
 import emailjs from '@emailjs/browser'
-import { EMAILJS_CONFIG } from './config/email.js.js'
+import { EMAILJS_CONFIG } from './config/emailjs.js'
 emailjs.init(EMAILJS_CONFIG.publicKey)
 
 import App from './App.jsx'
