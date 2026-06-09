@@ -4,12 +4,11 @@ import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
 import './header.css'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function Header() {
 
-  const navigate = useNavigate()
 
   const [scrolled, setScrolled] = useState(false)
 

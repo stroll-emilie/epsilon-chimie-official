@@ -1,4 +1,3 @@
-import { CircleArrowIcon } from '../../../assets/icons/circle_arrow_icon'
 import '../request.css'
 import { formDataProp } from '../../../propTypes';
 

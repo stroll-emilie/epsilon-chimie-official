@@ -95,9 +95,9 @@ function Product() {
                         <div className="number">AVAILABLE PACKINGS</div>
                         <div>
                             {
-                                packing.map((element, index) => (
+                                packing.map((element) => (
                                     <button
-                                        key={index}
+                                        key={element}
                                         className={currentPackingSelected === element ? "active" : ""}
                                         onClick={() => setPackingSelected(element)}
                                     >
