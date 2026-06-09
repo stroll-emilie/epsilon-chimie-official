@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { data } from 'react-router-dom';
 
 export const sizeProp = {size: PropTypes.number};
 export const childrenProp = {children: PropTypes.node.isRequired};

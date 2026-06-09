@@ -3,7 +3,6 @@ import '../product.css'
 function SafetyHazards() {
     
     return (
-    <>
         <article id="safety_hazards">
             <div>
                 <span>GHS07</span>
@@ -14,7 +13,6 @@ function SafetyHazards() {
             </div>
             <p>Request for the full SDS (Safety Data Sheet) for detailed handling, storage and disposal guidance.</p>
         </article>
-    </>
     )
 }
 

@@ -5,7 +5,6 @@ import '../product.css'
 function ShippingDocs() {
     
     return (
-    <>
         <article id="shipping_docs">
             <ul>
                 <li><span>Lead time:</span>2-5 working days from Brest for in-stock items. Made-to-order : 2-8 weeks depending on batch size</li>
@@ -13,7 +12,6 @@ function ShippingDocs() {
                 <li><span>Incoterms:</span>DAP, FCA Brest or EXW on request. We ship worldwide via DHL, UPS or specialised dangerous-goods carriers</li>
             </ul>
         </article>
-    </>
     )
 }
 

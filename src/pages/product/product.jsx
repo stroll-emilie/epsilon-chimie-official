@@ -1,5 +1,5 @@
 import './product.css'
-import { useNavigate, Link, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useProducts } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'

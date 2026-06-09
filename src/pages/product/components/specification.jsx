@@ -5,7 +5,6 @@ import { specsListProp } from '../../../props/propTypes';
 function Specification({specsList}) {
     if (!specsList) return null;
     return (
-    <>
         <article id="specification">
             {specsList.map((spec, index) => (
                 <div key={index} className='specification-elem'>
@@ -18,7 +17,6 @@ function Specification({specsList}) {
                 </div>
             ))}
         </article>
-    </>
     )
 }
 Specification.propTypes = { ...specsListProp };
