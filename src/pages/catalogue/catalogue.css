@@ -264,7 +264,7 @@ section#content-catalogue article#product div#product-container article div.txt-
   flex-direction: column;
   gap: 4px;
 }
-section#content-catalogue article#product div#product-container article div.txt-container ul li {
+section#content-catalogue article#product div#product-container article div.txt-container ul button {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;

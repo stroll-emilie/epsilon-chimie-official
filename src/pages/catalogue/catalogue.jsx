@@ -4,7 +4,7 @@ import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
 import { ReloadIcon } from '../../assets/icons/reload_icon';
 
 import { useEffect, useState} from 'react';
-import { useNavigate, Link, useSearchParams, data } from 'react-router-dom';
+import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useProducts } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
@@ -13,7 +13,6 @@ import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 import { SearchIcon } from "../../assets/icons/search_icon"
 import { DownloadPDFIcon } from '../../assets/icons/downloadPDFIcon';
 import { DownloadXLSIcon } from '../../assets/icons/downloadXLSIcon';
-import { RightArrowIcon } from '../../assets/icons/right_arrow_icon';
 import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon';
 
 function Catalogue() {
@@ -164,10 +163,10 @@ function Catalogue() {
                                 <div>
                                     <div className="number">OR YOU CAN TRY ONE OF THESE</div>
                                     <ul>
-                                        <li onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</li>
-                                        <li onClick={() => setSearch("Diethyl")}>Diethyl</li>
-                                        <li onClick={() => setSearch("Phosphonates")}>Phosphonates</li>
-                                        <li onClick={() => setSearch("Triphenyl")}>Triphenyl</li>
+                                        <button onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</button>
+                                        <button onClick={() => setSearch("Diethyl")}>Diethyl</button>
+                                        <button onClick={() => setSearch("Phosphonates")}>Phosphonates</button>
+                                        <button onClick={() => setSearch("Triphenyl")}>Triphenyl</button>
                                     </ul>
                                 </div>
                             </div>

@@ -262,11 +262,12 @@ section{
                 hr{
                     color: var(--color-border-reversed);
                 }
-                > div{
+                > button{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     cursor: pointer;
+                    text-align: left;
                     > div{
                         gap: var(--spacing-x-small);
                         display: flex;

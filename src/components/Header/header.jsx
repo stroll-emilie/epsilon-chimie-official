@@ -4,8 +4,7 @@ import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
 import './header.css'
-import { Link, useNavigate } from 'react-router-dom'
-
+import { Link,useNavigate } from 'react-router-dom'
 
 
 function Header() {
@@ -41,9 +40,9 @@ function Header() {
               alt="logo-epsilon-chimie"
               title="logo-epsilon-chimie"
             />
-            <button className={scrolled ? 'show' : 'hide'} onClick={() => navigate("/")}>
+            <Link to="/" className={scrolled ? 'show' : 'hide'} >
               <span>Epsilon Chimie |</span> European Chemicals Manufacturer
-            </button>
+            </Link>
           </Link>
           <Nav />
           <Action />

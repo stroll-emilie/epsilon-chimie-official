@@ -166,7 +166,7 @@ function Home() {
             <article>
                 <hr/>
 
-                <div onClick={() => navigate("/catalogue")}>
+                <button onClick={() => navigate("/catalogue")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -183,11 +183,11 @@ function Home() {
                         <RightArrowIcon/>
                     </div>
                     
-                </div>
+                </button>
 
                 <hr/>
 
-                <div onClick={() => navigate("/custom")}>
+                <button onClick={() => navigate("/custom")}>
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -204,7 +204,7 @@ function Home() {
                         <RightArrowIcon/>
                     </div>
                     
-                </div>
+                </button>
 
                 <hr/>
             </article>
