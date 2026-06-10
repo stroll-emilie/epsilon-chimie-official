@@ -1,6 +1,6 @@
 @use '../../styles/_mixin' as *;
 
-label{
+.labelField{
     display: flex;
     align-items: center;
     width: 100%;
@@ -92,13 +92,16 @@ section{
                     line-height: 140%;
                     color: var(--color-content-secondary);
                     a {
-                        cursor: pointer;
                         color: var(--color-content-accent);
                         &:hover{
                             text-decoration: underline;
                         }
                     }
                 }
+                #privacyPolicyCheck{
+                    cursor: pointer;
+                }
+                
                 hr{
                     color: var(--color-border-reversed);
                     height: .5px;
@@ -123,7 +126,7 @@ section{
                                 display: flex;
                                 justify-content: space-between;
                                 gap: var(--spacing-x-large);
-                                >div{
+                                >label{
                                     display: flex;
                                     align-items: flex-start;
                                     gap: var(--spacing-x-small);
@@ -131,6 +134,7 @@ section{
                                     border-radius: var(--border-radius-xxl);
                                     padding: var(--spacing-xx-small) var(--spacing-medium);
                                     width: 48%;
+                                    cursor: pointer;
                                     input{
                                         margin-top: 7px;
                                     }

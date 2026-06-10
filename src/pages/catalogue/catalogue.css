@@ -264,7 +264,7 @@ section#content-catalogue article#product div#product-container article div.txt-
   flex-direction: column;
   gap: 4px;
 }
-section#content-catalogue article#product div#product-container article div.txt-container ul button {
+section#content-catalogue article#product div#product-container article div.txt-container ul li {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -399,7 +399,7 @@ section#content-catalogue article#product div#product-container #empty-search > 
   display: flex;
   gap: var(--spacing-xx-small);
 }
-section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li {
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul button {
   display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
@@ -417,11 +417,11 @@ section#content-catalogue article#product div#product-container #empty-search > 
   border: 0.5px solid var(--color-border-accent);
   color: var(--color-content-accent);
 }
-section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li:active {
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul button:active {
   background-color: var(--color-state-bg-reversed-hover);
   color: var(--color-content-link-hover);
 }
-section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul li {
+section#content-catalogue article#product div#product-container #empty-search > div div:last-of-type ul button {
   cursor: pointer;
 }
 section#content-catalogue article#product div#pagination {
