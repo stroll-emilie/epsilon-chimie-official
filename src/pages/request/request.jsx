@@ -55,9 +55,23 @@ function Request() {
     const prev = () => setFormStep((s) => s - 1);
     const handleSubmit = () => {
         console.log("Données finales :", formData);
-        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, formData);
+        
+        emailjs.send(
+            EMAILJS_CONFIG.serviceId, 
+            EMAILJS_CONFIG.templateId, 
+            formData
+        );
+        
+        emailjs.send(
+            EMAILJS_CONFIG.serviceId,
+            EMAILJS_CONFIG.replyTemplateId,
+            {
+                email: formData.email,
+                firstName: formData.firstName,
+            }
+        );
         alert("Mail envoyé");
-    }
+    };
     // Champs obligatoire pour passer à l'étape suivante 
     const REQUIRED_FIELDS = {
         0: ["compoundName", "quantity", "purity"],

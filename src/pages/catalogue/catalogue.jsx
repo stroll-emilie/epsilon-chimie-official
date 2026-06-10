@@ -163,10 +163,10 @@ function Catalogue() {
                                 <div>
                                     <div className="number">OR YOU CAN TRY ONE OF THESE</div>
                                     <ul>
-                                        <button onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</button>
-                                        <button onClick={() => setSearch("Diethyl")}>Diethyl</button>
-                                        <button onClick={() => setSearch("Phosphonates")}>Phosphonates</button>
-                                        <button onClick={() => setSearch("Triphenyl")}>Triphenyl</button>
+                                        <button type="button" onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</button>
+                                        <button type="button" onClick={() => setSearch("Diethyl")}>Diethyl</button>
+                                        <button type="button" onClick={() => setSearch("Phosphonates")}>Phosphonates</button>
+                                        <button type="button" onClick={() => setSearch("Triphenyl")}>Triphenyl</button>
                                     </ul>
                                 </div>
                             </div>
