@@ -174,7 +174,7 @@ header #default #navBar .logo-container {
   display: grid;
   align-items: center;
 }
-header #default #navBar .logo-container img, header #default #navBar .logo-container a {
+header #default #navBar .logo-container img, header #default #navBar .logo-container span {
   grid-area: 1/1;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
 }
@@ -189,12 +189,12 @@ header #default #navBar .logo-container img.show {
   opacity: 1;
   visibility: 0s 0.2s;
 }
-header #default #navBar .logo-container a.hide {
+header #default #navBar .logo-container span.hide {
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
-header #default #navBar .logo-container a.show {
+header #default #navBar .logo-container span.show {
   transition: opacity 0.2s ease-in-out 0.1;
   opacity: 1;
 }

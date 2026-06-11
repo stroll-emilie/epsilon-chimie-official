@@ -19,6 +19,9 @@ section{
         article{
             display: flex;
             &:first-of-type{
+                position: sticky;
+                top: 83px;
+                width: 20%;
                 flex-direction: column;
                 gap: var(--spacing-medium);
                 nav{
@@ -86,7 +89,7 @@ section{
                         }
                     }
                 }
-                div{
+                .legal-note{
                     @include card-default;
                 }
             }

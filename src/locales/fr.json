@@ -1,0 +1,73 @@
+{
+    "privacy-policy": {
+        "head": "Epsilon Chimie SARL respecte votre vie privée et s'engage à traiter vos données à caractère personnel conformément au règlement général sur la protection des données (UE) 2016/679 (« RGPD ») et à la loi française sur la protection des données.",
+        "nav": [
+            "1. Responsable du traitement des données",
+            "2. Données collectées",
+            "3. Finalités et base juridique",
+            "4. Rétention",
+            "5. Cookies et traceurs",
+            "6. Vos droits",
+            "7. Transferts en dehors de l'UE",
+            "8. Sécurité des données",
+            "9. Modifications"
+        ],
+        "sections": {
+            "controller": {
+                "title": "1. Responsable du traitement des données",
+                "content": "Le responsable du traitement des données est Epsilon Chimie SARL, 450 rue Antoine Lavoisier, 29490 Guipavas, France. Vous pouvez nous contacter à tout moment à l'adresse <strong>pierre.cornec[at]epsilon-chimie.com</strong>."
+            },
+            "collect": {
+                "title": "2. Données collectées",
+                "content": "Nous recueillons uniquement les informations que vous nous fournissez volontairement via notre formulaire de demande de devis (nom, coordonnées professionnelles, entreprise, contenu de la demande) ainsi que les données techniques collectées automatiquement par le biais de cookies strictement nécessaires (voir la Politique en matière de cookies)."
+            },
+            "purpose": {
+                "title": "3. Finalités et base juridique",
+                "content": "Nous traitons vos données afin de répondre à vos demandes commerciales (intérêt légitime), d'exécuter vos commandes (exécution d'un contrat) et de respecter les obligations légales en matière de comptabilité et de REACH (obligation légale). Nous ne procédons à aucune prise de décision individuelle automatisée."
+            },
+            "retention": {
+                "title": "4. Rétention",
+                "content": "Les données relatives aux demandes de devis sont conservées pendant une durée maximale de 3 ans à compter de notre dernière interaction. Les données relatives aux relations commerciales sont conservées pendant 10 ans, conformément au droit commercial français. Les données issues des cookies sont conservées pendant une durée maximale de 13 mois."
+            },
+            "cookies": {
+                "title": "5. Cookies et traceurs",
+                "subsections": [
+                    {
+                        "title": "5.1 Cookies strictement nécessaires",
+                        "content": "Ces cookies sont indispensables au bon fonctionnement du site web. Ils ne nécessitent pas votre consentement."
+                    },
+                    {
+                        "title": "5.2 Cookies Analytiques — Google Analytics 4",
+                        "content": "Nous utilisons Google Analytics 4 (GA4) pour analyser le trafic sur notre site web et le comportement des visiteurs. Ces cookies collectent des données de navigation agrégées (pages consultées, durée de la session, pays d'origine, source du trafic). <br/><br/>Ces cookies ne sont placés sur votre appareil qu'<strong>après votre consentement explicite</strong> via notre bannière de gestion des cookies. <br/><br/>Vous pouvez retirer votre consentement à tout moment en cliquant sur « Gérer les préférences en matière de cookies », accessible en bas de chaque page. <br/><br/>Vous pouvez également désactiver le suivi de Google Analytics en installant le module complémentaire officiel pour navigateur : https://tools.google.com/dipage/gaoptout"
+                    }
+                ]
+            },
+            "rights": {
+                "title": "6. Vos Droits",
+                "head": "En vertu du RGPD et de la législation applicable en matière de protection des données, vous disposez des droits suivants concernant vos données à caractère personnel :",
+                "list": [
+                    "<strong>Droit d'accès</strong> (Art. 15 du RGPD): obtenir une copie des données que nous détenons à votre sujet",
+                    "<strong>Droit à la rectification</strong> (Art. 16): corriger des données inexactes ou incomplètes",
+                    "<strong>Droit à l'effacement</strong> (Art. 17): demander la suppression de vos données (« droit à l'oubli »)",
+                    "<strong>Droit à la limitation du traitement</strong> (Art. 18): suspendre le traitement de vos données",
+                    "<strong>Droit à la portabilité des données</strong> (Art. 20): recevoir vos données dans un format structuré et lisible par machine",
+                    "<strong>Droit d'opposition</strong> (Art. 21): vous opposer au traitement fondé sur un intérêt légitime",
+                    "<strong>Droit de retirer votre consentement à tout moment</strong> (Art. 7 du RGPD) <br /><br /> Pour exercer ces droits, veuillez nous écrire à l'adresse <strong>pierre.cornec[at]epsilon-chimie.com</strong>. Nous vous répondrons dans un délai d'un mois (prolongeable à trois mois pour les demandes complexes). <br /><br /> Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer une réclamation auprès de la CNIL (Commission nationale de l'informatique et des libertés) à l'adresse suivante : www.cnil.fr. Si vous résidez hors de France, vous pouvez également contacter l'autorité de contrôle compétente de votre pays."
+                ]
+            },
+            "transfers": {
+                "title": "7. Transferts en dehors de l'UE",
+                "content": "Vos données sont principalement traitées au sein de l'Union européenne. Tout transfert en dehors de l'EEE est régi par les clauses contractuelles types de la Commission européenne."
+            },
+            "security": {
+                "title": "8. Sécurité des données",
+                "content": "Epsilon Chimie met en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité et la confidentialité de vos données à caractère personnel, notamment contre tout accès non autorisé, toute perte, toute altération ou toute divulgation. Ces mesures font l'objet d'une révision régulière."
+            },
+            "changes": {
+                "title": "9. Modifications",
+                "content": "Epsilon Chimie se réserve le droit de mettre à jour la présente politique de confidentialité à tout moment, notamment pour se conformer à toute modification de la réglementation. La date de la dernière mise à jour est indiquée en haut de ce document. Nous vous invitons à la consulter régulièrement."
+            }
+        },
+        "note" : "La version anglaise est fournie à titre indicatif uniquement. En cas de divergence, la version française fera foi."
+    }
+}

@@ -28,6 +28,9 @@ section#privacy-policy article, section#general-tc article, section#legal-notice
   display: flex;
 }
 section#privacy-policy article:first-of-type, section#general-tc article:first-of-type, section#legal-notice article:first-of-type {
+  position: sticky;
+  top: 83px;
+  width: 20%;
   flex-direction: column;
   gap: var(--spacing-medium);
 }
@@ -104,7 +107,7 @@ section#privacy-policy article:last-of-type > ul > li ul, section#general-tc art
   list-style-type: disc;
   list-style-position: inside;
 }
-section#privacy-policy article:last-of-type div, section#general-tc article:last-of-type div, section#legal-notice article:last-of-type div {
+section#privacy-policy article:last-of-type .legal-note, section#general-tc article:last-of-type .legal-note, section#legal-notice article:last-of-type .legal-note {
   display: flex;
   align-items: center;
   gap: var(--spacing-large);
@@ -114,12 +117,12 @@ section#privacy-policy article:last-of-type div, section#general-tc article:last
   padding: var(--spacing-x-large);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#privacy-policy article:last-of-type div > div, section#general-tc article:last-of-type div > div, section#legal-notice article:last-of-type div > div {
+section#privacy-policy article:last-of-type .legal-note > div, section#general-tc article:last-of-type .legal-note > div, section#legal-notice article:last-of-type .legal-note > div {
   display: flex;
   gap: var(--spacing-x-small);
   align-items: center;
 }
-section#privacy-policy article:last-of-type div > div h3, section#general-tc article:last-of-type div > div h3, section#legal-notice article:last-of-type div > div h3 {
+section#privacy-policy article:last-of-type .legal-note > div h3, section#general-tc article:last-of-type .legal-note > div h3, section#legal-notice article:last-of-type .legal-note > div h3 {
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
 }/*# sourceMappingURL=legal.css.map */
