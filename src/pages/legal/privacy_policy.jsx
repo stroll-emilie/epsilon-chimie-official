@@ -84,7 +84,7 @@ function PrivacyPolicy() {
                     </li>
                 </ul>
                 <div className='legal-note'>
-                    <p>{t('privacy-policy.note')}</p>
+                    <p>{t('note')}</p>
                 </div>
             </article>
         </section>

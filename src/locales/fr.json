@@ -67,7 +67,45 @@
                 "title": "9. Modifications",
                 "content": "Epsilon Chimie se réserve le droit de mettre à jour la présente politique de confidentialité à tout moment, notamment pour se conformer à toute modification de la réglementation. La date de la dernière mise à jour est indiquée en haut de ce document. Nous vous invitons à la consulter régulièrement."
             }
-        },
-        "note" : "La version anglaise est fournie à titre indicatif uniquement. En cas de divergence, la version française fera foi."
-    }
+        }
+    },
+    
+    "legal-notice": {
+        "head": "Conformément à la loi française n° 2004-575 du 21 juin 2004 relative à la confiance dans l'économie numérique, les utilisateurs de ce site web sont informés par la présente de l'identité de l'éditeur et de l'hébergeur.",
+        "nav": [
+            "Art. 1 — Éditeur",
+            "Art. 2 — Hébergeur",
+            "Art. 3 — Propriété Intellectuelle",
+            "Art. 4 — Responsabilité",
+            "Art. 5 — Loi Applicables",
+            "Art. 6 — Modification des mentions"
+        ],
+        "sections" : {
+            "publisher": {
+                "title": "Art. 1 — Éditeur",
+                "content": "<strong>Epsilon Chimie SARL</strong>, société à responsabilité limitée au capital de 43 158,01 €, immatriculée au Registre du commerce et des sociétés de Brest sous le n° 402 459 721. Siège social : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Numéro de TVA intracommunautaire : FR96402459721. Directeur de la publication : Pierre-Yves Cornec, gérant d'Epsilon Chimie SARL — pierre.cornec@epsilon-chimie.com."
+            },
+            "host": {
+                "title": "Art. 2 — Hébergeur",
+                "content": "Ce site web est hébergé par <strong>Bluecom SAS</strong>, société par actions simplifiée. Siège social : 105 RUE CHARLES NUNGESSER, 29490 GUIPAVAS, FRANCE. Numéro de téléphone : 02 98 49 23 02. Adresse e-mail : hotline@bluecom.fr"
+            },
+            "property": {
+                "title": "Art. 3 — Propriété Intellectuelle",
+                "content": "L'ensemble du contenu du site www.epsilon-chimie.com (textes, images, graphiques, logos, base de données de molécules, logiciels, etc.) est la propriété exclusive d'Epsilon Chimie ou est utilisé avec l'autorisation de ses propriétaires.<br /><br />Toute reproduction, représentation, modification, publication ou adaptation, en tout ou en partie, par quelque moyen que ce soit, sans l'accord écrit préalable d'Epsilon Chimie est interdite."
+            },
+            "liability": {
+                "title": "Art. 4 — Responsabilité",
+                "content": "Les informations et le contenu publiés sur le Site sont fournis à titre indicatif uniquement. Epsilon Chimie s'efforce d'en garantir l'exactitude et l'actualité, mais ne saurait être tenue responsable en cas d'inexactitude, d'omission ou de tout préjudice résultant de leur utilisation. Les fiches de données de sécurité (FDS) constituent la référence faisant autorité en matière de manipulation des produits et sont disponibles sur simple demande. "
+            },
+            "law": {
+                "title": "Art. 5 — Loi Applicables",
+                "content": "Les présentes mentions légales sont régies par le droit français. Tout litige relatif au site web relève de la compétence exclusive des tribunaux de Brest."
+            },
+            "changes": {
+                "title": "Art. 6 — Modification des mentions",
+                "content": "La Société se réserve le droit de modifier les présentes mentions légales à tout moment afin de tenir compte des changements législatifs ou réglementaires ou des modifications apportées au Site. La date de mise à jour est indiquée en haut du présent document.<br /><br />Tout accès au Site après l'entrée en vigueur d'une version mise à jour des mentions légales vaut acceptation de ces dernières."
+            }
+        }
+    },
+    "note" : "La version anglaise est fournie à titre indicatif uniquement. En cas de divergence, la version française fera foi."
 }

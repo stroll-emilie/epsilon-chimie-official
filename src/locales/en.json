@@ -67,7 +67,45 @@
                 "title": "9. Changes to This Policy",
                 "content": "Epsilon Chimie reserves the right to update this Privacy Policy at any time, in particular to comply with any regulatory changes. The date of last update is indicated at the top of this document. We encourage you to review it regularly."
             }
-        },
-        "note": "The English version is provided for convenience only. In the event of any discrepancy, the French version shall prevail."
-    }
+        }
+    },
+
+    "legal-notice": {
+        "head": "In accordance with French law n° 2004-575 of 21 June 2004 on confidence in the digital economy, users of this website are hereby informed of the identity of the publisher and the host.",
+        "nav": [
+            "Art. 1 — Publisher",
+            "Art. 2 — Host",
+            "Art. 3 — Intellectual Property",
+            "Art. 4 — Liability",
+            "Art. 5 — Applicable law",
+            "Art. 6 — Change to this notice"
+        ],
+        "sections" : {
+            "publisher": {
+                "title": "Art. 1 — Publisher",
+                "content": "<strong>Epsilon Chimie SARL</strong>, as a Limited Liability Company with capital of 43,158.01€ registered with the Brest Trade and Companies Register under n° 402 459 721. Registered office : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Intra-community VAT number : FR96402459721. Publication director : Pierre-Yves Cornec, Managing Director of Epsilon Chimie SARL — pierre.cornec@epsilon-chimie.com."
+            },
+            "host": {
+                "title": "Art. 2 — Host",
+                "content": "This website is hosted by <strong>Bluecom SAS</strong>, as a simplified joint-stock company. Registered office : 105 RUE CHARLES NUNGESSER 29490 GUIPAVAS, FRANCE. Phone number  : 02 98 49 23 02. E-mail contact : hotline@bluecom.fr"
+            },
+            "property": {
+                "title": "Art. 3 — Intellectual Property",
+                "content": "All content on www.epsilon-chimie.com (texts, images, graphics, logos, molecule database, software, etc.) is the exclusive property of Epsilon Chimie or is used with the authorisation of its owners.<br /><br />Any reproduction, representation, modification, publication or adaptation, in whole or in parts, by any means whatsoever, without the prior written consent of Epsilon Chimie is prohibited."
+            },
+            "liability": {
+                "title": "Art. 4 — Liability",
+                "content": "The information and content published on the Site is given for guidance only. Epsilon Chimie strives to keep it accurate and up to date but cannot be held liable for any inaccuracy, omission, or for any damage arising fromt its use. Safety Data Sheets remain the authoritative reference for handling information and are available on request. "
+            },
+            "law": {
+                "title": "Art. 5 — Applicable law",
+                "content": "This legal notice is governed by French law. Any dispute relating to the website shall fall under the exclusive juridiction of the courts of Brest."
+            },
+            "changes": {
+                "title": "Art. 6 — Change to this notice",
+                "content": "The Company reserved the right to modify this notice at any time to reflect legal or regulatory changes or modifications made to the Site. The version date is indicated at the top of this document.<br /><br />Any access to the Site following the entry into force of an updated version of the legal notice constitute acceptance of the updated notice."
+            }
+        }
+    },
+    "note": "The English version is provided for convenience only. In the event of any discrepancy, the French version shall prevail."
 }
