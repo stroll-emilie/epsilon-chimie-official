@@ -2,6 +2,7 @@
 import '../request.css'
 import { getCountryOptions } from '../../../services/dataService'
 import { formDataProp } from '../../../propTypes';
+import { Link } from 'react-router-dom';
 
 const countryOptions = getCountryOptions();
 
@@ -86,7 +87,7 @@ function Company({data,onChange}) {
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
                 />
                 <span>
-                    By clicking 'Next', you confirm that you have read ou <a href="">privacy policy</a>  and agree that your details will be used solely to process this request.
+                    By clicking 'Next', you confirm that you have read ou <Link to="/privacy-policy">privacy policy</Link>  and agree that your details will be used solely to process this request.
                 </span>
             </label>
         </div>

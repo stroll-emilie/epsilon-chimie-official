@@ -10,6 +10,7 @@ footer{
         gap: 87px;
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
 
         article{
             padding: var(--spacing-xx-small);

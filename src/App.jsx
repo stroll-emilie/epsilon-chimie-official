@@ -12,7 +12,9 @@ import Catalogue from './pages/catalogue/catalogue.jsx'
 import Product from './pages/product/product.jsx'
 import Error404 from './pages/error/error404.jsx'
 import Request from './pages/request/request.jsx'
-
+import PrivacyPolicy from './pages/legal/privacy_policy.jsx'
+import GeneralTC from './pages/legal/general_tc.jsx'
+import LegalNotice from './pages/legal/legal_notice.jsx'
 
 function App() {
   return (
@@ -22,12 +24,21 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
+
             <Route path='/catalogue' element={<Catalogue />} />
             <Route path='/product/:id' element={<Product />} />
             <Route path='/about' element={<About />} />
             <Route path='/custom' element={<Custom />} />
+
             <Route path='/request-for-quote' element={<Request />} />
             <Route path='/request-for-quote/:id' element={<Request />} />
+
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+            <Route path='/general-t&c' element={<GeneralTC />} />
+            <Route path='/legal-notice' element={<LegalNotice />} />
+
+
+
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
 
