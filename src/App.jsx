@@ -16,6 +16,7 @@ import PrivacyPolicy from './pages/legal/privacy_policy.jsx'
 import GeneralTC from './pages/legal/general_tc.jsx'
 import LegalNotice from './pages/legal/legal_notice.jsx'
 
+
 function App() {
   return (
       <main>

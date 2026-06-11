@@ -107,5 +107,53 @@
             }
         }
     },
+
+    "general-tc": {
+        "nav": [
+            "Art. 1 — Objet",
+            "Art. 2 — Description et Accès au Site",
+            "Art. 3 — Propriété Intellectuelle",
+            "Art. 4 — Responsabilité",
+            "Art. 5 — Hyperliens",
+            "Art. 6 — Données Personelles et Cookies",
+            "Art. 7 — Loi Applicable et Juridiction",
+            "Art. 8 — Modifications"
+        ],
+        "sections": {
+            "purpose": {
+                "title": "Art. 1 — Objet",
+                "content": "Les présentes conditions d'utilisation (ci-après les « Conditions ») définissent les conditions d'accès et d'utilisation du site web www.epsilon-chimie.com (ci-après le « Site ») publié par Epsilon Chimie (ci-après la « Société »). <br /><br />L'accès au Site ou son utilisation de quelque manière que ce soit vaut acceptation sans réserve des présentes Conditions. Si vous n'acceptez pas les présentes Conditions, veuillez ne pas utiliser ce site web."
+            },
+            "description": {
+                "title": "Art. 2 — Description et Accès au Site",
+                "content": "Le site est une vitrine destinée à un public professionnel international. Il présente les produits de synthèse chimique d'Epsilon Chimie, en particulier sa gamme de molécules pharmaceutiques, et permet aux visiteurs de soumettre des demandes de devis via un formulaire de contact. <br /><br /><strong>Le Site n'est pas une plateforme de vente en ligne.</strong>Aucune transaction commerciale ne peut être conclue directement via le Site. Les informations présentées ne constituent pas une offre de vente au sens juridique du terme. <br /><br />Le Site est librement accessible depuis tout appareil connecté à Internet. La Société se réserve le droit de modifier, suspendre ou interrompre l'accès à tout ou partie du Site à tout moment, sans préavis ni indemnisation."
+            },
+            "property": {
+                "title": "Art. 3 — Propriété Intellectuelle",
+                "content": "Tous les éléments du Site — y compris les textes, les images, les visuels, les logos, la base de données de molécules et sa structure — sont protégés par le droit de la propriété intellectuelle et appartiennent à la Société ou sont utilisés avec l'autorisation de leurs propriétaires. <br /><br />Les icônes sont libres de droits et proviennent de la bibliothèque Iconsax. La base de données de molécules est spécifiquement protégée en tant que base de données au sens de la directive européenne 96/9/CE relative à la protection juridique des bases de données et de la législation nationale applicable, et bénéficie des droits sui generis du producteur de la base de données.<br /><br /> Toute reproduction, représentation, extraction, réutilisation, adaptation, publication ou transmission, en tout ou en partie, du contenu du Site, par quelque moyen que ce soit, est strictement interdite sans l'accord écrit préalable d'Epsilon Chimie."
+            },
+            "liability": {
+                "title": "Art. 4 — Responsabilité",
+                "content": "Les informations et le contenu présentés sur le Site sont fournis à titre purement informatif et ne constituent en aucun cas des conseils techniques, scientifiques, médicaux ou commerciaux. Epsilon Chimie s'efforce d'assurer l'exactitude des informations publiées, mais ne peut garantir leur exhaustivité ni leur actualité. <br /><br />Les pages produits disponibles sur le Site sont destinées à des professionnels qualifiés et peuvent être incomplètes. Elles ne remplacent pas les Fiches de données de sécurité (FDS) officielles fournies dans le cadre de la relation commerciale et disponibles sur demande.<br /><br />Les produits présentés sur le Site peuvent être soumis à des réglementations spécifiques en fonction du pays d'utilisation ou de livraison (notamment les réglementations REACH, CLP/GHS, les contrôles à l'exportation, les réglementations sur les précurseurs chimiques). Il incombe à l'acheteur de vérifier les exigences réglementaires applicables sur son territoire.<br /><br />La Société décline toute responsabilité pour tout dommage direct ou indirect résultant de l'accès au Site, de son utilisation ou de l'impossibilité d'y accéder."
+            },
+            "hyperlinks": {
+                "title": "Art. 5 — Hyperliens",
+                "content": "Le Site peut contenir des liens hypertextes vers des sites web tiers. Ces liens sont fournis à titre purement informatif. La Société n'a aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.<br /><br />Tout lien vers www.epsilon-chimie.com à partir d'un site web tiers doit faire l'objet d'une autorisation écrite préalable de la part d'Epsilon Chimie."
+            },
+            "personal": {
+                "title": "Art. 6 — Données Personelles et Cookies",
+                "content": "Le Site recueille certaines données à caractère personnel dans les conditions décrites dans la <Link to='/privacy-policy'>Politique de Confidentialité</Link> disponible sur ce site. <br /><br />Des cookies peuvent être enregistrés sur votre appareil lors de votre navigation. Certains cookies (notamment ceux de Google Analytics) nécessitent votre consentement préalable. Ce consentement est recueilli via la bannière de gestion des cookies qui s'affiche lors de votre première visite."
+            },
+            "governing": {
+                "title": "Art. 7 — Loi Applicable et Juridiction",
+                "content": "Les présentes Conditions sont régies par le droit français.<br /><br />En cas de litige relatif à l'interprétation, à la validité ou à l'exécution des présentes Conditions, les parties s'efforceront de parvenir à un règlement à l'amiable. Si aucun accord à l'amiable n'est trouvé dans un délai de trente (30) jours à compter de la notification écrite du litige, celui-ci sera soumis aux tribunaux compétents de Brest, en France.<br /><br />La version française des présentes Conditions prévaut sur toute version traduite en cas de divergence ou de conflit."
+            },
+            "purpose": {
+                "changes": "Art. 8 — Modifications",
+                "content": "La Société se réserve le droit de modifier les présentes Conditions à tout moment afin de tenir compte des changements législatifs ou réglementaires ou des modifications apportées au Site. La date de la version figure en haut du présent document.<br /><br />Tout accès au Site après l'entrée en vigueur d'une version mise à jour des Conditions vaut acceptation des Conditions mises à jour."
+            }
+        }
+    },
+
     "note" : "La version anglaise est fournie à titre indicatif uniquement. En cas de divergence, la version française fera foi."
 }
