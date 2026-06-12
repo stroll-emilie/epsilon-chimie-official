@@ -10,7 +10,7 @@ section{
         border-bottom: .5px solid var(--color-border-reversed);
     }
 
-    &#privacy-policy,&#general-tc,&#legal-notice{
+    &#privacy-policy,&#general-tc,&#legal-notice,&#cgv{
         background-color: #FFF;
         display: flex;
         gap: var(--spacing-x-large);
@@ -42,6 +42,8 @@ section{
                 
                 ul{
                     border-left: .5px solid var(--color-border-reversed);
+                    overflow-y: auto;
+                    height: 80vh;
                     li{
                         padding: var(--spacing-xx-small) var(--spacing-x-small);
                     }
@@ -55,6 +57,7 @@ section{
                 h3{
                     font-weight: var(--font-weight-bold);
                 }
+                
                 > ul{
                     display: flex;
                     flex-direction: column;
@@ -93,7 +96,9 @@ section{
                     @include card-default;
                 }
             }
-
         }
+    }
+    &#cgv > article:last-of-type > ul > li {
+        gap: var(--spacing-medium);
     }
 }

@@ -59,7 +59,12 @@ function GeneralTC() {
 
                     <li>
                         <h3>{t('general-tc.sections.personal.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('general-tc.sections.personal.content')}}/>
+                        <p>
+                            {t('general-tc.sections.personal.content-before')}
+                            {' '}<Link to={t('general-tc.sections.personal.link-url')}>{t('general-tc.sections.personal.link-text')}</Link>{' '}
+                            {t('general-tc.sections.personal.content-after')}
+                            <div dangerouslySetInnerHTML={{ __html: t('general-tc.sections.personal.content-rest') }} />
+                        </p>
                     </li>
 
                     <li>
