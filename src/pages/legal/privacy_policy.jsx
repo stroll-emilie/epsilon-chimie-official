@@ -55,7 +55,7 @@ function PrivacyPolicy() {
                     <li>
                         <h3>{t('privacy-policy.sections.cookies.title')}</h3>
                         {t('privacy-policy.sections.cookies.subsections').map((item,i) => (
-                            <div>
+                            <div key={item}>
                                 <span dangerouslySetInnerHTML={{__html: item.title}} />
                                 <p dangerouslySetInnerHTML={{__html: item.content}}></p>
                             </div>

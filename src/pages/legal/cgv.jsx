@@ -11,7 +11,7 @@ const SECTIONS = [
     'protection', 'corruption', 'termination', 'governing', 'provisions'
 ]
 
-function CGV() {
+function Cgv() {
     const { t } = useApp()
     const [openIndex, setOpenIndex] = useState(null)
 
@@ -57,7 +57,7 @@ function CGV() {
                                         {item.list    && (
                                             <ul>
                                                 {item.list.map((li, k) => (
-                                                    <li key={k} dangerouslySetInnerHTML={{ __html: li }} />
+                                                    <li key={li} dangerouslySetInnerHTML={{ __html: li }} />
                                                 ))}
                                             </ul>
                                         )}
@@ -77,4 +77,4 @@ function CGV() {
     )
 }
 
-export default CGV
+export default Cgv
