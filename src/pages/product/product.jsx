@@ -1,6 +1,6 @@
 import './product.css'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useProducts } from '../../context/AppContext';
+import { useApp } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
 
@@ -23,7 +23,7 @@ function Product() {
     const [packingSelected, setPackingSelected] = useState();
     const [detailsSelected, setDetailsSelected] = useState("Specifications")
 
-    const { products, loading } = useProducts()
+    const { products, loading } = useApp()
     const { id } = useParams()
     
     

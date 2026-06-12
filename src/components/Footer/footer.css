@@ -11,6 +11,7 @@ footer section:first-child {
   gap: 87px;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 footer section:first-child article {
   padding: var(--spacing-xx-small);

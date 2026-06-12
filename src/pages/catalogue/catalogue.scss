@@ -187,7 +187,7 @@ section{
                                         display: flex;
                                         flex-direction: column;
                                         gap: 4px;
-                                        button{
+                                        li{
                                             width: fit-content;
                                             @include chips-small-primary-rounded;
                                         }
@@ -196,8 +196,6 @@ section{
                                 }
                             }
                         }
-
-
                         #empty-search{
                             display: flex;
                             flex-direction: column;
@@ -262,7 +260,7 @@ section{
                                     ul{
                                         display: flex;
                                         gap: var(--spacing-xx-small);
-                                        li{
+                                        button{
                                             @include chips-large-outlined-rounded;
                                             cursor: pointer;
                                         }
@@ -271,7 +269,6 @@ section{
                             }
                         }
                     }
-
                     &#pagination{
                         display: flex;
                         justify-content: flex-end;
@@ -293,10 +290,6 @@ section{
                             }
                         }
                     }
-
-
-
-
                 }
             }
             

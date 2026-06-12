@@ -72,6 +72,19 @@
     }
 }
 
+@mixin btn-border-bottom-blue{
+    width: 100%;
+    border-bottom: 2px solid var(--color-border-reversed);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-md);
+    line-height: 136%;
+    padding: var(--spacing-xx-small) var(--spacing-x-small);
+    &.active,&:active{
+        color: var(--color-content-accent);
+        border-color: var(--color-border-accent);
+    }
+}
+
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 

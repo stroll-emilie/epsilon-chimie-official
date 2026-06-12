@@ -6,7 +6,7 @@ import { ReloadIcon } from '../../assets/icons/reload_icon';
 import { useEffect, useState} from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
-import { useProducts } from '../../context/AppContext';
+import { useApp } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
@@ -18,7 +18,7 @@ import { CircleArrowIcon } from '../../assets/icons/circle_arrow_icon';
 function Catalogue() {
     const [searchParams] = useSearchParams();
 
-    const {products} = useProducts()
+    const {products} = useApp()
     const [search, setSearch] = useState(searchParams.get('search') || '');
     const [selectedFamily, setSelectedFamily] = useState(searchParams.get('family') || 'All');
     const [sortOrder, setSortOrder] = useState("nameAsc");

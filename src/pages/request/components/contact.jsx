@@ -10,7 +10,7 @@ function Contact({data,onChange}) {
     <>
         <div id="your-name">
             <div>
-                <label htmlFor="first-name">first name<span>*</span></label>
+                <label htmlFor="first-name" className='labelField'>first name<span>*</span></label>
                 <input 
                 type="text"
                 value={data.firstName}
@@ -20,7 +20,7 @@ function Contact({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="last-name">last name<span>*</span></label>
+                <label htmlFor="last-name" className='labelField'>last name<span>*</span></label>
                 <input 
                 type="text"
                 value={data.lastName}
@@ -32,7 +32,7 @@ function Contact({data,onChange}) {
     
         <div id="role">
             <div>
-                <label htmlFor="last-name">role / position</label>
+                <label htmlFor="last-name" className='labelField'>role / position</label>
                 <input 
                 type="text"
                 placeholder='e.g. Research chemist, Procurement officer'
@@ -45,7 +45,7 @@ function Contact({data,onChange}) {
 
         <div id="mail-phone">
             <div>
-                <label htmlFor="mail">e-mail<span>*</span></label>
+                <label htmlFor="mail" className='labelField'>e-mail<span>*</span></label>
                 <input 
                 type="text"
                 placeholder='name@company.com'
@@ -56,7 +56,7 @@ function Contact({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="phone">phone number</label>
+                <label htmlFor="phone" className='labelField'>phone number</label>
                 <input 
                 type="text"
                 placeholder='+33 ...'

@@ -1,0 +1,623 @@
+{
+    "privacy-policy": {
+        "head": "Epsilon Chimie SARL respects your privacy and is committed to processing your personal data in accordance with the General Data Protection Regulation (EU) 2016/679 (“GRPD”) and the French Data Protection Act.",
+        "nav": [
+            "1. Data controller",
+            "2. Data we collect",
+            "3. Purpose and legal basis",
+            "4. Retention",
+            "5. Cookies and trackers",
+            "6. Your rights",
+            "7. Transfers outside the EU",
+            "8. Data Security",
+            "9. Changes to This Policy"
+        ],
+        "sections": {
+            "controller": {
+                "title": "1. Data controller",
+                "content": "The data controller is Epsilon Chimie SARL, 450 rue Antoine Lavoisier, 29490 Guipavas, France. You may contact us at any time at <strong>pierre.cornec[at]epsilon-chimie.com</strong>."
+            },
+            "collect": {
+                "title": "2. Data we collect",
+                "content": "We collect only the information you voluntarily provide through our quote-request form (name, professional contact details, company, request content) and technical data collected automatically through strictly necessary cookies (see Cookie policy)."
+            },
+            "purpose": {
+                "title": "3. Purpose and legal basis",
+                "content": "We process your data to answer your commercial enquiries (legitimate interest), to fulfill orders (performance of a contract), and to comply with legal accounting and REACH obligations (legal obligation). We do not carry out automated individual decision-making."
+            },
+            "retention": {
+                "title": "4. Retention",
+                "content": "Quote-request data is retained for up to 3 years from ou rlast interaction. Commercial-relationship data is retained for 10 years as required by French commercial law. Cookie data is retained for a maximum of 13 months."
+            },
+            "cookies": {
+                "title": "5. Cookies and trackers",
+                "subsections": [
+                    {
+                        "title": "5.1 Strictly necessary cookies",
+                        "content": "These cookies are essential for the website to function properly. They do not require your consent."
+                    },
+                    {
+                        "title": "5.2 Analytics Cookies — Google Analytics 4",
+                        "content": "We use Google Analytics 4 (GA4) to analyse website traffic and visitor behaviour. These cookies colect aggregated browsing data (paged viewed, session duration, country of origin, traffic source). <br/><br/>These cookies are only placed on your device <strong>after your explicit consent</strong> via our cookie management banner.<br/><br/>You may withdraw your consent at any time by cliking 'Manage cookie preferences' accessible from the bottom of each page. <br/><br/>You may also opt out of Google Analytics tracking by installing the official browser add-on: https://tools.google.com/dipage/gaoptout."
+                    }
+                ]
+            },
+            "rights": {
+                "title": "6. Your rights",
+                "head": "Under the GPRD and applicable data protection law, you have the following rights regarding your personal data :",
+                "list": [
+                    "<strong>Right of access</strong> (Art. 15 GPRD): obtain a copy of the data we hold about you",
+                    "<strong>Right to rectification</strong> (Art. 16): correct inaccurate or incomplete data",
+                    "<strong>Right to erasure</strong> (Art. 17): request deletion of your data ('right to be forgotten')",
+                    "<strong>Right to restriction of processing</strong> (Art. 18): suspend processing of your data",
+                    "<strong>Right to data portability</strong> (Art. 20): receive your data in a structured, machine-readable format",
+                    "<strong>Right to object</strong> (Art. 21): object to processing based on legitimate interest",
+                    "<strong>Right to withdraw consent at any time</strong> (Art. 7 GRPD) <br /><br /> To exercise the rights, please write to us at <strong>pierre.cornec[at]epsilon-chimie.com</strong>. We will respond within one month (extendable to three months for complex requests). <br /><br /> If you believe your rights are not being respected, you have the right to lodge a complaint with the CNIL (French Data Protection Authority) at: www.cnil.fr. If you are based outside France, you may alternatively contact your local host supervisory authority."
+                ]
+            },
+            "transfers": {
+                "title": "7. Transfers outside the EU",
+                "content": "Your data is primarily processed within the European Union. Any transfer outside the EEA is covered by the European Commission's Standard Contractual Clauses. "
+            },
+            "security": {
+                "title": "8. Data Security",
+                "content": "Epsilon Chimie implements appropriate technical and organisational measures to ensure the security and confidentiality of your personal data, in particular against any unauthorised access, loss, alteration, or discolsure. These measures are regularly reviewed."
+            },
+            "changes": {
+                "title": "9. Changes to This Policy",
+                "content": "Epsilon Chimie reserves the right to update this Privacy Policy at any time, in particular to comply with any regulatory changes. The date of last update is indicated at the top of this document. We encourage you to review it regularly."
+            }
+        }
+    },
+
+    "legal-notice": {
+        "head": "In accordance with French law n° 2004-575 of 21 June 2004 on confidence in the digital economy, users of this website are hereby informed of the identity of the publisher and the host.",
+        "nav": [
+            "Art. 1 — Publisher",
+            "Art. 2 — Host",
+            "Art. 3 — Intellectual Property",
+            "Art. 4 — Liability",
+            "Art. 5 — Applicable law",
+            "Art. 6 — Change to this notice"
+        ],
+        "sections" : {
+            "publisher": {
+                "title": "Art. 1 — Publisher",
+                "content": "<strong>Epsilon Chimie SARL</strong>, as a Limited Liability Company with capital of 43,158.01€ registered with the Brest Trade and Companies Register under n° 402 459 721. Registered office : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Intra-community VAT number : FR96402459721. Publication director : Pierre-Yves Cornec, Managing Director of Epsilon Chimie SARL — pierre.cornec@epsilon-chimie.com."
+            },
+            "host": {
+                "title": "Art. 2 — Host",
+                "content": "This website is hosted by <strong>Bluecom SAS</strong>, as a simplified joint-stock company. Registered office : 105 RUE CHARLES NUNGESSER 29490 GUIPAVAS, FRANCE. Phone number  : 02 98 49 23 02. E-mail contact : hotline@bluecom.fr"
+            },
+            "property": {
+                "title": "Art. 3 — Intellectual Property",
+                "content": "All content on www.epsilon-chimie.com (texts, images, graphics, logos, molecule database, software, etc.) is the exclusive property of Epsilon Chimie or is used with the authorisation of its owners.<br /><br />Any reproduction, representation, modification, publication or adaptation, in whole or in parts, by any means whatsoever, without the prior written consent of Epsilon Chimie is prohibited."
+            },
+            "liability": {
+                "title": "Art. 4 — Liability",
+                "content": "The information and content published on the Site is given for guidance only. Epsilon Chimie strives to keep it accurate and up to date but cannot be held liable for any inaccuracy, omission, or for any damage arising fromt its use. Safety Data Sheets remain the authoritative reference for handling information and are available on request. "
+            },
+            "law": {
+                "title": "Art. 5 — Applicable law",
+                "content": "This legal notice is governed by French law. Any dispute relating to the website shall fall under the exclusive juridiction of the courts of Brest."
+            },
+            "changes": {
+                "title": "Art. 6 — Change to this notice",
+                "content": "The Company reserved the right to modify this notice at any time to reflect legal or regulatory changes or modifications made to the Site. The version date is indicated at the top of this document.<br /><br />Any access to the Site following the entry into force of an updated version of the legal notice constitute acceptance of the updated notice."
+            }
+        }
+    },
+
+    "general-tc": {
+        "nav": [
+            "Art. 1 — Purpose",
+            "Art. 2 — Description and Access to the Site",
+            "Art. 3 — Intellectual Property",
+            "Art. 4 — Liability",
+            "Art. 5 — Hyperlinks",
+            "Art. 6 — Personal Data and Cookies",
+            "Art. 7 — Governing Law and Jurisdiction",
+            "Art. 8 — Changes to These Terms"
+        ],
+        "sections": {
+            "purpose": {
+                "title": "Art. 1 — Purpose",
+                "content": "These Terms of Use (hereinafter “Terms”) define the conditions of access to and use of the website www.epsilon-chimie.com (hereinafter the “Site”) published by Epsilon Chimie (hereinafter the “Company”). <br /><br />Accessing or using the Site in any way constitutes unconditional acceptance of these Terms. If you do not agree with these Terms, please do not use this website."
+            },
+            "description": {
+                "title": "Art. 2 — Description and Access to the Site",
+                "content": "The Site is a showcase website aimed at an international professional audience. It presents Epsilon Chimie's chemical synthesis products, in particular its range of pharmaceutical molecules, and allows visitors to submit quotation requests via a contact form. <br /><br /><strong>The site is not an online sales platform</strong>. No commercial transaction can be concluded directly via the Site. The information presented does not constitute a sales offer in the legal sense. <br /><br />The Site is freely accessible from any Internet-connected device. The Company reserves the right to modify, suspend, or discontinue access to all or part of the Site at any time, without notice or compensation."
+            },
+            "property": {
+                "title": "Art. 3 — Intellectual Property",
+                "content": "All elements from the Site — including texts, images, visuals, logos, the molecule database and its structure — are protected by intellectual property law and belong to the Company or are used with the permission of their owners.<br />Icons are free of use and come from the Iconsax library.<br /><br />The molecule database is specifically protected as a database within the meaning of EU Directive 96/9/EC on the legal protection of databases and applicable national law, benefiting from the sui generis rights of the database producer.<br /><br />Any reproduction, representation, extraction, re-use, adaptation, publication, or transmission, in whole or in part, of the Site's content, by any means, is strictly prohibited without the prior written consent of Epsilon Chimie."
+            },
+            "liability": {
+                "title": "Art. 4 — Liability",
+                "content": "The information and content presented on the Site are provided for informational purposes only and do not constitute technical, scientific, medical, or commercial advice. Epsilon Chimie endeavours to ensure the accuracy of published information but cannot guarantee its completeness or currency. <br /><br />Product pages available on the Site are intended for qualified professionals and may be incomplete. They do not replace the official Safety Data Sheets (SDS) provided in the context of the commercial relationship and available on request.<br /><br />Products presented on the Site may be subjected to specific regulations depending on the country of use or delivery (including REACH, CLP/GHS regulations, export controls, chemical precursor regulations). It is the buyer's responsibility to verify the regulatory requirements applicable to their territory.<br /><br />The Company acceprs no liability for any direct or indirect damages resulting from access to the Site, its use, or inability to access it."
+            },
+            "hyperlinks": {
+                "title": "Art. 5 — Hyperlinks",
+                "content": "The Site may contain hyperlinks to third-party wbesites. These links are provided for information purposes only. The Company has no control over the content of such sites and accepts no responsibility for the information published there.<br /><br />Any link to www.epsilon-chimie.com fromt a third-party wbesite must receive prior written authorisation from Epsilon Chimie."
+            },
+            "personal": {
+                "title": "Art. 6 — Personal Data and Cookies",
+                "content-before": "The Site collects certain personal data under the conditions described in the",
+                "link-text":"privacy policy",
+                "link-url":"/privacy-policy",
+                "content-after": "available on this site.",
+                "content-rest":"<br />Cookies may be stored on your device while browsing. Certain cookies (in particular Google Analytics cookies) require your prior consent. This consent is collected via the cookie management banner displayed on your first visit." 
+            },
+            "governing": {
+                "title": "Art. 7 — Governing Law and Jurisdiction",
+                "content": "These Terms are governed by French law.<br/><br/>In the event of a dispute relating to the interpretation, validity or performance of these Terms, the partites will endeavour to reach an amicable settlement. If no amicable agreement is reached within thirty (30) days of written notification of the dispute, it will be submitted to the competent courts of Brest, France.<br/><br/>The French version of these Terms prevails over any translated version in the event of divergence or conflict."
+            },
+            "changes": {
+                "title": "Art. 8 — Changes to These Terms",
+                "content": "The Company reserved the right to modify these Terms at any time to reflect legal or regulatory changes or modifications made to the Site. The version date is indicated at the top of this document.<br /><br />Any access to the Site following the entry into force of an updated version of the Terms constitute acceptance of the updated Terms."
+            }
+        }
+    },
+
+    "cgv": {
+        "head": "Epsilon Chimie SARL, (hereinafter “Epsilon Chimie” or the “Seller”), as a Limited Liability Company (Société à Responsabilités Limitées) incorporated under French law in 1995, specialises in the manufacture and sale of Active Pharmaceutical Ingredients (“API”) intended for pharmaceutical, biotechnology and scientific research industries.<br/><br/>These General Terms and Conditions of Sales (hereinafter the “GTCS”) constitute, in accordance with Article L. 441-1 of the French Commercial Code (Code de commerce), the sole basis for commercial negotiation between Epsilon Chimie and any professional buyer (hereinafter the “Customer”). They apply to the exclusion of any document, including the Customer's general purchasing conditions.<br/><br/>Epsilon Chimie operates under the supervision of the competent regulatory authorities and its Products are manufactured in compliance with the Good Manufacturing Practices (GMP) applicable to active pharmaceutical substances, in particular the ICH Q7 guideline and the equivalent regulations of the competent authorities (EMA, FDA, PMDA and others).",
+        "nav": [
+            "Art. 1 — Scope and Application",
+            "Art. 2 — Offers and Orders",
+            "Art. 3 — Prices",
+            "Art. 4 — Payment Terms",
+            "Art. 5 — Delivery and Risk Transfer",
+            "Art. 6 — Specifications, Quality and Regulatory Documentation",
+            "Art. 7 — GMP Compliance and Pharmaceutical Regulations",
+            "Art. 8 — Acceptance, Complaints and Non-conformity",
+            "Art. 9 — Warranties and Limitation of Liability",
+            "Art. 10 — Reach, CLP and Environmental Regulations",
+            "Art. 11 — Export controls and International sanctions",
+            "Art. 12 — Force Majeure",
+            "Art. 13 — Intellectual Property",
+            "Art. 14 — Confidentiality",
+            "Art. 15 — Personal Data Protection",
+            "Art. 16 — Anti-corruption and Ethical compliance",
+            "Art. 17 — Termination",
+            "Art. 18 — Governing Law and Dispute Resolution",
+            "Art. 19 — General Provisions"
+        ],
+        "sections":{ 
+            "scope": {
+                "title": "Art. 1 — Scope and Application",
+                "subsections": [
+                    {
+                        "title": "1.1 Purpose",
+                        "content": "These GTCS define the rights and obligations of the parties in connection with the sale by Epsilon Chimie of active pharmaceutical ingredients (API) and associated chemical products (hereinafter the “Products”) to professional customers, including pharmaceutical laboratories, specialist distributors, contact manufacturing organisations (CMO/CDMO) and research institutes."
+                    },
+                    {
+                        "title": "1.2 Field of Application",
+                        "content": "The GTCS apply to all offers, orders and deliveries of Products made by Epsilon Chimie, whether in France or internationally, regardless of the order channel (post, e-mail, customer portal, purchase order). They apply exclusively to business-to-business (B2B) relationships within the meaning of the French Commercial Code. Any Customer placing an order with Epsilon Chimie is deemed to have read and unconditionally accepted the GTCS."
+                    },
+                    {
+                        "title": "1.3 Precedence of the GTCS",
+                        "content": "In accordance with Article L. 441-1 of the French Commercial Code, these GTCS take precedence over all purchase conditions of the Customer or any other document issued by the Customer. Any derogation from these GTCS may only result from a specific written agreement signed by a duly authorised representative of Epsilon Chimie.  Failure to formally object to the Customer's purchase conditions shall note constitute acceptance thereof."
+                    },
+                    {
+                        "title": "1.4 Exclusion of the Vienna Convention (CISG)",
+                        "content": "The parties expressly agree to exclude the application of the United Nations Convention on Contracts for International Sale of Goods (Vienna Convention of 11 April 1980, “CISG”), including for contracts of an international nature. French law exclusively governs all contractual relationships arising from these GTCS, in accordance with Article 18 hereof."
+                    }
+                ]
+            },
+            "offers": {
+                "title": "Art. 2 — Offers and Orders",
+                "subsections": [
+                    {
+                        "title": "2.1 Commercial Offers",
+                        "content": "All commercial offers issued by Epsilon Chimie are made in writing (e-mail, post or dedicated customer portal). Unless otherwise expressly stated, offers are valid for thirty (30) calendar days from their date of issue. After this period, Epsilon Chimie reserves the right not to honour the initial offer or to revise it."
+                    },
+                    {
+                        "title": "2.2 Contract Formation",
+                        "content": "The contract of sale is formed upon receipt by Epsilon Chimie of a written purchase order from the Customer, subject to the issuance by Epsilon Chimie of a written Order Acknowledgement ('OA') confirming the agreed terms (Product, quantity, price, delivery lead time). In the absence of an OA within five (5) business days of receipt of the purchase order, the Customer is invited to contact Epsilon Chimie directly. <br/><br/> Epsilon Chimie reserves the right to refuse any order without justification, in particular where there is doubt as to the Customer's solvency, where the Customer has previously breached these GTCS, or where the declared end-use of the Products is incompatible with applicable regulations."
+                    },
+                    {
+                        "title": "2.3 Declared End-Use and Regulatory Qualifications",
+                        "content": "The Customer is required to accurately declare the intended end-use of the Products ordered (clinical development stage, manufacturing of marketed medicinal products, research, etc.) as well as the regulatory authorisations it holds (MA, IND, IMPD, etc.). Epsilon Chimie reserves the right to refuse or suspend an order if the declared use proves incompatible with applicable regulations or with the Products' specifications."
+                    },
+                    {
+                        "title": "2.4 Order Modification and Cancellation",
+                        "content": "Any modification or cancellation of a confirmed order must be notified in writing and is subject to prior acceptance by Epsilon Chimie. Cancellation or modification fees may be charged, reflecting in particular manufacturing costs already incurred, raw materials ordered and resources allocated. Orders for custom-manufactured Products ('made-to-order') or those requiring specific qualification documentation may not be cancelled once production has commenced."
+                    }
+                ]
+            },
+            "prices": {
+                "title": "Art. 3 — Prices",
+                "subsections": [
+                    {
+                        "title": "3.1 Price Basis",
+                        "content": "Prices are expressed in euros (EUR) exclusive of taxes and exclusive of delivery costs, unless otherwise specified in the offer. Applicable prices are those in force at the time of issuance of the OA. For multi-year contracts or blanket orders, the applicable price is that set out in the signed written framework agreement between the parties."
+                    },
+                    {
+                        "title": "3.2 Price Revision",
+                        "content": "Epsilon Chimie reserves the right to amend its pricing at any time. Any pricing change will be notified to the Customer in writing with a minimum notice period of sixty (60) days. Orders confirmed before the effective date of the new pricing remain governed by the prices in the corresponding OA. For orders with deliveries spread over more than twelve (12) months, Epsilon Chimie reserves the right to apply a price revision based on changes in raw material indices, energy costs or regulations imposing new manufacturing constraints, following prior notice to the Customer."
+                    },
+                    {
+                        "title": "3.3 Taxes and Duties",
+                        "content": "The Customer is responsible for all taxes, customs duties, levies, charges and similar assessments applicable in the destination country of the Products. Prices invoiced by Epsilon Chimie are net of French VAT where the Customer is registered for VAT in a Member State of the European Union (subject to provision of a valid EU VAT number) or is established outside the European Union."
+                    },
+                    {
+                        "title": "3.4 Ancillary Costs",
+                        "content": "Analytical, certification (e.g. Pharmacopoeia Certificate of Compliance, GMP certificate, Drug Master File), special packaging, additional regulatory documentation or quality audit fees are invoiced separately, unless expressly included in the commercial offer."
+                    }
+                ]
+            },
+            "payment": {
+                "title": "Art. 4 — Payment terms",
+                "subsections": [
+                    {
+                        "title": "4.1 Payment Deadlines",
+                        "content": "Unless otherwise agreed in writing, invoices are payable within thirty (30) days net from the invoice date. In accordance with Articles L. 441-10 et seq. of the French Commercial Code (French Economic Modernisation Act, 'LME'), the payment period may under no circumstances exceed sixty (60) days from the invoice date, or forty-five (45) days end of month. <br/><br/> For first-time orders or where there is doubt as to the Customer's solvency, Epsilon Chimie may require full or partial advance payment (deposit), the provision of bank guarantees or a documentary letter of credit (L/C) compliant with the ICC Uniform Customs and Practice (UCP 600)."
+                    },
+                    {
+                        "title": "4.2 Payment Methods",
+                        "content": "Payment shall be made by bank transfer to the account indicated on the invoice. Any other payment method is subject to prior written agreement from Epsilon Chimie. International wire transfer charges are borne by the Customer (OUR charges)."
+                    },
+                    {
+                        "title": "4.3 Late Payment",
+                        "head": "Any late payment shall automatically give rise, without prior notice being required, in accordance with Article L. 441-10 of the French Commercial Code, to:",
+                        "list": [
+                            "The application of a late-payment interest rate equal to the European Central Bank's main refinancing rate plus ten (10) percentage points;",
+                            "A flat-rate recovery fee of forty euros (EUR 40) per unpaid invoice, pursuant to Decree no. 2012-1115 of 2 October 2012;",
+                            "The right for Epsilon Chimie to immediately suspend all ongoing deliveries and/or to terminate current contracts, without prejudice to any other remedy."
+                        ],
+                        "foot ": "Interest accrues from the day following the due date shown on the invoice until full payment of principal and all accessories."
+                    },
+                    {
+                        "title": "4.4 Set-Off and Deductions",
+                        "content": "The Customer is not entitled to make any unilateral set-off, deduction or withholding against amounts due to Epsilon Chimie, unless agreed in writing in advance or ordered by a final court judgment."
+                    },
+                    {
+                        "title": "4.5 Retention of Title",
+                        "content": "Epsilon Chimie retains full title to the Products delivered until complete payment of all sums due by the Customer in respect of principal, interest and ancillary costs, in accordance with Articles 2367 to 2372 of the French Civil Code. The transfer of risk, as defined in Article 5 hereof, is independent of the transfer of title governed by this clause. In the event of non-payment at maturity, Epsilon Chimie may claim restitution of the Products in the Customer's possession, under the conditions provided by law. The Customer undertakes to store the Products in a manner that allows their identification and separation from other goods, and to inform any third party of Epsilon Chimie's retention of title."
+                    }
+                ]
+            },
+            "risk": {
+                "title": "Art. 5 — Delivery and Risk Transfer",
+                "subsections": [
+                    {
+                        "title": "5.1 Delivery Terms (Incoterms®)",
+                        "content": "Unless otherwise agreed in the offer or OA, Products are delivered under FCA (Free Carrier - named place of departure) terms of the current edition of the Incoterms® of the International Chamber of Commerce (Incoterms® 2020). The appointment of the carrier and the taking out of transport insurance are the Customer's responsibility unless otherwise stipulated. The parties may agree in writing to a different Incoterm (DAP, DDP, CIF, etc.), in which case the corresponding Incoterms® 2020 conditions apply."
+                    },
+                    {
+                        "title": "5.2 Risk Transfer",
+                        "content": "The transfer of risk of loss, deterioration or destruction of the Products occurs in accordance with the agreed Incoterm. Under FCA, risk transfers upon handing over the Products to the first carrier at the agreed place of departure, irrespective of whether the Products have been paid for (independently of the retention of title clause in Article 4.5)."
+                    },
+                    {
+                        "title": "5.3 Delivery Lead Times",
+                        "content": "Delivery lead times communicated by Epsilon Chimie are indicative and do not constitute a firm commitment, unless otherwise expressly agreed in writing. Epsilon Chimie shall use all reasonable means to comply with announced lead times. Any delivery delay shall only give rise to penalties, damages or termination if a firm lead time was expressly agreed in writing and the delay is directly attributable to Epsilon Chimie, to the exclusion of any force majeure event within the meaning of Article 12 hereof."
+                    },
+                    {
+                        "title": "5.4 Packaging and Labelling",
+                        "content": "Products are packaged and labelled in compliance with applicable regulations, including Regulation (EC) No 1272/2008 (CLP) on the classification, labelling and packaging of substances and mixtures, IATA/IMDG standards for the transport of dangerous goods, and applicable requirements for the transport of pharmaceutical active substances. Special packaging conditions must be agreed in writing before order confirmation and may give rise to additional charges."
+                    },
+                    {
+                        "title": "5.5 Partial Deliveries",
+                        "content": "Epsilon Chimie reserves the right to make partial deliveries within the ordered quantities. Each partial delivery is invoiced separately. The delay or absence of a partial delivery shall not justify the refusal or cancellation of other deliveries."
+                    },
+                    {
+                        "title": "5.6 Safety Data Sheet (SDS)",
+                        "content": "In accordance with Article 31 of the REACH Regulation (EC) No 1907/2006, Epsilon Chimie shall provide the Customer, prior to or upon the first delivery of each Product, with an up-to-date Safety Data Sheet (SDS), drawn up in the language of the country of delivery or in English for destinations outside the European Union. The Customer is responsible for communicating the SDS to its own downstream users."
+                    }
+                ]
+            },
+            "specifications": {
+                "title": "Art. 6 — Specifications, Quality and Regulatory Documentation",
+                "subsections": [
+                    {
+                        "title": "6.1 Product Specifications",
+                        "content": "Products are supplied in conformity with the technical specifications agreed between the parties and reproduced or referenced in the OA or in any written quality agreement (Quality Agreement) concluded between the parties. In the absence of agreed specifications, Products are supplied in compliance with the current monograph of the European Pharmacopoeia (Ph. Eur.) or the United States Pharmacopeia (USP) in force at the date of manufacture, or, where no official monograph exists, in accordance with Epsilon Chimie's internal specifications as communicated to the Customer. Any request by the Customer for specification changes must be submitted in writing and is subject to prior technical and regulatory assessment by Epsilon Chimie, with a written amendment to be executed if the change is accepted."
+                    },
+                    {
+                        "title": "6.2 Certificate of Analysis (CoA)",
+                        "content": "Each delivery is accompanied by a Certificate of Analysis (CoA) attesting to the batch's compliance with the agreed specifications. The CoA shall include, inter alia: Product name (INN and trade name where applicable), batch number, manufacturing date, retest/expiry date, analytical test results and corresponding acceptance criteria."
+                    },
+                    {
+                        "title": "6.3 Regulatory Documentation",
+                        "head": "Upon written request from the Customer at the time of ordering, Epsilon Chimie may provide, subject to availability and confidentiality obligations:",
+                        "list": [
+                            "A Drug Master File (DMF) or a Letter of Access to its DMF filed with the competent authorities (FDA, EMA/EDQM, PMDA, etc.);",
+                            "A Vendor Qualification Package meeting GMP requirements;",
+                            "A GMP certificate issued by the competent authority;",
+                            "A Certificate of Suitability to the Monographs of the European Pharmacopoeia (CEP/COS) where applicable;",
+                            "A REACH compliance declaration pursuant to Regulation (EC) No 1907/2006."
+                        ],
+                        "foot": "The provision of additional regulatory documents or batch manufacturing records is subject to a prior confidentiality agreement and may be subject to a fee."
+                    },
+                    {
+                        "title": "6.4 Quality Agreement",
+                        "content": "For regular commercial relationships involving Products intended for the manufacture of marketed medicinal products, the parties undertake to enter into a written Quality Agreement, in accordance with ICH Q10 recommendations and applicable EMA/FDA guidelines. In the event of conflict between a Quality Agreement and these GTCS, the more stringent provisions with respect to pharmaceutical quality shall prevail."
+                    }
+                ]
+            },
+            "compilance": {
+                "title": "Art. 7 — GMP Compliance and Pharmaceutical Regulations",
+                "subsections": [
+                    {
+                        "title": "7.1 Epsilon Chimie's GMP Commitment",
+                        "head": "Epsilon Chimie undertakes to manufacture and deliver Products in compliance with the Good Manufacturing Practices applicable to active pharmaceutical substances, in particular:",
+                        "list": [
+                            "The ICH Q7 Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients;",
+                            "Directives 2003/94/EC and 2001/83/EC (European Union);",
+                            "21 CFR Parts 210/211 (U.S. Food and Drug Administration);",
+                            "The guidelines of the PMDA (Pharmaceuticals and Medical Devices Agency, Japan);",
+                            "Any other applicable GMP regulation in the destination country, to the extent of its knowledge."
+                        ]
+                    },
+                    {
+                        "title": "7.2 Change Control Notification",
+                        "head": "Epsilon Chimie undertakes to notify the Customer in writing, within a reasonable time and in any event before delivery of the batches concerned, of any change that may have an impact on the quality, regulatory compliance or specifications of the Products, including:",
+                        "list": [
+                            "Any change to the synthetic route or manufacturing process;",
+                            "Any change of supplier for critical starting materials;",
+                            "Any change of manufacturing site or critical subcontractor;",
+                            "Any update to analytical specifications or control methods."
+                        ],
+                        "foot": "The notification period shall be defined in the Quality Agreement. In the absence of a Quality Agreement, notification shall be given at least sixty (60) days before delivery of the first batches resulting from the change."
+                    },
+                    {
+                        "title": "7.3 Audit Rights",
+                        "content": "The Customer or its representative has the right to conduct quality audits of Epsilon Chimie's manufacturing facilities in respect of the Products ordered, subject to prior written notice of at least forty-five (45) business days, and limited to one (1) audit per calendar year per site, unless otherwise indicated in the Quality Agreement. Audits are carried out at the Customer's expense. Epsilon Chimie reserves the right to refuse access to competitors or to persons without the necessary clearances, and to require the auditor to sign a confidentiality agreement in advance."
+                    },
+                    {
+                        "title": "7.4 Batch Traceability and Records",
+                        "content": "Epsilon Chimie ensures full traceability of each delivered batch in accordance with GMP requirements. Batch records are retained in compliance with applicable legal retention periods (at minimum one year after the expiry date of the finished medicinal product manufactured from the relevant API batch, or seven years from the batch release date, whichever is longer)."
+                    },
+                    {
+                        "title": "7.5 Quality Complaints and Batch Recalls",
+                        "content": "In the event of identification of a quality defect likely to affect Products already delivered, Epsilon Chimie shall notify the Customer as soon as possible. Both parties shall cooperate in good faith to assess the impact and determine appropriate corrective actions, including a potential batch recall, in accordance with applicable regulatory procedures."
+                    }
+                ]
+            },
+            "acceptance": {
+                "title": "Art. 8 — Acceptance, Complaints and Non-Conformity",
+                "subsections": [
+                    {
+                        "title": "8.1 Incoming Inspection",
+                        "content": "The Customer is required to inspect the Products upon receipt, including packaging, quantities delivered and apparent conformity with the delivery note and CoA. Any apparent anomaly (missing parcel, visible damage, incorrect designation) must be noted on the delivery note (reservations) and notified to Epsilon Chimie within five (5) business days of delivery."
+                    },
+                    {
+                        "title": "8.2 Non-Conformity Complaints",
+                        "content": "Any complaint relating to a Product's non-conformity with agreed specifications (analytical quality defect, contamination, documentary non-conformity, etc.) must be submitted in writing to Epsilon Chimie within a maximum of thirty (30) calendar days following the date of receipt of the Products or, in the case of defects not detectable upon incoming inspection, within thirty (30) days of discovery of the defect. The complaint must include: the batch number concerned, a precise description of the alleged defect, analytical counter-test results where applicable, and a proposed disposition (return, replacement, credit note). Epsilon Chimie shall have thirty (30) business days to investigate the complaint and issue its response."
+                    },
+                    {
+                        "title": "8.3 Latent Defects",
+                        "content": "The warranty against latent defects is governed by Articles 1641 to 1649 of the French Civil Code. The Customer has a period of two (2) years from discovery of the defect to bring a warranty claim. Such a claim may only succeed if the defect was hidden, existed at the time of sale, and renders the Product unfit for its intended use."
+                    },
+                    {
+                        "title": "8.4 Non-Conformity Management",
+                        "content": "Non-conforming Products may only be returned with Epsilon Chimie's prior written agreement and in accordance with its return instructions (Return Material Authorisation, 'RMA'). In the absence of an agreement within fifteen (15) days of the complaint, the Customer may not proceed with a return without formal agreement. Where non-conformity attributable to Epsilon Chimie is established, the Customer's remedy is limited, at Epsilon Chimie's option, to replacement of the non-conforming Product or issuance of a credit note equal to the price of the defective Product."
+                    }
+                ]
+            },
+            "warranties": {
+                "title": "Art. 9 — Warranties and Limitation of Liability",
+                "subsections": [
+                    {
+                        "title": "9.1 Epsilon Chimie's Warranties",
+                        "head": "Epsilon Chimie warrants that the Products delivered:",
+                        "list": [
+                            "Conform to the agreed specifications at the time of their manufacture;",
+                            "Have been manufactured in compliance with applicable GMP/BPF for pharmaceutical active substances;",
+                            "Are covered by the authorisations and registrations required for their manufacture and export from France;",
+                            "Do not, to Epsilon Chimie's knowledge, infringe third-party intellectual property rights with respect to the manufacturing process used."
+                        ]
+                    },
+                    {
+                        "title": "9.2 Warranty Exclusions",
+                        "head": "Epsilon Chimie does not warrant:",
+                        "list": [
+                            "The suitability of the Products for a specific use by the Customer not expressly agreed in writing;",
+                            "The obtaining or maintenance of any regulatory authorisation in the destination country (MA, IND, etc.), as these steps are the sole responsibility of the Customer;",
+                            "Conformity of the Products with specifications where they have been stored, handled or processed by the Customer outside the conditions recommended in the CoA or SDS."
+                        ]
+                    },
+                    {
+                        "title": "9.3 Liability Cap",
+                        "content": "In all cases, except in the event of gross negligence or wilful misconduct by Epsilon Chimie or its employees, the total liability of Epsilon Chimie in respect of any one order is limited to the ex-tax amount of the invoice corresponding to the Products directly involved in the loss, and may not exceed the total amounts actually paid by the Customer to Epsilon Chimie during the twelve (12) months preceding the event giving rise to the liability."
+                    },
+                    {
+                        "title": "9.4 Exclusion of Indirect Damages",
+                        "content": "Epsilon Chimie shall not be liable for any indirect, immaterial, consequential or incidental damages suffered by the Customer or third parties, such as loss of revenue or profits, loss of business, loss of clientele, reputational damage, disruption to clinical programmes or commercial loss of any kind, even if Epsilon Chimie has been informed of the possibility of such damages. This exclusion does not apply to personal injury or death caused by Epsilon Chimie's negligence."
+                    }
+                ]
+            },
+            "reach": {
+                "title": "Art. 10 — Reach, CLP and Environmental Regulations",
+                "subsections": [
+                    {
+                        "title": "10.1 REACH Compliance",
+                        "content": "Epsilon Chimie undertakes to comply with the obligations incumbent upon it as a manufacturer and/or importer of chemical substances under Regulation (EC) No 1907/2006 (REACH), including the prior registration of substances manufactured or imported in quantities above one tonne per year and the communication of information on substances of very high concern (SVHC)."
+                    },
+                    {
+                        "title": "10.2 CLP Compliance",
+                        "content": "Products are classified, labelled and packaged in accordance with Regulation (EC) No 1272/2008 (CLP) and its successive delegated acts. SDS are drafted in accordance with the format required by Regulation (EU) No 2020/878."
+                    },
+                    {
+                        "title": "10.3 Customer Obligations",
+                        "content": "The Customer undertakes to use the Products in accordance with the uses and conditions set out in the SDS, to store the Products under the prescribed conditions, to comply with local regulations applicable to the possession and use of regulated chemical substances, and to inform Epsilon Chimie of any incident or accident involving the Products that may have an impact on health, safety or the environment."
+                    }
+                ]
+            },
+            "export": {
+                "title": "Art. 11 — Export controls and International sanctions",
+                "subsections": [
+                    {
+                        "title": "11.1 Applicable Regulations",
+                        "head": "The sale and delivery of Products are subject to applicable export control laws and international trade sanctions, in particular:",
+                        "list": [
+                            "Council Regulation (EU) 2021/821 on dual-use items and its amending instruments;",
+                            "European Union restrictive measures and UN, US (OFAC, BIS/EAR) and other relevant jurisdictions' sanctions regimes;",
+                            "The provisions of the Union Customs Code (UCC)."
+                        ]
+                    },
+                    {
+                        "title": "11.2 Customer Obligations",
+                        "head": "The Customer declares and warrants that it will not resell, transfer or export the Products in violation of any of the aforementioned regulations. In particular, the Customer undertakes to:",
+                        "list": [
+                            "Accurately declare the actual end-use and final destination of the Products;",
+                            "Obtain all required export licences, authorisations and permits;",
+                            "Not transfer the Products to any entity appearing on restricted-party lists (OFAC lists, EU lists or equivalents);",
+                            "Immediately inform Epsilon Chimie of any change in end-use, final destination or ultimate beneficial owner."
+                        ]
+                    },
+                    {
+                        "title": "11.3 Regulatory Suspension",
+                        "content": "Epsilon Chimie reserves the right to suspend or cancel any delivery without notice and without liability if it has reasonable grounds to believe that the transaction would be contrary to applicable export control regulations or sanctions. In such case, no liability shall attach to Epsilon Chimie."
+                    }
+                ]
+            },
+            "force": {
+                "title": "Art. 12 — Force Majeure",
+                "subsections": [
+                    {
+                        "title": "12.1 Definition",
+                        "content": "A force majeure event means, within the meaning of Article 1218 of the French Civil Code, any event that is unforeseeable, irresistible and external to the party invoking it, making performance of its obligations impossible, including: natural disasters, declared epidemics or pandemics, wars, riots or terrorist acts, unexpected governmental or regulatory decisions affecting the manufacture or export of Products, fires or explosions, major power grid or IT system failures, general strikes, and severe raw material shortages attributable to external causes."
+                    },
+                    {
+                        "title": "12.2 Notification and Suspension",
+                        "content": "The party invoking a force majeure event must notify the other party in writing within forty-eight (48) hours of its occurrence and shall implement all reasonable efforts to mitigate its consequences. The parties' contractual obligations are suspended for the duration of the force majeure event. No penalty or termination for non-performance may be imposed during this period."
+                    },
+                    {
+                        "title": "12.3 Termination",
+                        "content": "If the force majeure event continues for more than ninety (90) consecutive days, either party shall have the right to terminate the relevant contract by written notice, without compensation on either side, subject to payment by the Customer for Products already delivered before the occurrence of the force majeure event."
+                    }
+                ]
+            },
+            "property": {
+                "title": "Art. 13 — Intellectual Property",
+                "subsections": [
+                    {
+                        "title": "13.1 Reserved Rights",
+                        "content": "Epsilon Chimie is and remains the owner of all intellectual property rights relating to its Products, manufacturing processes, know-how, formulations, analytical data, synthesis methods and any other technical or commercial information. Nothing in these GTCS shall be construed as granting the Customer any licence, sub-licence or intellectual property right in respect of the Products or the information communicated by Epsilon Chimie."
+                    },
+                    {
+                        "title": "13.2 Limited Use Licence",
+                        "content": "The purchase of Products grants the Customer only the right to use them for the declared and agreed purpose. Any reproduction, reverse engineering, decompilation or attempt to reproduce the Products' manufacturing process is strictly prohibited without Epsilon Chimie's prior written consent."
+                    },
+                    {
+                        "title": "13.3 Non-Infringement",
+                        "content": "Epsilon Chimie represents, to its knowledge as of the date of the order, that the Products do not infringe third-party intellectual property rights. However, Epsilon Chimie does not warrant that the Customer's use of the Products in its formulations or pharmaceutical preparations will not constitute an infringement of third-party rights. It is the Customer's responsibility to ensure that its use of the Products complies with applicable intellectual property rights in its country."
+                    }
+                ]
+            },
+            "confidentiality": {
+                "title": "Art. 14 — Confidentiality",
+                "subsections": [
+                    {
+                        "title": "14.1 Mutual Obligations",
+                        "content": "Each party undertakes to treat as strictly confidential all information of a technical, commercial, scientific, financial, regulatory or strategic nature communicated by the other party in the context of the commercial relationship (hereinafter 'Confidential Information'). The parties undertake not to disclose such information to third parties without prior written authorisation and to use it only for the purposes of performing the sales contract."
+                    },
+                    {
+                        "title": "14.2 Exceptions",
+                        "content": "The confidentiality obligation does not apply to information that: (i) was publicly known at the time of disclosure or has become so without fault of the receiving party; (ii) was legitimately known to the receiving party prior to disclosure; (iii) has been communicated by a third party in good faith without confidentiality restrictions; or (iv) must be disclosed pursuant to a legal, regulatory or judicial obligation."
+                    },
+                    {
+                        "title": "14.3 Duration",
+                        "content": "Confidentiality obligations survive the termination or expiry of the contractual relationship for a period of five (5) years. For information constituting trade secrets (know-how), confidentiality is maintained without time limit for as long as the information retains its secret character."
+                    }
+                ]
+            },
+            "protection": {
+                "title": "Art. 15 — Personal Data Protection",
+                "subsections": [
+                    {
+                        "title": "15.1 Data Processing",
+                        "content": "In the context of commercial relationships, Epsilon Chimie may collect and process personal data relating to the Customer's professional contacts (name, first name, position, professional contact details). Such data is processed on the basis of Epsilon Chimie's legitimate interest in maintaining commercial relationships (Article 6(1)(f) of the GDPR), or for the performance of the contract. This data is used exclusively for the management of the commercial relationship, invoicing and compliance with contractual and regulatory obligations, and is not transferred to unauthorised third parties. It is retained for the duration of the commercial relationship and beyond, to comply with legal retention requirements (at minimum ten years for accounting data)."
+                    },
+                    {
+                        "title": "15.2 Data Subject Rights",
+                        "content": "Individuals whose data is processed have rights of access, rectification, erasure, restriction of processing and objection, under the conditions set out in the GDPR (EU Regulation 2016/679) and French data protection law (Act No. 78-17 of 6 January 1978, as amended). These rights may be exercised by email addressed to Epsilon Chimie's Data Protection Officer (DPO)."
+                    }
+                ]
+            },
+            "corruption": {
+                "title": "Art. 16 — Anti-corruption and Ethical Compliance",
+                "subsections": [
+                    {
+                        "title": "16.1 Compliance Commitment",
+                        "content": "The parties declare their compliance with all applicable laws and regulations on anti-corruption, including French Act No. 2016-1691 of 9 December 2016 on transparency, anti-corruption and economic modernisation ('Sapin II Act'), the OECD Convention on Combating Bribery of Foreign Public Officials, the U.S. Foreign Corrupt Practices Act (FCPA) and the UK Bribery Act, each within its respective scope of application."
+                    },
+                    {
+                        "title": "16.2 Representations and Warranties",
+                        "content": "The Customer represents and warrants that it has not paid, offered, promised, authorised or accepted, directly or indirectly, any payment, benefit or consideration of any nature to government officials, public agents or private agents in order to obtain an undue commercial advantage. Any proven breach of these undertakings shall constitute grounds for immediate termination of the contract, without prejudice to Epsilon Chimie's civil and criminal remedies."
+                    }
+                ]
+            },
+            "termination": {
+                "title": "Art. 17 — Termination",
+                "subsections": [
+                    {
+                        "title": "17.1 Termination for Breach",
+                        "content": "In the event of a serious or repeated breach by either party of its contractual obligations, and if such breach has not been remedied within fifteen (15) business days following the sending of written notice by registered letter with acknowledgement of receipt, the other party may terminate the relevant contract(s) as of right, without prejudice to its right to claim damages."
+                    },
+                    {
+                        "title": "17.2 Automatic Termination",
+                        "content": "Epsilon Chimie may terminate any current contract as of right, without prior notice, in the event of: (i) the opening of insolvency proceedings against the Customer (judicial reorganisation, liquidation or equivalent procedure abroad); (ii) the Customer's suspension of payments or manifest insolvency; or (iii) the Customer's breach of export control regulations or international sanctions referred to in Article 11."
+                    },
+                    {
+                        "title": "17.3 Effects of Termination",
+                        "content": "Termination renders immediately due all sums owed by the Customer to Epsilon Chimie. Products already delivered and unpaid remain subject to the retention of title clause. Epsilon Chimie shall not be liable for any compensation in respect of orders not yet fulfilled."
+                    }
+                ]
+            },
+            "governing": {
+                "title": "Art. 18 — Governing Law and Dispute Resolution",
+                "subsections": [
+                    {
+                        "title": "18.1 Governing Law",
+                        "content": "These GTCS and all contracts formed thereunder are governed exclusively by French law, to the exclusion of its conflict of laws rules and the United Nations Convention on Contracts for the International Sale of Goods (CISG, Vienna, 1980), the application of which is expressly excluded."
+                    },
+                    {
+                        "title": "18.2 Amicable Settlement",
+                        "content": "In the event of a dispute relating to the interpretation, performance or termination of a contract, the parties undertake to seek an amicable solution within thirty (30) days of notification of the dispute by either party. Failing resolution within this period, the parties may resort to mediation or other alternative dispute resolution (ADR) methods."
+                    },
+                    {
+                        "title": "18.3 Competent Courts",
+                        "content": "Failing amicable settlement, any dispute relating to these GTCS or the contracts arising therefrom shall be submitted to the exclusive jurisdiction of the Commercial Court (Tribunal de commerce) of the registered office of Epsilon Chimie, including in the case of multiple defendants, third-party proceedings or urgent applications."
+                    },
+                    {
+                        "title": "18.4 International Arbitration (Option for Non-EU Contracts)",
+                        "content": "By way of derogation from Article 18.3, for any contract concluded with a Customer established outside the European Union, the parties may agree, by express provision in the contract or special conditions, to submit any dispute to international arbitration under the Rules of Arbitration of the International Chamber of Commerce (ICC), by one or three arbitrators appointed in accordance with those Rules. The seat of arbitration shall be Paris, the language of proceedings shall be French or English by agreement of the parties, and the substantive governing law shall be French law."
+                    }
+                ]
+            },
+            "provisions": {
+                "title": "Art. 19 — General Provisions",
+                "subsections": [
+                    {
+                        "title": "19.1 Entire Agreement",
+                        "content": "These GTCS, together with the special conditions, offers, OA and Quality Agreements concluded between the parties, constitute the entire agreement between Epsilon Chimie and the Customer for the sale of the relevant Products, and supersede all prior agreements, commitments or negotiations relating to the same subject matter."
+                    },
+                    {
+                        "title": "19.2 Severability",
+                        "content": "If any provision of these GTCS is found to be null or unenforceable under applicable law or a final court decision, that provision shall be deemed unwritten, without affecting the validity of the remaining provisions, which remain fully applicable."
+                    },
+                    {
+                        "title": "19.3 No Waiver",
+                        "content": "The failure of either party to enforce any breach by the other party of any of its obligations under these GTCS shall not be construed as a waiver of the relevant obligation for the future."
+                    },
+                    {
+                        "title": "19.4 Assignment",
+                        "content": "The Customer may not assign or transfer all or part of its rights or obligations arising from these GTCS or any contract without the prior written consent of Epsilon Chimie. Epsilon Chimie may freely assign its rights and obligations to any entity within its group or in the context of a business transfer or restructuring, subject to notifying the Customer accordingly."
+                    },
+                    {
+                        "title": "19.5 Notices",
+                        "content": "All notices, formal notices or communications required under these GTCS must be made in writing (registered letter with acknowledgement of receipt or e-mail with electronic acknowledgement of receipt) to the registered office address or the designated email address of each party. The parties undertake to notify each other of any change of address within a reasonable time."
+                    },
+                    {
+                        "title": "19.6 Language",
+                        "content": "The French version of these GTCS constitutes the legally binding original. Translations into other languages may be made available for information purposes only. In the event of any discrepancy between the French version and any translated version, the French version shall prevail."
+                    }
+                ]
+            }
+        }
+    },
+
+    "note": "The English version is provided for convenience only. In the event of any discrepancy, the French version shall prevail."
+}
