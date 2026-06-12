@@ -24,7 +24,7 @@ function LegalNotice() {
                 <p>on this page</p>
                 <ul>
                     {t('legal-notice.nav').map((item,i) => (
-                        <li key={i}>{item}</li>
+                        <li key={item}>{item}</li>
                     ))}
                 </ul>
             </article>

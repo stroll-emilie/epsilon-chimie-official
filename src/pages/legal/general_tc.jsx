@@ -24,7 +24,7 @@ function GeneralTC() {
                 <p>on this page</p>
                 <ul>
                     {t('general-tc.nav').map((item,i) => (
-                        <li key={i}>{item}</li>
+                        <li key={item}>{item}</li>
                     ))}
                 </ul>
             </article>

@@ -33,7 +33,7 @@ function CGV() {
                 <p>on this page</p>
                 <ul>
                     {t('cgv.nav').map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={item}>{item}</li>
                     ))}
                 </ul>
             </article>
@@ -42,7 +42,7 @@ function CGV() {
                 <p dangerouslySetInnerHTML={{ __html: t('cgv.head') }} />
                 <ul>
                     {SECTIONS.map((section, i) => (
-                        <li key={i}>
+                        <li key={section}>
                             <h3 onClick={() => toggle(i)}>
                                 {t(`cgv.sections.${section}.title`)}
                                 <span>{openIndex === i ? ' ▲' : ' ▼'}</span>
@@ -50,7 +50,7 @@ function CGV() {
 
                             {openIndex === i && (
                                 t(`cgv.sections.${section}.subsections`).map((item, j) => (
-                                    <div key={j}>
+                                    <div key={item}>
                                         <span dangerouslySetInnerHTML={{ __html: item.title }} />
                                         {item.head    && <p>{item.head}</p>}
                                         {item.content && <p dangerouslySetInnerHTML={{ __html: item.content }} />}

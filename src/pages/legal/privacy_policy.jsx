@@ -24,7 +24,7 @@ function PrivacyPolicy() {
                 <p>on this page</p>
                 <ul>
                     {t('privacy-policy.nav').map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={item}>{item}</li>
                     ))}
                 </ul>
             </article>
@@ -66,7 +66,7 @@ function PrivacyPolicy() {
                         <p>{t('privacy-policy.sections.rights.head')}</p>
                         <ul>
                             {t('privacy-policy.sections.rights.list').map((item,i) => (
-                                <li key={i} dangerouslySetInnerHTML={{__html: item}}></li>
+                                <li key={item} dangerouslySetInnerHTML={{__html: item}}></li>
                             ))}
                         </ul>
                     </li>
