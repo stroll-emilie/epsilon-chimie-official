@@ -4,7 +4,7 @@
         "nav": [
             "1. Data controller",
             "2. Data we collect",
-            "3. Purpose and legal basis",
+            "3. Purposes and legal basis",
             "4. Retention",
             "5. Cookies and trackers",
             "6. Your rights",
@@ -83,7 +83,7 @@
         "sections" : {
             "publisher": {
                 "title": "Art. 1 — Publisher",
-                "content": "<strong>Epsilon Chimie SARL</strong>, as a Limited Liability Company with capital of 43,158.01€ registered with the Brest Trade and Companies Register under n° 402 459 721. Registered office : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Intra-community VAT number : FR96402459721. Publication director : Pierre-Yves Cornec, Managing Director of Epsilon Chimie SARL — pierre.cornec@epsilon-chimie.com."
+                "content": "<strong>Epsilon Chimie SARL</strong>, as a Limited Liability Company with capital of 43,158.01€ registered with the Brest Trade and Companies Register under n° 402 459 721. Registered office : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Intra-community VAT number : FR96402459721. Publication director : Pierre-Yves Cornec, Managing Director of Epsilon Chimie SARL — pierre.cornec[at]epsilon-chimie.com."
             },
             "host": {
                 "title": "Art. 2 — Host",
@@ -159,7 +159,7 @@
         }
     },
 
-    "cgv": {
+    "general-terms": {
         "head": "Epsilon Chimie SARL, (hereinafter “Epsilon Chimie” or the “Seller”), as a Limited Liability Company (Société à Responsabilités Limitées) incorporated under French law in 1995, specialises in the manufacture and sale of Active Pharmaceutical Ingredients (“API”) intended for pharmaceutical, biotechnology and scientific research industries.<br/><br/>These General Terms and Conditions of Sales (hereinafter the “GTCS”) constitute, in accordance with Article L. 441-1 of the French Commercial Code (Code de commerce), the sole basis for commercial negotiation between Epsilon Chimie and any professional buyer (hereinafter the “Customer”). They apply to the exclusion of any document, including the Customer's general purchasing conditions.<br/><br/>Epsilon Chimie operates under the supervision of the competent regulatory authorities and its Products are manufactured in compliance with the Good Manufacturing Practices (GMP) applicable to active pharmaceutical substances, in particular the ICH Q7 guideline and the equivalent regulations of the competent authorities (EMA, FDA, PMDA and others).",
         "nav": [
             "Art. 1 — Scope and Application",

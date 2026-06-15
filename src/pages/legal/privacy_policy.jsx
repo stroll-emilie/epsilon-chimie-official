@@ -4,9 +4,26 @@ import { Link } from 'react-router-dom'
 import { useApp } from '../../context/AppContext';
 import LanguageSwitcher from '../../components/LanguageSwitcher/language_switcher';
 
+import useActiveSection from '../../hooks/useActiveSection';
+import { scrollTo } from '../../utils/scroll';
+
 function PrivacyPolicy() {
 
+    const sections = [
+        { key: 'controller' },
+        { key: 'collect' },
+        { key: 'purpose' },
+        { key: 'retention' },
+        { key: 'cookies',  special: 'subsections' },
+        { key: 'rights',   special: 'list' },
+        { key: 'transfers' },
+        { key: 'security' },
+        { key: 'changes' },
+    ];
+
     const { t } = useApp()
+    const [activeKey, setActiveKey] = useActiveSection(sections);
+
 
     return (
     <>
@@ -23,65 +40,50 @@ function PrivacyPolicy() {
                 <LanguageSwitcher />
                 <p>on this page</p>
                 <ul>
-                    {t('privacy-policy.nav').map((item, i) => (
-                        <li key={item}>{item}</li>
+                    {sections.map(({ key, special }, i) => (
+                        <button
+                        key={key}
+                        onClick={() => { scrollTo(key); setActiveKey(key); }}
+                        className={activeKey === key ? 'active' : ''}
+                        >
+                            {t(`privacy-policy.sections.${key}.title`)}
+                        </button>
                     ))}
                 </ul>
             </article>
 
-
             <article>
                 <p>Epsilon Chimie SARL respects your privacy and is committed to processing your personal data in accordance with the General Data Protection Regulation (EU) 2016/679 (“GRPD”) and the French Data Protection Act.</p>
                 <ul>
-                    <li>
-                        <h3>{t('privacy-policy.sections.controller.title')}</h3>
-                        <p dangerouslySetInnerHTML={{ __html: t('privacy-policy.sections.controller.content') }} />
-                    </li>
-                    
-                    <li>
-                        <h3>{t('privacy-policy.sections.collect.title')}</h3>
-                        <p dangerouslySetInnerHTML={{ __html: t('privacy-policy.sections.collect.content') }} />
-                    </li>
-                    <li>
-                        <h3>{t('privacy-policy.sections.purpose.title')}</h3>
-                        <p dangerouslySetInnerHTML={{ __html: t('privacy-policy.sections.purpose.content') }} />
-                    </li>
+                {sections.map(({ key, special }, i) => (
+                    <li key={key} id={key}>
+                    <h3>{t(`privacy-policy.sections.${key}.title`)}</h3>
 
-                    <li>
-                        <h3>{t('privacy-policy.sections.retention.title')}</h3>
-                        <p dangerouslySetInnerHTML={{ __html: t('privacy-policy.sections.retention.content') }} />
-                    </li>
+                    {!special && (
+                        <p dangerouslySetInnerHTML={{ __html: t(`privacy-policy.sections.${key}.content`) }} />
+                    )}
 
-                    <li>
-                        <h3>{t('privacy-policy.sections.cookies.title')}</h3>
-                        {t('privacy-policy.sections.cookies.subsections').map((item,i) => (
-                            <div key={item}>
-                                <span dangerouslySetInnerHTML={{__html: item.title}} />
-                                <p dangerouslySetInnerHTML={{__html: item.content}}></p>
-                            </div>
-                        ))}
+                    {special === 'subsections' && (
+                        t('privacy-policy.sections.cookies.subsections').map((item, i) => (
+                        <div key={item}>
+                            <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                            <p dangerouslySetInnerHTML={{ __html: item.content }} />
+                        </div>
+                        ))
+                    )}
+
+                    {special === 'list' && (
+                        <>
+                            <p>{t('privacy-policy.sections.rights.head')}</p>
+                            <ul>
+                                {t('privacy-policy.sections.rights.list').map((item, i) => (
+                                <li key={item} dangerouslySetInnerHTML={{ __html: item }} />
+                                ))}
+                            </ul>
+                        </>
+                    )}
                     </li>
-                    <li>
-                        <h3>{t('privacy-policy.sections.rights.title')}</h3>
-                        <p>{t('privacy-policy.sections.rights.head')}</p>
-                        <ul>
-                            {t('privacy-policy.sections.rights.list').map((item,i) => (
-                                <li key={item} dangerouslySetInnerHTML={{__html: item}}></li>
-                            ))}
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>{t('privacy-policy.sections.transfers.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('privacy-policy.sections.transfers.content') }} />
-                    </li>
-                    <li>
-                        <h3>{t('privacy-policy.sections.security.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('privacy-policy.sections.security.content')}} />
-                    </li>
-                    <li>
-                        <h3>{t('privacy-policy.sections.changes.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('privacy-policy.sections.changes.content')}} />
-                    </li>
+                ))}
                 </ul>
                 <div className='legal-note'>
                     <p>{t('note')}</p>

@@ -10,7 +10,7 @@ section{
         border-bottom: .5px solid var(--color-border-reversed);
     }
 
-    &#privacy-policy,&#general-tc,&#legal-notice,&#cgv{
+    &#privacy-policy,&#general-tc,&#legal-notice,&#general-terms{
         background-color: #FFF;
         display: flex;
         gap: var(--spacing-x-large);
@@ -41,11 +41,19 @@ section{
                 }
                 
                 ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
                     border-left: .5px solid var(--color-border-reversed);
                     overflow-y: auto;
-                    height: 80vh;
-                    li{
+                    max-height: 80vh;
+                    button{
+                        text-align: left;
+                        scroll-margin-top: 83px;
                         padding: var(--spacing-xx-small) var(--spacing-x-small);
+                        &:active,&.active{
+                            color: var(--color-content-accent);
+                        }
                     }
                 }
             }
@@ -98,7 +106,12 @@ section{
             }
         }
     }
-    &#cgv > article:last-of-type > ul > li {
+    &#general-terms > article:last-of-type > ul > li {
         gap: var(--spacing-medium);
+        h3{
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

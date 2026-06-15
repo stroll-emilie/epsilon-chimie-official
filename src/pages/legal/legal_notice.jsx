@@ -4,9 +4,24 @@ import { Link } from 'react-router-dom'
 import { useApp } from '../../context/AppContext'
 import LanguageSwitcher from '../../components/LanguageSwitcher/language_switcher';
 
+import useActiveSection from '../../hooks/useActiveSection';
+import { scrollTo } from '../../utils/scroll';
+
 function LegalNotice() {
 
+    const sections = [
+        { key: 'publisher' },
+        { key: 'host' },
+        { key: 'property' },
+        { key: 'liability' },
+        { key: 'law' },
+        { key: 'changes' },
+    ];
+
     const { t } = useApp()
+    const [activeKey, setActiveKey] = useActiveSection(sections);
+
+
 
     return (
     <>
@@ -23,8 +38,14 @@ function LegalNotice() {
                 <LanguageSwitcher/>
                 <p>on this page</p>
                 <ul>
-                    {t('legal-notice.nav').map((item,i) => (
-                        <li key={item}>{item}</li>
+                    {sections.map(({ key, special }, i) => (
+                        <button
+                        key={key}
+                        onClick={() => { scrollTo(key); setActiveKey(key); }}
+                        className={activeKey === key ? 'active' : ''}
+                        >
+                            {t(`legal-notice.sections.${key}.title`)}
+                        </button>
                     ))}
                 </ul>
             </article>
@@ -33,35 +54,12 @@ function LegalNotice() {
             <article>
                 <ul>
                     <p dangerouslySetInnerHTML={{__html: t('legal-notice.head')}} />
-                    <li>
-                        <h3>{t('legal-notice.sections.publisher.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.publisher.content')}} />
-                    </li>
-
-                    <li>
-                        <h3>{t('legal-notice.sections.host.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.host.content')}} />
-                    </li>
-
-                    <li>
-                        <h3>{t('legal-notice.sections.property.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.property.content')}} />
-                    </li>
-
-                    <li>
-                        <h3>{t('legal-notice.sections.liability.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.liability.content')}} />
-                    </li>
-
-                    <li>
-                        <h3>{t('legal-notice.sections.law.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.law.content')}} />
-                    </li>
-
-                    <li>
-                        <h3>{t('legal-notice.sections.changes.title')}</h3>
-                        <p dangerouslySetInnerHTML={{__html: t('legal-notice.sections.changes.content')}} />
-                    </li>
+                    {sections.map(({ key }) => (
+                        <li key={key} id={key}>
+                            <h3>{t(`legal-notice.sections.${key}.title`)}</h3>
+                            <p dangerouslySetInnerHTML={{ __html: t(`legal-notice.sections.${key}.content`) }} />
+                        </li>
+                    ))}
                 </ul>
                 <div className='legal-note'>
                     <p>{t('note')}</p>

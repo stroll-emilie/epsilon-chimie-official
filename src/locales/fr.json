@@ -83,7 +83,7 @@
         "sections" : {
             "publisher": {
                 "title": "Art. 1 — Éditeur",
-                "content": "<strong>Epsilon Chimie SARL</strong>, société à responsabilité limitée au capital de 43 158,01 €, immatriculée au Registre du commerce et des sociétés de Brest sous le n° 402 459 721. Siège social : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Numéro de TVA intracommunautaire : FR96402459721. Directeur de la publication : Pierre-Yves Cornec, gérant d'Epsilon Chimie SARL — pierre.cornec@epsilon-chimie.com."
+                "content": "<strong>Epsilon Chimie SARL</strong>, société à responsabilité limitée au capital de 43 158,01 €, immatriculée au Registre du commerce et des sociétés de Brest sous le n° 402 459 721. Siège social : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Numéro de TVA intracommunautaire : FR96402459721. Directeur de la publication : Pierre-Yves Cornec, gérant d'Epsilon Chimie SARL — pierre.cornec[at]epsilon-chimie.com."
             },
             "host": {
                 "title": "Art. 2 — Hébergeur",
@@ -159,7 +159,7 @@
         }
     },
 
-    "cgv": {
+    "general-terms": {
         "head": "Epsilon Chimie SARL (ci-après dénommée « Epsilon Chimie » ou le « Vendeur »), société à responsabilité limitée de droit français constituée en 1995, est spécialisée dans la fabrication et la vente de principes actifs pharmaceutiques (« API ») destinés aux secteurs pharmaceutique, biotechnologique et de la recherche scientifique.<br /><br />Les présentes Conditions générales de vente (ci-après les « CGV ») constituent, conformément à l'article L. 441-1 du Code de commerce français, le seul fondement des relations commerciales entre Epsilon Chimie et tout acheteur professionnel (ci-après le « Client »). Elles s'appliquent à l'exclusion de tout autre document, y compris les conditions générales d'achat du Client.<br/><br/>Epsilon Chimie exerce ses activités sous la supervision des autorités réglementaires compétentes et ses Produits sont fabriqués conformément aux Bonnes Pratiques de Fabrication (BPF) applicables aux substances pharmaceutiques actives, en particulier la directive ICH Q7 et les réglementations équivalentes des autorités compétentes (EMA, FDA, PMDA et autres).",
         "nav": [
             "Art. 1 — Champ d'application",
