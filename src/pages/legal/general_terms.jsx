@@ -92,14 +92,14 @@ function GeneralTerms() {
 
                         {openIndex === i && (
                             t(`general-terms.sections.${key}.subsections`).map((item, j) => (
-                            <div key={j}>
+                            <div key={item}>
                                 <span dangerouslySetInnerHTML={{ __html: item.title }} />
                                 {item.head && <p>{item.head}</p>}
                                 {item.content && <p dangerouslySetInnerHTML={{ __html: item.content }} />}
                                 {item.list && (
                                 <ul>
                                     {item.list.map((li, k) => (
-                                    <li key={k} dangerouslySetInnerHTML={{ __html: li }} />
+                                    <li key={li} dangerouslySetInnerHTML={{ __html: li }} />
                                     ))}
                                 </ul>
                                 )}
