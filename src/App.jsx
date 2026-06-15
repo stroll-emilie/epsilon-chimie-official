@@ -15,7 +15,7 @@ import Request from './pages/request/request.jsx'
 import PrivacyPolicy from './pages/legal/privacy_policy.jsx'
 import GeneralTC from './pages/legal/general_tc.jsx'
 import LegalNotice from './pages/legal/legal_notice.jsx'
-import GeneralTerms from './pages/legal/general_terms.jsx/index.js'
+import GeneralTerms from './pages/legal/general_terms.jsx'
 
 
 function App() {
@@ -39,8 +39,6 @@ function App() {
             <Route path='/general-t&c' element={<GeneralTC />} />
             <Route path='/legal-notice' element={<LegalNotice />} />
             <Route path='/general-terms' element={<GeneralTerms />} />
-
-
 
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
