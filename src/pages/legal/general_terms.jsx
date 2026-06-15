@@ -84,7 +84,7 @@ function GeneralTerms() {
                 <p dangerouslySetInnerHTML={{ __html: t('general-terms.head') }} />
                 <ul>
                     {sections.map(({ key }, i) => (
-                        <li key={key} id={key}>
+                        <button type="button" key={key} id={key} onClick={() =>handleScrollTo(key)}>
                         <h3 onClick={() => toggle(i)}>
                             {t(`general-terms.sections.${key}.title`)}
                             <span>{openIndex === i ? <UpArrowIcon /> : <DownArrowIcon />}</span>
@@ -107,7 +107,7 @@ function GeneralTerms() {
                             </div>
                             ))
                         )}
-                        </li>
+                        </button>
                     ))}
                 </ul>
                 <div className='legal-note'>

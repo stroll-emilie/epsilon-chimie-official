@@ -29,6 +29,7 @@ section{
                     button{
                         @include btn-border-bottom-blue;
                         width: 25%;
+                        cursor: pointer;
                     }
                 }
                 p{
@@ -51,6 +52,7 @@ section{
                         text-align: left;
                         scroll-margin-top: 83px;
                         padding: var(--spacing-xx-small) var(--spacing-x-small);
+                        cursor: pointer;
                         &:active,&.active{
                             color: var(--color-content-accent);
                         }
@@ -71,10 +73,15 @@ section{
                     flex-direction: column;
                     gap: var(--spacing-medium);
 
-                    > li{
+                    > li, > button{
                         display: flex;
                         flex-direction: column;
                         gap: var(--spacing-xxx-small);
+                        text-align: left;
+                        h3{
+                            display: flex;
+                            justify-content: space-between;
+                        }
                         p{
                             font-family: var(--font-family-body);
                             line-height: 140%;
@@ -110,8 +117,6 @@ section{
         gap: var(--spacing-medium);
         h3{
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
         }
     }
 }
