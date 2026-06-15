@@ -7,25 +7,25 @@ function Compound({data, onChange}) {
     return (
     <>
         <div id='request-type'>
-            <label htmlFor="request-type">Request Type</label>
+            <label htmlFor="request-type" className='labelField'>Request Type</label>
             <div>
-                <div>
-                    <input 
+                <label htmlFor='buttonCatalogue'>
+                    <input
+                        id='buttonCatalogue'
                         type="radio" 
                         name="radio-request-type"
                         checked={data.requestType === "catalogue"}
                         onChange={() => onChange({requestType: "catalogue"})}
-
-
                     />
                     <div>
                         <span>Catalogue product</span>
                         <p>Request for quote for a listed reference.</p>
                     </div>
-                </div>
+                </label>
 
-                <div>
+                <label htmlFor='buttonCustom'>
                     <input 
+                        id='buttonCustom'
                         type="radio" 
                         name="radio-request-type"
                         checked={data.requestType === "custom"}
@@ -36,12 +36,12 @@ function Compound({data, onChange}) {
                         <span>Custom synthesis</span>
                         <p>A non-commercial compound, synthesised on-demand.</p>
                     </div>
-                </div>
+                </label>
             </div>
         </div>
         
         <div id='product-name'>
-            <label htmlFor="name">compound name, cas number or target structure <span>*</span></label>
+            <label htmlFor="name" className='labelField'>compound name, cas number or target structure <span>*</span></label>
             <input 
                 type="text" 
                 placeholder='e.g. Diethyl phosphonate, CAS 762-04-9' 
@@ -53,7 +53,7 @@ function Compound({data, onChange}) {
 
         <div id='quantity-purity'>
             <div>
-                <label htmlFor="quantity">quantity <span>*</span></label>
+                <label htmlFor="quantity" className='labelField'>quantity <span>*</span></label>
                 <input 
                     type="text" 
                     placeholder='e.g. 250 g or 5x100 g'
@@ -64,7 +64,7 @@ function Compound({data, onChange}) {
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
             <div>
-                <label htmlFor="purity">minimum purity <span>*</span></label>
+                <label htmlFor="purity" className='labelField'>minimum purity <span>*</span></label>
                 <select 
                     name="purity"
                     value={data.purity}
@@ -83,7 +83,7 @@ function Compound({data, onChange}) {
 
         <div id='packing-required'>
             <div>
-                <label htmlFor="packing">packing preference </label>
+                <label htmlFor="packing" className='labelField'>packing preference </label>
                 <input 
                     type="text" 
                     placeholder='e.g. x*50 g glass bottles'
@@ -93,7 +93,7 @@ function Compound({data, onChange}) {
                 />
             </div>
             <div>
-                <label htmlFor="required">required by </label>
+                <label htmlFor="required" className='labelField'>required by </label>
                 <select 
                     name="purity"
                     value={data.required}
@@ -109,7 +109,7 @@ function Compound({data, onChange}) {
         </div>
 
         <div id='application'>
-            <label htmlFor="name">application / end-use</label>
+            <label htmlFor="name" className='labelField'>application / end-use</label>
             <textarea 
                 placeholder="e.g. HWE olefination step in a API synthesis; internal R&D only."
                 value={data.application}

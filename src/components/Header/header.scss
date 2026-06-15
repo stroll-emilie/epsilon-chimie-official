@@ -81,9 +81,7 @@ header{
                     }
                 }
             }
-            
-            
-            > .logo-container a{
+            > .logo-container > span{
                 padding: var(--spacing-xx-small) var(--spacing-x-small);
                 text-shadow: 0 1px 2px rgb(37 26 40 / 0.06),0 1px 3px rgb(37 26  40 / 0.06);
                 color: var(--color-content-accent);
@@ -91,7 +89,7 @@ header{
                 font-size: var(--font-size-body-md);
                 line-height: 136%;
                 letter-spacing: -1%;
-                span{
+                > span{
                     font-weight: var(--font-weight-bold);
                 }
             }
@@ -131,7 +129,7 @@ header{
                 display: grid;
                 align-items: center;
                 
-                img,a{
+                img,span{
                     grid-area: 1/1;
                     transition: opacity .2s ease-in-out, visibility 0s .2s;
                 }
@@ -139,10 +137,8 @@ header{
                 img.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;visibility: 0s .2s;}
                 img.show{transition: opacity .2s ease-in-out .1s;opacity: 1;visibility: 0s .2s;}
 
-                a.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;}
-                a.show{transition: opacity .2s ease-in-out .1;opacity: 1;}
-            
-
+                span.hide{transition: opacity .2s ease-in-out;opacity: 0;pointer-events: none;}
+                span.show{transition: opacity .2s ease-in-out .1;opacity: 1;}
             }
         }
     }

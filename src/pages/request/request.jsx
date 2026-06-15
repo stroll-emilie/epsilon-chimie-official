@@ -10,14 +10,14 @@ import Contact from './components/contact'
 
 import { useEffect, useMemo, useState } from 'react'
 import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
-import { useProducts } from '../../context/AppContext';
+import { useApp } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 // FIXME: mettre le bon fichier de config
 import { EMAILJS_CONFIG } from '../../config/tempo.js'
 
 function Request() {
     const navigate = useNavigate();
-    const { products, loading } = useProducts()
+    const { products, loading } = useApp()
     const { id } = useParams()
     const prod = useMemo(() => id ? getProductById(products, id) : null, [products, id]);
     

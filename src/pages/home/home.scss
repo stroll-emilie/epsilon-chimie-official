@@ -204,7 +204,7 @@ section{
                             gap: var(--spacing-xxx-small);
                             display: flex;
                             flex-wrap: wrap;
-                            li{
+                            button{
                                 @include chips-large-outlined-rounded;
                                 &:hover{
                                     cursor: pointer;

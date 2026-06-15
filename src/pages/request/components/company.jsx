@@ -2,6 +2,7 @@
 import '../request.css'
 import { getCountryOptions } from '../../../services/dataService'
 import { formDataProp } from '../../../propTypes';
+import { Link } from 'react-router-dom';
 
 const countryOptions = getCountryOptions();
 
@@ -13,7 +14,7 @@ function Company({data,onChange}) {
     <>
         <div id="company-institution">
             <div>
-                <label htmlFor="company">company or institution</label>
+                <label htmlFor="company" className='labelField'>company or institution</label>
                 <input 
                 type="text" 
                 placeholder='e.g. Epsilon Chimie'
@@ -24,7 +25,7 @@ function Company({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="sector">sector</label>
+                <label htmlFor="sector" className='labelField'>sector</label>
                 <select 
                     name="sector"
                     value={data.sector}
@@ -44,7 +45,7 @@ function Company({data,onChange}) {
     
         <div id="country-website">
             <div>
-                <label htmlFor="country">country <span>*</span></label>
+                <label htmlFor="country" className='labelField'>country <span>*</span></label>
                 <select
                     value={data.country}
                     onChange={(e) => onChange({country: e.target.value})}
@@ -58,7 +59,7 @@ function Company({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="company">website</label>
+                <label htmlFor="company" className='labelField'>website</label>
                 <input 
                 type="text" 
                 placeholder='e.g. https://'
@@ -70,7 +71,7 @@ function Company({data,onChange}) {
         </div>
 
         <div id='additional'>
-            <label htmlFor="additional">additional comments</label>
+            <label htmlFor="additional" className='labelField'>additional comments</label>
             <textarea 
                 placeholder="Anything else we should know?."
                 value={data.additional}
@@ -79,16 +80,16 @@ function Company({data,onChange}) {
             >
 
             </textarea>
-            <p className='input-comment'>
+            <label className='input-comment' id="privacyPolicyCheck">
                 <input 
                     type="checkbox" 
                     checked={data.privacyPolicy}
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
                 />
                 <span>
-                    By clicking 'Next', you confirm that you have read ou <a href="">privacy policy</a>  and agree that your details will be used solely to process this request.
+                    By clicking 'Next', you confirm that you have read ou <Link to="/privacy-policy">privacy policy</Link>  and agree that your details will be used solely to process this request.
                 </span>
-            </p>
+            </label>
         </div>
     </>
     )

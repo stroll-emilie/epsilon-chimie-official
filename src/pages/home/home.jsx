@@ -19,6 +19,7 @@ import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg'
 import Phosphines from '../../assets/images/schema/family-phosphine.svg';
 import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
+import EffeilTower from  '../../assets/images/effel_tower.png'
 
 import { useNavigate,Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -44,7 +45,7 @@ function Home() {
         navigate(`/catalogue?search=${encodeURIComponent(query)}`);
     }
 
-    const popularSearch = ["Diethyl phosphonates", "Wittig reagents", "phosphonic acids"," HWE reagents", "Phosphonium salts"];
+    const popularSearch = ["05026","99147","07044-1","06021"];
 
     return (
     <>
@@ -122,12 +123,12 @@ function Home() {
                         <ul>
                             <p>Popular : </p>
                             {popularSearch.map(search => (
-                                <li
+                                <button
                                     key={search}
                                     onClick={() => navigate(`/catalogue?search=${encodeURIComponent(search)}`)}
                                 >
                                     {search}
-                                </li>
+                                </button>
                             ))}
                         </ul>
                     </div>
@@ -145,10 +146,13 @@ function Home() {
         </section>
 
         <section id='capabilites'>
+            <img src={EffeilTower} alt="Tour Effel" />
+
             <article>
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
                 <div>
+                    <img src="" alt="" />
                     <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
                         <br /> <br />
                         Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :

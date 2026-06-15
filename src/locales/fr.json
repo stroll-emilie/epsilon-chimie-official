@@ -1,0 +1,623 @@
+{
+    "privacy-policy": {
+        "head": "Epsilon Chimie SARL respecte votre vie privée et s'engage à traiter vos données à caractère personnel conformément au règlement général sur la protection des données (UE) 2016/679 (« RGPD ») et à la loi française sur la protection des données.",
+        "nav": [
+            "1. Responsable du traitement des données",
+            "2. Données collectées",
+            "3. Finalités et base juridique",
+            "4. Rétention",
+            "5. Cookies et traceurs",
+            "6. Vos droits",
+            "7. Transferts en dehors de l'UE",
+            "8. Sécurité des données",
+            "9. Modifications"
+        ],
+        "sections": {
+            "controller": {
+                "title": "1. Responsable du traitement des données",
+                "content": "Le responsable du traitement des données est Epsilon Chimie SARL, 450 rue Antoine Lavoisier, 29490 Guipavas, France. Vous pouvez nous contacter à tout moment à l'adresse <strong>pierre.cornec[at]epsilon-chimie.com</strong>."
+            },
+            "collect": {
+                "title": "2. Données collectées",
+                "content": "Nous recueillons uniquement les informations que vous nous fournissez volontairement via notre formulaire de demande de devis (nom, coordonnées professionnelles, entreprise, contenu de la demande) ainsi que les données techniques collectées automatiquement par le biais de cookies strictement nécessaires (voir la Politique en matière de cookies)."
+            },
+            "purpose": {
+                "title": "3. Finalités et base juridique",
+                "content": "Nous traitons vos données afin de répondre à vos demandes commerciales (intérêt légitime), d'exécuter vos commandes (exécution d'un contrat) et de respecter les obligations légales en matière de comptabilité et de REACH (obligation légale). Nous ne procédons à aucune prise de décision individuelle automatisée."
+            },
+            "retention": {
+                "title": "4. Rétention",
+                "content": "Les données relatives aux demandes de devis sont conservées pendant une durée maximale de 3 ans à compter de notre dernière interaction. Les données relatives aux relations commerciales sont conservées pendant 10 ans, conformément au droit commercial français. Les données issues des cookies sont conservées pendant une durée maximale de 13 mois."
+            },
+            "cookies": {
+                "title": "5. Cookies et traceurs",
+                "subsections": [
+                    {
+                        "title": "5.1 Cookies strictement nécessaires",
+                        "content": "Ces cookies sont indispensables au bon fonctionnement du site web. Ils ne nécessitent pas votre consentement."
+                    },
+                    {
+                        "title": "5.2 Cookies Analytiques — Google Analytics 4",
+                        "content": "Nous utilisons Google Analytics 4 (GA4) pour analyser le trafic sur notre site web et le comportement des visiteurs. Ces cookies collectent des données de navigation agrégées (pages consultées, durée de la session, pays d'origine, source du trafic). <br/><br/>Ces cookies ne sont placés sur votre appareil qu'<strong>après votre consentement explicite</strong> via notre bannière de gestion des cookies. <br/><br/>Vous pouvez retirer votre consentement à tout moment en cliquant sur « Gérer les préférences en matière de cookies », accessible en bas de chaque page. <br/><br/>Vous pouvez également désactiver le suivi de Google Analytics en installant le module complémentaire officiel pour navigateur : https://tools.google.com/dipage/gaoptout"
+                    }
+                ]
+            },
+            "rights": {
+                "title": "6. Vos Droits",
+                "head": "En vertu du RGPD et de la législation applicable en matière de protection des données, vous disposez des droits suivants concernant vos données à caractère personnel :",
+                "list": [
+                    "<strong>Droit d'accès</strong> (Art. 15 du RGPD): obtenir une copie des données que nous détenons à votre sujet",
+                    "<strong>Droit à la rectification</strong> (Art. 16): corriger des données inexactes ou incomplètes",
+                    "<strong>Droit à l'effacement</strong> (Art. 17): demander la suppression de vos données (« droit à l'oubli »)",
+                    "<strong>Droit à la limitation du traitement</strong> (Art. 18): suspendre le traitement de vos données",
+                    "<strong>Droit à la portabilité des données</strong> (Art. 20): recevoir vos données dans un format structuré et lisible par machine",
+                    "<strong>Droit d'opposition</strong> (Art. 21): vous opposer au traitement fondé sur un intérêt légitime",
+                    "<strong>Droit de retirer votre consentement à tout moment</strong> (Art. 7 du RGPD) <br /><br /> Pour exercer ces droits, veuillez nous écrire à l'adresse <strong>pierre.cornec[at]epsilon-chimie.com</strong>. Nous vous répondrons dans un délai d'un mois (prolongeable à trois mois pour les demandes complexes). <br /><br /> Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer une réclamation auprès de la CNIL (Commission nationale de l'informatique et des libertés) à l'adresse suivante : www.cnil.fr. Si vous résidez hors de France, vous pouvez également contacter l'autorité de contrôle compétente de votre pays."
+                ]
+            },
+            "transfers": {
+                "title": "7. Transferts en dehors de l'UE",
+                "content": "Vos données sont principalement traitées au sein de l'Union européenne. Tout transfert en dehors de l'EEE est régi par les clauses contractuelles types de la Commission européenne."
+            },
+            "security": {
+                "title": "8. Sécurité des données",
+                "content": "Epsilon Chimie met en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité et la confidentialité de vos données à caractère personnel, notamment contre tout accès non autorisé, toute perte, toute altération ou toute divulgation. Ces mesures font l'objet d'une révision régulière."
+            },
+            "changes": {
+                "title": "9. Modifications",
+                "content": "Epsilon Chimie se réserve le droit de mettre à jour la présente politique de confidentialité à tout moment, notamment pour se conformer à toute modification de la réglementation. La date de la dernière mise à jour est indiquée en haut de ce document. Nous vous invitons à la consulter régulièrement."
+            }
+        }
+    },
+    
+    "legal-notice": {
+        "head": "Conformément à la loi française n° 2004-575 du 21 juin 2004 relative à la confiance dans l'économie numérique, les utilisateurs de ce site web sont informés par la présente de l'identité de l'éditeur et de l'hébergeur.",
+        "nav": [
+            "Art. 1 — Éditeur",
+            "Art. 2 — Hébergeur",
+            "Art. 3 — Propriété Intellectuelle",
+            "Art. 4 — Responsabilité",
+            "Art. 5 — Loi Applicables",
+            "Art. 6 — Modification des mentions"
+        ],
+        "sections" : {
+            "publisher": {
+                "title": "Art. 1 — Éditeur",
+                "content": "<strong>Epsilon Chimie SARL</strong>, société à responsabilité limitée au capital de 43 158,01 €, immatriculée au Registre du commerce et des sociétés de Brest sous le n° 402 459 721. Siège social : 450 RUE ANTOINE LAVOISIER 29490 GUIPAVAS, FRANCE. Numéro de TVA intracommunautaire : FR96402459721. Directeur de la publication : Pierre-Yves Cornec, gérant d'Epsilon Chimie SARL — pierre.cornec[at]epsilon-chimie.com."
+            },
+            "host": {
+                "title": "Art. 2 — Hébergeur",
+                "content": "Ce site web est hébergé par <strong>Bluecom SAS</strong>, société par actions simplifiée. Siège social : 105 RUE CHARLES NUNGESSER, 29490 GUIPAVAS, FRANCE. Numéro de téléphone : 02 98 49 23 02. Adresse e-mail : hotline@bluecom.fr"
+            },
+            "property": {
+                "title": "Art. 3 — Propriété Intellectuelle",
+                "content": "L'ensemble du contenu du site www.epsilon-chimie.com (textes, images, graphiques, logos, base de données de molécules, logiciels, etc.) est la propriété exclusive d'Epsilon Chimie ou est utilisé avec l'autorisation de ses propriétaires.<br /><br />Toute reproduction, représentation, modification, publication ou adaptation, en tout ou en partie, par quelque moyen que ce soit, sans l'accord écrit préalable d'Epsilon Chimie est interdite."
+            },
+            "liability": {
+                "title": "Art. 4 — Responsabilité",
+                "content": "Les informations et le contenu publiés sur le Site sont fournis à titre indicatif uniquement. Epsilon Chimie s'efforce d'en garantir l'exactitude et l'actualité, mais ne saurait être tenue responsable en cas d'inexactitude, d'omission ou de tout préjudice résultant de leur utilisation. Les fiches de données de sécurité (FDS) constituent la référence faisant autorité en matière de manipulation des produits et sont disponibles sur simple demande. "
+            },
+            "law": {
+                "title": "Art. 5 — Loi Applicables",
+                "content": "Les présentes mentions légales sont régies par le droit français. Tout litige relatif au site web relève de la compétence exclusive des tribunaux de Brest."
+            },
+            "changes": {
+                "title": "Art. 6 — Modification des mentions",
+                "content": "La Société se réserve le droit de modifier les présentes mentions légales à tout moment afin de tenir compte des changements législatifs ou réglementaires ou des modifications apportées au Site. La date de mise à jour est indiquée en haut du présent document.<br /><br />Tout accès au Site après l'entrée en vigueur d'une version mise à jour des mentions légales vaut acceptation de ces dernières."
+            }
+        }
+    },
+
+    "general-tc": {
+        "nav": [
+            "Art. 1 — Objet",
+            "Art. 2 — Description et Accès au Site",
+            "Art. 3 — Propriété Intellectuelle",
+            "Art. 4 — Responsabilité",
+            "Art. 5 — Hyperliens",
+            "Art. 6 — Données Personelles et Cookies",
+            "Art. 7 — Loi Applicable et Juridiction",
+            "Art. 8 — Modifications"
+        ],
+        "sections": {
+            "purpose": {
+                "title": "Art. 1 — Objet",
+                "content": "Les présentes conditions d'utilisation (ci-après les « Conditions ») définissent les conditions d'accès et d'utilisation du site web www.epsilon-chimie.com (ci-après le « Site ») publié par Epsilon Chimie (ci-après la « Société »). <br /><br />L'accès au Site ou son utilisation de quelque manière que ce soit vaut acceptation sans réserve des présentes Conditions. Si vous n'acceptez pas les présentes Conditions, veuillez ne pas utiliser ce site web."
+            },
+            "description": {
+                "title": "Art. 2 — Description et Accès au Site",
+                "content": "Le site est une vitrine destinée à un public professionnel international. Il présente les produits de synthèse chimique d'Epsilon Chimie, en particulier sa gamme de molécules pharmaceutiques, et permet aux visiteurs de soumettre des demandes de devis via un formulaire de contact. <br /><br /><strong>Le Site n'est pas une plateforme de vente en ligne.</strong>Aucune transaction commerciale ne peut être conclue directement via le Site. Les informations présentées ne constituent pas une offre de vente au sens juridique du terme. <br /><br />Le Site est librement accessible depuis tout appareil connecté à Internet. La Société se réserve le droit de modifier, suspendre ou interrompre l'accès à tout ou partie du Site à tout moment, sans préavis ni indemnisation."
+            },
+            "property": {
+                "title": "Art. 3 — Propriété Intellectuelle",
+                "content": "Tous les éléments du Site — y compris les textes, les images, les visuels, les logos, la base de données de molécules et sa structure — sont protégés par le droit de la propriété intellectuelle et appartiennent à la Société ou sont utilisés avec l'autorisation de leurs propriétaires. <br /><br />Les icônes sont libres de droits et proviennent de la bibliothèque Iconsax. La base de données de molécules est spécifiquement protégée en tant que base de données au sens de la directive européenne 96/9/CE relative à la protection juridique des bases de données et de la législation nationale applicable, et bénéficie des droits sui generis du producteur de la base de données.<br /><br /> Toute reproduction, représentation, extraction, réutilisation, adaptation, publication ou transmission, en tout ou en partie, du contenu du Site, par quelque moyen que ce soit, est strictement interdite sans l'accord écrit préalable d'Epsilon Chimie."
+            },
+            "liability": {
+                "title": "Art. 4 — Responsabilité",
+                "content": "Les informations et le contenu présentés sur le Site sont fournis à titre purement informatif et ne constituent en aucun cas des conseils techniques, scientifiques, médicaux ou commerciaux. Epsilon Chimie s'efforce d'assurer l'exactitude des informations publiées, mais ne peut garantir leur exhaustivité ni leur actualité. <br /><br />Les pages produits disponibles sur le Site sont destinées à des professionnels qualifiés et peuvent être incomplètes. Elles ne remplacent pas les Fiches de données de sécurité (FDS) officielles fournies dans le cadre de la relation commerciale et disponibles sur demande.<br /><br />Les produits présentés sur le Site peuvent être soumis à des réglementations spécifiques en fonction du pays d'utilisation ou de livraison (notamment les réglementations REACH, CLP/GHS, les contrôles à l'exportation, les réglementations sur les précurseurs chimiques). Il incombe à l'acheteur de vérifier les exigences réglementaires applicables sur son territoire.<br /><br />La Société décline toute responsabilité pour tout dommage direct ou indirect résultant de l'accès au Site, de son utilisation ou de l'impossibilité d'y accéder."
+            },
+            "hyperlinks": {
+                "title": "Art. 5 — Hyperliens",
+                "content": "Le Site peut contenir des liens hypertextes vers des sites web tiers. Ces liens sont fournis à titre purement informatif. La Société n'a aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.<br /><br />Tout lien vers www.epsilon-chimie.com à partir d'un site web tiers doit faire l'objet d'une autorisation écrite préalable de la part d'Epsilon Chimie."
+            },
+            "personal": {
+                "title": "Art. 6 — Données Personelles et Cookies",
+                "content-before": "Le Site recueille certaines données à caractère personnel dans les conditions décrites dans la",
+                "link-text":"Politique de Confidentialité",
+                "link-url":"/privacy-policy",
+                "content-after": "disponible sur ce site.",
+                "content-rest": "<br />Des cookies peuvent être enregistrés sur votre appareil lors de votre navigation. Certains cookies (notamment ceux de Google Analytics) nécessitent votre consentement préalable. Ce consentement est recueilli via la bannière de gestion des cookies qui s'affiche lors de votre première visite."
+            },
+            "governing": {
+                "title": "Art. 7 — Loi Applicable et Juridiction",
+                "content": "Les présentes Conditions sont régies par le droit français.<br /><br />En cas de litige relatif à l'interprétation, à la validité ou à l'exécution des présentes Conditions, les parties s'efforceront de parvenir à un règlement à l'amiable. Si aucun accord à l'amiable n'est trouvé dans un délai de trente (30) jours à compter de la notification écrite du litige, celui-ci sera soumis aux tribunaux compétents de Brest, en France.<br /><br />La version française des présentes Conditions prévaut sur toute version traduite en cas de divergence ou de conflit."
+            },
+            "purpose": {
+                "changes": "Art. 8 — Modifications",
+                "content": "La Société se réserve le droit de modifier les présentes Conditions à tout moment afin de tenir compte des changements législatifs ou réglementaires ou des modifications apportées au Site. La date de la version figure en haut du présent document.<br /><br />Tout accès au Site après l'entrée en vigueur d'une version mise à jour des Conditions vaut acceptation des Conditions mises à jour."
+            }
+        }
+    },
+
+    "general-terms": {
+        "head": "Epsilon Chimie SARL (ci-après dénommée « Epsilon Chimie » ou le « Vendeur »), société à responsabilité limitée de droit français constituée en 1995, est spécialisée dans la fabrication et la vente de principes actifs pharmaceutiques (« API ») destinés aux secteurs pharmaceutique, biotechnologique et de la recherche scientifique.<br /><br />Les présentes Conditions générales de vente (ci-après les « CGV ») constituent, conformément à l'article L. 441-1 du Code de commerce français, le seul fondement des relations commerciales entre Epsilon Chimie et tout acheteur professionnel (ci-après le « Client »). Elles s'appliquent à l'exclusion de tout autre document, y compris les conditions générales d'achat du Client.<br/><br/>Epsilon Chimie exerce ses activités sous la supervision des autorités réglementaires compétentes et ses Produits sont fabriqués conformément aux Bonnes Pratiques de Fabrication (BPF) applicables aux substances pharmaceutiques actives, en particulier la directive ICH Q7 et les réglementations équivalentes des autorités compétentes (EMA, FDA, PMDA et autres).",
+        "nav": [
+            "Art. 1 — Champ d'application",
+            "Art. 2 — Offres et Commandes",
+            "Art. 3 — Prix",
+            "Art. 4 — Conditions de Paiement",
+            "Art. 5 — Livraison et Transfert des Risques",
+            "Art. 6 — Spécifications, Qualité et Documentation Réglementaire",
+            "Art. 7 — Conformité GMP et Réglementation Pharmaceutique",
+            "Art. 8 — Réception, Réclamations et Non-conformités",
+            "Art. 9 — Garanties et Limitation de Responsabilité",
+            "Art. 10 — Réglementation REACH, CLP et Environnement",
+            "Art. 11 — Contrôle des Exportations et Sanctions Internationales",
+            "Art. 12 — Force Majeure",
+            "Art. 13 — Propriété Intellectuelle",
+            "Art. 14 — Confidentialité",
+            "Art. 15 — Protection des Données Personnelles",
+            "Art. 16 — Lutte contre la Corruption et Conformité Éthique",
+            "Art. 17 — Résiliation",
+            "Art. 18 — Loi Applicable et Règlement des Litiges",
+            "Art. 19 — Dispositions Générales"
+        ],
+        "sections":{
+            "scope": {
+                "title": "Art. 1 — Champ d'application",
+                "subsections": [
+                    {
+                        "title": "1.1 Objet",
+                        "content": "Les présentes CGV définissent les droits et obligations des parties dans le cadre de la vente par Epsilon Chimie de principes actifs pharmaceutiques (API) et de produits chimiques associés (ci-après les « Produits ») à des clients professionnels, notamment des laboratoires pharmaceutiques, des distributeurs spécialisés, des organismes de fabrication sous contrat (CMO/CDMO) et des instituts de recherche."
+                    },
+                    {
+                        "title": "1.2 Champ d'application",
+                        "content": "Les CGV s'appliquent à toutes les offres, commandes et livraisons de Produits effectuées par Epsilon Chimie, que ce soit en France ou à l'international, quel que soit le canal de commande (courrier postal, e-mail, portail client, bon de commande). Elles s'appliquent exclusivement aux relations entre entreprises (B2B) au sens du Code de commerce français. Tout Client passant une commande auprès d'Epsilon Chimie est réputé avoir pris connaissance et accepté sans réserve les CGV."
+                    },
+                    {
+                        "title": "1.3 Prévalence des CGV",
+                        "content": "Conformément à l'article L. 441-1 du Code de commerce français, les présentes CGV prévalent sur toutes les conditions d'achat du Client ou sur tout autre document émis par celui-ci. Toute dérogation aux présentes CGV ne peut résulter que d'un accord écrit spécifique signé par un représentant dûment habilité d'Epsilon Chimie.  L'absence d'opposition formelle aux conditions d'achat du Client ne vaut pas acceptation de celles-ci."
+                    },
+                    {
+                        "title": "1.4 Exclusion de la Convention de Vienne (CISG)",
+                        "content": "Les parties conviennent expressément d'exclure l'application de la Convention des Nations Unies sur les contrats de vente internationale de marchandises (Convention de Vienne du 11 avril 1980, « CISG »), y compris pour les contrats à caractère international. Le droit français régit exclusivement toutes les relations contractuelles découlant des présentes CGV, conformément à l'article 18 des présentes."
+                    }
+                ]
+            },
+            "offers": {
+                "title": "Art. 2 — Offres et commandes",
+                "subsections": [
+                    {
+                        "title": "2.1 Offres commerciales",
+                        "content": "Toutes les offres commerciales émises par Epsilon Chimie sont formulées par écrit (courrier électronique, courrier postal ou portail client dédié). Sauf indication contraire expresse, les offres sont valables pendant trente (30) jours calendaires à compter de leur date d'émission. Passé ce délai, Epsilon Chimie se réserve le droit de ne pas honorer l'offre initiale ou de la réviser."
+                    },
+                    {
+                        "title": "2.2 Conclusion du contrat",
+                        "content": "Le contrat de vente est conclu dès réception par Epsilon Chimie d'un bon de commande écrit du Client, sous réserve de l'émission par Epsilon Chimie d'un accusé de réception de commande (« ARC ») confirmant les conditions convenues (produit, quantité, prix, délai de livraison) . En l'absence d'une OA dans les cinq (5) jours ouvrables suivant la réception du bon de commande, le Client est invité à contacter directement Epsilon Chimie. <br/><br/> Epsilon Chimie se réserve le droit de refuser toute commande sans justification, notamment en cas de doute quant à la solvabilité du Client, si le Client a déjà enfreint les présentes CGV, ou si l'utilisation finale déclarée des Produits est incompatible avec la réglementation applicable."
+                    },
+                    {
+                        "title": "2.3 Utilisation finale déclarée et autorisations réglementaires",
+                        "content": "Le Client est tenu de déclarer avec exactitude l'utilisation finale prévue des Produits commandés (phase de développement clinique, fabrication de médicaments commercialisés, recherche, etc.) ainsi que les autorisations réglementaires dont il dispose (AMM, IND, IMPD, etc.). Epsilon Chimie se réserve le droit de refuser ou de suspendre une commande si l'utilisation déclarée s'avère incompatible avec la réglementation en vigueur ou avec les spécifications des Produits."
+                    },
+                    {
+                        "title": "2.4 Modification et annulation de commande",
+                        "content": "Toute modification ou annulation d'une commande confirmée doit être notifiée par écrit et est soumise à l'acceptation préalable d'Epsilon Chimie. Des frais d'annulation ou de modification peuvent être facturés, reflétant notamment les coûts de fabrication déjà engagés, les matières premières commandées et les ressources allouées. Les commandes de Produits fabriqués sur mesure (« sur commande ») ou nécessitant une documentation de qualification spécifique ne peuvent être annulées une fois la production lancée."
+                    }
+                ]
+            },
+            "prices": {
+                "title": "Art. 3 — Prix",
+                "subsections": [
+                    {
+                        "title": "3.1 Base de tarification",
+                        "content": "Les prix sont exprimés en euros (EUR), hors taxes et hors frais de livraison, sauf indication contraire dans l'offre. Les prix applicables sont ceux en vigueur au moment de l'émission de l'offre d'achat. Pour les contrats pluriannuels ou les commandes ouvertes, le prix applicable est celui stipulé dans l'accord-cadre écrit signé entre les parties."
+                    },
+                    {
+                        "title": "3.2 Révision des prix",
+                        "content": "Epsilon Chimie se réserve le droit de modifier ses tarifs à tout moment. Toute modification de prix sera notifiée au Client par écrit avec un préavis minimum de soixante (60) jours. Les commandes confirmées avant la date d'entrée en vigueur des nouveaux prix restent régies par les prix figurant dans l'offre d'achat correspondante. Pour les commandes dont les livraisons s'étalent sur plus de douze (12) mois, Epsilon Chimie se réserve le droit d'appliquer une révision de prix en fonction de l'évolution des indices des matières premières, des coûts énergétiques ou des réglementations imposant de nouvelles contraintes de fabrication, après notification préalable au Client."
+                    },
+                    {
+                        "title": "3.3 Taxes et droits",
+                        "content": "Le Client est responsable de toutes les taxes, droits de douane, prélèvements, redevances et autres impositions similaires applicables dans le pays de destination des Produits. Les prix facturés par Epsilon Chimie s'entendent hors TVA française lorsque le Client est assujetti à la TVA dans un État membre de l'Union européenne (sous réserve de la fourniture d'un numéro de TVA intracommunautaire valide) ou est établi en dehors de l'Union européenne."
+                    },
+                    {
+                        "title": "3.4 Frais accessoires",
+                        "content": "Les frais d'analyse, de certification (par exemple : Certificat de Conformité Pharmacopée, certificat GMP, Drug Master File), d'emballage spécial, de documentation réglementaire supplémentaire ou d'audit qualité font l'objet d'une facturation séparée, sauf inclusion expresse dans l'offre commerciale."
+                    }
+                ]
+            },
+            "payment": {
+                "title": "Art. 4 — Conditions de Paiement",
+                "subsections": [
+                    {
+                        "title": "4.1 Délais de paiement",
+                        "content": "Sauf conditions particulières convenues par écrit, les factures sont payables à trente (30) jours nets à compter de la date de la facture. Conformément aux articles L. 441-10 et suivants du Code de commerce (loi de modernisation de l'économie, dite « LME »), le délai de paiement ne peut en aucun cas excéder soixante (60) jours à compter de la date d'émission de la facture, ou quarante-cinq (45) jours fin de mois. <br/><br/> Pour les premières commandes ou en cas de doute sur la solvabilité du Client, Epsilon Chimie peut exiger un paiement anticipé total ou partiel (acompte), la fourniture de garanties bancaires ou une lettre de crédit documentaire (L/C) conforme aux règles et usances uniformes de la CCI (RUU 600)."
+                    },
+                    {
+                        "title": "4.2 Modes de paiement",
+                        "content": "Le règlement s'effectue par virement bancaire sur le compte indiqué sur la facture. Tout autre mode de paiement doit faire l'objet d'un accord préalable écrit d'Epsilon Chimie. Les frais bancaires liés au virement international sont à la charge du Client (frais OUR)."
+                    },
+                    {
+                        "title": "4.3 Retard de paiement",
+                        "head": "Tout retard de paiement donne lieu, de plein droit et sans mise en demeure préalable, conformément à l'article L. 441-10 du Code de commerce :",
+                        "list": [
+                            "À l'application d'un taux d'intérêt de retard égal au taux directeur de la Banque Centrale Européenne (taux de refinancement) majoré de dix (10) points de pourcentage ;",
+                            "À une indemnité forfaitaire pour frais de recouvrement de quarante euros (40 €) par facture impayée, conformément au décret n° 2012-1115 du 2 octobre 2012 ;",
+                            "Au droit pour Epsilon Chimie de suspendre immédiatement toutes les livraisons en cours et/ou de résoudre les contrats en cours, sans préjudice de tout autre recours."
+                        ],
+                        "foot ": "Les intérêts courent à compter du lendemain de la date d'échéance figurant sur la facture jusqu'au paiement intégral, principal et accessoires."
+                    },
+                    {
+                        "title": "4.4 Compensation et déduction",
+                        "content": "Le Client n'est pas autorisé à effectuer, de sa propre initiative, toute compensation, déduction ou retenue sur les sommes dues à Epsilon Chimie, à moins d'un accord écrit préalable ou d'une décision de justice définitive."
+                    },
+                    {
+                        "title": "4.5 Clause de réserve de propriété",
+                        "content": "Epsilon Chimie conserve la pleine propriété des Produits livrés jusqu'au paiement intégral de l'ensemble des sommes dues par le Client en principal, intérêts et frais accessoires, conformément aux articles 2367 à 2372 du Code civil. Le transfert de risques, tel que défini à l'article 5 ci-après, est indépendant du transfert de propriété régi par la présente clause. <br/><br/> En cas de non-paiement à l'échéance, Epsilon Chimie pourra revendiquer la restitution des Produits en possession du Client, dans les conditions prévues par la loi. Le Client s'engage à stocker les Produits de manière à permettre leur identification et leur séparation des autres marchandises, et à informer tout tiers de la réserve de propriété d'Epsilon Chimie."
+                    }
+                ]
+            },
+            "risk": {
+                "title": "Art. 5 — Livraison et Transfert des Risques",
+                "subsections": [
+                    {
+                        "title": "5.1 Termes de livraison (Incoterms®)",
+                        "content": "Sauf accord contraire stipulé dans l'offre ou l'ARC, les Produits sont livrés selon les termes FCA (Franco Transporteur - lieu de départ convenu) de la version en vigueur des Incoterms® de la Chambre de Commerce Internationale (Incoterms® 2020). La désignation du transporteur et la souscription de l'assurance transport incombent au Client sauf stipulation contraire. <br/><br/>Les parties peuvent convenir par écrit d'un autre Incoterm (DAP, DDP, CIF, etc.), auquel cas les conditions correspondantes s'appliquent dans le respect des Incoterms® 2020."
+                    },
+                    {
+                        "title": "5.2 Transfert des risques",
+                        "content": "Le transfert des risques de perte, de détérioration ou de destruction des Produits s'opère selon le terme Incoterm convenu. En FCA, le transfert des risques intervient dès la remise des Produits au premier transporteur au lieu de départ convenu, que les Produits soient ou non payés (indépendamment de la clause de réserve de propriété prévue à l'article 4.5)."
+                    },
+                    {
+                        "title": "5.3 Délais de livraison",
+                        "content": "Les délais de livraison communiqués par Epsilon Chimie sont indicatifs et ne constituent pas un engagement ferme, sauf accord écrit contraire. Epsilon Chimie mettra en œuvre tous les moyens raisonnables pour respecter les délais annoncés. Tout retard de livraison ne pourra donner lieu à des pénalités, dommages-intérêts ou résolution du contrat que si un délai ferme a été expressément convenu par écrit et que le retard est directement imputable à Epsilon Chimie, à l'exclusion de tout cas de force majeure au sens de l'article 12 des présentes CGV."
+                    },
+                    {
+                        "title": "5.4 Conditionnement et étiquetage",
+                        "content": "Les Produits sont conditionnés et étiquetés conformément aux réglementations applicables, notamment le règlement CLP (CE n° 1272/2008) relatif à la classification, l'étiquetage et l'emballage des substances et mélanges, les normes IATA/IMDG pour le transport de matières dangereuses, ainsi que les exigences applicables au transport des substances actives pharmaceutiques. <br/>Des conditions spéciales d'emballage (emballage sous atmosphère contrôlée, conditionnement à température dirigée, etc.) doivent être convenues par écrit avant la confirmation de la commande et peuvent donner lieu à une facturation complémentaire."
+                    },
+                    {
+                        "title": "5.5 Livraisons partielles",
+                        "content": "Epsilon Chimie se réserve le droit d'effectuer des livraisons partielles dans la limite des quantités commandées. Chaque livraison partielle fait l'objet d'une facturation distincte. Le retard ou l'absence d'une livraison partielle ne peut justifier le refus ou l'annulation des autres livraisons."
+                    },
+                    {
+                        "title": "5.6 Fiche de données de sécurité (FDS/SDS)",
+                        "content": "Conformément à l'article 31 du règlement REACH (CE n° 1907/2006), Epsilon Chimie remet au Client, préalablement à ou lors de la première livraison de chaque Produit, la Fiche de Données de Sécurité (FDS) à jour, rédigée dans la langue du pays de livraison ou en anglais pour les destinations hors Union européenne. Le Client est responsable de la transmission de la FDS à ses propres utilisateurs en aval."
+                    }
+                ]
+            },
+            "specifications": {
+                "title": "Art. 6 — Spécifications, Qualité et Documentation Réglementaire",
+                "subsections": [
+                    {
+                        "title": "6.1 Spécifications des Produits",
+                        "content": "Les Produits sont fournis conformément aux spécifications techniques convenues entre les parties et reproduites ou référencées dans l'ARC ou dans tout accord qualité écrit (Quality Agreement) conclu entre les parties. À défaut de spécifications convenues, les Produits sont fournis conformément à la monographie de la Pharmacopée Européenne (Ph. Eur.) ou à l'United States Pharmacopeia (USP) en vigueur à la date de fabrication, ou, à défaut de monographie officielle, aux spécifications internes d'Epsilon Chimie communiquées au Client. <br/><br/>Toute demande de modification des spécifications de la part du Client doit être formulée par écrit et fait l'objet d'une évaluation technique et réglementaire préalable par Epsilon Chimie. Un avenant au contrat sera établi si une telle modification est acceptée."
+                    },
+                    {
+                        "title": "6.2 Certificat d'analyse (CoA)",
+                        "content": "Chaque livraison est accompagnée d'un Certificat d'Analyse (Certificate of Analysis, CoA) attestant de la conformité du lot aux spécifications convenues. Le CoA mentionne notamment : la dénomination du Produit (DCI et nom commercial le cas échéant), le numéro de lot, la date de fabrication, la date de péremption (retest date/expiry date), les résultats des tests analytiques effectués et les critères d'acceptation correspondants."
+                    },
+                    {
+                        "title": "6.3 Documentation réglementaire",
+                        "head": "Sur demande écrite du Client formulée au moment de la commande, Epsilon Chimie peut fournir, selon disponibilité et dans le respect des obligations de confidentialité :",
+                        "list": [
+                            "Un Drug Master File (DMF) ou une lettre d'accès (Letter of Access) à son DMF déposé auprès des autorités compétentes (FDA, EMA/EDQM, PMDA, etc.) ;",
+                            "Un dossier de qualification du fournisseur (Vendor Qualification Package) incluant les informations requises par les BPF/GMP ;",
+                            "Un certificat GMP délivré par l'autorité compétente ;",
+                            "Un certificat de conformité à la Pharmacopée Européenne (CEP/COS) le cas échéant ;",
+                            "Une déclaration REACH de conformité au règlement (CE) n° 1907/2006."
+                        ],
+                        "foot ": "La fourniture de documents réglementaires supplémentaires ou de données de dossier de fabrication (batch records) est soumise à un accord de confidentialité préalable et peut faire l'objet d'une facturation."
+                    },
+                    {
+                        "title": "6.4 Accord qualité (Quality Agreement)",
+                        "content": "Pour les relations commerciales régulières impliquant des Produits destinés à la fabrication de médicaments commercialisés, les parties s'engagent à conclure un accord qualité (Quality Agreement) écrit, conformément aux recommandations de l'ICH Q10 et aux guidelines EMA/FDA applicables. En cas de conflit entre un accord qualité et les présentes CGV, les dispositions plus restrictives en matière de qualité pharmaceutique prévalent."
+                    }
+                ]
+            },
+            "compilance": {
+                "title": "Art. 7 — Conformité GMP et Réglementation Pharmaceutique",
+                "subsections": [
+                    {
+                        "title": "7.1 Engagement GMP d'Epsilon Chimie",
+                        "head": "Epsilon Chimie s'engage à fabriquer et à livrer les Produits conformément aux Bonnes Pratiques de Fabrication applicables aux substances actives à usage pharmaceutique, notamment :",
+                        "list": [
+                            "Le guide ICH Q7 (Good Manufacturing Practice Guide for Active Pharmaceutical Ingredients) ;",
+                            "Les directives 2003/94/CE et 2001/83/CE (Union européenne) ;",
+                            "Le titre 21 CFR Parts 210/211 (Food and Drug Administration, États-Unis) ;",
+                            "Les guidelines du PMDA (Pharmaceuticals and Medical Devices Agency, Japon) ;",
+                            "Toute autre réglementation GMP applicable dans le pays de destination, dans la mesure de sa connaissance."
+                        ]
+                    },
+                    {
+                        "title": "7.2 Notification des changements (Change Control)",
+                        "head": "Epsilon Chimie s'engage à notifier le Client par écrit, dans un délai raisonnable et en tout état de cause avant la livraison des lots concernés, de tout changement susceptible d'avoir un impact sur la qualité, la conformité réglementaire ou les spécifications des Produits, notamment :",
+                        "list": [
+                            "Tout changement de voie de synthèse ou de procédé de fabrication ;",
+                            "Tout changement de fournisseur de matières premières critiques ;",
+                            "Tout changement de site de fabrication ou de sous-traitant critique ;",
+                            "Toute mise à jour des spécifications analytiques ou des méthodes de contrôle."
+                        ],
+                        "foot ": "Le délai de notification sera défini dans l'accord qualité conclu entre les parties. À défaut d'accord qualité, la notification sera faite au moins soixante (60) jours avant la livraison des premiers lots issus du changement."
+                    },
+                    {
+                        "title": "7.3 Droits d'audit",
+                        "content": "Le Client ou son mandataire a le droit d'effectuer des audits qualité des installations de fabrication d'Epsilon Chimie concernant les Produits commandés, sous réserve d'une notification préalable écrite d'au moins quarante-cinq (45) jours ouvrés, et dans la limite d'un (1) audit par année civile et par site, sauf indication contraire dans l'accord qualité. Les audits sont réalisés aux frais du Client. <br/>Epsilon Chimie se réserve le droit de refuser la présence de concurrents ou de personnes ne disposant pas des habilitations nécessaires, et de soumettre l'auditeur à un engagement de confidentialité préalable."
+                    },
+                    {
+                        "title": "7.4 Traçabilité et gestion des lots",
+                        "content": "Epsilon Chimie assure la traçabilité complète de chaque lot livré conformément aux exigences GMP. Les dossiers de lot sont conservés conformément aux durées légales applicables (a minima un an après la date de péremption du médicament fini fabriqué à partir du lot d'API concerné, ou sept ans à compter de la date de libération du lot, la durée la plus longue étant retenue)."
+                    },
+                    {
+                        "title": "7.5 Gestion des réclamations et retraits de lots (recalls)",
+                        "content": "En cas d'identification d'un défaut de qualité susceptible d'affecter des Produits déjà livrés, Epsilon Chimie notifiera le Client dans les meilleurs délais. Les deux parties coopèreront de bonne foi pour évaluer l'impact et déterminer les mesures correctives appropriées, y compris un éventuel retrait de lot (recall), conformément aux procédures réglementaires applicables."
+                    }
+                ]
+            },
+            "acceptance": {
+                "title": "Art. 8 — Réception, Réclamations et Non-conformités",
+                "subsections": [
+                    {
+                        "title": "8.1 Vérification à la réception",
+                        "content": "Le Client est tenu de procéder à la vérification des Produits à la réception, notamment du conditionnement, des quantités livrées et de la conformité apparente avec le bon de livraison et le CoA. Toute anomalie apparente (colis manquant, dommage visible, erreur de désignation) doit être portée à la connaissance du transporteur sur le bon de livraison (émission de réserves) et notifiée à Epsilon Chimie dans un délai de cinq (5) jours ouvrés suivant la livraison."
+                    },
+                    {
+                        "title": "8.2 Réclamations pour non-conformité",
+                        "content": "Toute réclamation relative à une non-conformité des Produits aux spécifications convenues (défaut de qualité analytique, contamination, non-conformité documentaire, etc.) doit être formulée par écrit à Epsilon Chimie dans un délai maximum de trente (30) jours calendaires suivant la date de réception des Produits ou, s'agissant de vices non décelables lors d'une inspection à la réception, dans un délai de trente (30) jours suivant la découverte du vice. <br/> <br/>La réclamation doit inclure : le numéro de lot concerné, la description précise du défaut allégué, les résultats analytiques de contre-analyse le cas échéant, et une proposition de disposition (retour, remplacement, avoir). Epsilon Chimie dispose d'un délai de trente (30) jours ouvrés pour instruire la réclamation et formuler sa réponse."
+                    },
+                    {
+                        "title": "8.3 Vices cachés",
+                        "content": "La garantie contre les vices cachés est régie par les articles 1641 à 1649 du Code civil. Le Client dispose d'un délai de deux (2) ans à compter de la découverte du vice pour exercer l'action en garantie. Cette action ne peut prospérer que si le vice était caché, existait au moment de la vente, et rend le Produit impropre à l'usage prévu."
+                    },
+                    {
+                        "title": "8.4 Gestion des non-conformités",
+                        "content": "Les Produits non conformes ne peuvent être retournés qu'avec l'accord préalable écrit d'Epsilon Chimie et conformément aux instructions de retour (Return Material Authorization, RMA). À défaut d'accord dans un délai de quinze (15) jours suivant la réclamation, le Client ne peut procéder au retour sans accord formel. <br/> <br/>En cas de non-conformité avérée imputable à Epsilon Chimie, le recours du Client est limité, au choix d'Epsilon Chimie, au remplacement du Produit non conforme ou à l'émission d'un avoir d'un montant égal au prix du Produit défectueux."
+                    }
+                ]
+            },
+            "warranties": {
+                "title": "Art. 9 — Garanties et Limitation de Responsabilité",
+                "subsections": [
+                    {
+                        "title": "9.1 Garanties d'Epsilon Chimie",
+                        "head": "Epsilon Chimie garantit que les Produits livrés :",
+                        "list": [
+                            "Sont conformes aux spécifications convenues au moment de leur fabrication ;",
+                            "Ont été fabriqués conformément aux BPF/GMP applicables aux substances actives pharmaceutiques ;",
+                            "Sont couverts par les autorisations et enregistrements nécessaires à leur fabrication et à leur exportation depuis la France ;",
+                            "Ne violent pas, à la connaissance d'Epsilon Chimie, les droits de propriété intellectuelle de tiers au titre du procédé de fabrication utilisé."
+                        ]
+                    },
+                    {
+                        "title": "9.2 Exclusions de garanties",
+                        "head": "Epsilon Chimie ne garantit pas :",
+                        "list": [
+                            "L'adéquation des Produits à un usage spécifique du Client non expressément convenu par écrit ;",
+                            "L'obtention ou le maintien de toute autorisation réglementaire dans le pays de destination (AMM, IND, etc.), ces démarches relevant exclusivement de la responsabilité du Client ;",
+                            "La conformité des Produits aux spécifications si ceux-ci ont été stockés, manipulés ou transformés par le Client en dehors des conditions recommandées dans le CoA ou la FDS."
+                        ]
+                    },
+                    {
+                        "title": "9.3 Plafond de responsabilité",
+                        "content": "En tout état de cause, sauf faute lourde ou dol d'Epsilon Chimie ou de ses préposés, la responsabilité totale d'Epsilon Chimie au titre d'une commande est limitée au montant hors taxes de la facture correspondant aux Produits directement impliqués dans le sinistre, et ne peut excéder le montant des sommes effectivement payées par le Client à Epsilon Chimie au titre des douze (12) derniers mois précédant l'événement générateur."
+                    },
+                    {
+                        "title": "9.4 Exclusion de responsabilité pour dommages indirects",
+                        "content": "Epsilon Chimie ne saurait être tenue responsable de dommages indirects, immatériels, consécutifs ou accessoires subis par le Client ou des tiers, tels que perte de revenus ou de bénéfices, manque à gagner, perte de clientèle, préjudice d'image, perturbation de programmes cliniques ou préjudice commercial d'aucune sorte, quand bien même Epsilon Chimie aurait été informée de la possibilité de tels dommages. <br/><br/> Cette exclusion ne s'applique pas en cas de dommages corporels ou de décès causés par une faute d'Epsilon Chimie."
+                    }
+                ]
+            },
+            "reach": {
+                "title": "Art. 10 — Réglementation REACH, CLP et Environnement",
+                "subsections": [
+                    {
+                        "title": "10.1 Conformité REACH",
+                        "content": "Epsilon Chimie s'engage à respecter les obligations qui lui incombent en tant que fabricant et/ou importateur de substances chimiques au titre du règlement (CE) n° 1907/2006 (REACH), notamment l'enregistrement préalable des substances fabriquées ou importées en quantités supérieures à une tonne par an, et la communication des informations sur les substances extrêmement préoccupantes (SVHC)."
+                    },
+                    {
+                        "title": "10.2 Conformité CLP",
+                        "content": "Les Produits sont classifiés, étiquetés et emballés conformément au règlement (CE) n° 1272/2008 (CLP) et à ses actes délégués successifs. Les FDS sont rédigées selon le format imposé par le règlement (UE) n° 2020/878."
+                    },
+                    {
+                        "title": "10.3 Obligations du Client",
+                        "content": "Le Client s'engage à utiliser les Produits conformément aux usages et conditions indiqués dans la FDS, à stocker les Produits dans les conditions prescrites, à respecter les réglementations locales applicables à la détention et à l'utilisation de substances chimiques réglementées, et à informer Epsilon Chimie de tout incident ou accident impliquant les Produits susceptible d'avoir un impact sur la santé, la sécurité ou l'environnement."
+                    }
+                ]
+            },
+            "export": {
+                "title": "Art. 11 — Contrôle des Exportations et Sanctions Internationales",
+                "subsections": [
+                    {
+                        "title": "11.1 Réglementation applicable",
+                        "head": "La vente et la livraison des Produits sont soumises aux lois et réglementations relatives au contrôle des exportations et aux sanctions commerciales internationales, notamment :",
+                        "list": [
+                            "Le règlement (UE) 2021/821 du Conseil relatif aux biens à double usage (dual-use) et ses textes modificatifs ;",
+                            "Les mesures restrictives de l'Union européenne et les régimes de sanctions de l'ONU, des États-Unis (OFAC, BIS/EAR) et de toute autre juridiction compétente ;",
+                            "Les dispositions du Code des douanes de l'Union (CDU)."
+                        ]
+                    },
+                    {
+                        "title": "11.2 Obligations du Client",
+                        "head": "Le Client déclare et garantit qu'il ne revendra pas, ne transférera pas et n'exportera pas les Produits en violation de l'une des réglementations mentionnées ci-dessus. Le Client s'engage notamment à :",
+                        "list": [
+                            "Déclarer l'usage final réel des Produits et leur destination ultime ;",
+                            "Obtenir toutes les licences, autorisations et permis d'exportation requis ;",
+                            "Ne pas transférer les Produits à des entités figurant sur les listes de restrictions (listes OFAC, listes de l'UE ou équivalentes) ;",
+                            "Informer immédiatement Epsilon Chimie de tout changement d'usage, de destination finale ou de bénéficiaire effectif."
+                        ]
+                    },
+                    {
+                        "title": "11.3 Suspension pour motif réglementaire",
+                        "content": "Epsilon Chimie se réserve le droit de suspendre ou d'annuler toute livraison sans préavis et sans indemnité si elle a des raisons raisonnables de croire que la transaction serait contraire aux réglementations de contrôle des exportations ou aux sanctions applicables. Dans ce cas, aucune responsabilité ne pourra être imputée à Epsilon Chimie."
+                    }
+                ]
+            },
+            "force": {
+                "title": "Art. 12 — Force Majeure",
+                "subsections": [
+                    {
+                        "title": "12.1 Définition",
+                        "content": "Constitue un cas de force majeure, au sens de l'article 1218 du Code civil, tout événement imprévisible, irrésistible et extérieur à la partie qui l'invoque, rendant l'exécution de ses obligations impossible, notamment : catastrophes naturelles, épidémies ou pandémies déclarées, guerres, émeutes ou actes terroristes, décisions gouvernementales ou réglementaires imprévues affectant la fabrication ou l'exportation des Produits, incendies ou explosions, défaillances majeures du réseau électrique ou des systèmes d'information, grèves générales et pénuries graves de matières premières imputables à des causes extérieures."
+                    },
+                    {
+                        "title": "12.2 Notification et suspension",
+                        "content": "La partie invoquant un cas de force majeure doit notifier l'autre partie par écrit dans les quarante-huit (48) heures suivant la survenance de l'événement et mettre en œuvre tous les efforts raisonnables pour en limiter les conséquences. Les obligations contractuelles des parties sont suspendues pendant la durée du cas de force majeure. Aucune pénalité, ni résiliation pour inexécution ne peut être prononcée pendant cette période."
+                    },
+                    {
+                        "title": "12.3 Résolution",
+                        "content": "Si le cas de force majeure se prolonge au-delà de quatre-vingt-dix (90) jours consécutifs, chaque partie aura le droit de résilier le contrat concerné par notification écrite, sans indemnité de part ni d'autre, sous réserve du paiement par le Client des Produits déjà livrés avant la survenance du cas de force majeure."
+                    }
+                ]
+            },
+            "property": {
+                "title": "Art. 13 — Propriété Intellectuelle",
+                "subsections": [
+                    {
+                        "title": "13.1 Droits réservés",
+                        "content": "Epsilon Chimie est et demeure titulaire de l'ensemble des droits de propriété intellectuelle afférents à ses Produits, procédés de fabrication, know-how, formulations, données analytiques, méthodes de synthèse et toute autre information technique ou commerciale. Aucune disposition des présentes CGV ne saurait être interprétée comme conférant au Client une licence, un droit de sous-licence ou un quelconque droit de propriété intellectuelle sur les Produits ou les informations communiquées par Epsilon Chimie."
+                    },
+                    {
+                        "title": "13.2 Licence d'usage limitée",
+                        "content": "L'achat des Produits confère au Client uniquement le droit de les utiliser pour l'usage déclaré et convenu. Toute reproduction, analyse de rétro-ingénierie (reverse engineering), décompilation ou tentative de reproduction du procédé de fabrication des Produits est strictement interdite sans accord écrit préalable d'Epsilon Chimie."
+                    },
+                    {
+                        "title": "13.3 Garantie d'éviction",
+                        "content": "Epsilon Chimie déclare, à sa connaissance à la date de la commande, que les Produits ne violent pas les droits de propriété intellectuelle de tiers. Toutefois, Epsilon Chimie ne garantit pas que l'usage des Produits par le Client dans ses formulations ou préparations pharmaceutiques ne constituera pas une violation de droits tiers. Il appartient au Client de s'assurer que l'usage qu'il fait des Produits est conforme aux droits de propriété intellectuelle applicables dans son pays."
+                    }
+                ]
+            },
+            "confidentiality": {
+                "title": "Art. 14 — Confidentialité",
+                "subsections": [
+                    {
+                        "title": "14.1 Obligations réciproques",
+                        "content": "Chaque partie s'engage à traiter comme strictement confidentielles toutes les informations de nature technique, commerciale, scientifique, financière, réglementaire ou stratégique communiquées par l'autre partie dans le cadre des relations commerciales issues des présentes CGV (ci-après les « Informations Confidentielles »). Les parties s'engagent à ne pas divulguer ces informations à des tiers sans autorisation écrite préalable et à ne les utiliser qu'aux fins de l'exécution du contrat de vente."
+                    },
+                    {
+                        "title": "14.2 Exceptions",
+                        "content": "L'obligation de confidentialité ne s'applique pas aux informations qui : (i) étaient publiquement connues au moment de leur divulgation ou le sont devenues sans faute de la partie réceptrice ; (ii) étaient légitimement connues de la partie réceptrice avant leur divulgation ; (iii) ont été communiquées par un tiers de bonne foi sans restriction de confidentialité ; ou (iv) doivent être divulguées en vertu d'une obligation légale, réglementaire ou judiciaire."
+                    },
+                    {
+                        "title": "14.3 Durée",
+                        "content": "Les obligations de confidentialité survivent à la résiliation ou à l'expiration des relations contractuelles pour une durée de cinq (5) ans. Pour les informations constituant des secrets d'affaires (know-how), la confidentialité est maintenue sans limitation de durée tant que lesdites informations conservent leur caractère secret."
+                    }
+                ]
+            },
+            "protection": {
+                "title": "Art. 15 — Protection des Données Personnelles",
+                "subsections": [
+                    {
+                        "title": "15.1 Traitement des données",
+                        "content": "Dans le cadre des relations commerciales, Epsilon Chimie peut être amenée à collecter et traiter des données à caractère personnel de contacts professionnels du Client (nom, prénom, fonction, coordonnées professionnelles). Ces données sont traitées sur le fondement de l'intérêt légitime d'Epsilon Chimie à entretenir des relations commerciales (article 6.1.f du RGPD), ou pour l'exécution du contrat. <br/><br/> Ces données sont utilisées exclusivement à des fins de gestion de la relation commerciale, de facturation, d'exécution des obligations contractuelles et réglementaires, et ne sont pas transférées à des tiers non habilités. Elles sont conservées pendant la durée de la relation commerciale et au-delà pour respecter les obligations légales de conservation (a minima dix ans pour les données comptables)."
+                    },
+                    {
+                        "title": "15.2 Droits des personnes",
+                        "content": "Les personnes dont les données sont traitées disposent d'un droit d'accès, de rectification, d'effacement, de limitation du traitement et d'opposition, dans les conditions prévues par le RGPD (Règlement UE 2016/679) et la loi Informatique et Libertés (loi n° 78-17 du 6 janvier 1978 modifiée). Ces droits peuvent être exercés par courrier électronique adressé au Délégué à la Protection des Données (DPO) d'Epsilon Chimie."
+                    }
+                ]
+            },
+            "corruption": {
+                "title": "Art. 16 — Lutte contre la Corruption et Conformité Éthique",
+                "subsections": [
+                    {
+                        "title": "16.1 Engagement de conformité",
+                        "content": "Les parties déclarent se conformer à toutes les lois et réglementations applicables en matière de lutte contre la corruption, notamment la loi française n° 2016-1691 du 9 décembre 2016 relative à la transparence, à la lutte contre la corruption et à la modernisation de la vie économique (dite « loi Sapin II »), la Convention de l'OCDE sur la lutte contre la corruption d'agents publics étrangers, le Foreign Corrupt Practices Act (FCPA) américain et le UK Bribery Act britannique, dans leur champ d'application respectif."
+                    },
+                    {
+                        "title": "16.2 Déclarations et garanties",
+                        "content": "Le Client déclare et garantit qu'il n'a pas versé, offert, promis, autorisé ou accepté, directement ou indirectement, tout paiement, avantage ou contrepartie de quelque nature que ce soit à des fonctionnaires, agents publics ou agents privés en vue d'obtenir un avantage commercial indu. Toute violation avérée de ces engagements constitue un motif de résiliation immédiate du contrat, sans préjudice des recours civils et pénaux d'Epsilon Chimie."
+                    }
+                ]
+            },
+            "termination": {
+                "title": "Art. 17 — Résiliation",
+                "subsections": [
+                    {
+                        "title": "17.1 Résiliation pour manquement",
+                        "content": "En cas de manquement grave ou répété d'une partie à ses obligations contractuelles, et si ce manquement n'a pas été remédié dans un délai de quinze (15) jours ouvrés suivant l'envoi d'une mise en demeure écrite par lettre recommandée avec accusé de réception, l'autre partie peut résilier de plein droit le ou les contrats en cours, sans préjudice de ses droits à dommages-intérêts."
+                    },
+                    {
+                        "title": "17.2 Résiliation de plein droit",
+                        "content": "Epsilon Chimie peut résilier tout contrat en cours de plein droit, sans mise en demeure préalable, en cas : (i) d'ouverture d'une procédure collective à l'encontre du Client (redressement judiciaire, liquidation judiciaire ou procédure équivalente à l'étranger) ; (ii) de suspension de paiement ou d'insolvabilité notoire du Client ; (iii) de violation par le Client des réglementations relatives au contrôle des exportations ou aux sanctions internationales visées à l'article 11."
+                    },
+                    {
+                        "title": "17.3 Effets de la résiliation",
+                        "content": "La résiliation entraîne l'exigibilité immédiate de toutes les sommes dues par le Client à Epsilon Chimie. Les Produits déjà livrés et non payés restent soumis à la clause de réserve de propriété. Epsilon Chimie n'est tenue d'aucune indemnité pour les commandes non encore exécutées."
+                    }
+                ]
+            },
+            "governing": {
+                "title": "Art. 18 — Loi Applicable et Règlement des Litiges",
+                "subsections": [
+                    {
+                        "title": "18.1 Loi applicable",
+                        "content": "Les présentes CGV et tous les contrats formés sur leur base sont régis exclusivement par le droit français, à l'exclusion de ses règles de conflits de lois et de la Convention des Nations Unies sur les contrats de vente internationale de marchandises (CISG, Vienne, 1980), dont l'application est expressément exclue."
+                    },
+                    {
+                        "title": "18.2 Règlement amiable",
+                        "content": "En cas de différend relatif à l'interprétation, l'exécution ou la résiliation d'un contrat, les parties s'engagent à rechercher une solution amiable dans un délai de trente (30) jours à compter de la notification du différend par l'une des parties. À défaut de résolution amiable dans ce délai, les parties pourront recourir à une médiation ou à d'autres modes alternatifs de règlement des différends (MARD)."
+                    },
+                    {
+                        "title": "18.3 Juridiction compétente",
+                        "content": "À défaut de règlement amiable, tout litige relatif aux présentes CGV ou aux contrats en découlant sera soumis à la compétence exclusive du Tribunal de commerce du ressort du siège social d'Epsilon Chimie, y compris en cas de pluralité de défendeurs, d'appel en garantie ou de procédure d'urgence."
+                    },
+                    {
+                        "title": "18.4 Arbitrage international (option pour contrats hors UE)",
+                        "content": "Par dérogation à l'article 18.3, pour tout contrat conclu avec un Client établi en dehors de l'Union européenne, les parties peuvent convenir, par accord exprès figurant dans le contrat ou dans les conditions particulières, de soumettre tout litige à un arbitrage international selon le Règlement d'arbitrage de la Chambre de Commerce Internationale (CCI), par un ou trois arbitres désignés conformément audit règlement. Le siège de l'arbitrage sera Paris, la langue de la procédure sera le français ou l'anglais selon accord des parties, et la loi applicable au fond sera le droit français."
+                    }
+                ]
+            },
+            "provisions": {
+                "title": "Art. 19 — Dispositions Générales",
+                "subsections": [
+                    {
+                        "title": "19.1 Intégralité de l'accord",
+                        "content": "Les présentes CGV, ainsi que les conditions particulières, offres, ARC et accords qualité conclus entre les parties, constituent l'intégralité de l'accord entre Epsilon Chimie et le Client pour la vente des Produits concernés, et remplacent tous les accords, engagements ou négociations antérieurs portant sur le même objet."
+                    },
+                    {
+                        "title": "19.2 Divisibilité",
+                        "content": "Si l'une quelconque des stipulations des présentes CGV s'avère nulle ou inapplicable en vertu d'une loi ou d'une réglementation applicable, ou d'une décision de justice définitive, cette stipulation sera réputée non écrite, sans affecter la validité des autres stipulations, qui demeurent pleinement applicables."
+                    },
+                    {
+                        "title": "19.3 Non-renonciation",
+                        "content": "Le fait pour l'une des parties de ne pas se prévaloir d'un manquement de l'autre partie à l'une quelconque de ses obligations au titre des présentes CGV ne saurait s'interpréter comme une renonciation à l'obligation en cause pour l'avenir."
+                    },
+                    {
+                        "title": "19.4 Cession",
+                        "content": "Le Client ne peut céder ou transférer tout ou partie de ses droits ou obligations découlant des présentes CGV ou d'un contrat sans l'accord préalable écrit d'Epsilon Chimie. Epsilon Chimie peut librement céder ses droits et obligations à toute entité de son groupe ou dans le cadre d'une cession de fonds de commerce ou d'une opération de restructuration, sous réserve d'en informer le Client."
+                    },
+                    {
+                        "title": "19.5 Communication",
+                        "content": "Toutes les notifications, mises en demeure ou communications prévues par les présentes CGV doivent être faites par écrit (courrier recommandé avec accusé de réception ou courriel avec accusé de réception électronique) à l'adresse du siège social ou à l'adresse électronique désignée par chaque partie. Les parties s'engagent à se notifier mutuellement tout changement d'adresse dans un délai raisonnable."
+                    },
+                    {
+                        "title": "19.6 Langue",
+                        "content": "La version française des présentes CGV fait foi. Des traductions en d'autres langues peuvent être mises à disposition à titre informatif. En cas de divergence entre la version française et une version traduite, la version française prévaut."
+                    }
+                ]
+            }
+        }
+    },
+
+    "note" : "La version anglaise est fournie à titre indicatif uniquement. En cas de divergence, la version française fera foi."
+}

@@ -59,10 +59,10 @@ function Footer() {
                 <article>
                     <span>LEGAL</span>
                     <ul>
-                        <li>Legal notice</li>
-                        <li>Privacy policy</li>
-                        <li>General T&Cs</li>
-                        <li>Cookie policy</li>
+                        <li><Link to="/legal-notice">Legal notice</Link></li>
+                        <li><Link to="/privacy-policy">Privacy policy</Link></li>
+                        <li><Link to="/general-t&c">General T&Cs</Link></li>
+                        <li><Link to="/general-terms">Conditions of Sales</Link></li>
                     </ul>
                 </article>
             </section>

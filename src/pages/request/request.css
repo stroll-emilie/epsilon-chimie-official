@@ -10,7 +10,7 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
-label {
+.labelField {
   display: flex;
   align-items: center;
   width: 100%;
@@ -21,7 +21,7 @@ label {
   line-height: 8px;
   text-transform: uppercase;
 }
-label span {
+.labelField span {
   color: var(--color-icon-danger);
   font-family: var(--font-family-body);
   font-weight: var(--font-weight-bold);
@@ -97,11 +97,13 @@ section#request article form .input-comment {
   color: var(--color-content-secondary);
 }
 section#request article form .input-comment a {
-  cursor: pointer;
   color: var(--color-content-accent);
 }
 section#request article form .input-comment a:hover {
   text-decoration: underline;
+}
+section#request article form #privacyPolicyCheck {
+  cursor: pointer;
 }
 section#request article form hr {
   color: var(--color-border-reversed);
@@ -146,7 +148,7 @@ section#request article form#form-compound > div#request-type > div {
   justify-content: space-between;
   gap: var(--spacing-x-large);
 }
-section#request article form#form-compound > div#request-type > div > div {
+section#request article form#form-compound > div#request-type > div > label {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-x-small);
@@ -154,15 +156,16 @@ section#request article form#form-compound > div#request-type > div > div {
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   width: 48%;
+  cursor: pointer;
 }
-section#request article form#form-compound > div#request-type > div > div input {
+section#request article form#form-compound > div#request-type > div > label input {
   margin-top: 7px;
 }
-section#request article form#form-compound > div#request-type > div > div > div {
+section#request article form#form-compound > div#request-type > div > label > div {
   display: flex;
   flex-direction: column;
 }
-section#request article form#form-compound > div#request-type > div > div > div > span {
+section#request article form#form-compound > div#request-type > div > label > div > span {
   font-weight: var(--font-weight-bold);
 }
 section#request article form#form-compound > div#quantity-purity, section#request article form#form-compound > div#packing-required, section#request article form#form-compound > div#company-institution, section#request article form#form-compound > div#country-website, section#request article form#form-compound > div#your-name, section#request article form#form-compound > div#mail-phone, section#request article form#form-compound > div#role {
