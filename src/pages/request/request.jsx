@@ -22,24 +22,28 @@ function Request() {
     const prod = useMemo(() => id ? getProductById(products, id) : null, [products, id]);
     
     const [formStep, setFormStep] = useState(0)
+    
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const packing = searchParams.get('packing');
     
-    
+    // donnée du formulaire préremplie / vide
     const [formData, setFormData] = useState({
         requestType: id ? "catalogue" : "custom", compoundName: "", quantity: "", purity: "", packing: packing || "", required: "default", application: "",
         company: "", sector: "", country: "", website: "", additional: "", privacyPolicy: "",
         firstName: "", lastName: "", role: "", email: "", tel: ""
     });
 
+    // si le produit dans l'url est inexistant --> error 404
     useEffect(() => {
         if (!loading && id && !prod) {
             navigate('/error404');
         }
     }, [loading, id, prod]);
 
+    // préremplie la pureté dans le formulaire (en passant par la fonction prévu pour)
     useEffect(() => {
         if (!prod) return;
         const { name, purity } = parseNom(prod["Nom"]);
@@ -50,26 +54,44 @@ function Request() {
         }));
     }, [prod]);
     
+    // pagination
     const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
     const next = () => setFormStep((s) => s + 1);
     const prev = () => setFormStep((s) => s - 1);
 
-
+    // envoie des mail suite à soumission du formulaire
     const handleSubmit = () => {
-        console.log("Données finales :", formData);
-        
-        emailjs.send(
-            EMAILJS_CONFIG.serviceId, 
-            EMAILJS_CONFIG.templateId, 
-            formData
-        );
-        
-        emailjs.send(
-            EMAILJS_CONFIG.serviceId,
-            EMAILJS_CONFIG.replyTemplateId,
-            formData
-        );
-        navigate('/success', { state: { fromForm: true } })
+        // protection pour éviter le double envoie
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+        try{
+            emailjs.send(
+                EMAILJS_CONFIG.serviceId, 
+                EMAILJS_CONFIG.templateId, 
+                formData
+            );
+            
+            emailjs.send(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.replyTemplateId,
+                formData
+            );
+            navigate('/success', { state: { fromForm: true } })
+        } catch (error) {
+            console.log(error.status);  // 429 = limite dépassée
+            console.log(error.text);    // message d'erreur
+            if (error instanceof TypeError && error.message === 'Failed to fetch') {
+                // erreur réseau / pas de connexion
+                setError("Connexion impossible, vérifiez votre réseau.");
+            }
+            if (error.status === 429) {
+                alert("limite de message atteinte veuillez ré-essayé ultérieurement");
+            } else {
+                alert("une erreur est survenue, veuillez ré-essayé ultérieurement");
+            }
+        } finally {
+            setIsSubmitting(false);
+        }
     };
     // Champs obligatoire pour passer à l'étape suivante 
     const REQUIRED_FIELDS = {
