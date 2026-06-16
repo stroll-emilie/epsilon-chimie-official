@@ -53,6 +53,8 @@ function Request() {
     const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
     const next = () => setFormStep((s) => s + 1);
     const prev = () => setFormStep((s) => s - 1);
+
+
     const handleSubmit = () => {
         console.log("Données finales :", formData);
         
@@ -70,7 +72,7 @@ function Request() {
                 firstName: formData.firstName,
             }
         );
-        alert("Mail envoyé");
+        navigate('/success', { state: { fromForm: true } })
     };
     // Champs obligatoire pour passer à l'étape suivante 
     const REQUIRED_FIELDS = {
