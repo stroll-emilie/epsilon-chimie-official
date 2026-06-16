@@ -13,7 +13,7 @@ import { getProductById, parseNom, getDefaultPurity} from '../../services/dataSe
 import { useApp } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 // FIXME: mettre le bon fichier de config
-import { EMAILJS_CONFIG } from '../../config/tempo.js'
+import { EMAILJS_CONFIG } from '../../config/emailjs.js'
 
 function Request() {
     const navigate = useNavigate();
@@ -67,10 +67,7 @@ function Request() {
         emailjs.send(
             EMAILJS_CONFIG.serviceId,
             EMAILJS_CONFIG.replyTemplateId,
-            {
-                email: formData.email,
-                firstName: formData.firstName,
-            }
+            formData
         );
         navigate('/success', { state: { fromForm: true } })
     };
