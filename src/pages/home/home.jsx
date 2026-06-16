@@ -19,7 +19,7 @@ import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg'
 import Phosphines from '../../assets/images/schema/family-phosphine.svg';
 import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
-import EffeilTower from  '../../assets/images/effel_tower.png'
+import EiffelTower from  '../../assets/images/effel_tower.png'
 
 import { useNavigate,Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -29,7 +29,7 @@ function Home() {
     /* Pour la répétition dans le carousel */
     const items = [
         { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Guidelines' },
-        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'most chemicals above 98%' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Most chemicals above 98%' },
         { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
@@ -45,15 +45,20 @@ function Home() {
         navigate(`/catalogue?search=${encodeURIComponent(query)}`);
     }
 
-    const popularSearch = ["05026","99147","07044-1","06021"];
-
-    return (
+    const popularSearch = [
+        {cas: '103694-84-4', ec: '05026'},
+        {cas: '1984-15-2', ec: '99147'},
+        {cas: '103725-47-9', ec: '07044-1'},
+        {cas: '65717-97-7', ec: '06021'}
+    ]
+    
+    return ( 
     <>
         <section id="presentation">
             <article>
                 <div>
                     <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
-                    <h1>European chemicals Manufacturer</h1>
+                    <h1>European Chemicals Manufacturer</h1>
                     <p>We manufacture over hundreds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
@@ -68,7 +73,7 @@ function Home() {
                     <img src={HWE} alt="" />
                 </div>
                 <ul>
-                    <li><span>1 000+</span>REFERENCES</li>
+                    <li><span>1,000+</span>REFERENCES</li>
                     <li><span>30+ YRS</span>OF EXPERIENCE</li>
                     <li><span>ICH-Q7</span>GUIDELINES</li>
                 </ul>
@@ -94,7 +99,7 @@ function Home() {
             <article>
                 <div>
                     <legend><div className='losange'></div>COMPOUND FINDER</legend>
-                    <h2>Search across 1 000+ references</h2>
+                    <h2>Search across 1,000+ references</h2>
                     <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
                 </div>
                 <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
@@ -122,12 +127,12 @@ function Home() {
                     <div className='popular'>
                         <ul>
                             <p>Popular : </p>
-                            {popularSearch.map(search => (
+                            {popularSearch.map(({ cas, ec }) => (
                                 <button
-                                    key={search}
-                                    onClick={() => navigate(`/catalogue?search=${encodeURIComponent(search)}`)}
+                                    key={cas}
+                                    onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
                                 >
-                                    {search}
+                                    {cas}
                                 </button>
                             ))}
                         </ul>
@@ -146,13 +151,11 @@ function Home() {
         </section>
 
         <section id='capabilites'>
-            <img src={EffeilTower} alt="Tour Effel" />
-
+            <img src={EiffelTower} alt="Tour Eiffel" />
             <article>
                 <legend><div className='losange'></div>CAPABILITIES</legend>
                 <h2>One laboratory, Three complementary services.</h2>
                 <div>
-                    <img src="" alt="" />
                     <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
                         <br /> <br />
                         Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :

@@ -13,7 +13,7 @@ import { getProductById, parseNom, getDefaultPurity} from '../../services/dataSe
 import { useApp } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 // FIXME: mettre le bon fichier de config
-import { EMAILJS_CONFIG } from '../../config/tempo.js'
+import { EMAILJS_CONFIG } from '../../config/emailjs.js'
 
 function Request() {
     const navigate = useNavigate();
@@ -53,6 +53,8 @@ function Request() {
     const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
     const next = () => setFormStep((s) => s + 1);
     const prev = () => setFormStep((s) => s - 1);
+
+
     const handleSubmit = () => {
         console.log("Données finales :", formData);
         
@@ -65,12 +67,9 @@ function Request() {
         emailjs.send(
             EMAILJS_CONFIG.serviceId,
             EMAILJS_CONFIG.replyTemplateId,
-            {
-                email: formData.email,
-                firstName: formData.firstName,
-            }
+            formData
         );
-        alert("Mail envoyé");
+        navigate('/success', { state: { fromForm: true } })
     };
     // Champs obligatoire pour passer à l'étape suivante 
     const REQUIRED_FIELDS = {

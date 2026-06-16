@@ -1,17 +1,6 @@
 {
     "privacy-policy": {
         "head": "Epsilon Chimie SARL respecte votre vie privée et s'engage à traiter vos données à caractère personnel conformément au règlement général sur la protection des données (UE) 2016/679 (« RGPD ») et à la loi française sur la protection des données.",
-        "nav": [
-            "1. Responsable du traitement des données",
-            "2. Données collectées",
-            "3. Finalités et base juridique",
-            "4. Rétention",
-            "5. Cookies et traceurs",
-            "6. Vos droits",
-            "7. Transferts en dehors de l'UE",
-            "8. Sécurité des données",
-            "9. Modifications"
-        ],
         "sections": {
             "controller": {
                 "title": "1. Responsable du traitement des données",
@@ -72,14 +61,6 @@
     
     "legal-notice": {
         "head": "Conformément à la loi française n° 2004-575 du 21 juin 2004 relative à la confiance dans l'économie numérique, les utilisateurs de ce site web sont informés par la présente de l'identité de l'éditeur et de l'hébergeur.",
-        "nav": [
-            "Art. 1 — Éditeur",
-            "Art. 2 — Hébergeur",
-            "Art. 3 — Propriété Intellectuelle",
-            "Art. 4 — Responsabilité",
-            "Art. 5 — Loi Applicables",
-            "Art. 6 — Modification des mentions"
-        ],
         "sections" : {
             "publisher": {
                 "title": "Art. 1 — Éditeur",
@@ -109,16 +90,6 @@
     },
 
     "general-tc": {
-        "nav": [
-            "Art. 1 — Objet",
-            "Art. 2 — Description et Accès au Site",
-            "Art. 3 — Propriété Intellectuelle",
-            "Art. 4 — Responsabilité",
-            "Art. 5 — Hyperliens",
-            "Art. 6 — Données Personelles et Cookies",
-            "Art. 7 — Loi Applicable et Juridiction",
-            "Art. 8 — Modifications"
-        ],
         "sections": {
             "purpose": {
                 "title": "Art. 1 — Objet",
@@ -161,27 +132,6 @@
 
     "general-terms": {
         "head": "Epsilon Chimie SARL (ci-après dénommée « Epsilon Chimie » ou le « Vendeur »), société à responsabilité limitée de droit français constituée en 1995, est spécialisée dans la fabrication et la vente de principes actifs pharmaceutiques (« API ») destinés aux secteurs pharmaceutique, biotechnologique et de la recherche scientifique.<br /><br />Les présentes Conditions générales de vente (ci-après les « CGV ») constituent, conformément à l'article L. 441-1 du Code de commerce français, le seul fondement des relations commerciales entre Epsilon Chimie et tout acheteur professionnel (ci-après le « Client »). Elles s'appliquent à l'exclusion de tout autre document, y compris les conditions générales d'achat du Client.<br/><br/>Epsilon Chimie exerce ses activités sous la supervision des autorités réglementaires compétentes et ses Produits sont fabriqués conformément aux Bonnes Pratiques de Fabrication (BPF) applicables aux substances pharmaceutiques actives, en particulier la directive ICH Q7 et les réglementations équivalentes des autorités compétentes (EMA, FDA, PMDA et autres).",
-        "nav": [
-            "Art. 1 — Champ d'application",
-            "Art. 2 — Offres et Commandes",
-            "Art. 3 — Prix",
-            "Art. 4 — Conditions de Paiement",
-            "Art. 5 — Livraison et Transfert des Risques",
-            "Art. 6 — Spécifications, Qualité et Documentation Réglementaire",
-            "Art. 7 — Conformité GMP et Réglementation Pharmaceutique",
-            "Art. 8 — Réception, Réclamations et Non-conformités",
-            "Art. 9 — Garanties et Limitation de Responsabilité",
-            "Art. 10 — Réglementation REACH, CLP et Environnement",
-            "Art. 11 — Contrôle des Exportations et Sanctions Internationales",
-            "Art. 12 — Force Majeure",
-            "Art. 13 — Propriété Intellectuelle",
-            "Art. 14 — Confidentialité",
-            "Art. 15 — Protection des Données Personnelles",
-            "Art. 16 — Lutte contre la Corruption et Conformité Éthique",
-            "Art. 17 — Résiliation",
-            "Art. 18 — Loi Applicable et Règlement des Litiges",
-            "Art. 19 — Dispositions Générales"
-        ],
         "sections":{
             "scope": {
                 "title": "Art. 1 — Champ d'application",
