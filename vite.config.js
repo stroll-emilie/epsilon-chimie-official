@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 
 export default defineConfig({
-  base: '/',
+  // FIXME: mettre '/' pour l'envoie en prod
+  base: '/epsilon-chimie-official/',
   plugins: [react(),tailwindcss()],
 })
 
