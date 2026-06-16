@@ -291,6 +291,7 @@ section#success article:last-of-type div:first-of-type h1 {
   color: var(--color-content-accent);
 }
 section#success article:last-of-type div:first-of-type span {
+  text-align: center;
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-h1);
