@@ -3,14 +3,13 @@ import { XIcon } from '../../../assets/icons/x_icon'
 import { SmsTrackingIcon } from '../../../assets/icons/sms_tracking_icon'
 import { useLocation, Navigate, Link } from 'react-router-dom'
 
-function Success({data,onChange}) {
+function Success() {
 
     const location = useLocation();
 
     if (!location.state?.fromForm) return <Navigate to="/" />;
 
     return (
-    <>
         <section id="success">
             <article>
                 <Link to="/"><XIcon/></Link>
@@ -27,7 +26,6 @@ function Success({data,onChange}) {
                 </div>
             </article>
         </section>
-    </>
     )
 }
 

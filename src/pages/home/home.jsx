@@ -127,9 +127,9 @@ function Home() {
                     <div className='popular'>
                         <ul>
                             <p>Popular : </p>
-                            {popularSearch.map(({ cas, ec }, index) => (
+                            {popularSearch.map(({ cas, ec }) => (
                                 <button
-                                    key={index}
+                                    key={cas}
                                     onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
                                 >
                                     {cas}

@@ -170,9 +170,9 @@ function Catalogue() {
                                 <div>
                                     <div className="number">OR YOU CAN TRY ONE OF THESE</div>
                                     <ul>
-                                        {popularSearch.map(({ cas, ec }, index) => (
+                                        {popularSearch.map(({ cas, ec }) => (
                                             <button
-                                                key={index}
+                                                key={cas}
                                                 onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
                                             >
                                                 {cas}
