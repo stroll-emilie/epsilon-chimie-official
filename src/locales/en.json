@@ -1,17 +1,6 @@
 {
     "privacy-policy": {
         "head": "Epsilon Chimie SARL respects your privacy and is committed to processing your personal data in accordance with the General Data Protection Regulation (EU) 2016/679 (“GRPD”) and the French Data Protection Act.",
-        "nav": [
-            "1. Data controller",
-            "2. Data we collect",
-            "3. Purposes and legal basis",
-            "4. Retention",
-            "5. Cookies and trackers",
-            "6. Your rights",
-            "7. Transfers outside the EU",
-            "8. Data Security",
-            "9. Changes to This Policy"
-        ],
         "sections": {
             "controller": {
                 "title": "1. Data controller",
@@ -72,14 +61,6 @@
 
     "legal-notice": {
         "head": "In accordance with French law n° 2004-575 of 21 June 2004 on confidence in the digital economy, users of this website are hereby informed of the identity of the publisher and the host.",
-        "nav": [
-            "Art. 1 — Publisher",
-            "Art. 2 — Host",
-            "Art. 3 — Intellectual Property",
-            "Art. 4 — Liability",
-            "Art. 5 — Applicable law",
-            "Art. 6 — Change to this notice"
-        ],
         "sections" : {
             "publisher": {
                 "title": "Art. 1 — Publisher",
@@ -109,16 +90,6 @@
     },
 
     "general-tc": {
-        "nav": [
-            "Art. 1 — Purpose",
-            "Art. 2 — Description and Access to the Site",
-            "Art. 3 — Intellectual Property",
-            "Art. 4 — Liability",
-            "Art. 5 — Hyperlinks",
-            "Art. 6 — Personal Data and Cookies",
-            "Art. 7 — Governing Law and Jurisdiction",
-            "Art. 8 — Changes to These Terms"
-        ],
         "sections": {
             "purpose": {
                 "title": "Art. 1 — Purpose",
@@ -161,27 +132,6 @@
 
     "general-terms": {
         "head": "Epsilon Chimie SARL, (hereinafter “Epsilon Chimie” or the “Seller”), as a Limited Liability Company (Société à Responsabilités Limitées) incorporated under French law in 1995, specialises in the manufacture and sale of Active Pharmaceutical Ingredients (“API”) intended for pharmaceutical, biotechnology and scientific research industries.<br/><br/>These General Terms and Conditions of Sales (hereinafter the “GTCS”) constitute, in accordance with Article L. 441-1 of the French Commercial Code (Code de commerce), the sole basis for commercial negotiation between Epsilon Chimie and any professional buyer (hereinafter the “Customer”). They apply to the exclusion of any document, including the Customer's general purchasing conditions.<br/><br/>Epsilon Chimie operates under the supervision of the competent regulatory authorities and its Products are manufactured in compliance with the Good Manufacturing Practices (GMP) applicable to active pharmaceutical substances, in particular the ICH Q7 guideline and the equivalent regulations of the competent authorities (EMA, FDA, PMDA and others).",
-        "nav": [
-            "Art. 1 — Scope and Application",
-            "Art. 2 — Offers and Orders",
-            "Art. 3 — Prices",
-            "Art. 4 — Payment Terms",
-            "Art. 5 — Delivery and Risk Transfer",
-            "Art. 6 — Specifications, Quality and Regulatory Documentation",
-            "Art. 7 — GMP Compliance and Pharmaceutical Regulations",
-            "Art. 8 — Acceptance, Complaints and Non-conformity",
-            "Art. 9 — Warranties and Limitation of Liability",
-            "Art. 10 — Reach, CLP and Environmental Regulations",
-            "Art. 11 — Export controls and International sanctions",
-            "Art. 12 — Force Majeure",
-            "Art. 13 — Intellectual Property",
-            "Art. 14 — Confidentiality",
-            "Art. 15 — Personal Data Protection",
-            "Art. 16 — Anti-corruption and Ethical compliance",
-            "Art. 17 — Termination",
-            "Art. 18 — Governing Law and Dispute Resolution",
-            "Art. 19 — General Provisions"
-        ],
         "sections":{ 
             "scope": {
                 "title": "Art. 1 — Scope and Application",

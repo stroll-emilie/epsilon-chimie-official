@@ -272,6 +272,7 @@ section{
                     &#pagination{
                         display: flex;
                         justify-content: flex-end;
+                        align-items: center;
                         gap: var(--spacing-xx-small);
                         button{
                             padding: var(--spacing-xx-small) var(--spacing-x-small);
@@ -289,6 +290,7 @@ section{
                                 border: none;
                             }
                         }
+
                     }
                 }
             }

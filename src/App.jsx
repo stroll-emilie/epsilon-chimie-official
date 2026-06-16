@@ -42,9 +42,6 @@ function App() {
 
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
-
-
-
           </Routes>
           <Footer />
         </ProductProvider>

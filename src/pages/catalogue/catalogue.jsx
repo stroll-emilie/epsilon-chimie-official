@@ -44,6 +44,13 @@ function Catalogue() {
 
     useEffect(() => setCurrentPage(1), [search,selectedFamily])
 
+    const popularSearch = [
+        {cas: '103694-84-4', ec: '05026'},
+        {cas: '1984-15-2', ec: '99147'},
+        {cas: '103725-47-9', ec: '07044-1'},
+        {cas: '65717-97-7', ec: '06021'}
+    ]
+
     return (
     <>
         <section id="searchInCatalogue">
@@ -51,7 +58,7 @@ function Catalogue() {
             <article>
                 <div>
                     <h2>Product catalogue</h2>
-                    <p>{dataProcessed.length} of 1 000+ references. Every batch ships with a Certificate of Analysis.</p>
+                    <p>{dataProcessed.length} of 1,000+ references. Every batch ships with a Certificate of Analysis.</p>
                 </div>
                 <div>
                     <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
@@ -163,10 +170,14 @@ function Catalogue() {
                                 <div>
                                     <div className="number">OR YOU CAN TRY ONE OF THESE</div>
                                     <ul>
-                                        <button type="button" onClick={() => setSearch("Phosphonic Acids")}>Phosphonic Acids</button>
-                                        <button type="button" onClick={() => setSearch("Diethyl")}>Diethyl</button>
-                                        <button type="button" onClick={() => setSearch("Phosphonates")}>Phosphonates</button>
-                                        <button type="button" onClick={() => setSearch("Triphenyl")}>Triphenyl</button>
+                                        {popularSearch.map(({ cas, ec }, index) => (
+                                            <button
+                                                key={index}
+                                                onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
+                                            >
+                                                {cas}
+                                            </button>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -178,10 +189,7 @@ function Catalogue() {
 
                 <div id="pagination">
                     <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1}><CircleArrowIcon/></button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    {/* button pages */}
+                    <span>{currentPage}/{totalPages}</span>
                     <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages}><CircleArrowIcon/></button>
                 </div>
 

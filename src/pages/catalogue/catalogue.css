@@ -427,6 +427,7 @@ section#content-catalogue article#product div#product-container #empty-search > 
 section#content-catalogue article#product div#pagination {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: var(--spacing-xx-small);
 }
 section#content-catalogue article#product div#pagination button {
