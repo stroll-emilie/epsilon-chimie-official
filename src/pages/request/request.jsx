@@ -96,6 +96,7 @@ function Request() {
         2: ["firstName", "lastName", "email"],
     };
 
+    // vérifie que les champs required sont bien remplie
     const isStepValid = REQUIRED_FIELDS[formStep].every((field) => {
         const value = formData[field];
         if(typeof value === "boolean") return value === true;

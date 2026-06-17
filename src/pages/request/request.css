@@ -139,16 +139,16 @@ section#request article form#form-compound > div {
   padding: 0 var(--spacing-x-large);
   gap: var(--spacing-medium);
 }
-section#request article form#form-compound > div#request-type {
-  flex-direction: column;
+section#request article form#form-compound > div#request-type-container {
   display: flex;
+  flex-direction: column;
 }
-section#request article form#form-compound > div#request-type > div {
+section#request article form#form-compound > div#request-type-container > div {
   display: flex;
   justify-content: space-between;
   gap: var(--spacing-x-large);
 }
-section#request article form#form-compound > div#request-type > div > label {
+section#request article form#form-compound > div#request-type-container > div > label {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-x-small);
@@ -158,14 +158,14 @@ section#request article form#form-compound > div#request-type > div > label {
   width: 48%;
   cursor: pointer;
 }
-section#request article form#form-compound > div#request-type > div > label input {
+section#request article form#form-compound > div#request-type-container > div > label input {
   margin-top: 7px;
 }
-section#request article form#form-compound > div#request-type > div > label > div {
+section#request article form#form-compound > div#request-type-container > div > label > div {
   display: flex;
   flex-direction: column;
 }
-section#request article form#form-compound > div#request-type > div > label > div > span {
+section#request article form#form-compound > div#request-type-container > div > label > div > span {
   font-weight: var(--font-weight-bold);
 }
 section#request article form#form-compound > div#quantity-purity, section#request article form#form-compound > div#packing-required, section#request article form#form-compound > div#company-institution, section#request article form#form-compound > div#country-website, section#request article form#form-compound > div#your-name, section#request article form#form-compound > div#mail-phone, section#request article form#form-compound > div#role {

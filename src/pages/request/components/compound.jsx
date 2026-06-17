@@ -6,8 +6,8 @@ function Compound({data, onChange}) {
     
     return (
     <>
-        <div id='request-type'>
-            <label htmlFor="request-type" className='labelField'>Request Type</label>
+        <div id='request-type-container'>
+            <label className='labelField'>Request Type</label>
             <div>
                 <label htmlFor='buttonCatalogue'>
                     <input
@@ -43,6 +43,7 @@ function Compound({data, onChange}) {
         <div id='product-name'>
             <label htmlFor="name" className='labelField'>compound name, cas number or target structure <span>*</span></label>
             <input 
+                id='name'
                 type="text" 
                 placeholder='e.g. Diethyl phosphonate, CAS 762-04-9' 
                 value={data.compoundName}
@@ -55,6 +56,7 @@ function Compound({data, onChange}) {
             <div>
                 <label htmlFor="quantity" className='labelField'>quantity <span>*</span></label>
                 <input 
+                    id='quantity'
                     type="text" 
                     placeholder='e.g. 250 g or 5x100 g'
                     value={data.quantity}
@@ -65,12 +67,13 @@ function Compound({data, onChange}) {
             </div>
             <div>
                 <label htmlFor="purity" className='labelField'>minimum purity <span>*</span></label>
-                <select 
+                <select
+                    id='purity'
                     name="purity"
                     value={data.purity}
                     onChange={(e) => onChange({purity: e.target.value})}
                 >
-                    <option value="default">Select a purity</option>
+                    <option value="default" hidden>Select a purity</option>
                     <option value="99">99%</option>
                     <option value="min98">min. 98%</option>
                     <option value="95">95%</option>
@@ -85,6 +88,7 @@ function Compound({data, onChange}) {
             <div>
                 <label htmlFor="packing" className='labelField'>packing preference </label>
                 <input 
+                    id='packing'
                     type="text" 
                     placeholder='e.g. x*50 g glass bottles'
                     value={data.packing}
@@ -95,7 +99,8 @@ function Compound({data, onChange}) {
             <div>
                 <label htmlFor="required" className='labelField'>required by </label>
                 <select 
-                    name="purity"
+                    id='required'
+                    name="required"
                     value={data.required}
                     onChange={(e) => onChange({required: e.target.value})}
                 >
@@ -109,8 +114,9 @@ function Compound({data, onChange}) {
         </div>
 
         <div id='application'>
-            <label htmlFor="name" className='labelField'>application / end-use</label>
+            <label htmlFor="area-application" className='labelField'>application / end-use</label>
             <textarea 
+                id='area-application'
                 placeholder="e.g. HWE olefination step in a API synthesis; internal R&D only."
                 value={data.application}
                 onChange={(e) => onChange({application: e.target.value})}
@@ -122,7 +128,7 @@ function Compound({data, onChange}) {
     </>
     )
 }
-Compound.propTypes = { ...formDataProp };
 
+Compound.propTypes = formDataProp
 
 export default Compound

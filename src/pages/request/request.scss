@@ -120,9 +120,9 @@ section{
                         flex-direction: column;
                         padding: 0 var(--spacing-x-large);
                         gap: var(--spacing-medium);
-                        &#request-type{
-                            flex-direction: column;
+                        &#request-type-container{
                             display: flex;
+                            flex-direction: column;
                             > div{
                                 display: flex;
                                 justify-content: space-between;
