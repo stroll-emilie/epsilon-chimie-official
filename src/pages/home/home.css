@@ -32,8 +32,8 @@ h3 {
   letter-spacing: -1%;
 }
 
-legend {
-  gap: 2px;
+.section-label {
+  gap: 2px !important;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -42,7 +42,7 @@ legend {
   color: var(--color-content-accent);
   line-height: 8px;
 }
-legend .losange {
+.section-label .losange {
   width: 2px;
   height: 2px;
   background-color: var(--color-content-accent);
@@ -562,13 +562,24 @@ section#talk article {
   max-width: 60%;
   gap: var(--spacing-medium);
 }
-section#talk article legend {
+section#talk article > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxx-small);
+}
+section#talk article > div h2 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title);
+  line-height: 175%;
+  letter-spacing: -2%;
+}
+section#talk article > div .section-label {
   color: var(--color-content-reversed-secondary);
 }
-section#talk article legend div {
+section#talk article > div .section-label div {
   background-color: var(--color-content-reversed-secondary);
 }
-section#talk article p {
+section#talk article > div p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-md);
   line-height: 136%;
