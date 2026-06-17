@@ -123,8 +123,8 @@
                 "title": "Art. 7 — Loi Applicable et Juridiction",
                 "content": "Les présentes Conditions sont régies par le droit français.<br /><br />En cas de litige relatif à l'interprétation, à la validité ou à l'exécution des présentes Conditions, les parties s'efforceront de parvenir à un règlement à l'amiable. Si aucun accord à l'amiable n'est trouvé dans un délai de trente (30) jours à compter de la notification écrite du litige, celui-ci sera soumis aux tribunaux compétents de Brest, en France.<br /><br />La version française des présentes Conditions prévaut sur toute version traduite en cas de divergence ou de conflit."
             },
-            "purpose": {
-                "changes": "Art. 8 — Modifications",
+            "changes": {
+                "title": "Art. 8 — Modifications",
                 "content": "La Société se réserve le droit de modifier les présentes Conditions à tout moment afin de tenir compte des changements législatifs ou réglementaires ou des modifications apportées au Site. La date de la version figure en haut du présent document.<br /><br />Tout accès au Site après l'entrée en vigueur d'une version mise à jour des Conditions vaut acceptation des Conditions mises à jour."
             }
         }

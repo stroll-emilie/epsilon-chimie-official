@@ -29,10 +29,10 @@
   color: var(--color-content-reversed-primary);
 }
 
-section#custom legend {
+section#custom .section-label {
   color: var(--color-content-reversed-secondary);
 }
-section#custom legend .losange {
+section#custom .section-label .losange {
   background-color: var(--color-content-reversed-secondary);
 }
 section#custom .path, section#custom .path > span {

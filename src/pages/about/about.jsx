@@ -10,12 +10,12 @@ function About() {
             <div>
                 <article>
                     <div className='path'><Link to="/">HOME</Link> / <span>ABOUT</span></div>
-                    <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
+                    <div className="section-label"><div className='losange'></div>about the laboratory</div>
                     <h1>A french laboratory serving worldwide industry since 1995.</h1>
                     <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemicals for research and industry. Our founders trained in organometallic chemistry lab of the University of Brest; our product range still reflects that heritage.</p>
                 </article>
                 <div>
-                    <img src={Batiment} alt="" />
+                    <img src={Batiment} alt="Epsilon Chimie production site in Brest, France" />
                 </div>
             </div>
         </section>
@@ -32,7 +32,7 @@ function About() {
 
         <section id="timeline">
             <article>
-                <legend><div className='losange'></div>TIMELINE</legend>
+                <div className="section-label"><div className='losange'></div>timeline</div>
                 <h2>Twenty-eight years of phosphorus chemistry.</h2>
             </article>
 
@@ -73,7 +73,7 @@ function About() {
         <section id="quality">
             <article>
                 <div>
-                    <legend><div className='losange'></div>QUALITY</legend>
+                    <div className="section-label"><div className='losange'></div>quality</div>
                     <h2>ICH-Q7 Guidelines</h2>
                 </div>
                 <p>Our quality system is re-certified every three years. Each batch is released only after 13C-NMR, 31P-NMR or 1H-NMR confirmation, HPLC purity check and a documented visual inspection. A Certificate of Analysis accompanies every delivery.</p>
@@ -81,8 +81,8 @@ function About() {
 
             <article>
                 <div>
-                    <legend><div className='losange'></div>COMPILANCE</legend>
-                    <h2>Reach & CLP compilant.</h2>
+                    <div className="section-label"><div className='losange'></div>compliance</div>
+                    <h2>Reach & CLP compliant.</h2>
                 </div>
                 <p>All commercial references are pre-registered or fully registered under REACH when applicable. Safety Data Sheets follow the EU CLP classification and are supplied in English and French.</p>
             </article>

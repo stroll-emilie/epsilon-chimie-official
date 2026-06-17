@@ -32,7 +32,7 @@ function Product() {
     const prod = getProductById(products, id)
     
     // si le produit ne peux pas être charger --> error 404 not found
-    if (!prod) navigate('/error404')
+    if (!prod) return navigate('/error404')
         
     // préparation des informations à afficher
     const formula = formatFormula(prod["Formule brute"])
@@ -58,7 +58,7 @@ function Product() {
     <>
         <section id="product-details">
             <article>
-                <img src={imgSrc} alt="" />
+                <img src={imgSrc} alt={name} />
                 <div>
                     <div>
                         <div className="number">FORMULA</div>
@@ -78,7 +78,8 @@ function Product() {
 
             <article>
                 <div>
-                    <legend><div className='losange'></div>{prod["Réf EPSILON"]} - {getMoleculeFamily(prod)}</legend>
+                    <div className="section-label"><div className='losange'></div>{prod["Réf EPSILON"]} - {getMoleculeFamily(prod)}</div>
+
                     <h2>{name}</h2>
                 </div>
 
@@ -106,7 +107,7 @@ function Product() {
                                 ))
                             }
                         </div>
-                        <p>Larger quantities ? Wa produce up to multi kilograms batches on demand.</p>
+                        <p>Larger quantities ? We produce up to multi kilograms batches on demand.</p>
                     </div>
                     <div>
                         <button onClick={() => navigate(`/request-for-quote/${id}?packing=${currentPackingSelected}`)}>Request quote for {currentPackingSelected}</button>
@@ -133,7 +134,6 @@ function Product() {
             </article>
         </section>
 
-        <section></section>
     </>
     )
 }

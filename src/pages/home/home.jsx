@@ -57,7 +57,7 @@ function Home() {
         <section id="presentation">
             <article>
                 <div>
-                    <legend><div className='losange'></div>SINCE 1995, BREST, FRANCE</legend>
+                    <div className="section-label"><div className='losange'></div>SINCE 1995, BREST, FRANCE</div>
                     <h1>European Chemicals Manufacturer</h1>
                     <p>We manufacture over hundreds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
                 </div>
@@ -70,7 +70,7 @@ function Home() {
 
             <article>
                 <div>
-                    <img src={HWE} alt="" />
+                    <img src={HWE} alt="HWE olefination reaction sheme" />
                 </div>
                 <ul>
                     <li><span>1,000+</span>REFERENCES</li>
@@ -98,9 +98,9 @@ function Home() {
         <section id="finder">
             <article>
                 <div>
-                    <legend><div className='losange'></div>COMPOUND FINDER</legend>
+                    <div className="section-label"><div className='losange'></div>COMPOUND FINDER</div>
                     <h2>Search across 1,000+ references</h2>
-                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
+                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthesize on demand.</p>
                 </div>
                 <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
             </article>
@@ -126,26 +126,27 @@ function Home() {
                     </div>
                     <div className='popular'>
                         <ul>
-                            <p>Popular : </p>
+                            <li>Popular : </li>
                             {popularSearch.map(({ cas, ec }) => (
-                                <button
-                                    key={cas}
-                                    onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
-                                >
-                                    {cas}
-                                </button>
+                                <li key={cas}>
+                                    <button
+                                        onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
+                                    >
+                                        {cas}
+                                    </button>
+                                </li>
                             ))}
                         </ul>
                     </div>
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonate schema" />Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonate schema" />Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonate schema" />Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphonate schema" />Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphonate schema" />Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermeidates} alt="Phosphonate schema" />Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" />Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" />Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" />Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" />Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" />Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermeidates} alt="Chemical Intermediates schema" />Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -153,7 +154,7 @@ function Home() {
         <section id='capabilites'>
             <img src={EiffelTower} alt="Tour Eiffel" />
             <article>
-                <legend><div className='losange'></div>CAPABILITIES</legend>
+                <div className="section-label"><div className='losange'></div>CAPABILITIES</div>
                 <h2>One laboratory, Three complementary services.</h2>
                 <div>
                     <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
@@ -172,8 +173,7 @@ function Home() {
 
             <article>
                 <hr/>
-
-                <button onClick={() => navigate("/catalogue")}>
+                <Link to="/catalogue">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -189,12 +189,11 @@ function Home() {
                     <div className="arrowIcon">
                         <RightArrowIcon/>
                     </div>
-                    
-                </button>
+                </Link>
 
                 <hr/>
 
-                <button onClick={() => navigate("/custom")}>
+                <Link to="/custom">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -210,8 +209,7 @@ function Home() {
                     <div className="arrowIcon">
                         <RightArrowIcon/>
                     </div>
-                    
-                </button>
+                </Link>
 
                 <hr/>
             </article>
@@ -220,7 +218,7 @@ function Home() {
         <section id='families'>
             <article id='families-title'>
                 <div>
-                    <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
+                    <div className="section-label"><div className='losange'></div>PRODUCT FAMILIES</div>
                     <h2>Six families, one <br />thousand compounds</h2>
                 </div>
                 <Link to="/catalogue">Browse the full catalogue<CircleArrowIcon/></Link>
@@ -296,7 +294,7 @@ function Home() {
 
                     <div className='familie-element'>
                         <div>
-                            <img src={Intermeidates} alt="Intermeidates schema" />
+                            <img src={Intermeidates} alt="Chemical Intermeidates schema" />
                         </div>
                         <span>
                             <div className="number">FAMILY 06</div>
@@ -313,15 +311,17 @@ function Home() {
 
         <section id='talk'>
             <article>
-                <legend><div className='losange'></div>PRODUCT FAMILIES</legend>
-                <h1>Need 100g or 1kg of a compound from our R&D ?</h1>
-                <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
+                <div>
+                    <div className="section-label"><div className='losange'></div>TALK TO OUR LAB</div>
+                    <h2>Need 100g or 1kg of a compound from our R&D ?</h2>
+                    <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
+                </div>
                 <nav>
                     <Link to="/request-for-quote">Request for quote</Link>
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>
-            <img src={PhosphonateMark} alt="" />
+            <img src={PhosphonateMark} alt="Phosphonate molecule structure" />
         </section>
     </>
     )

@@ -22,8 +22,8 @@ h3{
     letter-spacing: -1%;
 }
 
-legend{
-    gap: 2px;
+.section-label { 
+    gap: 2px !important;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -31,6 +31,7 @@ legend{
     font-size: var(--font-size-body-sm);
     color: var(--color-content-accent);
     line-height: 8px;
+    text-transform: uppercase;
     .losange{
         width: 2px;
         height: 2px;
@@ -262,7 +263,7 @@ section{
                 hr{
                     color: var(--color-border-reversed);
                 }
-                > button{
+                > a{
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -404,16 +405,26 @@ section{
             flex-direction: column;
             max-width: 60%;
             gap: var(--spacing-medium);
-            legend{
-                color: var(--color-content-reversed-secondary);
-                div{
-                    background-color: var(--color-content-reversed-secondary);
+            >div{
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-xxx-small);
+                h2{
+                    font-family: var(--font-family-title);
+                    font-size: var(--font-size-title);
+                    line-height: 175%;letter-spacing: -2%;
                 }
-            }
-            p{
-                @include text-style;
-                font-size: var(--font-size-body-lg);
-                color: var(--color-content-reversed-secondary);
+                .section-label{
+                    color: var(--color-content-reversed-secondary);
+                    div{
+                        background-color: var(--color-content-reversed-secondary);
+                    }
+                }
+                p{
+                    @include text-style;
+                    font-size: var(--font-size-body-lg);
+                    color: var(--color-content-reversed-secondary);
+                }
             }
             nav{
                 display: flex;

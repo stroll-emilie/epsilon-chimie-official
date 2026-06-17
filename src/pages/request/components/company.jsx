@@ -16,17 +16,19 @@ function Company({data,onChange}) {
             <div>
                 <label htmlFor="company" className='labelField'>company or institution</label>
                 <input 
-                type="text" 
-                placeholder='e.g. Epsilon Chimie'
-                value={data.company}
-                onChange={(e) => onChange({company: e.target.value})}
-                maxLength={150}
+                    id='company'
+                    type="text" 
+                    placeholder='e.g. Epsilon Chimie'
+                    value={data.company}
+                    onChange={(e) => onChange({company: e.target.value})}
+                    maxLength={150}
                 />
             </div>
 
             <div>
                 <label htmlFor="sector" className='labelField'>sector</label>
                 <select 
+                    id='sector'
                     name="sector"
                     value={data.sector}
                     onChange={(e) => onChange({sector: e.target.value})}
@@ -37,8 +39,6 @@ function Company({data,onChange}) {
                     <option value="r&d">R&D</option>
                     <option value="commercial">Commercial</option>
                     <option value="other">Other application</option>
-
-
                 </select>
             </div>
         </div>
@@ -47,10 +47,11 @@ function Company({data,onChange}) {
             <div>
                 <label htmlFor="country" className='labelField'>country <span>*</span></label>
                 <select
+                    id='country'
                     value={data.country}
                     onChange={(e) => onChange({country: e.target.value})}
                 >
-                    <option value="default"> Select a Country</option>
+                    <option value="default" hidden> Select a Country</option>
                     {countryOptions.map(({ code, name }) => (
                         <option key={code} value={name}>{code} - {name}</option>
                     ))}
@@ -59,20 +60,22 @@ function Company({data,onChange}) {
             </div>
 
             <div>
-                <label htmlFor="company" className='labelField'>website</label>
+                <label htmlFor="website" className='labelField'>website</label>
                 <input 
-                type="text" 
-                placeholder='e.g. https://'
-                value={data.website}
-                onChange={(e) => onChange({website: e.target.value})}
-                maxLength={200}
+                    id='website'
+                    type="text" 
+                    placeholder='e.g. https://'
+                    value={data.website}
+                    onChange={(e) => onChange({website: e.target.value})}
+                    maxLength={200}
                 />
             </div>
         </div>
 
         <div id='additional'>
             <label htmlFor="additional" className='labelField'>additional comments</label>
-            <textarea 
+            <textarea
+                id='additional'
                 placeholder="Anything else we should know?."
                 value={data.additional}
                 onChange={(e) => onChange({additional: e.target.value})}
@@ -87,13 +90,14 @@ function Company({data,onChange}) {
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
                 />
                 <span>
-                    By clicking 'Next', you confirm that you have read ou <Link to="/privacy-policy">privacy policy</Link>  and agree that your details will be used solely to process this request.
+                    By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">privacy policy</Link> and agree that your details will be used solely to process this request.
+                    <span>*</span>
                 </span>
             </label>
         </div>
     </>
     )
 }
-Company.propTypes = { ...formDataProp };
+Company.propTypes = formDataProp
 
 export default Company

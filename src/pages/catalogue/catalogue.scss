@@ -124,75 +124,80 @@ section{
                         display: flex;
                         flex-wrap: wrap;
                         gap: var(--spacing-xx-small);
-                        article{
+                        a{
                             display: flex;
                             flex-direction: column;
                             width: 18%;
                             border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
                             background-color: var(--color-bg-default);
-                            div{
-                                &.img-container{
-                                    position: relative;
-
-                                    > div{
-                                        position: absolute;
-                                        display: flex;
-                                        width: 100%;
-                                        padding: 8px;
-                                        justify-content: flex-end;
-
-                                        >div{
-                                            &.in-stock{
-                                                @include chips-large-success-rounded;
+                            cursor: pointer;
+                            article{
+                                display: flex;
+                                flex-direction: column;
+                                div{
+                                    &.img-container{
+                                        position: relative;
+    
+                                        > div{
+                                            position: absolute;
+                                            display: flex;
+                                            width: 100%;
+                                            padding: 8px;
+                                            justify-content: flex-end;
+    
+                                            >div{
+                                                &.in-stock{
+                                                    @include chips-large-success-rounded;
+                                                }
+                                                &.out-stock{
+                                                    @include chips-large-danger-rounded;
+                                                }
+                                                &.purity{
+                                                    @include chips-large-neutral-square;
+                                                }
                                             }
-                                            &.out-stock{
-                                                @include chips-large-danger-rounded;
-                                            }
-                                            &.purity{
-                                                @include chips-large-neutral-square;
-                                            }
-                                        }
-                                    }
-                                    
-
-                                }
-                                &.txt-container{
-                                    border: 1px solid #D9D9D9;
-                                    border-top: none;
-                                    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-                                    padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
-                                    div{
-                                        .nomenclature{
-                                            white-space: nowrap;
-                                            overflow: hidden;
-                                            text-overflow: ellipsis;
-                                            font-family: var(--font-family-heading);
-                                            font-size: var(--font-size-body-sm);
-                                            font-weight: var(--font-weight-bold);
-                                            line-height: 136%;
                                         }
                                         
-                                        .number{
-                                            &:first-of-type{
-                                                color: var(--color-content-accent)
+    
+                                    }
+                                    &.txt-container{
+                                        border: 1px solid #D9D9D9;
+                                        border-top: none;
+                                        border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+                                        padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
+                                        div{
+                                            .nomenclature{
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                font-family: var(--font-family-heading);
+                                                font-size: var(--font-size-body-sm);
+                                                font-weight: var(--font-weight-bold);
+                                                line-height: 136%;
+                                            }
+                                            
+                                            .number{
+                                                &:first-of-type{
+                                                    color: var(--color-content-accent)
+                                                }
+                                            }
+                                            > div{
+                                                display: flex;
+                                                justify-content: space-between;
+                                                color: var(--color-content-tertiary);
                                             }
                                         }
-                                        > div{
+                                        ul{
                                             display: flex;
-                                            justify-content: space-between;
-                                            color: var(--color-content-tertiary);
+                                            flex-direction: column;
+                                            gap: 4px;
+                                            li{
+                                                width: fit-content;
+                                                @include chips-small-primary-rounded;
+                                            }
                                         }
+                                        
                                     }
-                                    ul{
-                                        display: flex;
-                                        flex-direction: column;
-                                        gap: 4px;
-                                        li{
-                                            width: fit-content;
-                                            @include chips-small-primary-rounded;
-                                        }
-                                    }
-                                    
                                 }
                             }
                         }
@@ -237,15 +242,18 @@ section{
                                             font-size: var(--font-size-h1);
                                         }
                                     }
-                                    nav{
+                                    > nav{
                                         display: flex;
                                         gap: var(--spacing-xx-small);
-                                        button{
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 100%;
+                                        button,a{
                                             display: flex;
                                             gap: var(--spacing-xx-small);
                                             @include btn-grey;
+                                            width: max-content;
                                             cursor: pointer;
-
                                         }
                                         a{
                                             @include btn-blue;
@@ -287,10 +295,9 @@ section{
                             &:active{
                                 color: var(--color-content-on-primary);
                                 background-color: var(--color-bg-primary);
-                                border: none;
+                                outline: none;
                             }
                         }
-
                     }
                 }
             }
