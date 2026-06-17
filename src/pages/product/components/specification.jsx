@@ -20,6 +20,6 @@ function Specification({specsList}) {
     )
 }
 
-Specification.propTypes = formDataProp
+Specification.propTypes = specsListProp
 
 export default Specification
