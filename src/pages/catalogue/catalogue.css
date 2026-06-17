@@ -168,24 +168,29 @@ section#content-catalogue article#product div#product-container {
   flex-wrap: wrap;
   gap: var(--spacing-xx-small);
 }
-section#content-catalogue article#product div#product-container article {
+section#content-catalogue article#product div#product-container a {
   display: flex;
   flex-direction: column;
   width: 18%;
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   background-color: var(--color-bg-default);
+  cursor: pointer;
 }
-section#content-catalogue article#product div#product-container article div.img-container {
+section#content-catalogue article#product div#product-container a article {
+  display: flex;
+  flex-direction: column;
+}
+section#content-catalogue article#product div#product-container a article div.img-container {
   position: relative;
 }
-section#content-catalogue article#product div#product-container article div.img-container > div {
+section#content-catalogue article#product div#product-container a article div.img-container > div {
   position: absolute;
   display: flex;
   width: 100%;
   padding: 8px;
   justify-content: flex-end;
 }
-section#content-catalogue article#product div#product-container article div.img-container > div > div.in-stock {
+section#content-catalogue article#product div#product-container a article div.img-container > div > div.in-stock {
   display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
@@ -202,7 +207,7 @@ section#content-catalogue article#product div#product-container article div.img-
   background-color: var(--color-bg-success);
   color: var(--color-content-success);
 }
-section#content-catalogue article#product div#product-container article div.img-container > div > div.out-stock {
+section#content-catalogue article#product div#product-container a article div.img-container > div > div.out-stock {
   display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
@@ -219,7 +224,7 @@ section#content-catalogue article#product div#product-container article div.img-
   background-color: var(--color-bg-danger);
   color: var(--color-content-danger);
 }
-section#content-catalogue article#product div#product-container article div.img-container > div > div.purity {
+section#content-catalogue article#product div#product-container a article div.img-container > div > div.purity {
   display: flex;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
@@ -236,13 +241,13 @@ section#content-catalogue article#product div#product-container article div.img-
   background-color: var(--color-bg-default);
   color: var(--color-content-secondary);
 }
-section#content-catalogue article#product div#product-container article div.txt-container {
+section#content-catalogue article#product div#product-container a article div.txt-container {
   border: 1px solid #D9D9D9;
   border-top: none;
   border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
   padding: 0 var(--spacing-medium) var(--spacing-xx-small) var(--spacing-medium);
 }
-section#content-catalogue article#product div#product-container article div.txt-container div .nomenclature {
+section#content-catalogue article#product div#product-container a article div.txt-container div .nomenclature {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -251,20 +256,20 @@ section#content-catalogue article#product div#product-container article div.txt-
   font-weight: var(--font-weight-bold);
   line-height: 136%;
 }
-section#content-catalogue article#product div#product-container article div.txt-container div .number:first-of-type {
+section#content-catalogue article#product div#product-container a article div.txt-container div .number:first-of-type {
   color: var(--color-content-accent);
 }
-section#content-catalogue article#product div#product-container article div.txt-container div > div {
+section#content-catalogue article#product div#product-container a article div.txt-container div > div {
   display: flex;
   justify-content: space-between;
   color: var(--color-content-tertiary);
 }
-section#content-catalogue article#product div#product-container article div.txt-container ul {
+section#content-catalogue article#product div#product-container a article div.txt-container ul {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-section#content-catalogue article#product div#product-container article div.txt-container ul li {
+section#content-catalogue article#product div#product-container a article div.txt-container ul li {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -326,11 +331,14 @@ section#content-catalogue article#product div#product-container #empty-search > 
   color: var(--color-content-accent);
   font-size: var(--font-size-h1);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav {
   display: flex;
   gap: var(--spacing-xx-small);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a {
   display: flex;
   gap: var(--spacing-xx-small);
   border: 0.5px solid var(--color-border-accent);
@@ -339,52 +347,54 @@ section#content-catalogue article#product div#product-container #empty-search > 
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:hover {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button:hover, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:active {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button:active, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a {
   color: var(--color-content-primary);
   border-color: var(--color-border-reversed);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:hover {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button:hover, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:hover {
   background-color: var(--color-state-bg-neutral-hover);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button:active {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button:active, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:active {
   background-color: var(--color-state-bg-neutral-pressed);
   color: var(--color-content-primary);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav button {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav button, section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a {
+  width: -moz-max-content;
+  width: max-content;
   cursor: pointer;
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a {
   border: 0.5px solid var(--color-border-accent);
   border-radius: var(--border-radius-xxl);
   padding: var(--spacing-xx-small) var(--spacing-medium);
   color: var(--color-content-accent);
   box-shadow: 0 1px 2px rgba(37, 26, 40, 0.06), 0 1px 3px rgba(37, 26, 40, 0.06);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:hover {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:hover {
   background-color: var(--color-state-bg-reversed-hover);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:active {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:active {
   background-color: var(--color-state-bg-dark-active);
   color: var(--color-content-disabled);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a {
   background-color: var(--color-bg-primary);
   color: var(--color-content-on-primary);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:hover {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:hover {
   background-color: var(--color-state-primary-hover);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:active {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:active {
   background-color: var(--color-state-primary-pressed);
 }
-section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container nav a:disabled {
+section#content-catalogue article#product div#product-container #empty-search > div #empty-info-container > nav a:disabled {
   background-color: var(--color-bg-disabled);
   color: var(--color-content-reversed-secondary);
   border: none;
@@ -442,5 +452,5 @@ section#content-catalogue article#product div#pagination button:first-of-type sv
 section#content-catalogue article#product div#pagination button:active {
   color: var(--color-content-on-primary);
   background-color: var(--color-bg-primary);
-  border: none;
+  outline: none;
 }/*# sourceMappingURL=catalogue.css.map */

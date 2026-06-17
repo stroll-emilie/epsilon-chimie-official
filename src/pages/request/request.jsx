@@ -80,8 +80,6 @@ function Request() {
         } catch (error) {
             if (error instanceof TypeError && error.message === 'Failed to fetch') {
                 alert("Connexion impossible, vérifiez votre réseau.");
-            } else if (error.status === 429) {
-                alert("Limite de messages atteinte, réessayez ultérieurement.");
             } else {
                 alert("Une erreur est survenue, réessayez ultérieurement.");
             }

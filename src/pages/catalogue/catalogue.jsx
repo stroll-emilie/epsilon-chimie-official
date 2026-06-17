@@ -73,7 +73,6 @@ function Catalogue() {
                         placeholder="Search by name, CAS number, MFCD, formula or synonym..." 
                         value={search}
                         onChange={e => setSearch(e.target.value)}
-                        onKeyDown={e => e.key === "Enter"}
                     />
                 </div>
 
@@ -123,28 +122,30 @@ function Catalogue() {
                         const imgSrc = getProductImage(ref)
 
                         return (
-                            <article key={ref} onClick={() => navigate(`/product/${ref}`)} style={{ cursor: 'pointer' }}>
-                                <div className='img-container'>
-                                    <div>
-                                        <div className='purity'>{product["Purity"] || "-"} </div>
-                                    </div>
-                                    <img src={imgSrc} alt="" />
-                                </div>
-
-                                <div className='txt-container'>
-                                    <div>
-                                        <div className="number">EC-{ref}</div>
-                                        <p className='nomenclature' title={product["NomClean"]}>{product["NomClean"]}</p>
-                                        <div className="number">
-                                            <p>CAS {product["CAS"]}</p>
-                                            <p>MW {product["Masse molaire"]}</p>
+                            <Link to={`/product/${ref}`} key={ref}>
+                                <article >
+                                    <div className='img-container'>
+                                        <div>
+                                            <div className='purity'>{product["Purity"] || "-"} </div>
                                         </div>
+                                        <img src={imgSrc} alt={product["NomClean"]} />
                                     </div>
-                                    <ul>
-                                        <li>{getMoleculeFamily(product)}</li>
-                                    </ul>
-                                </div>
-                            </article>
+
+                                    <div className='txt-container'>
+                                        <div>
+                                            <div className="number">EC-{ref}</div>
+                                            <p className='nomenclature' title={product["NomClean"]}>{product["NomClean"]}</p>
+                                            <div className="number">
+                                                <p>CAS {product["CAS"]}</p>
+                                                <p>MW {product["Masse molaire"]}</p>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>{getMoleculeFamily(product)}</li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </Link>
                         );
                     })}
 
@@ -157,7 +158,7 @@ function Catalogue() {
                                             <SearchBrokenIcon/>
                                         </div>
                                         <h2>Oups !</h2>
-                                        <h2>It seems like we don't have results for <span>"..."</span></h2>
+                                        <h2>It seems like we don't have results for <span>"{search}"</span></h2>
                                     </div>
                                     <p>Check the spelling, try a CAS number or a synonym, or widen your filters. Many compounds are also available through our on-demand synthesis service.</p>
                                     <nav>
@@ -171,12 +172,13 @@ function Catalogue() {
                                     <div className="number">OR YOU CAN TRY ONE OF THESE</div>
                                     <ul>
                                         {popularSearch.map(({ cas, ec }) => (
-                                            <button
-                                                key={cas}
-                                                onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
-                                            >
-                                                {cas}
-                                            </button>
+                                            <li key={cas}>
+                                                <button
+                                                    onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
+                                                >
+                                                    {cas}
+                                                </button>
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>
@@ -186,13 +188,13 @@ function Catalogue() {
                     
 
                 </div>
-
+                {totalPages>1 && (
                 <div id="pagination">
                     <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1}><CircleArrowIcon/></button>
                     <span>{currentPage}/{totalPages}</span>
                     <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages}><CircleArrowIcon/></button>
                 </div>
-
+                )}
             </article>
         </section>
     </>

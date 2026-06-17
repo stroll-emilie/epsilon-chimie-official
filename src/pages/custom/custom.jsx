@@ -14,7 +14,7 @@ function Custom() {
             <div>
                 <div className='path'><Link to="/">HOME</Link> / <span>CUSTOM SYNTHESIS</span></div>
                 <article>
-                    <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
+                    <div className="section-label"><div className='losange'></div>on-demand synthesis</div>
                     <h1>Synthesise a batch quickly, respecting your budget.</h1>
                     <p>We offer on-demand synthesis of non-commercial products for research. Our team is polyvalent and attentive to customer needs, so we can address challenges quickly.</p>
                 </article>
@@ -23,12 +23,12 @@ function Custom() {
                     <Link to="/catalogue">Browse the catalogue</Link>
                 </nav>
             </div> 
-            <img src={PhosphonateMark} alt="" /> 
+            <img src={PhosphonateMark} alt="Phosphonate molecule structure" /> 
         </section>
 
         <section id='process'>
             <article>
-                <legend><div className='losange'></div>PROCESS</legend>
+                <div className="section-label"><div className='losange'></div>process</div>
                 <h2>From brief to delivery, in four steps.</h2>
             </article>
             <article>
@@ -71,7 +71,7 @@ function Custom() {
         <section id='applications'>
             <article>
                 <div>
-                    <legend><div className='losange'></div>APPLICATIONS</legend>
+                    <div className="section-label"><div className='losange'></div>applications</div>
                     <h2>Where our molecules are used.</h2>
                 </div>
                 <p>For development work, we have signed agreements with international partners dedicated to custom manufacturing. For any request, do not hesitate to contact us.</p>
@@ -106,19 +106,19 @@ function Custom() {
 
         <section id='talk-to-director'>
             <article>
-                <img src={PierreCornec} alt="Pierre Cornec" />
+                <img src={PierreCornec} alt="Pierre Cornec, Director of Epsilon Chimie" />
             </article>
             <article>
                 <div>
                     <div>
-                        <legend><div className='losange'></div>ABOUT THE LABORATORY</legend>
+                        <div className="section-label"><div className='losange'></div>about the laboratory</div>
                         <h2>Pierre Cornec, Director</h2>
                     </div>
                     <p>For any question about custom synthesis or project feasibility, write or call directly. We respond to every enquiry within 48 working hours.</p>
                 </div>
                 <div>
                     <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
-                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>Mail to : pierre.corner[at]epsilon-chimie.com</a>
+                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>Mail to : pierre.cornec[at]epsilon-chimie.com</a>
                     <Link to="/request-for-quote">Request for quote</Link>
 
                 </div>

@@ -7,7 +7,7 @@ function Specification({specsList}) {
     return (
         <article id="specification">
             {specsList.map((spec) => (
-                <div key={spec} className='specification-elem'>
+                <div key={spec.label} className='specification-elem'>
                     <p>{spec.label}</p>
                     {spec.label.toUpperCase() === "MOLECULAR FORMULA" ? (
                         <p dangerouslySetInnerHTML={{ __html: spec.data }} />
@@ -19,6 +19,7 @@ function Specification({specsList}) {
         </article>
     )
 }
-Specification.propTypes = { ...specsListProp };
+
+Specification.propTypes = formDataProp
 
 export default Specification
