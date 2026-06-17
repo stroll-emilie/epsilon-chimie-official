@@ -84,7 +84,7 @@ section#request article > div .form-point.active span {
 section#request article > div .form-point.active p {
   color: var(--color-content-accent);
 }
-section#request article form input[type=text], section#request article form select, section#request article form textarea {
+section#request article form input[type=text], section#request article form input[type=email], section#request article form select, section#request article form textarea {
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-x-small) var(--spacing-medium);
@@ -101,6 +101,9 @@ section#request article form .input-comment a {
 }
 section#request article form .input-comment a:hover {
   text-decoration: underline;
+}
+section#request article form .input-comment > span > span {
+  color: var(--color-icon-danger);
 }
 section#request article form #privacyPolicyCheck {
   cursor: pointer;
