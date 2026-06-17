@@ -406,37 +406,37 @@ section#capabilites article:last-of-type {
 section#capabilites article:last-of-type hr {
   color: var(--color-border-reversed);
 }
-section#capabilites article:last-of-type > button {
+section#capabilites article:last-of-type > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   text-align: left;
 }
-section#capabilites article:last-of-type > button > div {
+section#capabilites article:last-of-type > a > div {
   gap: var(--spacing-x-small);
   display: flex;
 }
-section#capabilites article:last-of-type > button > div .service {
+section#capabilites article:last-of-type > a > div .service {
   display: flex;
   flex-direction: column;
   /*FIXME: non rencenser*/
   gap: 2px;
 }
-section#capabilites article:last-of-type > button > div .service .serviceTitle {
+section#capabilites article:last-of-type > a > div .service .serviceTitle {
   display: flex;
   align-items: center;
   /*FIXME: non rencenser*/
   gap: 9px;
 }
-section#capabilites article:last-of-type > button > div .service p {
+section#capabilites article:last-of-type > a > div .service p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-md);
   line-height: 136%;
   letter-spacing: -1%;
   color: var(--color-content-secondary);
 }
-section#capabilites article:last-of-type > button .arrowIcon {
+section#capabilites article:last-of-type > a .arrowIcon {
   /*FIXME: non renceser*/
   padding: 6px 3px;
   color: var(--color-icon-brand);

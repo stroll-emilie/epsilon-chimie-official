@@ -70,7 +70,7 @@ function Home() {
 
             <article>
                 <div>
-                    <img src={HWE} alt="" />
+                    <img src={HWE} alt="HWE olefination reaction sheme" />
                 </div>
                 <ul>
                     <li><span>1,000+</span>REFERENCES</li>
@@ -100,7 +100,7 @@ function Home() {
                 <div>
                     <div className="section-label"><div className='losange'></div>COMPOUND FINDER</div>
                     <h2>Search across 1,000+ references</h2>
-                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthezise on demand.</p>
+                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthesize on demand.</p>
                 </div>
                 <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
             </article>
@@ -128,9 +128,8 @@ function Home() {
                         <ul>
                             <li>Popular : </li>
                             {popularSearch.map(({ cas, ec }) => (
-                                <li>
+                                <li key={cas}>
                                     <button
-                                        key={cas}
                                         onClick={() => navigate(`/product/${encodeURIComponent(ec)}`)}
                                     >
                                         {cas}
@@ -174,8 +173,7 @@ function Home() {
 
             <article>
                 <hr/>
-
-                <button onClick={() => navigate("/catalogue")}>
+                <Link to="/catalogue">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -191,12 +189,11 @@ function Home() {
                     <div className="arrowIcon">
                         <RightArrowIcon/>
                     </div>
-                    
-                </button>
+                </Link>
 
                 <hr/>
 
-                <button onClick={() => navigate("/custom")}>
+                <Link to="/custom">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon/>
@@ -212,8 +209,7 @@ function Home() {
                     <div className="arrowIcon">
                         <RightArrowIcon/>
                     </div>
-                    
-                </button>
+                </Link>
 
                 <hr/>
             </article>
@@ -298,7 +294,7 @@ function Home() {
 
                     <div className='familie-element'>
                         <div>
-                            <img src={Intermeidates} alt="Intermeidates schema" />
+                            <img src={Intermeidates} alt="Chemical Intermeidates schema" />
                         </div>
                         <span>
                             <div className="number">FAMILY 06</div>
@@ -325,7 +321,7 @@ function Home() {
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>
             </article>
-            <img src={PhosphonateMark} alt="" />
+            <img src={PhosphonateMark} alt="Phosphonate molecule structure" />
         </section>
     </>
     )
