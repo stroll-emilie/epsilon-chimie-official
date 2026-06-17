@@ -60,34 +60,30 @@ function Request() {
     const prev = () => setFormStep((s) => s - 1);
 
     // envoie des mail suite à soumission du formulaire
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         // protection pour éviter le double envoie
         if (isSubmitting) return;
         setIsSubmitting(true);
         try{
-            emailjs.send(
+            await emailjs.send(
                 EMAILJS_CONFIG.serviceId, 
                 EMAILJS_CONFIG.templateId, 
                 formData
             );
             
-            emailjs.send(
+            await emailjs.send(
                 EMAILJS_CONFIG.serviceId,
                 EMAILJS_CONFIG.replyTemplateId,
                 formData
             );
             navigate('/success', { state: { fromForm: true } })
         } catch (error) {
-            console.log(error.status);  // 429 = limite dépassée
-            console.log(error.text);    // message d'erreur
             if (error instanceof TypeError && error.message === 'Failed to fetch') {
-                // erreur réseau / pas de connexion
-                setError("Connexion impossible, vérifiez votre réseau.");
-            }
-            if (error.status === 429) {
-                alert("limite de message atteinte veuillez ré-essayé ultérieurement");
+                alert("Connexion impossible, vérifiez votre réseau.");
+            } else if (error.status === 429) {
+                alert("Limite de messages atteinte, réessayez ultérieurement.");
             } else {
-                alert("une erreur est survenue, veuillez ré-essayé ultérieurement");
+                alert("Une erreur est survenue, réessayez ultérieurement.");
             }
         } finally {
             setIsSubmitting(false);
