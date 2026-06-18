@@ -94,7 +94,7 @@ export function searchProducts(products, search) {
 // compte le nombre d'élement de chaque 
 export function countByFamily(products) {
     const families = ["Phosphonic Acids", "Phosphonates", "Phosphonium Salts", "Phosphoranes", "Phosphines", "Chemical Intermediates"]
-    const counts = { "All" : products.length }
+    const counts = { "All" : products.length.toLocaleString('en-US') }
     families.forEach(f => {
         counts[f] = products.filter(p => getMoleculeFamily(p) === f).length
     })

@@ -91,7 +91,7 @@ function Company({data,onChange}) {
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
                 />
                 <span>
-                    By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/general-tc">General Terms and Conditions</Link>  and agree that your details will be used solely to process this request.
+                    By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/general-terms">General Terms and Conditions of Sales</Link> and consent to your details being used solely to process this request.
                     <span>*</span>
                 </span>
             </label>

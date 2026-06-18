@@ -30,7 +30,7 @@ function Home() {
     const items = [
         { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Guidelines' },
         { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Most chemicals above 98% purity' },
-        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
+        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgement mostly within 24 h' },
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]
     const repeated = [...items, ...items]
@@ -59,7 +59,7 @@ function Home() {
                 <div>
                     <div className="section-label"><div className='losange'></div>SINCE 1995, BREST, FRANCE</div>
                     <h1>European Chemicals Manufacturer</h1>
-                    <p>We manufacture over hundreds phosphonates, phosphoniums salts, phosphoranes and chemicals intermediates for R&D and industrial teams worldwide.</p>
+                    <p>We manufacture hundreds of phosphonates, phosphonium salts, phosphoranes and chemical intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
                 <div>
@@ -100,7 +100,7 @@ function Home() {
                 <div>
                     <div className="section-label"><div className='losange'></div>COMPOUND FINDER</div>
                     <h2>Search across 1,000+ references</h2>
-                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need ? We synthesize on demand.</p>
+                    <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need? We synthesise on demand.</p>
                 </div>
                 <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
             </article>
@@ -159,10 +159,10 @@ function Home() {
                 <div>
                     <p>We combine a stocked catalogue, made-to-order synthesis and full analytical support.
                         <br /> <br />
-                        Every compound ships with a <strong>Certificate of Analysis in-house with full traceability</strong> :
+                        Every compound ships with an <strong>in-house Certificate of Analysis in-house with full traceability</strong>:
                     </p>
                     <ul>
-                        <li>In house 13C-NMR</li>
+                        <li>13C-NMR</li>
                         <li>31P-NMR</li>
                         <li>1H-NMR</li>
                         <li>and HPLC characterisation (on request)</li>
@@ -183,7 +183,7 @@ function Home() {
                                 <div className="number">01</div>
                                 <h3>Catalogue</h3>
                             </div>
-                            <p>Over 1 000 phosphorus specialties mostly in stock, shipped from France (Brest) with full analytical documentation.</p>
+                            <p>Over 1,000 phosphorus specialties mostly in stock, shipped from France (Brest) with full analytical documentation.</p>
                         </div>
                     </div>
                     <div className="arrowIcon">
@@ -203,7 +203,7 @@ function Home() {
                                 <div className="number">02</div>
                                 <h3>Custom synthesis</h3>
                             </div>
-                            <p>Non-commercial molecules on demand, from 100mg to multi-kilogram, conform to your specification.</p>
+                            <p>Non-commercial molecules on demand, from 100 mg to multi-kilogram, conforming to your specifications.</p>
                         </div>
                     </div>
                     <div className="arrowIcon">

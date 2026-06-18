@@ -124,7 +124,7 @@ function Compound({data, onChange}) {
                 maxLength={1000}
             >
             </textarea>
-            <p className='input-comment'>Help us confirm the right grade and packaging. Treated confidentially.</p>
+            <p className='input-comment'>Help us confirm the right grade and packaging. All information is treated confidentially.</p>
         </div>
     </>
     )

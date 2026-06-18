@@ -58,7 +58,7 @@ function Catalogue() {
             <article>
                 <div>
                     <h2>Product catalogue</h2>
-                    <p>{dataProcessed.length} of 1,000+ references. Every batch ships with a Certificate of Analysis.</p>
+                    <p>{dataProcessed.length.toLocaleString('en-US')} of 1,000+ references. Every batch ships with a Certificate of Analysis.</p>
                 </div>
                 <div>
                     <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
@@ -101,7 +101,7 @@ function Catalogue() {
 
             <article id="product">
                 <div id="sort">
-                    <p className="number">{dataProcessed.length} RESULTS</p>
+                    <p className="number">{(dataProcessed.length).toLocaleString('en-US')} RESULTS</p>
                     <div>
                         <p>SORT</p>
                         <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
