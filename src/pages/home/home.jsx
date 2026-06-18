@@ -29,7 +29,7 @@ function Home() {
     /* Pour la répétition dans le carousel */
     const items = [
         { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Guidelines' },
-        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Most chemicals above 98%' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Most chemicals above 98% purity' },
         { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgment mostly within 24h' },
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
     ]

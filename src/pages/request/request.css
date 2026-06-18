@@ -12,14 +12,15 @@
 /*******************************************************************************************************************/
 .labelField {
   display: flex;
+  gap: var(--spacing-xx-small);
   align-items: center;
   width: 100%;
-  justify-content: space-between;
   font-family: var(--font-family-heading);
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-bold);
   line-height: 8px;
   text-transform: uppercase;
+  color: var(--color-content-tertiary);
 }
 .labelField span {
   color: var(--color-icon-danger);
@@ -34,6 +35,13 @@ section#request-title {
   flex-direction: column;
   align-items: flex-start;
   border-bottom: 0.5px solid var(--color-border-reversed);
+}
+section#request-title h1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: 106%;
+  color: var(--color-content-primary);
 }
 section#request article {
   display: flex;
@@ -89,6 +97,7 @@ section#request article form input[type=text], section#request article form inpu
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-x-small) var(--spacing-medium);
   outline-style: none;
+  background-color: var(--color-bg-default);
 }
 section#request article form .input-comment {
   display: flex;
@@ -107,6 +116,9 @@ section#request article form .input-comment > span > span {
 }
 section#request article form #privacyPolicyCheck {
   cursor: pointer;
+}
+section#request article form input[type=checkbox] {
+  accent-color: var(--color-bg-primary-subtle);
 }
 section#request article form hr {
   color: var(--color-border-reversed);
@@ -152,6 +164,7 @@ section#request article form#form-compound > div#request-type-container > div {
   gap: var(--spacing-x-large);
 }
 section#request article form#form-compound > div#request-type-container > div > label {
+  background-color: var(--color-bg-default);
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-x-small);

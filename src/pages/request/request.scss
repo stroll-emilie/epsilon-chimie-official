@@ -2,15 +2,15 @@
 
 .labelField{
     display: flex;
+    gap: var(--spacing-xx-small);
     align-items: center;
     width: 100%;
-    justify-content: space-between;
     font-family: var(--font-family-heading);
     font-size: var(--font-size-body-sm);
     font-weight: var(--font-weight-bold);
     line-height: 8px;
     text-transform: uppercase;
-
+    color: var(--color-content-tertiary);
     span{
         color: var(--color-icon-danger);
         font-family: var(--font-family-body);
@@ -26,6 +26,13 @@ section{
         flex-direction: column;
         align-items: flex-start;
         border-bottom: .5px solid var(--color-border-reversed);
+        h1{
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-h1);
+            font-weight: var(--font-weight-bold);
+            line-height: 106%;
+            color: var(--color-content-primary);
+        }
     }
     
     &#request{
@@ -86,6 +93,7 @@ section{
                     border-radius: var(--border-radius-lg);
                     padding: var(--spacing-x-small) var(--spacing-medium);
                     outline-style: none;
+                    background-color: var(--color-bg-default);
                 }
                 .input-comment{
                     display: flex;
@@ -106,8 +114,12 @@ section{
                 }
                 #privacyPolicyCheck{
                     cursor: pointer;
+                    
                 }
-                
+                input[type="checkbox"]{
+                    accent-color: var(--color-bg-primary-subtle);
+                }
+
                 hr{
                     color: var(--color-border-reversed);
                     height: .5px;
@@ -133,6 +145,7 @@ section{
                                 justify-content: space-between;
                                 gap: var(--spacing-x-large);
                                 >label{
+                                    background-color: var(--color-bg-default);
                                     display: flex;
                                     align-items: flex-start;
                                     gap: var(--spacing-x-small);

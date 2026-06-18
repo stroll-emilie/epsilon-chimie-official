@@ -50,7 +50,7 @@ function Footer() {
                     <span>COMPANY</span>
                     <ul>
                         <li><Link to="/about">About</Link></li>
-                        <li>Quality & ISO 9001</li>
+                        <li>Quality & ICH-Q7</li>
                         <li>Press</li>
 
                     </ul>

@@ -12,13 +12,13 @@ function Success() {
     return (
         <section id="success">
             <article>
-                <Link to="/"><XIcon/></Link>
+                <Link to="/" aria-label="Close and go back home"><XIcon aria-hidden="true"/></Link>
             </article>
             <article>
                 <SmsTrackingIcon/>
                 <div>
                     <h1>Thank you !</h1>
-                    <span>Your request has been succesfully sent.</span>
+                    <span>Your request has been successfully sent.</span>
                 </div>
                 <div>
                     <p>You will receive a confirmation email shortly. Our team will review your request and get back to you within 48 business hours. Meanwhile you can keep </p>

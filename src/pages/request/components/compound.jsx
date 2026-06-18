@@ -34,7 +34,7 @@ function Compound({data, onChange}) {
                     />
                     <div>
                         <span>Custom synthesis</span>
-                        <p>A non-commercial compound, synthesised on-demand.</p>
+                        <p>A non-commercial compound, synthesised on demand.</p>
                     </div>
                 </label>
             </div>
@@ -45,7 +45,7 @@ function Compound({data, onChange}) {
             <input 
                 id='name'
                 type="text" 
-                placeholder='e.g. Diethyl phosphonate, CAS 762-04-9' 
+                placeholder='e.g. Diethyl phosphonate, CAS 762-04-9...' 
                 value={data.compoundName}
                 onChange={(e) => onChange({compoundName: e.target.value})}
                 maxLength={100}
@@ -58,10 +58,11 @@ function Compound({data, onChange}) {
                 <input 
                     id='quantity'
                     type="text" 
-                    placeholder='e.g. 250 g or 5x100 g'
-                    value={data.quantity}
+                    placeholder='e.g. 250 g or 5x100 g...'
+                    value={data.quantity === "Other" ? "" : data.quantity}
                     onChange={(e) => onChange({quantity: e.target.value})}
                     maxLength={50}
+                    autoFocus={data.quantity === "Other"}
                 />
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
@@ -90,7 +91,7 @@ function Compound({data, onChange}) {
                 <input 
                     id='packing'
                     type="text" 
-                    placeholder='e.g. x*50 g glass bottles'
+                    placeholder='e.g. x*50 g glass bottles...'
                     value={data.packing}
                     onChange={(e) => onChange({packing: e.target.value})}
                     maxLength={50}
@@ -104,7 +105,7 @@ function Compound({data, onChange}) {
                     value={data.required}
                     onChange={(e) => onChange({required: e.target.value})}
                 >
-                    <option value="default">Select a timeline</option>
+                    <option value="default">Select a timeline until delivery</option>
                     <option value="withinweek">Within a week</option>
                     <option value="withinmonth">Within a month</option>
                     <option value="overmonth">Over a month</option>
@@ -117,7 +118,7 @@ function Compound({data, onChange}) {
             <label htmlFor="area-application" className='labelField'>application / end-use</label>
             <textarea 
                 id='area-application'
-                placeholder="e.g. HWE olefination step in a API synthesis; internal R&D only."
+                placeholder="e.g. HWE olefination step in a API synthesis; internal R&D only..."
                 value={data.application}
                 onChange={(e) => onChange({application: e.target.value})}
                 maxLength={1000}

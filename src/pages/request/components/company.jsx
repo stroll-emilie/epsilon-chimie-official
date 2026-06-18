@@ -18,7 +18,7 @@ function Company({data,onChange}) {
                 <input 
                     id='company'
                     type="text" 
-                    placeholder='e.g. Epsilon Chimie'
+                    placeholder='e.g. Epsilon Chimie...'
                     value={data.company}
                     onChange={(e) => onChange({company: e.target.value})}
                     maxLength={150}
@@ -35,7 +35,7 @@ function Company({data,onChange}) {
                 >
                     <option value="default">Select a sector</option>
                     <option value="pharmaceutical">Pharmaceutical</option>
-                    <option value="scholar">Scholar</option>
+                    <option value="scholar">Academic</option>
                     <option value="r&d">R&D</option>
                     <option value="commercial">Commercial</option>
                     <option value="other">Other application</option>
@@ -51,7 +51,7 @@ function Company({data,onChange}) {
                     value={data.country}
                     onChange={(e) => onChange({country: e.target.value})}
                 >
-                    <option value="default" hidden> Select a Country</option>
+                    <option value="default" hidden> Select a country</option>
                     {countryOptions.map(({ code, name }) => (
                         <option key={code} value={name}>{code} - {name}</option>
                     ))}
@@ -64,7 +64,7 @@ function Company({data,onChange}) {
                 <input 
                     id='website'
                     type="text" 
-                    placeholder='e.g. https://'
+                    placeholder='e.g. https://...'
                     value={data.website}
                     onChange={(e) => onChange({website: e.target.value})}
                     maxLength={200}
@@ -76,21 +76,22 @@ function Company({data,onChange}) {
             <label htmlFor="additional" className='labelField'>additional comments</label>
             <textarea
                 id='additional'
-                placeholder="Anything else we should know?."
+                placeholder="Anything else we should know ?"
                 value={data.additional}
                 onChange={(e) => onChange({additional: e.target.value})}
                 maxLength={1000}
             >
 
             </textarea>
-            <label className='input-comment' id="privacyPolicyCheck">
+            <label className='input-comment' id="privacyPolicyCheck" htmlFor='legalPart'>
                 <input 
+                    id='legalPart'
                     type="checkbox" 
                     checked={data.privacyPolicy}
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
                 />
                 <span>
-                    By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">privacy policy</Link> and agree that your details will be used solely to process this request.
+                    By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/general-tc">General Terms and Conditions</Link>  and agree that your details will be used solely to process this request.
                     <span>*</span>
                 </span>
             </label>
