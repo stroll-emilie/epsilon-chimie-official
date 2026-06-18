@@ -17,7 +17,7 @@ import GeneralTC from './pages/legal/general_tc.jsx'
 import LegalNotice from './pages/legal/legal_notice.jsx'
 import GeneralTerms from './pages/legal/general_terms.jsx'
 import Success from './pages/request/components/success.jsx'
-
+import Error from './pages/request/components/error.jsx'
 
 function App() {
   return (
@@ -42,6 +42,8 @@ function App() {
             <Route path='/general-terms' element={<GeneralTerms />} />
 
             <Route path='/success' element={<Success />} />
+            <Route path='/error' element={<Error />} />
+
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
           </Routes>

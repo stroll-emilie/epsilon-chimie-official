@@ -102,6 +102,7 @@ function Request() {
             if (error instanceof TypeError && error.message === 'Failed to fetch') {
                 setError("Connexion impossible, vérifiez votre réseau.");
             } else {
+                navigate('/error', { state: { fromForm: true } });
                 setError("Une erreur est survenue, réessayez ultérieurement.");
             }
         } finally {
@@ -124,15 +125,15 @@ function Request() {
         <section id="request">
             <article className="form-container">
                 <div>
-                    <div className={`form-point ${formStep === 0 ? "active" : ""}`}>
+                    <div className={`form-point ${formStep === 0 ? "active" : ""}`} aria-current={formStep === 0}>
                         <span>1</span> <p>COMPOUND</p>
                     </div>
                     <hr />
-                    <div className={`form-point ${formStep === 1 ? "active" : ""}`}>
+                    <div className={`form-point ${formStep === 1 ? "active" : ""}`} aria-current={formStep === 1}>
                         <span>2</span> <p>COMPANY</p>
                     </div>
                     <hr />
-                    <div className={`form-point ${formStep === 2 ? "active" : ""}`}>
+                    <div className={`form-point ${formStep === 2 ? "active" : ""}`} aria-current={formStep === 2}>
                         <span>3</span> <p>CONTACT</p>
                     </div>
                 </div>
@@ -157,10 +158,10 @@ function Request() {
                         {formStep === 0 && <span />}
 
                         {formStep <2 && (
-                            <button type="button" onClick={next} disabled={!isStepValid}> Next</button>
+                            <button type="button" onClick={next} disabled={!isStepValid} aria-disabled={!isStepValid}> Next</button>
                         )}
                         {formStep >=2 && (
-                            <button type="button" onClick={handleSubmit} disabled={!isStepValid || isSubmitting}>{isSubmitting ? "Sending..." : "Submit"}</button>
+                            <button type="button" onClick={handleSubmit} aria-disabled={!isStepValid || isSubmitting} disabled={!isStepValid || isSubmitting}>{isSubmitting ? "Sending..." : "Submit"}</button>
                         )}
                     </nav>
                 </form>

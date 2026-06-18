@@ -18,6 +18,7 @@ function Contact({data,onChange}) {
                     onChange={(e) => onChange({firstName: e.target.value})}
                     maxLength={50}
                     autoComplete='given-name'
+                    aria-required="true"
                 />
             </div>
 
@@ -30,7 +31,7 @@ function Contact({data,onChange}) {
                     onChange={(e) => onChange({lastName: e.target.value})}
                     maxLength={50}
                     autoComplete='family-name'
-
+                    aria-required="true"
                 />
             </div>
         </div>
@@ -60,6 +61,7 @@ function Contact({data,onChange}) {
                     onChange={(e) => onChange({email: e.target.value})}
                     maxLength={100}
                     autoComplete='email'
+                    aria-required="true"
                 />
             </div>
 

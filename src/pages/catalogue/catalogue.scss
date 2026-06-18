@@ -9,9 +9,11 @@ section{
         gap: 20px;
         border-bottom: 0.5px solid var(--color-border-reversed);
         > article{
-            h2{
+            h1{
+                font-family: var(--font-family-heading);
                 font-size: var(--font-size-h1);
-                font-weight: var(--font-weight-regular);
+                font-weight: var(--font-weight-bold);
+                line-height: 106%
             }
             p{
                 @include text-style;

@@ -13,11 +13,11 @@ import { RightArrowIcon } from '../../assets/icons/right_arrow_icon'
 // Families
 import HWE from '../../assets/images/schema/molecule-hwe.svg'
 import Phosphonic from '../../assets/images/schema/family-phosphonic-acid.svg';
-import Phosphonate from '../../assets/images/schema/family-phosphonate.svg';
 import Phosphorane from '../../assets/images/schema/family-phosphorane.svg';
-import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg';
+import Phosphonate from '../../assets/images/schema/family-phosphonate.svg';
 import Phosphines from '../../assets/images/schema/family-phosphine.svg';
-import Intermeidates from '../../assets/images/schema/family-chemical-intermediate.svg';
+import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg';
+import Intermediates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
 import EiffelTower from  '../../assets/images/effel_tower.png'
 
@@ -26,12 +26,30 @@ import { useState } from 'react'
 
 function Home() {
     
+    const families = [
+        [
+            {imgSrc: Phosphonic, familyName: "Phosphonic Acids", description: "Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates."},
+            {imgSrc: Phosphorane, familyName: "Phosphoranes", description: "Stabilised ylides for acyl, ether and ketone olefination."},
+        ],
+        [
+
+            {imgSrc: Phosphonate, familyName: "Phosphonates", description: "Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations."},
+            {imgSrc: Phosphines, familyName: "Phosphines", description: "Phosphites, phosphine oxides and ligand building blocks. "},
+        ],
+        [
+
+            {imgSrc: Phosphonium, familyName: "Phosphonium Salts", description: "Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles. "},
+            {imgSrc: Intermediates, familyName: "Chemical Intermediates", description: "Piperidines, indoles, dyes and bespoke small molecules.  "},
+        ]
+    ]
+
+
     /* Pour la répétition dans le carousel */
     const items = [
-        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)'/>, label: 'ICH-Q7 Guidelines' },
-        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)'/>, label: 'Most chemicals above 98% purity' },
-        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)'/>, label: 'Acknowledgement mostly within 24 h' },
-        { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)'/>, label: '100% of batches synthesised in Brest' },
+        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'ICH-Q7 Guidelines' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'Most chemicals above 98% purity' },
+        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'Acknowledgement mostly within 24 h' },
+        { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: '100% of batches synthesised in Brest' },
     ]
     const repeated = [...items, ...items]
 
@@ -102,7 +120,7 @@ function Home() {
                     <h2>Search across 1,000+ references</h2>
                     <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need? We synthesise on demand.</p>
                 </div>
-                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon/></Link>
+                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon arria-hidden="true"/></Link>
             </article>
 
             <article>
@@ -141,12 +159,12 @@ function Home() {
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" />Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" />Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" />Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" />Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" />Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermeidates} alt="Chemical Intermediates schema" />Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" arria-hidden="true"/>Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" arria-hidden="true"/>Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" arria-hidden="true"/>Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" arria-hidden="true"/>Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" arria-hidden="true"/>Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermediates} alt="Chemical Intermediates schema" arria-hidden="true"/>Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -173,10 +191,10 @@ function Home() {
 
             <article>
                 <hr/>
-                <Link to="/catalogue">
+                <Link to="/catalogue" aria-label='Navigate to catalogue'>
                     <div>
                         <div className="glassIcon">
-                            <GlassIcon/>
+                            <GlassIcon arria-hidden="true"/>
                         </div>
                         <div className='service'>
                             <div className="serviceTitle">
@@ -187,16 +205,16 @@ function Home() {
                         </div>
                     </div>
                     <div className="arrowIcon">
-                        <RightArrowIcon/>
+                        <RightArrowIcon arria-hidden="true"/>
                     </div>
                 </Link>
 
                 <hr/>
 
-                <Link to="/custom">
+                <Link to="/custom" aria-label='Navigate to custom synthesis'>
                     <div>
                         <div className="glassIcon">
-                            <GlassIcon/>
+                            <GlassIcon arria-hidden="true"/>
                         </div>
                         <div className='service'>
                             <div className="serviceTitle">
@@ -207,7 +225,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="arrowIcon">
-                        <RightArrowIcon/>
+                        <RightArrowIcon arria-hidden="true"/>
                     </div>
                 </Link>
 
@@ -226,85 +244,26 @@ function Home() {
 
             <article id='families-list'>
 
-                <div className='column'>
-
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Phosphonic} alt="Phosphonic schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 01</div>
-                            <h3>Phosphonic Acids</h3>
-                            <p>Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>BROWSE PHOSPHONIC ACIDS <CircleArrowIcon/></button>
+                {families.map((column,i) => (
+                    <div className='column' key={column}>
+                        {column.map(({imgSrc,familyName,description},j) => {
+                            const index = families.slice(0,i).reduce((s, g) => s + g.length, 0) + j + 1;
+                        return (
+                            <div className='familie-element' key={familyName}>
+                                <div>
+                                    <img src={imgSrc} alt={familyName} />
+                                </div>
+                                <span>
+                                    <div className="number">FAMILY 0{index}</div>
+                                    <h3>{familyName}</h3>
+                                    <p>{description}</p>
+                                </span>
+                                <button onClick={() => navigate(`catalogue?family=${familyName}`)}>BROWSE {familyName} <CircleArrowIcon arria-hidden="true"/></button>
+                            </div>
+                        );
+                    })}
                     </div>
-
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Phosphorane} alt="Phosphorane schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 04</div>
-                            <h3>Phosphoranes</h3>
-                            <p>Stabilised ylides for acyl, ether and ketone olefination.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphoranes')}>BROWSE PHOSPHORANES <CircleArrowIcon/></button>
-                    </div>
-                </div>
-
-                <div className='column'>
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Phosphonate} alt="Phosphonate schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 02</div>
-                            <h3>Phosphonates</h3>
-                            <p>Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonates')}>BROWSE PHOSPHONATES <CircleArrowIcon/></button>
-                    </div>
-
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Phosphines} alt="Phosphines schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 05</div>
-                            <h3>Phosphines</h3>
-                            <p>Phosphites, phosphine oxides and ligand building blocks.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphines')}>BROWSE PHOSPHINES <CircleArrowIcon/></button>
-                    </div>
-                </div>
-
-                <div className='column'>
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Phosphonium} alt="Phosphonium schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 03</div>
-                            <h3>Phosphonium Salts</h3>
-                            <p>Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>BROWSE PHOSPHONIUM SALTS <CircleArrowIcon/></button>
-                    </div>
-
-                    <div className='familie-element'>
-                        <div>
-                            <img src={Intermeidates} alt="Chemical Intermeidates schema" />
-                        </div>
-                        <span>
-                            <div className="number">FAMILY 06</div>
-                            <h3>Chemical Intermediates</h3>
-                            <p>Piperidines, indoles, dyes and bespoke small molecules.</p>
-                        </span>
-                        <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>BROWSE CHEMICAL INTERMEDIATES <CircleArrowIcon/></button>
-                        
-                    </div>
-                </div>
+                ))}
             </article>
 
         </section>

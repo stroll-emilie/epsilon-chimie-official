@@ -1,8 +1,10 @@
 import '../header.css'
-import { NavLink } from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
 function Nav() {
-    return (
 
+    const location = useLocation();
+
+    return (
     <nav>
         <ul>
             <li><NavLink to="/">Home</NavLink></li>

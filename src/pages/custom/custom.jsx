@@ -95,8 +95,8 @@ function Custom() {
                     <p>For any question about custom synthesis or project feasibility, write or call directly. We respond to every enquiry within 48 working hours.</p>
                 </div>
                 <div>
-                    <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
-                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>E-mail to : pierre.cornec[at]epsilon-chimie.com</a>
+                    <a href="tel:+33298424650"> <CallIcon aria-hidden="true"/>Call +33 (0)2 98 42 46 50</a>
+                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon aria-hidden="true"/>E-mail to : pierre.cornec[at]epsilon-chimie.com</a>
                     <Link to="/request-for-quote">Request for quote</Link>
 
                 </div>

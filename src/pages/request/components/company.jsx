@@ -50,6 +50,8 @@ function Company({data,onChange}) {
                     id='country'
                     value={data.country}
                     onChange={(e) => onChange({country: e.target.value})}
+                    aria-required="true"
+
                 >
                     <option value="default" hidden> Select a country</option>
                     {countryOptions.map(({ code, name }) => (
@@ -89,6 +91,7 @@ function Company({data,onChange}) {
                     type="checkbox" 
                     checked={data.privacyPolicy}
                     onChange={(e) => onChange({privacyPolicy: e.target.checked})}
+                    aria-required="true"
                 />
                 <span>
                     By clicking 'Next', you confirm that you have read our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/general-terms">General Terms and Conditions of Sales</Link> and consent to your details being used solely to process this request.
