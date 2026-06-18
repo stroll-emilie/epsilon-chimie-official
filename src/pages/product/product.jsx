@@ -130,10 +130,8 @@ function Product() {
                     {ActiveComponent && <ActiveComponent specsList={specsList} />}
                     
                 </div>
-
             </article>
         </section>
-
     </>
     )
 }
