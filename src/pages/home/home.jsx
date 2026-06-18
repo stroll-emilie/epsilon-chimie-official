@@ -46,10 +46,10 @@ function Home() {
 
     /* Pour la répétition dans le carousel */
     const items = [
-        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'ICH-Q7 Guidelines' },
-        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'Most chemicals above 98% purity' },
-        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: 'Acknowledgement mostly within 24 h' },
-        { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)' arria-hidden="true"/>, label: '100% of batches synthesised in Brest' },
+        { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'ICH-Q7 Guidelines' },
+        { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'Most chemicals above 98% purity' },
+        { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'Acknowledgement mostly within 24 h' },
+        { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: '100% of batches synthesised in Brest' },
     ]
     const repeated = [...items, ...items]
 
@@ -120,7 +120,7 @@ function Home() {
                     <h2>Search across 1,000+ references</h2>
                     <p>Search by CAS number, MFCD, synonym or molecular formula. Can't find what you need? We synthesise on demand.</p>
                 </div>
-                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon arria-hidden="true"/></Link>
+                <Link to="/request-for-quote">Request for custom synthesis <CircleArrowIcon aria-hidden="true"/></Link>
             </article>
 
             <article>
@@ -159,12 +159,12 @@ function Home() {
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" arria-hidden="true"/>Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" arria-hidden="true"/>Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" arria-hidden="true"/>Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" arria-hidden="true"/>Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" arria-hidden="true"/>Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermediates} alt="Chemical Intermediates schema" arria-hidden="true"/>Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" aria-hidden="true"/>Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" aria-hidden="true"/>Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" aria-hidden="true"/>Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" aria-hidden="true"/>Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" aria-hidden="true"/>Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermediates} alt="Chemical Intermediates schema" aria-hidden="true"/>Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -194,7 +194,7 @@ function Home() {
                 <Link to="/catalogue" aria-label='Navigate to catalogue'>
                     <div>
                         <div className="glassIcon">
-                            <GlassIcon arria-hidden="true"/>
+                            <GlassIcon aria-hidden="true"/>
                         </div>
                         <div className='service'>
                             <div className="serviceTitle">
@@ -205,7 +205,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="arrowIcon">
-                        <RightArrowIcon arria-hidden="true"/>
+                        <RightArrowIcon aria-hidden="true"/>
                     </div>
                 </Link>
 
@@ -214,7 +214,7 @@ function Home() {
                 <Link to="/custom" aria-label='Navigate to custom synthesis'>
                     <div>
                         <div className="glassIcon">
-                            <GlassIcon arria-hidden="true"/>
+                            <GlassIcon aria-hidden="true"/>
                         </div>
                         <div className='service'>
                             <div className="serviceTitle">
@@ -225,7 +225,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="arrowIcon">
-                        <RightArrowIcon arria-hidden="true"/>
+                        <RightArrowIcon aria-hidden="true"/>
                     </div>
                 </Link>
 
@@ -258,7 +258,7 @@ function Home() {
                                     <h3>{familyName}</h3>
                                     <p>{description}</p>
                                 </span>
-                                <button onClick={() => navigate(`catalogue?family=${familyName}`)}>BROWSE {familyName} <CircleArrowIcon arria-hidden="true"/></button>
+                                <button onClick={() => navigate(`catalogue?family=${familyName}`)}>BROWSE {familyName} <CircleArrowIcon aria-hidden="true"/></button>
                             </div>
                         );
                     })}

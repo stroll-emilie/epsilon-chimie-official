@@ -3,7 +3,7 @@ import { XIcon } from '../../../assets/icons/x_icon'
 import { useLocation, Navigate, Link } from 'react-router-dom'
 import { CloudCrossIcon } from '../../../assets/icons/cloud_cross_icon';
 
-function Error() {
+function RequestError() {
 
     const location = useLocation();
 
@@ -29,4 +29,4 @@ function Error() {
     )
 }
 
-export default Error
+export default RequestError
