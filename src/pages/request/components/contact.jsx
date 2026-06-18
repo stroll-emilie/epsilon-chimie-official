@@ -17,6 +17,7 @@ function Contact({data,onChange}) {
                     value={data.firstName}
                     onChange={(e) => onChange({firstName: e.target.value})}
                     maxLength={50}
+                    autoComplete='given-name'
                 />
             </div>
 
@@ -28,6 +29,8 @@ function Contact({data,onChange}) {
                     value={data.lastName}
                     onChange={(e) => onChange({lastName: e.target.value})}
                     maxLength={50}
+                    autoComplete='family-name'
+
                 />
             </div>
         </div>
@@ -38,7 +41,7 @@ function Contact({data,onChange}) {
                 <input 
                     id='role-input'
                     type="text"
-                    placeholder='e.g. Research chemist, Procurement officer'
+                    placeholder='e.g. Research chemist, Procurement officer...'
                     value={data.role}
                     onChange={(e) => onChange({role: e.target.value})}
                     maxLength={150}
@@ -52,10 +55,11 @@ function Contact({data,onChange}) {
                 <input 
                     id='mail'
                     type="email"
-                    placeholder='name@company.com'
+                    placeholder='name@company.com...'
                     value={data.email}
                     onChange={(e) => onChange({email: e.target.value})}
                     maxLength={100}
+                    autoComplete='email'
                 />
             </div>
 
@@ -63,17 +67,18 @@ function Contact({data,onChange}) {
                 <label htmlFor="phone" className='labelField'>phone number</label>
                 <input 
                     id='phone'
-                    type="text"
+                    type="tel"
                     placeholder='+33 ...'
                     value={data.tel}
                     onChange={(e) => onChange({tel: e.target.value})}
                     maxLength={30}
+                    autoComplete='tel'
                 />
             </div>
         </div>
 
         <div >
-            <p id='form-contact-info'><LockCircleIcon/>All commercial and technical information you share stays confidential. We can sign a mutual NDA on request before any technical discussion.</p>
+            <p id='form-contact-info'><LockCircleIcon aria-hidden="true"/>All commercial and technical information you share stays confidential. We can sign a mutual NDA on request before any technical discussion.</p>
         </div>
     </>
     )

@@ -10,7 +10,7 @@ function Footer() {
                 <article>
                     <div>
                         <h4>Epsilon Chimie</h4>
-                        <p>European manufacturer of phosphorus specialities since 1995. Over 1 000 references (phosphonic acids, phosphonates, phosphonium salts, phosphoranes and chemical intermediates).</p>
+                        <p>European manufacturer of phosphorus specialities since 1995. Over 1,000 references (phosphonic acids, phosphonates, phosphonium salts, phosphoranes and chemical intermediates).</p>
                     </div>
                     
                     <div>
@@ -50,7 +50,7 @@ function Footer() {
                     <span>COMPANY</span>
                     <ul>
                         <li><Link to="/about">About</Link></li>
-                        <li>Quality & ISO 9001</li>
+                        <li>Quality & ICH-Q7</li>
                         <li>Press</li>
 
                     </ul>
@@ -61,7 +61,7 @@ function Footer() {
                     <ul>
                         <li><Link to="/legal-notice">Legal notice</Link></li>
                         <li><Link to="/privacy-policy">Privacy policy</Link></li>
-                        <li><Link to="/general-t&c">General T&Cs</Link></li>
+                        <li><Link to="/general-t&c">Conditions of Use</Link></li>
                         <li><Link to="/general-terms">Conditions of Sales</Link></li>
                     </ul>
                 </article>

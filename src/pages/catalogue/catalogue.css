@@ -262,7 +262,7 @@ section#content-catalogue article#product div#product-container a article div.tx
 section#content-catalogue article#product div#product-container a article div.txt-container div > div {
   display: flex;
   justify-content: space-between;
-  color: var(--color-content-tertiary);
+  color: var(--color-content-secondary);
 }
 section#content-catalogue article#product div#product-container a article div.txt-container ul {
   display: flex;

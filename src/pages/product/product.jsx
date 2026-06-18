@@ -20,7 +20,7 @@ const TABS_CONFIG = [
 function Product() {
     
     const navigate = useNavigate();
-    const [packingSelected, setPackingSelected] = useState();
+    const [quantitySelected, setQuantitySelected] = useState();
     const [detailsSelected, setDetailsSelected] = useState("Specifications")
 
     const { products, loading } = useApp()
@@ -38,10 +38,10 @@ function Product() {
     const formula = formatFormula(prod["Formule brute"])
     const imgSrc = getProductImage(id)
     const { name, purity, method } = parseNom(prod["Nom"])
-    const packing = prod["Conditionnement"]?.split("\n").map(el => el.trim()) ?? [];
+    const quantity = (prod["Conditionnement"]?.split("\n").map(el => el.trim()) ?? []).concat("Other");
     const fullPuity = method ? `${purity} (${method})` : purity;
 
-    const currentPackingSelected = packingSelected || packing[0];
+    const currentQuantitySelected = quantitySelected || quantity[0];
     const ActiveComponent = TABS_CONFIG.find(tab => tab.id === detailsSelected)?.component;
 
     const specsList = [
@@ -93,14 +93,14 @@ function Product() {
 
                 <div>
                     <div>
-                        <div className="number">AVAILABLE PACKINGS</div>
+                        <div className="number">AVAILABLE QUANTITIES</div>
                         <div>
                             {
-                                packing.map((element) => (
+                                quantity.map((element) => (
                                     <button
                                         key={element}
-                                        className={currentPackingSelected === element ? "active" : ""}
-                                        onClick={() => setPackingSelected(element)}
+                                        className={currentQuantitySelected === element ? "active" : ""}
+                                        onClick={() => setQuantitySelected(element)}
                                     >
                                         {element}
                                     </button>
@@ -110,7 +110,7 @@ function Product() {
                         <p>Larger quantities ? We produce up to multi kilograms batches on demand.</p>
                     </div>
                     <div>
-                        <button onClick={() => navigate(`/request-for-quote/${id}?packing=${currentPackingSelected}`)}>Request quote for {currentPackingSelected}</button>
+                        <button onClick={() => navigate(`/request-for-quote/${id}?quantity=${currentQuantitySelected}`)}>Request quote for {currentQuantitySelected}</button>
                         <p>SDS and TDS available on request</p>
                     </div>
                 </div>
@@ -130,10 +130,8 @@ function Product() {
                     {ActiveComponent && <ActiveComponent specsList={specsList} />}
                     
                 </div>
-
             </article>
         </section>
-
     </>
     )
 }

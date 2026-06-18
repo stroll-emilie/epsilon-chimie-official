@@ -11,8 +11,8 @@ function About() {
                 <article>
                     <div className='path'><Link to="/">HOME</Link> / <span>ABOUT</span></div>
                     <div className="section-label"><div className='losange'></div>about the laboratory</div>
-                    <h1>A french laboratory serving worldwide industry since 1995.</h1>
-                    <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemicals for research and industry. Our founders trained in organometallic chemistry lab of the University of Brest; our product range still reflects that heritage.</p>
+                    <h1>A French laboratory serving worldwide industry since 1995.</h1>
+                    <p>Located in Brest, France, Epsilon Chimie formulates, analyses and produces speciality phosphorus chemical for research and industry. Our founders trained in the organometallic chemistry lab at the University of Brest; our product range still reflects that heritage.</p>
                 </article>
                 <div>
                     <img src={Batiment} alt="Epsilon Chimie production site in Brest, France" />
@@ -24,7 +24,7 @@ function About() {
             <article>
                 <ul>
                     <li><span>1995</span>FOUNDED</li>
-                    <li><span>3 600 m²</span>PRODUCTION SITE</li>
+                    <li><span>3,600 m<sup>2</sup></span>PRODUCTION SITE</li>
                     <li><span>30+</span>COUNTRIES SERVED</li>
                 </ul>
             </article>
@@ -33,7 +33,7 @@ function About() {
         <section id="timeline">
             <article>
                 <div className="section-label"><div className='losange'></div>timeline</div>
-                <h2>Twenty-eight years of phosphorus chemistry.</h2>
+                <h2>Thirty-eight years of phosphorus chemistry.</h2>
             </article>
 
             <article>
@@ -41,7 +41,7 @@ function About() {
                     <hr />
                     <li>
                         <h3>1995</h3>
-                        <p>Fondation</p>
+                        <p>Foundation</p>
                         <p>Epsilon Chimie founded in Brest, focused on phosphorus specialty chemistry.</p>
                     </li>
                     <hr />
@@ -54,7 +54,7 @@ function About() {
                     <li>
                         <h3>2010</h3>
                         <p>Expansion</p>
-                        <p>Relocation to a 2 800 m2 facility in Kergaradec, Guipavas (near Brest).</p>
+                        <p>Relocation to a 3,600 m<sup>2</sup> facility in Kergaradec, Guipavas (near Brest).</p>
                     </li>
                     <hr />
                     <li>
@@ -82,7 +82,7 @@ function About() {
             <article>
                 <div>
                     <div className="section-label"><div className='losange'></div>compliance</div>
-                    <h2>Reach & CLP compliant.</h2>
+                    <h2>REACH & CLP compliant.</h2>
                 </div>
                 <p>All commercial references are pre-registered or fully registered under REACH when applicable. Safety Data Sheets follow the EU CLP classification and are supplied in English and French.</p>
             </article>

@@ -7,13 +7,18 @@ import Company from './components/company'
 import Compound from './components/compound'
 import Contact from './components/contact'
 
-
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
 import { useApp } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
-// FIXME: mettre le bon fichier de config
-import { EMAILJS_CONFIG } from '../../config/tempo.js'
+import { EMAILJS_CONFIG } from '../../config/emailjs.js'
+
+// Champs obligatoire pour passer à l'étape suivante 
+const REQUIRED_FIELDS = {
+    0: ["compoundName", "quantity", "purity"],
+    1: ["country", "privacyPolicy"],
+    2: ["firstName", "lastName", "email"],
+};
 
 function Request() {
     const navigate = useNavigate();
@@ -24,14 +29,18 @@ function Request() {
     const [formStep, setFormStep] = useState(0)
     
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState(null);
 
     const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const packing = searchParams.get('packing');
+
+    const quantity = useMemo(
+        () => new URLSearchParams(location.search).get('quantity'),
+        [location.search]
+    );
     
     // donnée du formulaire préremplie / vide
     const [formData, setFormData] = useState({
-        requestType: id ? "catalogue" : "custom", compoundName: "", quantity: "", purity: "", packing: packing || "", required: "default", application: "",
+        requestType: id ? "catalogue" : "custom", compoundName: "", quantity: quantity || "", purity: "", packing: "", required: "default", application: "",
         company: "", sector: "", country: "", website: "", additional: "", privacyPolicy: "",
         firstName: "", lastName: "", role: "", email: "", tel: ""
     });
@@ -41,7 +50,7 @@ function Request() {
         if (!loading && id && !prod) {
             navigate('/error404');
         }
-    }, [loading, id, prod]);
+    }, [loading, id, prod, navigate]);
 
     // préremplie la pureté dans le formulaire (en passant par la fonction prévu pour)
     useEffect(() => {
@@ -54,16 +63,28 @@ function Request() {
         }));
     }, [prod]);
     
-    // pagination
-    const updateData = (newFields) => setFormData((prev) => ({...prev, ...newFields}));
-    const next = () => setFormStep((s) => s + 1);
-    const prev = () => setFormStep((s) => s - 1);
+    // bouton next/back
+    const updateData = useCallback(
+        (newFields) => setFormData((prev) => ({...prev, ...newFields})),
+        []
+    );
+    const next = useCallback(() => setFormStep((s) => s + 1), []);
+    const prev = useCallback(() => setFormStep((s) => s - 1), []);
+
+    // vérifie que les champs required sont bien remplie
+    const isStepValid = REQUIRED_FIELDS[formStep].every((field) => {
+        const value = formData[field];
+        if(typeof value === "boolean") return value === true;
+        const normalized = value?.toString().trim();
+        return normalized !== "" && normalized !== "default" && normalized !== "Other";
+    });
 
     // envoie des mail suite à soumission du formulaire
     const handleSubmit = async () => {
         // protection pour éviter le double envoie
         if (isSubmitting) return;
         setIsSubmitting(true);
+        setError(null);
         try{
             await emailjs.send(
                 EMAILJS_CONFIG.serviceId, 
@@ -76,37 +97,26 @@ function Request() {
                 EMAILJS_CONFIG.replyTemplateId,
                 formData
             );
-            navigate('/success', { state: { fromForm: true } })
+            navigate('/success', { state: { fromForm: true } });
         } catch (error) {
             if (error instanceof TypeError && error.message === 'Failed to fetch') {
-                alert("Connexion impossible, vérifiez votre réseau.");
+                setError("Connexion impossible, vérifiez votre réseau.");
             } else {
-                alert("Une erreur est survenue, réessayez ultérieurement.");
+                setError("Une erreur est survenue, réessayez ultérieurement.");
             }
         } finally {
             setIsSubmitting(false);
         }
     };
-    // Champs obligatoire pour passer à l'étape suivante 
-    const REQUIRED_FIELDS = {
-        0: ["compoundName", "quantity", "purity"],
-        1: ["country", "privacyPolicy"],
-        2: ["firstName", "lastName", "email"],
-    };
 
-    // vérifie que les champs required sont bien remplie
-    const isStepValid = REQUIRED_FIELDS[formStep].every((field) => {
-        const value = formData[field];
-        if(typeof value === "boolean") return value === true;
-        return value?.toString().trim() !== "" && value !== "default"
-    });
+
 
     return (
     <>
         <section id='request-title'>
             <div className='path'><Link to="/">HOME</Link> / <span>REQUEST FOR QUOTE</span></div>
             <div>
-                <h2>Request for quote</h2>
+                <h1>Request for quote</h1>
                 <p>We reply to every request within 48 working hours. All information stays confidential.</p>
             </div>
         </section>
@@ -115,22 +125,19 @@ function Request() {
             <article className="form-container">
                 <div>
                     <div className={`form-point ${formStep === 0 ? "active" : ""}`}>
-                        <span>1</span>
-                        <p>COMPOUND</p>
+                        <span>1</span> <p>COMPOUND</p>
                     </div>
                     <hr />
                     <div className={`form-point ${formStep === 1 ? "active" : ""}`}>
-                        <span>2</span>
-                        <p>COMPANY</p>
+                        <span>2</span> <p>COMPANY</p>
                     </div>
                     <hr />
                     <div className={`form-point ${formStep === 2 ? "active" : ""}`}>
-                        <span>3</span>
-                        <p>CONTACT</p>
+                        <span>3</span> <p>CONTACT</p>
                     </div>
                 </div>
 
-                <form id='form-compound'>
+                <form id='form-compound' onSubmit={(e) => e.preventDefault()}>
                     {formStep === 0 && (
                         <Compound data={formData} onChange={updateData}/>
                     )}
@@ -145,7 +152,7 @@ function Request() {
                     
                     <nav>
                         {formStep >0 && (
-                            <button type="button" onClick={prev}><CircleArrowIcon/> Back</button>
+                            <button type="button" onClick={prev}><CircleArrowIcon aria-hidden="true" /> Back</button>
                         )}
                         {formStep === 0 && <span />}
 
@@ -153,7 +160,7 @@ function Request() {
                             <button type="button" onClick={next} disabled={!isStepValid}> Next</button>
                         )}
                         {formStep >=2 && (
-                            <button type="button" onClick={handleSubmit} disabled={!isStepValid}>Submit</button>
+                            <button type="button" onClick={handleSubmit} disabled={!isStepValid || isSubmitting}>{isSubmitting ? "Sending..." : "Submit"}</button>
                         )}
                     </nav>
                 </form>

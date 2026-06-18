@@ -40,7 +40,7 @@ function Header() {
               title="logo-epsilon-chimie"
             />
             <span className={scrolled ? 'show' : 'hide'} >
-              <span>Epsilon Chimie |</span> European Chemicals Manufacturer
+              <span>Epsilon Chimie |</span> European Chemical Manufacturer
             </span>
           </Link>
           <Nav />

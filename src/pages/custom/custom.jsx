@@ -7,7 +7,24 @@ import { MailIcon } from '../../assets/icons/mail_icon'
 
 import { Link } from 'react-router-dom'
 
+const applications = [
+    {title: "Pharmaceuticals", content: "API intermediates, re-synthesis of R&D targets, key building blocks."},
+    {title: "Cosmetics", content: "Active substances, formulation components, high-purity actives."},
+    {title: "Synthetic chemistry", content: "Raw materials and reagents for academic and industrial R&D programmes. "},
+    {title: "Analytical chemistry", content: "Reference standards, including impurities, metabolites and internal standards."},
+    {title: "Biotechnology", content: "Substrates for enzymatic processes; biomass purification reagents."},
+    {title: "Biology", content: "Synthesis of natural molecules or metabolites"}
+]
+
+const process = [
+    {title: "Brief", content: "Share the structure, quantity and target specs. We sign an NDA if required."},
+    {title: "Feasibility", content: "Our team proposes a route, a timeline and a budget within 5 working days"},
+    {title: "Synthesis", content: "We synthesise a first batch at the agreed scale, from 100 mg to multi-kg."},
+    {title: "QC & Delivery", content: "Full characterisation (13C-NMR, 31P-NMR, 1H-NMR, HPLC). Shipping with Certificate of Analysis."}
+]
+
 function Custom() {
+
     return (
     <>
         <section id="custom">
@@ -15,8 +32,8 @@ function Custom() {
                 <div className='path'><Link to="/">HOME</Link> / <span>CUSTOM SYNTHESIS</span></div>
                 <article>
                     <div className="section-label"><div className='losange'></div>on-demand synthesis</div>
-                    <h1>Synthesise a batch quickly, respecting your budget.</h1>
-                    <p>We offer on-demand synthesis of non-commercial products for research. Our team is polyvalent and attentive to customer needs, so we can address challenges quickly.</p>
+                    <h1>Synthesise a batch quickly, within your budget.</h1>
+                    <p>We offer on-demand synthesis of non-commercial products for research. Our team is versatile and attentive to customer needs, so we can address challenges quickly.</p>
                 </article>
                 <nav>
                     <Link to="/request-for-quote">Request for quote</Link>
@@ -33,37 +50,15 @@ function Custom() {
             </article>
             <article>
                 <ul>
-                    <li>
-                        <div className="roundedNumber"><p>01</p></div>
-                        <div>
-                            <h3>Brief</h3>
-                            <p>Share the structure, quantity and target specs, We sign an NDA if required.</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className="roundedNumber"><p>02</p></div>
-                        <div>
-                            <h3>Feasibility</h3>
-                            <p>Our team proposes a route, a timeline and a budget within 5 working days.</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className="roundedNumber"><p>03</p></div>
-                        <div>
-                            <h3>Synthesis</h3>
-                            <p>We synthesise a first batch at the agreed scale, from 100 mg to multi-kg.</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className="roundedNumber"><p>04</p></div>
-                        <div>
-                            <h3>QC & Delivery</h3>
-                            <p>Full characterisation (13C-NMR, 31P-NMR, 1H-NMR, HPLC-). Shipping with Certificate of Analysis.</p>
-                        </div>
-                    </li>
+                    {process.map(({title,content},id) => (
+                        <li key={title}>
+                            <div className="roundedNumber"><p>0{id}</p></div>
+                            <div>
+                                <h3>{title}</h3>
+                                <p>{content}</p>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             </article>
         </section>
@@ -77,30 +72,13 @@ function Custom() {
                 <p>For development work, we have signed agreements with international partners dedicated to custom manufacturing. For any request, do not hesitate to contact us.</p>
             </article>
             <article>
-                <div>
-                    <h3>Pharmaceuticals</h3>
-                    <p>API intermediates, re-synthesis of R&D targets, key building blocks.</p>
-                </div>
-                <div>
-                    <h3>Cosmetics</h3>
-                    <p>Active substances, formulation components, high-purity actives.</p>
-                </div>
-                <div>
-                    <h3>Synthetic chemistry</h3>
-                    <p>Raw materials and reagents for academic and industrial R&D programmes.</p>
-                </div>
-                <div>
-                    <h3>Analytical chemistry</h3>
-                    <p>Reference standards, including impurities, metabolites and internal standards.</p>
-                </div>
-                <div>
-                    <h3>Biotechnology</h3>
-                    <p>Substrates for enzymatic processes; biomass purification reagents.</p>
-                </div>
-                <div>
-                    <h3>Biology</h3>
-                    <p>Synthesis of natural molecules or metabolites.</p>
-                </div>
+                {applications.map(({title,content}) => (
+                    <div key={title}>
+                        <h3>{title}</h3>
+                        <p>{content}</p>
+                    </div>
+                ))}
+                
             </article>
         </section>
 
@@ -118,7 +96,7 @@ function Custom() {
                 </div>
                 <div>
                     <a href="tel:+33298424650"> <CallIcon/>Call +33 (0)2 98 42 46 50</a>
-                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>Mail to : pierre.cornec[at]epsilon-chimie.com</a>
+                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon/>E-mail to : pierre.cornec[at]epsilon-chimie.com</a>
                     <Link to="/request-for-quote">Request for quote</Link>
 
                 </div>
