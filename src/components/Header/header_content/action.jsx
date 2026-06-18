@@ -51,7 +51,7 @@ function Action() {
                 </button>
             </div>
         ) : (
-            <button id='searchButtonOff' onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon/></button>
+            <button id='searchButtonOff' onClick={() => setIsOpen(true)}>Search Catalogue <SearchIcon aria-hidden="true" /></button>
         )}
         <Link to="/request-for-quote">Request for quote</Link>
     </div>

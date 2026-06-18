@@ -49,6 +49,7 @@ function Compound({data, onChange}) {
                 value={data.compoundName}
                 onChange={(e) => onChange({compoundName: e.target.value})}
                 maxLength={100}
+                aria-required="true"
                 />
         </div>
 
@@ -63,6 +64,7 @@ function Compound({data, onChange}) {
                     onChange={(e) => onChange({quantity: e.target.value})}
                     maxLength={50}
                     autoFocus={data.quantity === "Other"}
+                    aria-required="true"
                 />
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
@@ -73,6 +75,7 @@ function Compound({data, onChange}) {
                     name="purity"
                     value={data.purity}
                     onChange={(e) => onChange({purity: e.target.value})}
+                    aria-required="true"
                 >
                     <option value="default" hidden>Select a purity</option>
                     <option value="99">99%</option>

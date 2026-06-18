@@ -322,7 +322,6 @@ section{
                     align-items: center;
                     gap: var(--spacing-xx-small);
                     @include btn-base;
-                    
                 }
             }
 
@@ -374,6 +373,8 @@ section{
                             white-space: nowrap;
                             cursor: pointer;
                             border-bottom: 1px solid var(--color-border-accent);
+                            text-transform: uppercase;
+
                             &:active{
                                 background-color: var(--color-bg-primary-subtle);
                             }

@@ -57,12 +57,12 @@ function Catalogue() {
             <div className='path'><Link to="/">HOME</Link> / <span>CATALOGUE</span></div>
             <article>
                 <div>
-                    <h2>Product catalogue</h2>
+                    <h1>Product catalogue</h1>
                     <p>{dataProcessed.length.toLocaleString('en-US')} of 1,000+ references. Every batch ships with a Certificate of Analysis.</p>
                 </div>
                 <div>
-                    <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon/>Catalogue (PDF)</a>
-                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.xls"><DownloadXLSIcon/>Catalogue (XLS)</a>
+                    <a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf"><DownloadPDFIcon aria-hidden="true"/>Catalogue (PDF)</a>
+                    <a href="/EpsilonChimieCatalogueXLS.xls" download="EpsilonChimieCatalogueXLS.xls"><DownloadXLSIcon aria-hidden="true"/>Catalogue (XLS)</a>
                 </div>
             </article>
             <article>
@@ -90,6 +90,7 @@ function Catalogue() {
                             key={family}
                             className={`filter-elem ${selectedFamily === family ? "active" : ""}`}
                             onClick={() => setSelectedFamily(family)}
+                            aria-current={selectedFamily === family}
                         >
                             {family}<span>{count}</span>
                         </button>
@@ -190,9 +191,9 @@ function Catalogue() {
                 </div>
                 {totalPages>1 && (
                 <div id="pagination">
-                    <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1}><CircleArrowIcon/></button>
+                    <button onClick={() => setCurrentPage(p => p - 1)} disabled={currentPage === 1} aria-disabled={currentPage === 1} aria-label="Previous page"><CircleArrowIcon/></button>
                     <span>{currentPage}/{totalPages}</span>
-                    <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages}><CircleArrowIcon/></button>
+                    <button onClick={() => setCurrentPage(p => p + 1)} disabled={currentPage === totalPages} aria-disabled={currentPage === totalPages} aria-label="Next page" ><CircleArrowIcon/></button>
                 </div>
                 )}
             </article>

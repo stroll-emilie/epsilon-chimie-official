@@ -18,9 +18,11 @@ section#searchInCatalogue {
   gap: 20px;
   border-bottom: 0.5px solid var(--color-border-reversed);
 }
-section#searchInCatalogue > article h2 {
+section#searchInCatalogue > article h1 {
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
+  line-height: 106%;
 }
 section#searchInCatalogue > article p {
   font-family: var(--font-family-body);

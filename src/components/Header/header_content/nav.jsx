@@ -1,8 +1,8 @@
 import '../header.css'
 import { NavLink } from 'react-router-dom'
 function Nav() {
-    return (
 
+    return (
     <nav>
         <ul>
             <li><NavLink to="/">Home</NavLink></li>
