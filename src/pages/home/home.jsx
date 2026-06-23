@@ -19,7 +19,7 @@ import Phosphines from '../../assets/images/schema/family-phosphine.svg';
 import Phosphonium from '../../assets/images/schema/family-phosphonium-salt.svg';
 import Intermediates from '../../assets/images/schema/family-chemical-intermediate.svg';
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg';
-import EiffelTower from  '../../assets/images/effel_tower.png'
+import EiffelTower from  '../../assets/images/effel_tower.webp'
 
 import { useNavigate,Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'

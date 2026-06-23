@@ -1,23 +1,6 @@
 @use '../../styles/_mixin' as *;
 
-.labelField{
-    display: flex;
-    gap: var(--spacing-xx-small);
-    align-items: center;
-    width: 100%;
-    font-family: var(--font-family-heading);
-    font-size: var(--font-size-body-sm);
-    font-weight: var(--font-weight-bold);
-    line-height: 8px;
-    text-transform: uppercase;
-    color: var(--color-content-tertiary);
-    span{
-        color: var(--color-icon-danger);
-        font-family: var(--font-family-body);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-body-lg);
-    }
-}
+
 
 section{
     &#request-title{

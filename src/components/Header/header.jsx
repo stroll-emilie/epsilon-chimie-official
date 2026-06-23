@@ -1,5 +1,4 @@
 import { useEffect, useState} from 'react'
-import epsilonLogo from '../../assets/images/logo_epsilon.png'
 import Nav from './header_content/nav.jsx'
 import Credit from './header_content/credit.jsx'
 import Action from './header_content/action.jsx'
@@ -33,11 +32,10 @@ function Header() {
 
         <div id='navBar'>
           <Link to="/" className='logo-container'>
-            <img
-              src={epsilonLogo}
-              className={scrolled ? 'hide' : 'show'}
-              alt="logo-epsilon-chimie"
-              title="logo-epsilon-chimie"
+            <img 
+            src="logo_epsilon.webp" 
+            alt="Epsilon Chimie — European Chemical Manufacurer" 
+            className={scrolled ? 'hide' : 'show'}
             />
             <span className={scrolled ? 'show' : 'hide'} >
               <span>Epsilon Chimie |</span> European Chemical Manufacturer

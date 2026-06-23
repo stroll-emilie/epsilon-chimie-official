@@ -1,11 +1,30 @@
 @import "tailwindcss";
 
 /* ============================================================
-   EPSILON CHIMIE — Design Tokens
-   Source : Figma YhMxgEY4basLOkAxkTqeNy — page "Design System"
-   Convention : kebab-case sémantique, jamais les primitives
-   directement dans les composants.
+    EPSILON CHIMIE — Design Tokens
+    Source : Figma YhMxgEY4basLOkAxkTqeNy — page "Design System"
+    Convention : kebab-case sémantique, jamais les primitives
+    directement dans les composants.
    ============================================================ */
+
+@font-face {
+  font-family: 'Boldonse';
+  src: url('/fonts/boldonse-v1-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/inconsolata-v37-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+}
 
 :root {
 
@@ -202,3 +221,4 @@ body {
 .skip-link:focus {
   transform: translateY(0);
 }
+
