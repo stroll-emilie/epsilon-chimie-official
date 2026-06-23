@@ -44,33 +44,36 @@ footer{
             gap: var(--spacing-medium);
             width: 26%;
             color: var(--color-content-reversed-primary);
-            div:last-child{
-                display: flex;
-                gap: var(--spacing-xx-small);
-                flex-direction: column;
-            }
+            div{
+                p{
+                    font-family: var(--font-family-body);
+                    font-size: var(--font-size-body-sm);
+                    line-height: 136%;
+                    letter-spacing: -1%;
+                }
+                &:first-of-type{
+                    span{
+                        font-family: var(--font-family-title);
+                        font-size: var(--font-size-body-lg);
+                        line-height: 175%;
+                        letter-spacing: -2%;
+                    }
+                }
 
-            h4{
-
-                font-family: var(--font-family-title);
-                font-size: var(--font-size-body-lg);
-                line-height: 175%;
-                letter-spacing: -2%;
+                &:last-of-type{
+                    display: flex;
+                    gap: var(--spacing-xx-small);
+                    flex-direction: column;
+                    span{
+                        font-family: var(--font-family-heading);
+                        font-weight: var(--font-weight-bold);
+                        font-size: var(--font-size-body-sm);
+                        line-height: 8px;
+                        letter-spacing: -1%;
+                    }
+                }
             }
-
-            h5{
-                font-family: var(--font-family-heading);
-                font-weight: var(--font-weight-bold);
-                font-size: var(--font-size-body-sm);
-                line-height: 8px;
-                letter-spacing: -1%;
-            }
-            p{
-                font-family: var(--font-family-body);
-                font-size: var(--font-size-body-sm);
-                line-height: 136%;
-                letter-spacing: -1%;
-            }
+            
         }
     }
     section:last-child{

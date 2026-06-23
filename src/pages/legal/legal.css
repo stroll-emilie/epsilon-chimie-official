@@ -139,7 +139,7 @@ section#privacy-policy article:last-of-type .legal-note > div, section#general-t
   gap: var(--spacing-x-small);
   align-items: center;
 }
-section#privacy-policy article:last-of-type .legal-note > div h3, section#general-tc article:last-of-type .legal-note > div h3, section#legal-notice article:last-of-type .legal-note > div h3, section#general-terms article:last-of-type .legal-note > div h3 {
+section#privacy-policy article:last-of-type .legal-note > div h2, section#general-tc article:last-of-type .legal-note > div h2, section#legal-notice article:last-of-type .legal-note > div h2, section#general-terms article:last-of-type .legal-note > div h2 {
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
 }

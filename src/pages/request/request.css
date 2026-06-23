@@ -139,7 +139,7 @@ section#request article form #form-contact-info > div {
   gap: var(--spacing-x-small);
   align-items: center;
 }
-section#request article form #form-contact-info > div h3 {
+section#request article form #form-contact-info > div h2 {
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
 }

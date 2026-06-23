@@ -83,17 +83,17 @@ section#timeline article:first-of-type {
   flex-direction: column;
   gap: var(--spacing-xxx-small);
 }
-section#timeline article:last-of-type ul {
+section#timeline article:last-of-type div {
   display: flex;
   flex-direction: column;
   gap: 26px;
 }
-section#timeline article:last-of-type ul li {
+section#timeline article:last-of-type div div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 64px;
 }
-section#timeline article:last-of-type ul li h3 {
+section#timeline article:last-of-type div div h3 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
@@ -101,15 +101,15 @@ section#timeline article:last-of-type ul li h3 {
   letter-spacing: -1%;
   color: var(--color-content-accent);
 }
-section#timeline article:last-of-type ul li p:first-of-type {
+section#timeline article:last-of-type div div p:first-of-type {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-h3);
   line-height: 136%;
 }
-section#timeline article:last-of-type ul > hr:first-of-type {
+section#timeline article:last-of-type div > hr:first-of-type {
   width: 55%;
 }
-section#timeline article:last-of-type ul > hr {
+section#timeline article:last-of-type div > hr {
   color: var(--color-border-reversed);
 }
 section#quality {

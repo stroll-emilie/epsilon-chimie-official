@@ -9,12 +9,12 @@ function Footer() {
             <section>
                 <article>
                     <div>
-                        <h4>Epsilon Chimie</h4>
+                        <span>Epsilon Chimie</span>
                         <p>European manufacturer of phosphorus specialities since 1995. Over 1,000 references (phosphonic acids, phosphonates, phosphonium salts, phosphoranes and chemical intermediates).</p>
                     </div>
                     
                     <div>
-                        <h5>HEADQUARTERS</h5>
+                        <span>HEADQUARTERS</span>
                         <p>
                             450 rue Antoine Lavoisier <br />
                             Kergaradec III <br />
@@ -27,12 +27,12 @@ function Footer() {
                 <article>
                     <span>PRODUCTS</span>
                     <ul>
-                        <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>Phosphonic Acids</button>
-                        <button onClick={() => navigate('catalogue?family=Phosphonates')}>Phosphonates</button>
-                        <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>Phosphonium Salts</button>
-                        <button onClick={() => navigate('catalogue?family=Phosphoranes')}>Phosphoranes</button>
-                        <button onClick={() => navigate('catalogue?family=Phosphines')}>Phosphines</button>
-                        <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>Chemical Intermediates</button>
+                        <li><button onClick={() => navigate('catalogue?family=Phosphonic Acids')}>Phosphonic Acids</button></li>
+                        <li><button onClick={() => navigate('catalogue?family=Phosphonates')}>Phosphonates</button></li>
+                        <li><button onClick={() => navigate('catalogue?family=Phosphonium Salts')}>Phosphonium Salts</button></li>
+                        <li><button onClick={() => navigate('catalogue?family=Phosphoranes')}>Phosphoranes</button></li>
+                        <li><button onClick={() => navigate('catalogue?family=Phosphines')}>Phosphines</button></li>
+                        <li><button onClick={() => navigate('catalogue?family=Chemical Intermediates')}>Chemical Intermediates</button></li>
                         <li><a href="/EpsilonChimieCataloguePDF.pdf" download="EpsilonChimieCataloguePDF.pdf">Full Catalogue (PDF)</a></li>
                     </ul>
                 </article>

@@ -1,11 +1,12 @@
 
 import './custom.css'
-import PierreCornec from '../../assets/images/cornec-200w.jpg'
+import PierreCornec from '../../assets/images/cornec-200w.webp'
 import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mark 1.svg'
 import { CallIcon } from '../../assets/icons/call_icon'
 import { MailIcon } from '../../assets/icons/mail_icon'
 
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const applications = [
     {title: "Pharmaceuticals", content: "API intermediates, re-synthesis of R&D targets, key building blocks."},
@@ -27,6 +28,10 @@ function Custom() {
 
     return (
     <>
+        <Helmet>
+            <title>Custom Synthesis — On-demand Phosphorus Compounds | Epsilon Chimie</title>
+            <meta name="description" content="On-demand synthesis of non-commercial phosphorus compounds, from 100 mg to multi-kg. Brief to delivery in four steps. Based in Brest, France." />
+        </Helmet>
         <section id="custom">
             <div>
                 <div className='path'><Link to="/">HOME</Link> / <span>CUSTOM SYNTHESIS</span></div>
@@ -52,7 +57,7 @@ function Custom() {
                 <ul>
                     {process.map(({title,content},id) => (
                         <li key={title}>
-                            <div className="roundedNumber"><p>0{id}</p></div>
+                            <div className="roundedNumber"><p>0{id + 1}</p></div>
                             <div>
                                 <h3>{title}</h3>
                                 <p>{content}</p>
@@ -96,7 +101,12 @@ function Custom() {
                 </div>
                 <div>
                     <a href="tel:+33298424650"> <CallIcon aria-hidden="true"/>Call +33 (0)2 98 42 46 50</a>
-                    <a href="mailto:pierre.cornec@epsilon-chimie.com"><MailIcon aria-hidden="true"/>E-mail to : pierre.cornec[at]epsilon-chimie.com</a>
+                    <a href="#" onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = 'mailto:pierre.cornec' + '@' + 'epsilon-chimie.com';
+                    }}>
+                        <MailIcon aria-hidden="true"/>pierre.cornec[at]epsilon-chimie.com
+                    </a>                    
                     <Link to="/request-for-quote">Request for quote</Link>
 
                 </div>

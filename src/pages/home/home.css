@@ -78,7 +78,7 @@ h3 {
   font-weight: var(--font-weight-light);
   line-height: 100%;
   letter-spacing: -1%;
-  color: var(--color-content-tertiary);
+  color: var(--color-content-secondary);
 }
 .path > span {
   color: var(--color-content-primary);

@@ -42,8 +42,7 @@ section{
                 border-radius: var(--border-radius-xxl);
                 padding: var(--spacing-medium) var(--spacing-xx-small);  
                 p{
-                    color: var(--color-content-tertiary);
-
+                    color: var(--color-content-secondary);
                 }
                 >div{
                     gap: var(--spacing-xx-small);
@@ -103,7 +102,7 @@ section{
                         justify-content: space-between;
                         p{
                             font-size: var(--font-size-body-sm);
-                            color: var(--color-content-primary)
+                            color: var(--color-content-primary);
                         }
                         div{
                             display: flex;
@@ -117,7 +116,12 @@ section{
                                 &:focus{
                                     outline-style: none;
                                 }
-
+                            }
+                            label{
+                                font-family: var(--font-family-heading);
+                                font-size: var(--font-size-body-md);
+                                line-height: 8px;
+                                text-transform: uppercase;
                             }
                         }
                     }

@@ -1,11 +1,16 @@
 import './about.css'
-import Batiment from '../../assets/images/batiment4.jpg'
+import Batiment from '../../assets/images/batiment4.webp'
 
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 function About() {
     return (
     <>
+        <Helmet>
+            <title>About Epsilon Chimie — French Phosphorus Chemistry Laboratory</title>
+            <meta name="description" content="Founded in 1995 in Brest, France. Epsilon Chimie produces specialty phosphorus chemicals for research and industry worldwide. ICH-Q7 certified, REACH & CLP compliant." />
+        </Helmet>
         <section id="aboutLab">
             <div>
                 <article>
@@ -37,34 +42,34 @@ function About() {
             </article>
 
             <article>
-                <ul>
+                <div>
                     <hr />
-                    <li>
+                    <div>
                         <h3>1995</h3>
                         <p>Foundation</p>
                         <p>Epsilon Chimie founded in Brest, focused on phosphorus specialty chemistry.</p>
-                    </li>
+                    </div>
                     <hr />
-                    <li>
+                    <div>
                         <h3>1996</h3>
                         <p>International and online</p>
                         <p>First shipments to North America and Asia. Over 30 countries served.</p>
-                    </li>
+                    </div>
                     <hr />
-                    <li>
+                    <div>
                         <h3>2010</h3>
                         <p>Expansion</p>
                         <p>Relocation to a 3,600 m<sup>2</sup> facility in Kergaradec, Guipavas (near Brest).</p>
-                    </li>
+                    </div>
                     <hr />
-                    <li>
+                    <div>
                         <h3>2012</h3>
                         <p>ICH-Q7 Guidelines</p>
                         <p>Quality management renewed and based on ICH-Q7 Guidelines.</p>
-                    </li>
+                    </div>
                     <hr />
                     
-                </ul>
+                </div>
             </article>
 
         </section>

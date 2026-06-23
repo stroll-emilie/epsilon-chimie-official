@@ -6,10 +6,12 @@ import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
 
 import { WarnIcon } from '../../assets/icons/warn_icon'
 
-import Specification from './components/specification.jsx'
-import SafetyHazards from './components/safety_hazards'
-import ShippingDocs from './components/shipping_docs'
-import { useState } from 'react';
+import { useState,lazy, Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+
+const Specification = lazy(() => import('./components/specification.jsx'))
+const SafetyHazards = lazy(() => import('./components/safety_hazards'))
+const ShippingDocs = lazy(() => import('./components/shipping_docs'))
 
 const TABS_CONFIG = [
     { id: "Specifications", label: "Specifications", component: Specification },
@@ -56,6 +58,10 @@ function Product() {
 
     return (
     <>
+        <Helmet>
+            <title>{name} — EC-{id} | Epsilon Chimie</title>
+            <meta name="description" content={`${name}. CAS ${prod["CAS"]}. ${fullPuity} purity. Available from Epsilon Chimie, French phosphorus chemicals manufacturer.`} />
+        </Helmet>
         <section id="product-details">
             <article>
                 <img src={imgSrc} alt={name} />
@@ -79,14 +85,13 @@ function Product() {
             <article>
                 <div>
                     <div className="section-label"><div className='losange'></div>{prod["Réf EPSILON"]} - {getMoleculeFamily(prod)}</div>
-
-                    <h2>{name}</h2>
+                    <h1>{name}</h1>
                 </div>
 
                 <div className='information'>
-                    <WarnIcon/>
+                    <WarnIcon aria-hidden="true"/>
                     <div>
-                        <h3>GHS hazards</h3>
+                        <h2>GHS hazards</h2>
                         <p>Health hazard. Consult the full SDS before handling.</p>
                     </div>
                 </div>
@@ -101,6 +106,8 @@ function Product() {
                                         key={element}
                                         className={currentQuantitySelected === element ? "active" : ""}
                                         onClick={() => setQuantitySelected(element)}
+                                        aria-current={currentQuantitySelected === element ? "true" : undefined}
+
                                     >
                                         {element}
                                     </button>
@@ -116,18 +123,23 @@ function Product() {
                 </div>
                 
                 <div>
-                    <nav>
+                    <nav aria-label="Product details tabs">
                         {TABS_CONFIG.map((tab) => (
                             <button
                                 key={tab.id}
                                 onClick={() => setDetailsSelected(tab.id)}
                                 className={detailsSelected === tab.id ? "active" : ""}
+                                aria-current={detailsSelected === tab.id ? "true" : undefined}
                             >
                                 {tab.label}
                             </button>
                         ))}
                     </nav>
-                    {ActiveComponent && <ActiveComponent specsList={specsList} />}
+                    {ActiveComponent && (
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <ActiveComponent specsList={specsList} />
+                        </Suspense>
+                    )}
                     
                 </div>
             </article>

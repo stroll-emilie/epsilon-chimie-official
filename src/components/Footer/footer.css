@@ -42,28 +42,28 @@ footer section:first-child article:first-child {
   width: 26%;
   color: var(--color-content-reversed-primary);
 }
-footer section:first-child article:first-child div:last-child {
-  display: flex;
-  gap: var(--spacing-xx-small);
-  flex-direction: column;
+footer section:first-child article:first-child div p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-sm);
+  line-height: 136%;
+  letter-spacing: -1%;
 }
-footer section:first-child article:first-child h4 {
+footer section:first-child article:first-child div:first-of-type span {
   font-family: var(--font-family-title);
   font-size: var(--font-size-body-lg);
   line-height: 175%;
   letter-spacing: -2%;
 }
-footer section:first-child article:first-child h5 {
+footer section:first-child article:first-child div:last-of-type {
+  display: flex;
+  gap: var(--spacing-xx-small);
+  flex-direction: column;
+}
+footer section:first-child article:first-child div:last-of-type span {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body-sm);
   line-height: 8px;
-  letter-spacing: -1%;
-}
-footer section:first-child article:first-child p {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-sm);
-  line-height: 136%;
   letter-spacing: -1%;
 }
 footer section:last-child {

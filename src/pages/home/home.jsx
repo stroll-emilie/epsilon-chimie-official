@@ -22,61 +22,62 @@ import PhosphonateMark from '../../assets/images/schema/molecule-phosphonate-mar
 import EiffelTower from  '../../assets/images/effel_tower.png'
 
 import { useNavigate,Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
+
+const families = [
+    [
+        {imgSrc: Phosphonic, familyName: "Phosphonic Acids", description: "Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates."},
+        {imgSrc: Phosphorane, familyName: "Phosphoranes", description: "Stabilised ylides for acyl, ether and ketone olefination."},
+    ],
+    [
+        {imgSrc: Phosphonate, familyName: "Phosphonates", description: "Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations."},
+        {imgSrc: Phosphines, familyName: "Phosphines", description: "Phosphites, phosphine oxides and ligand building blocks. "},
+    ],
+    [
+        {imgSrc: Phosphonium, familyName: "Phosphonium Salts", description: "Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles. "},
+        {imgSrc: Intermediates, familyName: "Chemical Intermediates", description: "Piperidines, indoles, dyes and bespoke small molecules.  "},
+    ]
+]
+
+const popularSearch = [
+    {cas: '103694-84-4', ec: '05026'},
+    {cas: '1984-15-2', ec: '99147'},
+    {cas: '103725-47-9', ec: '07044-1'},
+    {cas: '65717-97-7', ec: '06021'}
+]
 
 function Home() {
     
-    const families = [
-        [
-            {imgSrc: Phosphonic, familyName: "Phosphonic Acids", description: "Free acids for surface functionalisation, ligand design, and pharmaceutical intermediates."},
-            {imgSrc: Phosphorane, familyName: "Phosphoranes", description: "Stabilised ylides for acyl, ether and ketone olefination."},
-        ],
-        [
-
-            {imgSrc: Phosphonate, familyName: "Phosphonates", description: "Diethyl-, dimethyl-, and dibutyl-phosphonates. The workhorses of HWE olefinations."},
-            {imgSrc: Phosphines, familyName: "Phosphines", description: "Phosphites, phosphine oxides and ligand building blocks. "},
-        ],
-        [
-
-            {imgSrc: Phosphonium, familyName: "Phosphonium Salts", description: "Wittig reagent precursors, including symmetrical bis-phosphonium salts for macrocycles. "},
-            {imgSrc: Intermediates, familyName: "Chemical Intermediates", description: "Piperidines, indoles, dyes and bespoke small molecules.  "},
-        ]
-    ]
-
-
     /* Pour la répétition dans le carousel */
-    const items = [
+    const carousel_item = [
         { id: 'medal', icon: <MedalIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'ICH-Q7 Guidelines' },
         { id: 'health', icon: <HealthIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'Most chemicals above 98% purity' },
         { id: 'time', icon: <TimeIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: 'Acknowledgement mostly within 24 h' },
         { id: 'loc', icon: <LocIcon color='var(--color-content-reversed-primary)' aria-hidden="true"/>, label: '100% of batches synthesised in Brest' },
     ]
-    const repeated = [...items, ...items]
+    const repeated = [...carousel_item, ...carousel_item]
 
     /* Barre de recherche Finder */
     const navigate = useNavigate();
     const [query, setQuery] = useState("");
-    
 
     const handleSearch = () => {
         if(!query.trim()) return;
         navigate(`/catalogue?search=${encodeURIComponent(query)}`);
     }
-
-    const popularSearch = [
-        {cas: '103694-84-4', ec: '05026'},
-        {cas: '1984-15-2', ec: '99147'},
-        {cas: '103725-47-9', ec: '07044-1'},
-        {cas: '65717-97-7', ec: '06021'}
-    ]
     
     return ( 
     <>
+        <Helmet>
+            <title>Epsilon Chimie — Phosphonate & Chemical Intermediates Manufacturer</title>
+            <meta name="description" content="European chemical manufacturer based in Brest, France. 1,000+ phosphonates, phosphonium salts and chemical intermediates for R&D and industrial teams worldwide." />
+        </Helmet>
         <section id="presentation">
             <article>
                 <div>
                     <div className="section-label"><div className='losange'></div>SINCE 1995, BREST, FRANCE</div>
-                    <h1>European Chemicals Manufacturer</h1>
+                    <h1>European Chemical Manufacturer</h1>
                     <p>We manufacture hundreds of phosphonates, phosphonium salts, phosphoranes and chemical intermediates for R&D and industrial teams worldwide.</p>
                 </div>
 
@@ -128,7 +129,7 @@ function Home() {
                     <div className='searchBarContainer'>
                         {/* search bar */}
                         <div className='searchBarInput'>
-                            <SearchIcon/>
+                            <SearchIcon aria-hidden="true"/>
                             <input 
                                 type="text" 
                                 placeholder="Name, CAS, MFCD, formula..." 
@@ -159,12 +160,12 @@ function Home() {
                 </div>
 
                 <div className='filtered'>
-                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="Phosphonic Acids schema" aria-hidden="true"/>Phosphonic Acids</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="Phosphonates schema" aria-hidden="true"/>Phosphonates</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="Phosphonium Salts schema" aria-hidden="true"/>Phosphonium Salts</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="Phosphoranes schema" aria-hidden="true"/>Phosphoranes</button>
-                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="Phosphines schema" aria-hidden="true"/>Phosphines</button>
-                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermediates} alt="Chemical Intermediates schema" aria-hidden="true"/>Chemical Intermediates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonic Acids')}><img src={Phosphonic} alt="" aria-hidden="true"/>Phosphonic Acids</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonates')}><img src={Phosphonate} alt="" aria-hidden="true"/>Phosphonates</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphonium Salts')}><img src={Phosphorane} alt="" aria-hidden="true"/>Phosphonium Salts</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphoranes')}><img src={Phosphonium} alt="" aria-hidden="true"/>Phosphoranes</button>
+                    <button onClick={() => navigate('catalogue?family=Phosphines')}><img src={Phosphines} alt="" aria-hidden="true"/>Phosphines</button>
+                    <button onClick={() => navigate('catalogue?family=Chemical Intermediates')}><img src={Intermediates} alt="" aria-hidden="true"/>Chemical Intermediates</button>
                 </div>
             </article>
         </section>
@@ -191,7 +192,7 @@ function Home() {
 
             <article>
                 <hr/>
-                <Link to="/catalogue" aria-label='Navigate to catalogue'>
+                <Link to="/catalogue">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon aria-hidden="true"/>
@@ -211,7 +212,7 @@ function Home() {
 
                 <hr/>
 
-                <Link to="/custom" aria-label='Navigate to custom synthesis'>
+                <Link to="/custom">
                     <div>
                         <div className="glassIcon">
                             <GlassIcon aria-hidden="true"/>
@@ -239,13 +240,13 @@ function Home() {
                     <div className="section-label"><div className='losange'></div>PRODUCT FAMILIES</div>
                     <h2>Six families, one <br />thousand compounds</h2>
                 </div>
-                <Link to="/catalogue">Browse the full catalogue<CircleArrowIcon/></Link>
+                <Link to="/catalogue">Browse the full catalogue<CircleArrowIcon aria-hidden="true"/></Link>
             </article>
 
             <article id='families-list'>
 
                 {families.map((column,i) => (
-                    <div className='column' key={column}>
+                    <div className='column' key={i}>
                         {column.map(({imgSrc,familyName,description},j) => {
                             const index = families.slice(0,i).reduce((s, g) => s + g.length, 0) + j + 1;
                         return (
@@ -275,7 +276,7 @@ function Home() {
                     <h2>Need 100g or 1kg of a compound from our R&D ?</h2>
                     <p>Use our reactivity to synthesise a batch quickly, within your budget. <br /> We reply to every request within <strong>48 working hours</strong>.</p>
                 </div>
-                <nav>
+                <nav aria-label="Contact actions">
                     <Link to="/request-for-quote">Request for quote</Link>
                     <Link to="/custom">Custom synthesis</Link>
                 </nav>

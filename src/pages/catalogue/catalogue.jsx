@@ -1,10 +1,11 @@
 import './catalogue.css';
 
+import { useEffect, useState} from 'react';
+import { useNavigate, Link, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'
 import { SearchBrokenIcon } from '../../assets/icons/search_broken_icon';
 import { ReloadIcon } from '../../assets/icons/reload_icon';
 
-import { useEffect, useState} from 'react';
-import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 
 import { useApp } from '../../context/AppContext';
 import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
@@ -53,6 +54,10 @@ function Catalogue() {
 
     return (
     <>
+        <Helmet>
+            <title>Phosphorus Chemicals Catalogue — Epsilon Chimie</title>
+            <meta name="description" content="Browse 1,000+ phosphonates, phosphonic acids, phosphonium salts and chemical intermediates. In-stock references shipped from Brest, France with Certificate of Analysis." />
+        </Helmet>
         <section id="searchInCatalogue">
             <div className='path'><Link to="/">HOME</Link> / <span>CATALOGUE</span></div>
             <article>
@@ -67,7 +72,7 @@ function Catalogue() {
             </article>
             <article>
                 <div>
-                    <SearchIcon/>
+                    <SearchIcon aria-hidden="true"/>
                     <input 
                         type="text" 
                         placeholder="Search by name, CAS number, MFCD, formula or synonym..." 
@@ -90,7 +95,7 @@ function Catalogue() {
                             key={family}
                             className={`filter-elem ${selectedFamily === family ? "active" : ""}`}
                             onClick={() => setSelectedFamily(family)}
-                            aria-current={selectedFamily === family}
+                            aria-current={selectedFamily === family ? "true" : undefined}
                         >
                             {family}<span>{count}</span>
                         </button>
@@ -104,8 +109,8 @@ function Catalogue() {
                 <div id="sort">
                     <p className="number">{(dataProcessed.length).toLocaleString('en-US')} RESULTS</p>
                     <div>
-                        <p>SORT</p>
-                        <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
+                        <label htmlFor="sort-select">sort</label>
+                        <select id="sort-select" value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
                             <option value="nameAsc" >Name (A➔Z)</option>
                             <option value="nameDesc" >Name (Z➔A)</option>
                             <option value="casAsc" >CAS (0/9)</option>
@@ -156,7 +161,7 @@ function Catalogue() {
                                 <div id='empty-info-container'>
                                     <div id='empty-title'>
                                         <div id='empty-svg'>
-                                            <SearchBrokenIcon/>
+                                            <SearchBrokenIcon aria-hidden="true"/>
                                         </div>
                                         <h2>Oups !</h2>
                                         <h2>It seems like we don't have results for <span>"{search}"</span></h2>
@@ -164,7 +169,7 @@ function Catalogue() {
                                     <p>Check the spelling, try a CAS number or a synonym, or widen your filters. Many compounds are also available through our on-demand synthesis service.</p>
                                     <nav>
                                         <button type="button" onClick={() => { setSearch(""); setSelectedFamily("All"); }}>
-                                            <ReloadIcon/> Clear search and filter
+                                            <ReloadIcon aria-hidden="true"/> Clear search and filter
                                         </button>
                                         <Link to="/request-for-quote">Request a custom quote</Link>
                                     </nav>
