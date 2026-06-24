@@ -26,3 +26,4 @@ dist-ssr
 *.csv
 ^[1-9]{5}.webp
 src/config/emailjs.js
+public/sitemap*.xml
