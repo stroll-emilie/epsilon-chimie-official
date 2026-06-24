@@ -1,5 +1,5 @@
 // scripts/generate-sitemap.js
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'node.fs'
 import Papa from 'papaparse'
 
 // Même logique que loadProducts() mais en Node.js

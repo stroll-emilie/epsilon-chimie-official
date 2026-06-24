@@ -43,9 +43,8 @@ function GeneralTC() {
                 <p>on this page</p>
                 <ul>
                         {sections.map(({ key, special }) => (
-                        <li>
+                        <li key={key}>
                             <button
-                            key={key}
                             onClick={() => { scrollTo(key); setActiveKey(key); }}
                             className={activeKey === key ? 'active' : ''}
                             >

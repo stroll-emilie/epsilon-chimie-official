@@ -246,7 +246,7 @@ function Home() {
             <article id='families-list'>
 
                 {families.map((column,i) => (
-                    <div className='column' key={i}>
+                    <div className='column' key={column}>
                         {column.map(({imgSrc,familyName,description},j) => {
                             const index = families.slice(0,i).reduce((s, g) => s + g.length, 0) + j + 1;
                         return (

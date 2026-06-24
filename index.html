@@ -6,7 +6,47 @@
     <link rel="preload" as="image" href="/logo_epsilon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>epsilon-chimie</title>
+
+    <!-- <script>
+      window.axeptioSettings = {
+        clientId: "6a3b84ee2035cba57e9d3e5c",
+        cookiesVersion: "3055a1ac-8e3b-476a-99f6-f13e5e5f7a5c",
+        googleConsentMode: {
+          default: {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+            wait_for_update: 500
+          }
+        }
+      };
+
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+
+      void 0 === window._axcb && (window._axcb = []);
+      window._axcb.push(function(axeptio) {
+        axeptio.on("cookies:complete", function(choices) {
+          if (choices.google_analytics) {
+            const t = document.getElementsByTagName("script")[0];
+            const e = document.createElement("script");
+            e.async = true;
+            e.src = "https://www.googletagmanager.com/gtag/js?id=G-W3VQX2VET5";
+            t.parentNode.insertBefore(e, t);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag("js", new Date());
+            gtag("config", "G-W3VQX2VET5");
+          }
+        });
+      });
+    </script> -->
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

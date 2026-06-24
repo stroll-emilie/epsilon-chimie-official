@@ -103,7 +103,7 @@ function Custom() {
                     <a href="tel:+33298424650"> <CallIcon aria-hidden="true"/>Call +33 (0)2 98 42 46 50</a>
                     <a href="#" onClick={(e) => {
                         e.preventDefault();
-                        window.location.href = 'mailto:pierre.cornec' + '@' + 'epsilon-chimie.com';
+                        globalThis.location.href = 'mailto:pierre.cornec' + '@' + 'epsilon-chimie.com';
                     }}>
                         <MailIcon aria-hidden="true"/>pierre.cornec[at]epsilon-chimie.com
                     </a>                    

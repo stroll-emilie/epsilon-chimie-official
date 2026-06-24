@@ -69,9 +69,8 @@ function GeneralTerms() {
                 <p>on this page</p>
                 <ul>
                     {sections.map(({ key }, i) => (
-                        <li>
+                        <li key={key}>
                             <button
-                            key={key}
                             onClick={() => { handleScrollTo(key); setActiveKey(key); }}
                             className={activeKey === key ? 'active' : ''}
                             >
