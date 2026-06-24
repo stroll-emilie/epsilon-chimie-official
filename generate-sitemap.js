@@ -26,7 +26,7 @@ const pagesXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>${BASE_URL}/</loc><lastmod>${TODAY}</lastmod><priority>1.0</priority></url>
     <url><loc>${BASE_URL}/request-for-quote</loc><lastmod>${TODAY}</lastmod><priority>0.9</priority></url>
-    <url><loc>${BASE_URL}/catalogue</loc><lastmod>${TODAY}</lastmod><priority>.8</priority></url>
+    <url><loc>${BASE_URL}/catalogue</loc><lastmod>${TODAY}</lastmod><priority>0.8</priority></url>
     <url><loc>${BASE_URL}/custom</loc><lastmod>${TODAY}</lastmod><priority>0.7</priority></url>
     <url><loc>${BASE_URL}/about</loc><lastmod>${TODAY}</lastmod><priority>0.7</priority></url>
     <url><loc>${BASE_URL}/legal-notice</loc><lastmod>${TODAY}</lastmod><priority>0.3</priority></url>
@@ -61,4 +61,3 @@ writeFileSync('./public/sitemap.xml', indexXml)
 writeFileSync('./public/sitemap-pages.xml', pagesXml)
 writeFileSync('./public/sitemap-products.xml', productsXml)
 
-console.log(`✅ Sitemap généré — ${products.length} produits`)
