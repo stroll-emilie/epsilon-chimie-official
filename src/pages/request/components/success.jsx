@@ -5,9 +5,9 @@ import { useLocation, Navigate, Link } from 'react-router-dom'
 
 function Success() {
 
-    // const location = useLocation();
+    const location = useLocation();
 
-    // if (!location.state?.fromForm) return <Navigate to="/" />;
+    if (!location.state?.fromForm) return <Navigate to="/" />;
 
     return (
         <section id="success">
