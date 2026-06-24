@@ -1,5 +1,6 @@
 import './legal.css'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 import { useApp } from '../../context/AppContext'
 import LanguageSwitcher from '../../components/LanguageSwitcher/language_switcher';
@@ -25,10 +26,14 @@ function LegalNotice() {
 
     return (
     <>
+        <Helmet>
+            <title>Legal Notice — Epsilon Chimie</title>
+            <meta name="description" content="Legal notice for Epsilon Chimie website. Publisher information, hosting details and intellectual property. Last updated June 2026." />
+        </Helmet>
         <section id='legal-title'>
             <div className='path'><Link to="/">HOME</Link> / <span>LEGAL NOTICE</span></div>
             <div>
-                <h2>Legal Notice</h2>
+                <h1>Legal Notice</h1>
                 <p>LAST UPDATE - JUNE 2026</p>
             </div>
         </section>
@@ -38,27 +43,26 @@ function LegalNotice() {
                 <LanguageSwitcher/>
                 <p>on this page</p>
                 <ul>
-                    <li>
-                        {sections.map(({ key, special }, i) => (
+                        {sections.map(({ key }, i) => (
+                        <li key={key}>
                             <button
-                            key={key}
                             onClick={() => { scrollTo(key); setActiveKey(key); }}
                             className={activeKey === key ? 'active' : ''}
                             >
                                 {t(`legal-notice.sections.${key}.title`)}
                             </button>
+                        </li>
                         ))}
-                    </li>
                 </ul>
             </article>
 
 
             <article>
+                <p dangerouslySetInnerHTML={{__html: t('legal-notice.head')}} />
                 <ul>
-                    <p dangerouslySetInnerHTML={{__html: t('legal-notice.head')}} />
                     {sections.map(({ key }) => (
                         <li key={key} id={key}>
-                            <h3>{t(`legal-notice.sections.${key}.title`)}</h3>
+                            <h2>{t(`legal-notice.sections.${key}.title`)}</h2>
                             <p dangerouslySetInnerHTML={{ __html: t(`legal-notice.sections.${key}.content`) }} />
                         </li>
                     ))}

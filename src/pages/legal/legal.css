@@ -17,6 +17,13 @@ section#legal-title {
   align-items: flex-start;
   border-bottom: 0.5px solid var(--color-border-reversed);
 }
+section#legal-title h1 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: 106%;
+  color: var(--color-content-primary);
+}
 section#privacy-policy, section#general-tc, section#legal-notice, section#general-terms {
   background-color: #FFF;
   display: flex;
@@ -86,8 +93,11 @@ section#privacy-policy article:last-of-type, section#general-tc article:last-of-
   gap: var(--spacing-medium);
   width: 40%;
 }
-section#privacy-policy article:last-of-type h3, section#general-tc article:last-of-type h3, section#legal-notice article:last-of-type h3, section#general-terms article:last-of-type h3 {
+section#privacy-policy article:last-of-type h2, section#privacy-policy article:last-of-type .section-title, section#general-tc article:last-of-type h2, section#general-tc article:last-of-type .section-title, section#legal-notice article:last-of-type h2, section#legal-notice article:last-of-type .section-title, section#general-terms article:last-of-type h2, section#general-terms article:last-of-type .section-title {
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h3);
+  line-height: 136%;
 }
 section#privacy-policy article:last-of-type > ul, section#general-tc article:last-of-type > ul, section#legal-notice article:last-of-type > ul, section#general-terms article:last-of-type > ul {
   display: flex;
@@ -100,7 +110,7 @@ section#privacy-policy article:last-of-type > ul > li, section#privacy-policy ar
   gap: var(--spacing-xxx-small);
   text-align: left;
 }
-section#privacy-policy article:last-of-type > ul > li h3, section#privacy-policy article:last-of-type > ul > li > button h3, section#general-tc article:last-of-type > ul > li h3, section#general-tc article:last-of-type > ul > li > button h3, section#legal-notice article:last-of-type > ul > li h3, section#legal-notice article:last-of-type > ul > li > button h3, section#general-terms article:last-of-type > ul > li h3, section#general-terms article:last-of-type > ul > li > button h3 {
+section#privacy-policy article:last-of-type > ul > li h2, section#privacy-policy article:last-of-type > ul > li .section-title, section#privacy-policy article:last-of-type > ul > li > button h2, section#privacy-policy article:last-of-type > ul > li > button .section-title, section#general-tc article:last-of-type > ul > li h2, section#general-tc article:last-of-type > ul > li .section-title, section#general-tc article:last-of-type > ul > li > button h2, section#general-tc article:last-of-type > ul > li > button .section-title, section#legal-notice article:last-of-type > ul > li h2, section#legal-notice article:last-of-type > ul > li .section-title, section#legal-notice article:last-of-type > ul > li > button h2, section#legal-notice article:last-of-type > ul > li > button .section-title, section#general-terms article:last-of-type > ul > li h2, section#general-terms article:last-of-type > ul > li .section-title, section#general-terms article:last-of-type > ul > li > button h2, section#general-terms article:last-of-type > ul > li > button .section-title {
   display: flex;
   justify-content: space-between;
 }
@@ -150,6 +160,6 @@ section#general-terms > article:last-of-type > ul > li {
   text-align: left;
   gap: var(--spacing-medium);
 }
-section#general-terms > article:last-of-type > ul > li h3 {
+section#general-terms > article:last-of-type > ul > li h2, section#general-terms > article:last-of-type > ul > li .section-title {
   cursor: pointer;
 }/*# sourceMappingURL=legal.css.map */
