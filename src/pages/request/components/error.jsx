@@ -15,13 +15,13 @@ function RequestError() {
                 <Link to="/" aria-label="Close and go back home"><XIcon aria-hidden="true"/></Link>
             </article>
             <article>
-                <CloudCrossIcon/>
+                <CloudCrossIcon aria-hidden="true"/>
                 <div>
                     <h1>Oups !</h1>
                     <span>There has been a mistake.</span>
                 </div>
                 <div>
-                    <p>You will receive a confirmation email shortly. Our team will review your request and get back to you within 48 business hours. Meanwhile you can keep </p>
+                    <p>An error occurred while sending your request. Please try again or contact us directly.</p>
                     <Link to="/">Back Home</Link>
                 </div>
             </article>
