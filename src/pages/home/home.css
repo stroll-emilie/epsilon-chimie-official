@@ -407,7 +407,7 @@ section#families > article#families-list {
   justify-content: space-between;
 }
 section#families > article#families-list .column {
-  width: 33%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   /*FIXME: border-with-sm non recenser*/

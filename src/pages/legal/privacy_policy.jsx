@@ -40,6 +40,7 @@ function PrivacyPolicy() {
                 <LanguageSwitcher />
                 <p>on this page</p>
                 <ul>
+                    <li>
                     {sections.map(({ key, special }, i) => (
                         <button
                         key={key}
@@ -49,6 +50,7 @@ function PrivacyPolicy() {
                             {t(`privacy-policy.sections.${key}.title`)}
                         </button>
                     ))}
+                    </li>
                 </ul>
             </article>
 

@@ -69,13 +69,15 @@ function GeneralTerms() {
                 <p>on this page</p>
                 <ul>
                     {sections.map(({ key, special }, i) => (
-                        <button
-                        key={key}
-                        onClick={() => { handleScrollTo(key); setActiveKey(key); }}
-                        className={activeKey === key ? 'active' : ''}
-                        >
-                            {t(`general-terms.sections.${key}.title`)}
-                        </button>
+                        <li>
+                            <button
+                            key={key}
+                            onClick={() => { handleScrollTo(key); setActiveKey(key); }}
+                            className={activeKey === key ? 'active' : ''}
+                            >
+                                {t(`general-terms.sections.${key}.title`)}
+                            </button>
+                        </li> 
                     ))}
                 </ul>
             </article>
@@ -84,30 +86,32 @@ function GeneralTerms() {
                 <p dangerouslySetInnerHTML={{ __html: t('general-terms.head') }} />
                 <ul>
                     {sections.map(({ key }, i) => (
-                        <button type="button" key={key} id={key} onClick={() =>handleScrollTo(key)}>
-                        <h3 onClick={() => toggle(i)}>
-                            {t(`general-terms.sections.${key}.title`)}
-                            <span>{openIndex === i ? <UpArrowIcon /> : <DownArrowIcon />}</span>
-                        </h3>
+                        <li>
+                            <button type="button" key={key} id={key} onClick={() =>handleScrollTo(key)}>
+                                <h3 onClick={() => toggle(i)}>
+                                    {t(`general-terms.sections.${key}.title`)}
+                                    <span>{openIndex === i ? <UpArrowIcon /> : <DownArrowIcon />}</span>
+                                </h3>
 
-                        {openIndex === i && (
-                            t(`general-terms.sections.${key}.subsections`).map((item, j) => (
-                            <div key={item}>
-                                <span dangerouslySetInnerHTML={{ __html: item.title }} />
-                                {item.head && <p>{item.head}</p>}
-                                {item.content && <p dangerouslySetInnerHTML={{ __html: item.content }} />}
-                                {item.list && (
-                                <ul>
-                                    {item.list.map((li, k) => (
-                                    <li key={li} dangerouslySetInnerHTML={{ __html: li }} />
-                                    ))}
-                                </ul>
+                                {openIndex === i && (
+                                    t(`general-terms.sections.${key}.subsections`).map((item, j) => (
+                                    <div key={item}>
+                                        <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                                        {item.head && <p>{item.head}</p>}
+                                        {item.content && <p dangerouslySetInnerHTML={{ __html: item.content }} />}
+                                        {item.list && (
+                                        <ul>
+                                            {item.list.map((li, k) => (
+                                            <li key={li} dangerouslySetInnerHTML={{ __html: li }} />
+                                            ))}
+                                        </ul>
+                                        )}
+                                        {item.foot && <p>{item.foot}</p>}
+                                    </div>
+                                    ))
                                 )}
-                                {item.foot && <p>{item.foot}</p>}
-                            </div>
-                            ))
-                        )}
-                        </button>
+                            </button>
+                        </li>
                     ))}
                 </ul>
                 <div className='legal-note'>

@@ -36,9 +36,10 @@ section#aboutLab > div > div {
   width: 45%;
 }
 section#aboutLab > div > div img {
-  background-color: #D9D9D9;
-  width: 100%;
+  width: 600px;
   height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 section#stat {
   display: flex;

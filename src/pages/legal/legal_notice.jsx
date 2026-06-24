@@ -38,15 +38,17 @@ function LegalNotice() {
                 <LanguageSwitcher/>
                 <p>on this page</p>
                 <ul>
-                    {sections.map(({ key, special }, i) => (
-                        <button
-                        key={key}
-                        onClick={() => { scrollTo(key); setActiveKey(key); }}
-                        className={activeKey === key ? 'active' : ''}
-                        >
-                            {t(`legal-notice.sections.${key}.title`)}
-                        </button>
-                    ))}
+                    <li>
+                        {sections.map(({ key, special }, i) => (
+                            <button
+                            key={key}
+                            onClick={() => { scrollTo(key); setActiveKey(key); }}
+                            className={activeKey === key ? 'active' : ''}
+                            >
+                                {t(`legal-notice.sections.${key}.title`)}
+                            </button>
+                        ))}
+                    </li>
                 </ul>
             </article>
 
