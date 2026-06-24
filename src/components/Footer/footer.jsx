@@ -66,7 +66,6 @@ function Footer() {
                     </ul>
                 </article>
             </section>
-
             <section>
                 <p>© 2026 EPSILON CHIMIE SARL - 402 489 721</p>
                 <article>

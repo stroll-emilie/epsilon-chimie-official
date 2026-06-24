@@ -73,7 +73,7 @@ section#request article > div .form-point.active span {
 section#request article > div .form-point.active p {
   color: var(--color-content-accent);
 }
-section#request article form input[type=text], section#request article form input[type=email], section#request article form select, section#request article form textarea {
+section#request article form input[type=text], section#request article form input[type=email], section#request article form input[type=tel], section#request article form select, section#request article form textarea {
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-x-small) var(--spacing-medium);
@@ -269,6 +269,7 @@ section#success article:first-of-type {
 section#success article:last-of-type {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-medium);
   width: 60%;
 }

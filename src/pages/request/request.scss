@@ -71,7 +71,7 @@ section{
             }
 
             form{
-                input[type="text"],input[type="email"], select, textarea{
+                input[type="text"],input[type="email"],input[type="tel"], select, textarea{
                     border: 1px solid var(--color-border-default);
                     border-radius: var(--border-radius-lg);
                     padding: var(--spacing-x-small) var(--spacing-medium);
@@ -212,6 +212,7 @@ section{
             &:last-of-type{
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: var(--spacing-medium);
                 width: 60%;
                 svg{
