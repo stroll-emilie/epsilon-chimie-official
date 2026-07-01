@@ -18,8 +18,11 @@ export async function loadProducts() {
     const buffer = await res.arrayBuffer()
     const csv = new TextDecoder("utf-8").decode(buffer)
     const { data } = Papa.parse(csv, {
-        delimiter: ";", header: true,
+        delimiter: ";",
+        header: true,
         skipEmptyLines: true,
+        quoteChar: '"',
+        newline: "\r\n",
     })
 
     // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"

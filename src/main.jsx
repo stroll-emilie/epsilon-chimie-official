@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 
 import emailjs from '@emailjs/browser'
 // FIXME: mettre le bon fichier de config
-import { EMAILJS_CONFIG } from './config/tempo.js'
+import { EMAILJS_CONFIG } from './config/emailjs.js'
 emailjs.init({
   publicKey: EMAILJS_CONFIG.publicKey,
   blockHeadless: true,

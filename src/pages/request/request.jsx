@@ -11,7 +11,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { getProductById, parseNom, getDefaultPurity} from '../../services/dataService.js'
 import { useApp } from '../../context/AppContext';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
-import { EMAILJS_CONFIG } from '../../config/tempo.js'
+import { EMAILJS_CONFIG } from '../../config/emailjs.js'
 
 // Champs obligatoire pour passer à l'étape suivante 
 const REQUIRED_FIELDS = {
