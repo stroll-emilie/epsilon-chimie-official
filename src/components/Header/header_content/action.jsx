@@ -23,7 +23,7 @@ function Action() {
                         setSearch("");
                     }}
                 >
-                    <SearchIcon />
+                    <SearchIcon aria-hidden="true" />
                 </div>
 
                 <input

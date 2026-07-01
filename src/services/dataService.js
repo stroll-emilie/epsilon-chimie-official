@@ -4,7 +4,7 @@ import enLocale from 'i18n-iso-countries/langs/en.json';
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
-import vide from '../assets/images/mollecules/vide.png'
+import vide from '../assets/images/mollecules/vide.webp'
 import Fuse from 'fuse.js'
 
 let cache = null
@@ -18,8 +18,11 @@ export async function loadProducts() {
     const buffer = await res.arrayBuffer()
     const csv = new TextDecoder("utf-8").decode(buffer)
     const { data } = Papa.parse(csv, {
-        delimiter: ";", header: true,
+        delimiter: ";",
+        header: true,
         skipEmptyLines: true,
+        quoteChar: '"',
+        newline: "\r\n",
     })
 
     // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
@@ -127,11 +130,11 @@ export const getDefaultPurity = (purity) => {
 
 //**************************** Gestion des images ***********************************//
 
-const images = import.meta.glob('../assets/images/mollecules/*.png', { eager: true });
+const images = import.meta.glob('../assets/images/mollecules/*.webp', { eager: true });
 
 const imageMap = Object.fromEntries(
     Object.entries(images).map(([path, module]) => {
-        const ref = path.split('/').pop().replace('.png', '');
+        const ref = path.split('/').pop().replace('.webp', '');
         return [ref, module.default];
     })
 );

@@ -23,9 +23,9 @@ section{
             > div{
                 width: 45%;
                 img{
-                    background-color: #D9D9D9;
-                    width: 100%;
+                    width: 600px;
                     height: 400px;
+                    object-fit: contain;
                 }
             }
             
@@ -60,11 +60,11 @@ section{
                 gap: var(--spacing-xxx-small);
             }
             &:last-of-type{
-                ul{
+                div{
                     display: flex;
                     flex-direction: column;
                     gap: 26px;
-                    li{
+                    div{
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
                         gap: 64px;

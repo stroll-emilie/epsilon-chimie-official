@@ -1,5 +1,6 @@
 import './legal.css'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 import { useApp } from '../../context/AppContext'
 import LanguageSwitcher from '../../components/LanguageSwitcher/language_switcher';
@@ -24,10 +25,14 @@ function GeneralTC() {
 
     return (
     <>
+        <Helmet>
+            <title>General Terms of Use — Epsilon Chimie</title>
+            <meta name="description" content="General terms of use and conditions for Epsilon Chimie. Last updated June 2026." />
+        </Helmet>
         <section id='legal-title'>
             <div className='path'><Link to="/">HOME</Link> / <span>GENERAL T&C</span></div>
             <div>
-                <h2>General Terms of Use & Conditions</h2>
+                <h1>General Terms of Use & Conditions</h1>
                 <p>LAST UPDATE - JUNE 2026</p>
             </div>
         </section>
@@ -37,15 +42,16 @@ function GeneralTC() {
                 <LanguageSwitcher/>
                 <p>on this page</p>
                 <ul>
-                    {sections.map(({ key, special }, i) => (
-                        <button
-                        key={key}
-                        onClick={() => { scrollTo(key); setActiveKey(key); }}
-                        className={activeKey === key ? 'active' : ''}
-                        >
-                            {t(`general-tc.sections.${key}.title`)}
-                        </button>
-                    ))}
+                        {sections.map(({ key, special }) => (
+                        <li key={key}>
+                            <button
+                            onClick={() => { scrollTo(key); setActiveKey(key); }}
+                            className={activeKey === key ? 'active' : ''}
+                            >
+                                {t(`general-tc.sections.${key}.title`)}
+                            </button>
+                        </li>
+                        ))}
                 </ul>
             </article>
 
@@ -55,7 +61,7 @@ function GeneralTC() {
                     {sections.map(({ key, special }) => (
                         
                         <li key={key} id={key}>
-                            <h3>{t(`general-tc.sections.${key}.title`)}</h3>
+                            <h2>{t(`general-tc.sections.${key}.title`)}</h2>
 
                             {!special && (
                             <p dangerouslySetInnerHTML={{ __html: t(`general-tc.sections.${key}.content`) }} />

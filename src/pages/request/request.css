@@ -10,25 +10,6 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
-.labelField {
-  display: flex;
-  gap: var(--spacing-xx-small);
-  align-items: center;
-  width: 100%;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-sm);
-  font-weight: var(--font-weight-bold);
-  line-height: 8px;
-  text-transform: uppercase;
-  color: var(--color-content-tertiary);
-}
-.labelField span {
-  color: var(--color-icon-danger);
-  font-family: var(--font-family-body);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-body-lg);
-}
-
 section#request-title {
   display: flex;
   gap: 20px;
@@ -92,7 +73,7 @@ section#request article > div .form-point.active span {
 section#request article > div .form-point.active p {
   color: var(--color-content-accent);
 }
-section#request article form input[type=text], section#request article form input[type=email], section#request article form select, section#request article form textarea {
+section#request article form input[type=text], section#request article form input[type=email], section#request article form input[type=tel], section#request article form select, section#request article form textarea {
   border: 1px solid var(--color-border-default);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-x-small) var(--spacing-medium);
@@ -139,7 +120,7 @@ section#request article form #form-contact-info > div {
   gap: var(--spacing-x-small);
   align-items: center;
 }
-section#request article form #form-contact-info > div h3 {
+section#request article form #form-contact-info > div h2 {
   font-weight: var(--font-weight-bold);
   white-space: nowrap;
 }
@@ -288,6 +269,7 @@ section#success article:first-of-type {
 section#success article:last-of-type {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-medium);
   width: 60%;
 }

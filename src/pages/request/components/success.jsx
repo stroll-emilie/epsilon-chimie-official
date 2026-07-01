@@ -15,7 +15,7 @@ function Success() {
                 <Link to="/" aria-label="Close and go back home"><XIcon aria-hidden="true"/></Link>
             </article>
             <article>
-                <SmsTrackingIcon/>
+                <SmsTrackingIcon aria-hidden="true"/>
                 <div>
                     <h1>Thank you !</h1>
                     <span>Your request has been successfully sent.</span>

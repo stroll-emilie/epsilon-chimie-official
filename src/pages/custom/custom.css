@@ -10,25 +10,6 @@
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
 /*******************************************************************************************************************/
-.roundedNumber {
-  display: flex;
-  padding: 5px var(--spacing-medium);
-  gap: var(--spacing-xxx-small);
-  border-radius: var(--border-radius-full);
-  background-color: var(--color-bg-primary);
-  width: 72px;
-  height: 72px;
-  align-items: center;
-  justify-content: center;
-}
-.roundedNumber > p {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-h1);
-  line-height: 100%;
-  letter-spacing: -1%;
-  color: var(--color-content-reversed-primary);
-}
-
 section#custom .section-label {
   color: var(--color-content-reversed-secondary);
 }
