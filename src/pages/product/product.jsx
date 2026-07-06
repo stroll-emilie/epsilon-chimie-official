@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useApp } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
+import { getActiveHazards } from '../../utils/safetyHazards.js';
 
 import { WarnIcon } from '../../assets/icons/warn_icon'
 
@@ -19,6 +20,8 @@ const TABS_CONFIG = [
     { id: "Shipping & docs", label: "Shipping & docs", component: ShippingDocs }
 ];
 
+
+
 function Product() {
     
     const navigate = useNavigate();
@@ -27,7 +30,6 @@ function Product() {
 
     const { products, loading } = useApp()
     const { id } = useParams()
-    
     
     if (loading) return <p>Chargement...</p>
     // on récupère les info sur le produit correspondant
@@ -45,6 +47,7 @@ function Product() {
 
     const currentQuantitySelected = quantitySelected || quantity[0];
     const ActiveComponent = TABS_CONFIG.find(tab => tab.id === detailsSelected)?.component;
+    const activeHazards = getActiveHazards(prod)
 
     const specsList = [
         { label:"CAS", data:prod["CAS"] || "N/A" },
@@ -137,7 +140,7 @@ function Product() {
                     </nav>
                     {ActiveComponent && (
                         <Suspense fallback={<p>Loading...</p>}>
-                            <ActiveComponent specsList={specsList} />
+                            <ActiveComponent specsList={specsList} hazards={activeHazards} />
                         </Suspense>
                     )}
                     

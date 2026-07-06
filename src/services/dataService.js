@@ -11,7 +11,6 @@ let cache = null
 
 countries.registerLocale(enLocale);
 
-// Chargement des données | découpage | groupement
 export async function loadProducts() {
     if (cache) return cache
     const res = await fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
@@ -25,7 +24,6 @@ export async function loadProducts() {
         newline: "\r\n",
     })
 
-    // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
     const parsed = data.map(row => {
         const { name, purity, method } = parseNom(row["Nom"])
         row["NomClean"] = name
@@ -34,7 +32,6 @@ export async function loadProducts() {
         return row
     })
 
-    
     const grouped = {}
     parsed.forEach(row => {
         const ref = String(row["Réf EPSILON"])

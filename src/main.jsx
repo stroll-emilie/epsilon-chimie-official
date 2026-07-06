@@ -4,7 +4,6 @@ import { HashRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 
 import emailjs from '@emailjs/browser'
-// FIXME: mettre le bon fichier de config
 import { EMAILJS_CONFIG } from './config/emailjs.js'
 emailjs.init({
   publicKey: EMAILJS_CONFIG.publicKey,

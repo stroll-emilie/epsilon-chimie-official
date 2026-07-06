@@ -20,6 +20,7 @@ function Catalogue() {
     const [searchParams] = useSearchParams();
 
     const {products} = useApp()
+    
     const [search, setSearch] = useState(searchParams.get('search') || '');
     const [selectedFamily, setSelectedFamily] = useState(searchParams.get('family') || 'All');
     const [sortOrder, setSortOrder] = useState("nameAsc");

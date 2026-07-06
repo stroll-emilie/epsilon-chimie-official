@@ -1,23 +1,28 @@
 import '../product.css'
 
-function SafetyHazards() {
+function SafetyHazards({ hazards = [] }) {
     
     return (
         <article id="safety_hazards">
-            <div>
-                <span>GHS07</span>
+            {hazards.length > 0 ? (
+                hazards.map((hazard,i) => (
+                    <div key={`${hazard.for}-${i}`}>
+                        <span>{hazard.code}</span>
+                        <div>
+                            <p>{hazard.label}</p>
+                            <p>{hazard.description}</p>
+                        </div>
+                    </div>
+                ))
+            ) : (
                 <div>
-                    <p>Health hazard</p>
-                    <p>Harmful if swallowed or inhaled</p>
+                    <span>N/A</span>
+                    <div>
+                        <p>Information not currently available.</p>
+                        <p>Please, feel free to reach out tu us for further details.</p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <span>GHS07</span>
-                <div>
-                    <p>Health hazard</p>
-                    <p>Harmful if swallowed or inhaled</p>
-                </div>
-            </div>
+            )}
             
             <p>Request for the full SDS (Safety Data Sheet) for detailed handling, storage and disposal guidance.</p>
         </article>
