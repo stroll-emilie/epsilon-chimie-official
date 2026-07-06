@@ -1,5 +1,6 @@
 import './product.css'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useNavigate, useParams} from 'react-router-dom'
 import { useApp } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
@@ -36,7 +37,11 @@ function Product() {
     const prod = getProductById(products, id)
     
     // si le produit ne peux pas être charger --> error 404 not found
-    if (!prod) return navigate('/error404')
+    useEffect(() => {
+        if (!loading && !prod) navigate('/error404');
+    }, [loading, prod]);
+
+    if (!prod) return null;
         
     // préparation des informations à afficher
     const formula = formatFormula(prod["Formule brute"])

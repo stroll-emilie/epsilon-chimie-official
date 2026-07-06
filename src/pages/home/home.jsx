@@ -41,10 +41,10 @@ const families = [
 ]
 
 const popularSearch = [
-    {cas: '103694-84-4', ec: '05026'},
+    {cas: '103694-84-4', ec: '5026'},
     {cas: '1984-15-2', ec: '99147'},
     {cas: '103725-47-9', ec: '07044-1'},
-    {cas: '65717-97-7', ec: '06021'}
+    {cas: '65717-97-7', ec: '6021'}
 ]
 
 function Home() {
@@ -246,7 +246,7 @@ function Home() {
             <article id='families-list'>
 
                 {families.map((column,i) => (
-                    <div className='column' key={column}>
+                    <div className='column' key={i}>
                         {column.map(({imgSrc,familyName,description},j) => {
                             const index = families.slice(0,i).reduce((s, g) => s + g.length, 0) + j + 1;
                         return (
