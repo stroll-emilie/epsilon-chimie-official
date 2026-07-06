@@ -1,5 +1,4 @@
 import './product.css'
-import { useEffect } from 'react';
 import { useNavigate, useParams} from 'react-router-dom'
 import { useApp } from '../../context/AppContext';
 import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
@@ -8,7 +7,7 @@ import { getActiveHazards } from '../../utils/safetyHazards.js';
 
 import { WarnIcon } from '../../assets/icons/warn_icon'
 
-import { useState,lazy, Suspense } from 'react'
+import { useState,lazy, Suspense, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const Specification = lazy(() => import('./components/specification.jsx'))
