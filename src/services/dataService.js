@@ -4,25 +4,26 @@ import enLocale from 'i18n-iso-countries/langs/en.json';
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
-import vide from '../assets/images/mollecules/vide.png'
+import vide from '../assets/images/mollecules/vide.webp'
 import Fuse from 'fuse.js'
 
 let cache = null
 
 countries.registerLocale(enLocale);
 
-// Chargement des données | découpage | groupement
 export async function loadProducts() {
     if (cache) return cache
     const res = await fetch(`${import.meta.env.BASE_URL}Catalogue.csv`)
     const buffer = await res.arrayBuffer()
     const csv = new TextDecoder("utf-8").decode(buffer)
     const { data } = Papa.parse(csv, {
-        delimiter: ";", header: true,
+        delimiter: ";",
+        header: true,
         skipEmptyLines: true,
+        quoteChar: '"',
+        newline: "\r\n",
     })
 
-    // Récupéré le nom de la molécule et la pureté stocker dans le champs "Nom"
     const parsed = data.map(row => {
         const { name, purity, method } = parseNom(row["Nom"])
         row["NomClean"] = name
@@ -31,7 +32,6 @@ export async function loadProducts() {
         return row
     })
 
-    
     const grouped = {}
     parsed.forEach(row => {
         const ref = String(row["Réf EPSILON"])
@@ -127,11 +127,11 @@ export const getDefaultPurity = (purity) => {
 
 //**************************** Gestion des images ***********************************//
 
-const images = import.meta.glob('../assets/images/mollecules/*.png', { eager: true });
+const images = import.meta.glob('../assets/images/mollecules/*.webp', { eager: true });
 
 const imageMap = Object.fromEntries(
     Object.entries(images).map(([path, module]) => {
-        const ref = path.split('/').pop().replace('.png', '');
+        const ref = path.split('/').pop().replace('.webp', '');
         return [ref, module.default];
     })
 );

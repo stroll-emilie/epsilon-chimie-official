@@ -24,7 +24,9 @@ function App() {
       <main>
         <ProductProvider>
           <ScrollToTop/>
+
           <Header />
+
           <Routes>
             <Route path='/' element={<Home />} />
 
@@ -47,7 +49,9 @@ function App() {
             <Route path='/error404' element={<Error404 />} />
             <Route path='/*' element={<Error404 />} />
           </Routes>
-          <Footer />
+
+          
+
         </ProductProvider>
       </main>
   )

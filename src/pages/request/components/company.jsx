@@ -51,14 +51,14 @@ function Company({data,onChange}) {
                     value={data.country}
                     onChange={(e) => onChange({country: e.target.value})}
                     aria-required="true"
-
+                    aria-describedby="country-hint"
                 >
                     <option value="default" hidden> Select a country</option>
                     {countryOptions.map(({ code, name }) => (
                         <option key={code} value={name}>{code} - {name}</option>
                     ))}
                 </select>
-                <p className='input-comment'>This may have an impacts on freight costs and currencies.</p>
+                <p className='input-comment'>This may have an impact on freight costs and currencies.</p>
             </div>
 
             <div>
@@ -82,9 +82,7 @@ function Company({data,onChange}) {
                 value={data.additional}
                 onChange={(e) => onChange({additional: e.target.value})}
                 maxLength={1000}
-            >
-
-            </textarea>
+            ></textarea>
             <label className='input-comment' id="privacyPolicyCheck" htmlFor='legalPart'>
                 <input 
                     id='legalPart'

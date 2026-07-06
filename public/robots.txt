@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /error404
+Disallow: /success
+Disallow: /error
+
+Sitemap: https://www.epsilon-chimie.com/sitemap.xml

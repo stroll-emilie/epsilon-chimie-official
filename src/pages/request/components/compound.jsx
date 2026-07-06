@@ -65,6 +65,7 @@ function Compound({data, onChange}) {
                     maxLength={50}
                     autoFocus={data.quantity === "Other"}
                     aria-required="true"
+                    aria-describedby="quantity-hint"
                 />
                 <p className='input-comment'>g, kilograms, or number of units</p>
             </div>
@@ -125,8 +126,8 @@ function Compound({data, onChange}) {
                 value={data.application}
                 onChange={(e) => onChange({application: e.target.value})}
                 maxLength={1000}
-            >
-            </textarea>
+                aria-describedby="application-hint"
+            ></textarea>
             <p className='input-comment'>Help us confirm the right grade and packaging. All information is treated confidentially.</p>
         </div>
     </>

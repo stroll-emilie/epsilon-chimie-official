@@ -76,7 +76,7 @@ section#searchInCatalogue > article:last-of-type {
   padding: var(--spacing-medium) var(--spacing-xx-small);
 }
 section#searchInCatalogue > article:last-of-type p {
-  color: var(--color-content-tertiary);
+  color: var(--color-content-secondary);
 }
 section#searchInCatalogue > article:last-of-type > div {
   gap: var(--spacing-xx-small);
@@ -164,6 +164,12 @@ section#content-catalogue article#product div#sort div select:hover {
 }
 section#content-catalogue article#product div#sort div select:focus {
   outline-style: none;
+}
+section#content-catalogue article#product div#sort div label {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-md);
+  line-height: 8px;
+  text-transform: uppercase;
 }
 section#content-catalogue article#product div#product-container {
   display: flex;
