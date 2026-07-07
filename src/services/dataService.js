@@ -4,7 +4,7 @@ import enLocale from 'i18n-iso-countries/langs/en.json';
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
-import vide from '../assets/images/mollecules/vide.webp'
+import vide from '/images/mollecules/vide.webp'
 import Fuse from 'fuse.js'
 
 let cache = null
@@ -125,23 +125,6 @@ export const getDefaultPurity = (purity) => {
     return "min50";
 };
 
-//**************************** Gestion des images ***********************************//
-
-const images = import.meta.glob('../assets/images/mollecules/*.webp', { eager: true });
-
-const imageMap = Object.fromEntries(
-    Object.entries(images).map(([path, module]) => {
-        const ref = path.split('/').pop().replace('.webp', '');
-        return [ref, module.default];
-    })
-);
-
-export function getProductImage(ref) {
-    return imageMap[ref]
-        ?? imageMap[ref.padStart(5, '0')]
-        ?? imageMap[ref.padStart(6, '0')]
-        ?? vide
-}
 //***********************************************************************************//
 
 export function parseNom(nom) {
