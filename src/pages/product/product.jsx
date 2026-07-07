@@ -1,14 +1,14 @@
 import './product.css'
-import { useEffect } from 'react';
 import { useNavigate, useParams} from 'react-router-dom'
 import { useApp } from '../../context/AppContext';
-import { getProductById, formatFormula, getProductImage, parseNom} from '../../services/dataService.js'
+import { getProductById, formatFormula, parseNom} from '../../services/dataService.js'
+import ProductImage from '../../components/ProductImage.jsx';
 import {getMoleculeFamily} from '../../utils/getMoleculeFamily.jsx'
 import { getActiveHazards } from '../../utils/safetyHazards.js';
 
 import { WarnIcon } from '../../assets/icons/warn_icon'
 
-import { useState,lazy, Suspense } from 'react'
+import { useState,lazy, Suspense, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const Specification = lazy(() => import('./components/specification.jsx'))
@@ -32,7 +32,6 @@ function Product() {
     const { products, loading } = useApp()
     const { id } = useParams()
     
-    if (loading) return <p>Chargement...</p>
     // on récupère les info sur le produit correspondant
     const prod = getProductById(products, id)
     
@@ -42,12 +41,12 @@ function Product() {
     }, [loading, prod]);
 
     if (!prod) return null;
+    if (loading) return <p>Chargement...</p>
         
     // préparation des informations à afficher
     const formula = formatFormula(prod["Formule brute"])
-    const imgSrc = getProductImage(id)
     const { name, purity, method } = parseNom(prod["Nom"])
-    const quantity = (prod["Conditionnement"]?.split("\n").map(el => el.trim()) ?? []).concat("Other");
+    const quantity = (prod["Conditionnement"]?.split("\n").map(el => el.trim()).filter(Boolean) ?? []).concat("Other");
     const fullPuity = method ? `${purity} (${method})` : purity;
 
     const currentQuantitySelected = quantitySelected || quantity[0];
@@ -72,7 +71,7 @@ function Product() {
         </Helmet>
         <section id="product-details">
             <article>
-                <img src={imgSrc} alt={name} />
+                <ProductImage refId={id} alt={name}/>
                 <div>
                     <div>
                         <div className="number">FORMULA</div>

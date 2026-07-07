@@ -8,7 +8,9 @@ import { ReloadIcon } from '../../assets/icons/reload_icon';
 
 
 import { useApp } from '../../context/AppContext';
-import { filterAndSort, countByFamily, getProductImage, searchProducts } from '../../services/dataService';
+import ProductImage from '../../components/ProductImage';
+import { filterAndSort, countByFamily, searchProducts } from '../../services/dataService';
+
 import { getMoleculeFamily } from '../../utils/getMoleculeFamily';
 
 import { SearchIcon } from "../../assets/icons/search_icon"
@@ -126,7 +128,6 @@ function Catalogue() {
                 <div id="product-container">
                     {paginated.map((product, index) => {
                         const ref = product["Réf EPSILON"];
-                        const imgSrc = getProductImage(ref)
 
                         return (
                             <Link to={`/product/${ref}`} key={ref}>
@@ -135,7 +136,7 @@ function Catalogue() {
                                         <div>
                                             <div className='purity'>{product["Purity"] || "-"} </div>
                                         </div>
-                                        <img src={imgSrc} alt={product["NomClean"]} />
+                                        <ProductImage refId={product["Réf EPSILON"]} alt={product["NomClean"]}/>
                                     </div>
 
                                     <div className='txt-container'>
