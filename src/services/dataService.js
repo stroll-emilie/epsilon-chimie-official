@@ -86,9 +86,13 @@ export function searchProducts(products, search) {
             { name: "NomPourTri", getFn: p => String(p["NomPourTri"] ?? "") },
             { name: "Réf EPSILON", getFn: p => String(p["Réf EPSILON"] ?? "") },
         ],
-        threshold: 0.4,
+        threshold: 0.3,
+        includeScore: true,
+        shouldSort: true,
     });
-    return fuse.search(cleanSearch).map(r => r.item);
+    return fuse.search(cleanSearch)
+        .sort((a, b) => a.score - b.score) // score le plus bas = meilleur match, en premier
+        .map(r => r.item);
 }
 
 // compte le nombre d'élement de chaque 
