@@ -4,7 +4,6 @@ import enLocale from 'i18n-iso-countries/langs/en.json';
 import Papa from 'papaparse';
 import { getMoleculeFamily } from '../utils/getMoleculeFamily';
 
-import vide from '/images/mollecules/vide.webp'
 import Fuse from 'fuse.js'
 
 let cache = null

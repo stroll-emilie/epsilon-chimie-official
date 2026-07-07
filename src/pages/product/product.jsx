@@ -46,7 +46,7 @@ function Product() {
     // préparation des informations à afficher
     const formula = formatFormula(prod["Formule brute"])
     const { name, purity, method } = parseNom(prod["Nom"])
-    const quantity = (prod["Conditionnement"]?.split("\n").map(el => el.trim()) ?? []).concat("Other");
+    const quantity = (prod["Conditionnement"]?.split("\n").map(el => el.trim()).filter(Boolean) ?? []).concat("Other");
     const fullPuity = method ? `${purity} (${method})` : purity;
 
     const currentQuantitySelected = quantitySelected || quantity[0];

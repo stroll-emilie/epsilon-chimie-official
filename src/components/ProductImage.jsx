@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import vide from '/images/mollecules/vide.webp'
+const vide = `${import.meta.env.BASE_URL}images/mollecules/vide.webp`
 
 function ProductImage({ refId, alt = '', ...props }) {
     const candidates = [...new Set([
